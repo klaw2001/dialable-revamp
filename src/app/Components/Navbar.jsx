@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="logo-links flex  items-center">
         <div className="logo relative w-[11vw]">
           <Link href={"#"}>
-            <Image src={Logo} alt="dialable-logo" placeholder="blur" objectFit="cover" />
+            <Image src={Logo} alt="dialable-logo" objectFit="cover" />
           </Link>
         </div>
         <div className="flex gap-5 mx-12 text-sm leading-none">
