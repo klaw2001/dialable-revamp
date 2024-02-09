@@ -1,13 +1,16 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+
 import TopBar from "./Components/TopBar";
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import Services from "./Components/Services/Services";
 import BusinessListing from "./Components/BusinessListing";
-import MarketPlace from "./Components/MarkrtPlace/MarketPlace";
+import MarketPlace from "./Components/MarketPlace/MarketPlace";
 import JobPortal from "./Components/JobPortal";
 import BoostBusiness from "./Components/BoostBusiness";
+import Faq from "./Components/Faq";
+import Blogs from "./Components/Blogs";
+import ConnectUs from "./Components/ConnectUs";
+import Footer from "./Components/Footer";
 
 export default function Home() {
   return (
@@ -20,6 +23,10 @@ export default function Home() {
       <MarketPlace/>
       <JobPortal/>
       <BoostBusiness/>
+      <Faq/>
+      <Blogs/>
+      <ConnectUs/>
+      <Footer/>
     </main>
   );
 }
