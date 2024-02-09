@@ -33,6 +33,7 @@ const Hero = () => {
           alt="hero-img"
           objectFit="cover"
           className="h-full w-full"
+          placeholder="blur"
         />
       </div>
     </div>

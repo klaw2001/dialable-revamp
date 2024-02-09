@@ -11,7 +11,7 @@ const Services = () => {
         services.map((item,index)=>(
           <div key={index} className="service-box self-baseline flex items-center justify-center flex-col bg-white gap-4 w-[12vw] shadow-md  p-4">
             <div className='w-[4vw] relative'>
-              <Image src={item.img} alt={`${item + "_" + index}`} objectFit='cover' className='h-full w-full'/>
+              <Image src={item.img} alt={`${item + "_" + index}`}  objectFit='cover'  className='h-full w-full'/>
             </div>
             <h3 className='text-center text-sm font-medium'>{item.title}</h3>
           </div>

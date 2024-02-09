@@ -5,7 +5,7 @@ import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import Services from "./Components/Services/Services";
 import BusinessListing from "./Components/BusinessListing";
-import MarketPlace from "./Components/MarketPlace";
+import MarketPlace from "./Components/MarkrtPlace/MarketPlace";
 import JobPortal from "./Components/JobPortal";
 import BoostBusiness from "./Components/BoostBusiness";
 
