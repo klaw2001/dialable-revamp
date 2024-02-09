@@ -40,7 +40,5 @@
   .Transition{
     transition: all .5s;
   }
-  .connect{
-    background: url(Images/);
-  }
+  /* . */
 }
