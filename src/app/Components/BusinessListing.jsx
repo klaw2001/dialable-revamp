@@ -74,7 +74,7 @@ const BusinessListing = () => {
         </div>
       </div>
       <div className="img relative mt-16">
-        <Image src={Business} alt="listing-img" objectFit="cover" />
+        <Image src={Business} alt="listing-img" placeholder="blur" objectFit="cover" />
       </div>
     </div>
   );
