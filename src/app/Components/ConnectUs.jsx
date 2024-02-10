@@ -4,17 +4,17 @@ import Image from "next/image";
 const ConnectUs = () => {
   return (
     <div
-      className={`m-20 border-2  relative   gap-4 after:content-[""] after:w-full after:h-full after:absolute after:top-0 after:left-0 after:bg-[#781393] after:opacity-[.63]`}
+      className={`m-20 border-2 h-[40vw] lg:h-[24.6vw] relative  gap-4 after:content-[""] after:w-full after:h-full after:absolute after:top-0 after:left-0 after:bg-[#781393] after:opacity-[.63]`}
     >
-      <div className="relative">
+      <div className="relative h-full w-full">
         <Image
           src={ConnectBg}
           alt="connect"
-          objectFit="cover"
-          className="h-full w-full"
+         
+          className="h-full w-full object-cover "
         />
       </div>
-      <div className="absolute top-[50%] w-[60%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-[2] text-center">
+      <div className="absolute top-[50%] w-[60%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-[2] text-center p-8">
         <h1 className="text-[3vw] mb-4 montserrat font-bold leading-[3vw]">
           Discover Opportunities and Connect Easily
         </h1>
@@ -28,6 +28,7 @@ const ConnectUs = () => {
             Get started
           </button>
         </div>
+        <p className="text-white text-[.7vw] mt-[-15px] roboto">By clicking Get Started, you agree to our Terms and Conditions.</p>
       </div>
     </div>
   );
