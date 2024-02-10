@@ -38,19 +38,19 @@ const Faq = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
   return (
-    <div className=" my-40 flex items-start justify-between p-20 Transition">
-      <div className="w-1/3 flex items-start flex-col gap-6">
-        <h1 className="text-[3.1vw] montserrat text-[black] font-bold leading-[3vw]">
+    <div className=" my-20 lg:my-40 lg:flex items-start justify-between p-10 lg:p-20 Transition">
+      <div className="lg:w-1/3 w-full flex items-start flex-col gap-6">
+        <h1 className="text-[9.5vw] lg:text-[3.1vw] montserrat text-[black] font-bold leading-[12vw] lg:leading-[3vw]">
          Frequently Asked Questions
         </h1>
-        <p className="montserrat font-medium text-[1vw]">
+        <p className="montserrat font-medium text-[4.5vw] lg:text-[1vw]">
         Find answers to common questions about our website and its accessibility features.
         </p>
-        <Link href={"#"} className="text-white btn bg-[#FF6004] py-4 px-8  cursor-pointer text-[1.2vw] font-normal  montserrat">
+        <Link href={"#"} className="text-white btn bg-[#FF6004] py-4 px-8  cursor-pointer text-[4.8vw] lg:text-[1.2vw] font-normal  montserrat">
           Contact
         </Link >
       </div>
-      <div className="w-1/2">
+      <div className="w-full lg:w-1/2 mt-10 lg:mt-0">
         <div className="">
           <div className="space-y-4 montserrat">
             {faqs.map((faq, index) => (
@@ -85,7 +85,7 @@ const Faq = () => {
                   </svg>
                 </div>
                 {activeIndex === index && (
-                  <p className="text-gray-600 mt-2 text-[1vw]">{faq.answer}</p>
+                  <p className="text-gray-600 mt-2 text-[3.5vw] lg:text-[1vw]">{faq.answer}</p>
                 )}
               </div>
             ))}

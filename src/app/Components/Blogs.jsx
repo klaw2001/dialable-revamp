@@ -23,18 +23,18 @@ const Blogs = () => {
     },
   ];
   return (
-    <div className="p-20 my-10 flex items-center flex-col gap-4">
+    <div className="p-10 lg:p-20 my-5 lg:my-10 flex items-center flex-col gap-4">
       <div>
-        <h1 className="text-[3vw] text-black font-bold text-center montserrat">
+        <h1 className=" text-[9vw] lg:text-[3vw] text-black font-bold text-center montserrat">
           Our Blogs
         </h1>
-        <p className="text-[1.2vw] text-black text-center font-semibold montserrat">
+        <p className="text-[4.2vw] lg:text-[1.2vw] text-black text-center font-semibold montserrat">
           Your Best Practices Guide for all your local service needs
         </p>
       </div>
-      <div className="flex items-center justify-center mt-10 gap-[2vw]">
+      <div className="lg:flex items-center justify-center mt-10 gap-[2vw]">
         {blogs.map((blog, index) => (
-          <div key={index} className="blog w-[40%] border-2 box-shadow border-black">
+          <div key={index} className="blog my-10 lg:my-0 lg:w-[40%] border-2 box-shadow border-black">
             <div className="img relative  ">
               <Image
                 src={blog.img}
@@ -46,23 +46,23 @@ const Blogs = () => {
             </div>
             <div className="info p-4 flex flex-col gap-4 bg-white">
               <div className="flex items-center  gap-6">
-                <div className="tag text-[.9vw] text-black bg-[#F4F4F4] montserrat font-semibold p-2">
+                <div className="tag text-[2.5vw] lg:text-[.9vw] text-black bg-[#F4F4F4] montserrat font-semibold p-2">
                   {blog.cat}
                 </div>
-                <p className="text-black  montserrat font-bold text-[.9vw]">
+                <p className="text-black  montserrat font-bold text-[2.5vw] lg:text-[.9vw]">
                   {blog.date}
                 </p>
-                <p className="text-black  montserrat font-bold text-[.9vw]">
+                <p className="text-black  montserrat font-bold text-[2.5vw] lg:text-[.9vw]">
                   {blog.duration}
                 </p>
               </div>
-              <h1 className="text-black font-bold text-[1.8vw] montserrat">
+              <h1 className="text-black font-bold text-[4.8vw] lg:text-[1.8vw] montserrat">
                 {blog.title}
               </h1>
-              <p className="text-black font-medium text-[1vw] roboto">
+              <p className="text-black font-medium text-[4vw] lg:text-[1vw] roboto">
                 {blog.desc}
               </p>
-              <button className="text-black font-normal flex items-center montserrat text-[1.2vw]">
+              <button className="text-black font-normal flex items-center montserrat text-[4.2vw] lg:text-[1.2vw]">
                 Read More
                 <MdOutlineChevronRight />
               </button>
@@ -70,7 +70,7 @@ const Blogs = () => {
           </div>
         ))}
       </div>
-      <button className="btn mt-10 bg-[#781393] text-white py-2 px-4 text-[1vw] montserrat text-center">
+      <button className="btn mt-5 lg:mt-10 bg-[#781393] text-white py-2 px-4 text-[4vw] lg:text-[1vw] montserrat text-center">
         View all
       </button>
     </div>
