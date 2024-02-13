@@ -2,7 +2,7 @@
 
 
 body{
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 @tailwind base;
 @tailwind components;

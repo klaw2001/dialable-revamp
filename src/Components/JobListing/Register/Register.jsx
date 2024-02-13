@@ -5,7 +5,7 @@ import Link from "next/link";
 import Check from "../../../../public/Images/check.svg";
 const Register = () => {
   return (
-    <div className="py-16 px-32 flex items-center flex-col">
+    <div className="py-16 px-24 flex items-center flex-col">
       <div className="w-[50vw] mt-10">
         <h1 className="montserrat text-[3vw] text-center  mx-auto font-semibold">
           List Your Business For Free. Start Getting Enquires

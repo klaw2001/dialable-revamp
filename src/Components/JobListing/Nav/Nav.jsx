@@ -44,7 +44,7 @@ const Nav = () => {
           </Link>
         </div>
         <div className="logo relative w-[33vw] lg:w-[11vw]">
-          <Link href={"#"}>
+          <Link href={"/"}>
             <Image src={Logo} alt="dialable-logo" objectFit="cover" />
           </Link>
         </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 const ConnectUs = () => {
   return (
     <div
-      className={`m-20 border-2 h-[40vw] lg:h-[24.6vw] relative  gap-4 after:content-[""] after:w-full after:h-full after:absolute after:top-0 after:left-0 after:bg-[#781393] after:opacity-[.63]`}
+      className={`m-20 mb-28 border-2 h-[40vw] lg:h-[24.6vw] relative  gap-4 after:content-[""] after:w-full after:h-full after:absolute after:top-0 after:left-0 after:bg-[#781393] after:opacity-[.63]`}
     >
       <div className="relative h-full w-full">
         <Image

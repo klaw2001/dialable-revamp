@@ -169,7 +169,7 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="p-10 lg:p-20 mt-20 bg-[#781393]">
+    <div className="p-10 lg:p-20  bg-[#781393]">
       <div className="top lg:flex items-start justify-between">
         <div>
           <div className="img relative w-[30vw] lg:w-[12vw]">
