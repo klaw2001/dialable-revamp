@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import Business from "../Images/business-listing.png";
-import Stacks from "../Images/stacks.png";
+import Business from "../../public/Images/business-listing.png";
+import Stacks from "../../public/Images/stacks.png";
 import { MdOutlineChevronRight } from "react-icons/md";
 import Link from "next/link";
 const BusinessListing = () => {

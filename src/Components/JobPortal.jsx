@@ -1,5 +1,5 @@
 import React from 'react'
-import Portal from  "../Images/job-portal.png"
+import Portal from  "../../public/Images/job-portal.png"
 import Image from 'next/image'
 const JobPortal = () => {
   return (

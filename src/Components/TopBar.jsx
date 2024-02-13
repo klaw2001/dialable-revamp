@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import accessibility from "../Images/accessibility.svg"
+import accessibility from "../../public/Images/accessibility.svg"
 import { FaAngleDown } from "react-icons/fa6";
 import { PiGlobe } from "react-icons/pi";
 const TopBar = () => {

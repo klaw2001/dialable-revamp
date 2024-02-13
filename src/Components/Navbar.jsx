@@ -3,12 +3,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import Logo from "../Images/dialable-logo.png";
+import Logo from "../../public/Images/dialable-logo.png";
 
 import { Button, Drawer } from "antd";
-import Menu from "../Images/menu.svg";
+import { useRouter } from 'next/navigation'
+import Menu from "../../public/Images/menu.svg";
 
 const Navbar = () => {
+  const router = useRouter()
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
     setOpen(true);
@@ -83,9 +85,9 @@ const Navbar = () => {
           </button>
         </Drawer>
       </div>
-      <button className="hidden lg:block text-white btn bg-[#FF6004] py-2 px-8 text-md cursor-pointer">
+      <Link  href={"/joblisting"} className="hidden lg:block text-white btn bg-[#FF6004] py-2 px-8 text-md cursor-pointer">
         Join
-      </button>
+      </Link >
     </div>
   );
 };

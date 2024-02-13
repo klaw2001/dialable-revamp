@@ -1,6 +1,6 @@
-import Bottle from "../../Images/MarketPlace/bottle.png"
-import Bed from "../../Images/MarketPlace/bed.png"
-import Buds from "../../Images/MarketPlace/buds.png"
+import Bottle from "../../../public/Images/MarketPlace/bottle.png"
+import Bed from "../../../public/Images/MarketPlace/bed.png"
+import Buds from "../../../public/Images/MarketPlace/buds.png"
 const marketData = [
   {
     title: "Insulin Cooler Bottle",

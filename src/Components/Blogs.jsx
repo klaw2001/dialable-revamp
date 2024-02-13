@@ -1,6 +1,6 @@
 import React from "react";
-import Blog_1 from "../Images/blog-1.png";
-import Blog_2 from "../Images/blog-2.png";
+import Blog_1 from "../../public/Images/blog-1.png";
+import Blog_2 from "../../public/Images/blog-2.png";
 import Image from "next/image";
 import { MdOutlineChevronRight } from "react-icons/md";
 const Blogs = () => {

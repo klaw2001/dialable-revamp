@@ -1,11 +1,11 @@
 import React from "react";
-import Logo from "../Images/dialable-logo.png";
+import Logo from "../../public/Images/dialable-logo.png";
 import Image from "next/image";
-import Facebook from "../Images/socials/Facebook.svg";
-import Instagram from "../Images/socials/Instagram.svg";
-import LinkedIn from "../Images/socials/LinkedIn.svg";
-import X from "../Images/socials/X.svg";
-import Youtube from "../Images/socials/Youtube.svg";
+import Facebook from "../../public/Images/socials/Facebook.svg";
+import Instagram from "../../public/Images/socials/Instagram.svg";
+import LinkedIn from "../../public/Images/socials/LinkedIn.svg";
+import X from "../../public/Images/socials/X.svg";
+import Youtube from "../../public/Images/socials/Youtube.svg";
 import Link from "next/link";
 const Footer = () => {
   const footerLinks = [

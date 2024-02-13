@@ -44,12 +44,12 @@ body{
   .Transition{
     transition: all .5s;
   }
-  .connect{
+  /* .connect{
     background-image: url('./Images/connect.png');
     background-repeat: no-repeat;
     background-size: cover;
 
-  }
+  } */
 }
 
 

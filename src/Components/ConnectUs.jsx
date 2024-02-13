@@ -1,5 +1,5 @@
 import React from "react";
-import ConnectBg from "../Images/connect.png";
+import ConnectBg from "../../public/Images/connect.png";
 import Image from "next/image";
 const ConnectUs = () => {
   return (
