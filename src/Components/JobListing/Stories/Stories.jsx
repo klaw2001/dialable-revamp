@@ -5,9 +5,9 @@ import Play from "../../../../public/Images/play.svg";
 import Image from "next/image";
 const Stories = () => {
   return (
-    <div className="py-60 px-24 flex ">
-      <div className=" stories flex items-start gap-12">
-        <div className=" card rounded-[4px]  overflow-hidden  w-[26.33%]">
+    <div className="py-20 lg:py-60 px-10 lg:px-24 flex ">
+      <div className=" stories block lg:flex items-start gap-12">
+        <div className=" card rounded-[4px]  overflow-hidden mt-6 lg:mt-0  lg:w-[26.33%]">
           <div className="img relative  w-[100%] ">
             <Image
               src={Story_1}
@@ -17,18 +17,18 @@ const Stories = () => {
           </div>
           <div className="story-info border-x-2 border-b-2 p-4 relative  ">
             <div className="title_role ">
-              <h2 className="montserrat text-[1.35vw] font-semibold leading-[1.7vw]">
+              <h2 className="montserrat text-[4vw] lg:text-[1.35vw] font-semibold leading-[4.5vw] lg:leading-[1.7vw]">
                 Mr. Jopesh Thomas
               </h2>
-              <p className="montserrat text-[.85vw] font-medium mb-4">
+              <p className="montserrat text-[2.5vw] lg:text-[.85vw] font-medium mb-4">
                 Entrepreneur name
               </p>
             </div>
-            <span className="montserrat font-normal text-[.82vw]">
+            <span className="montserrat font-normal text-[2.3vw] lg:text-[.82vw]">
               Customer since 8 years
             </span>
             <button className="btn bg-white border border-[#FF6004] p-4 absolute top-0  right-2 mt-[-10%]">
-              <div className="w-[2vw] relative flex items-center">
+              <div className="w-[4vw] lg:w-[2vw] relative flex items-center">
                 <Image
                   src={Play}
                   alt="play"
@@ -38,7 +38,7 @@ const Stories = () => {
             </button>
           </div>
         </div>
-        <div className="card rounded-[4px]  overflow-hidden  w-[26.33%]">
+        <div className="card rounded-[4px]  overflow-hidden mt-6 lg:mt-0  lg:w-[26.33%]">
           <div className="img relative w-[100%] ">
             <Image
               src={Story_2}
@@ -48,18 +48,18 @@ const Stories = () => {
           </div>
           <div className="story-info border-x-2 border-b-2 p-4 relative">
             <div className="title_role ">
-              <h2 className="montserrat text-[1.35vw] font-semibold leading-[1.7vw]">
+              <h2 className="montserrat text-[4vw] lg:text-[1.35vw] font-semibold leading-[4.5vw] lg:leading-[1.7vw]">
                 Ms. Samantha Alee
               </h2>
-              <p className="montserrat text-[.85vw] font-medium mb-4">
+              <p className="montserrat text-[2.5vw] lg:text-[.85vw] font-medium mb-4">
                 Entrepreneur name
               </p>
             </div>
-            <span className="montserrat font-normal text-[.82vw]">
+            <span className="montserrat font-normal text-[2.3vw] lg:text-[.82vw]">
               Customer since 10 years
             </span>
             <button className="btn bg-white border border-[#FF6004] p-4 absolute top-0 right-2 mt-[-10%] ">
-              <div className="w-[2vw] relative flex items-center">
+              <div className="w-[4vw] lg:w-[2vw] relative flex items-center">
                 <Image
                   src={Play}
                   alt="play"

@@ -8,166 +8,166 @@ import X from "../../public/Images/socials/X.svg";
 import Youtube from "../../public/Images/socials/Youtube.svg";
 import Link from "next/link";
 const Footer = () => {
-  const footerLinks = [
-    {
-      title: "About Us",
-      subLinks: [
-        {
-          linkName: "Services",
-          link: "#",
-        },
-        {
-          linkName: "Job",
-          link: "#",
-        },
-        {
-          linkName: "Contact",
-          link: "#",
-        },
-        {
-          linkName: "FAQ",
-          link: "#",
-        },
-        {
-          linkName: "Terms",
-          link: "#",
-        },
-      ],
-    },
-    {
-      title: "Privacy",
-      subLinks: [
-        {
-          linkName: "Blog",
-          link: "#",
-        },
-        {
-          linkName: "Help",
-          link: "#",
-        },
-        {
-          linkName: "Support",
-          link: "#",
-        },
-        {
-          linkName: "Feedback",
-          link: "#",
-        },
-        {
-          linkName: "Sitemap",
-          link: "#",
-        },
-      ],
-    },
-    {
-      title: "Partners",
-      subLinks: [
-        {
-          linkName: "Testimonials",
-          link: "#",
-        },
-        {
-          linkName: "Investors",
-          link: "#",
-        },
-        {
-          linkName: "Carrers",
-          link: "#",
-        },
-        {
-          linkName: "Press",
-          link: "#",
-        },
-        {
-          linkName: "Events",
-          link: "#",
-        },
-      ],
-    },
-    {
-      title: "Community",
-      subLinks: [
-        {
-          linkName: "Resources",
-          link: "#",
-        },
-        {
-          linkName: "Partnerships",
-          link: "#",
-        },
-        {
-          linkName: "Advertise",
-          link: "#",
-        },
-        {
-          linkName: "Become a Partner",
-          link: "#",
-        },
-        {
-          linkName: "Support Center",
-          link: "#",
-        },
-      ],
-    },
-    {
-      title: "Knowledge Base",
-      subLinks: [
-        {
-          linkName: "Help & Support",
-          link: "#",
-        },
-        {
-          linkName: "Frequently Asked",
-          link: "#",
-        },
-        {
-          linkName: "Questions",
-          link: "#",
-        },
-        {
-          linkName: "Contact Us",
-          link: "#",
-        },
-        {
-          linkName: "Customer Support",
-          link: "#",
-        },
-        {
-          linkName: "Submit a Ticket",
-          link: "#",
-        },
-      ],
-    },
-    {
-      title: "Company",
-      subLinks: [
-        {
-          linkName: "About Us",
-          link: "#",
-        },
-        {
-          linkName: "Our Mission",
-          link: "#",
-        },
-        {
-          linkName: "Company",
-          link: "#",
-        },
-        {
-          linkName: "News",
-          link: "#",
-        },
-        {
-          linkName: "Newsletter",
-          link: "#",
-        },
-        {
-          linkName: "Company Blog",
-          link: "#",
-        },
-      ],
-    },
-  ];
+    const footerLinks = [
+      {
+        title: "About Us",
+        subLinks: [
+          {
+            linkName: "Services",
+            link: "#",
+          },
+          {
+            linkName: "Job",
+            link: "#",
+          },
+          {
+            linkName: "Contact",
+            link: "#",
+          },
+          {
+            linkName: "FAQ",
+            link: "#",
+          },
+          {
+            linkName: "Terms",
+            link: "#",
+          },
+        ],
+      },
+      {
+        title: "Privacy",
+        subLinks: [
+          {
+            linkName: "Blog",
+            link: "#",
+          },
+          {
+            linkName: "Help",
+            link: "#",
+          },
+          {
+            linkName: "Support",
+            link: "#",
+          },
+          {
+            linkName: "Feedback",
+            link: "#",
+          },
+          {
+            linkName: "Sitemap",
+            link: "#",
+          },
+        ],
+      },
+      {
+        title: "Partners",
+        subLinks: [
+          {
+            linkName: "Testimonials",
+            link: "#",
+          },
+          {
+            linkName: "Investors",
+            link: "#",
+          },
+          {
+            linkName: "Carrers",
+            link: "#",
+          },
+          {
+            linkName: "Press",
+            link: "#",
+          },
+          {
+            linkName: "Events",
+            link: "#",
+          },
+        ],
+      },
+      {
+        title: "Community",
+        subLinks: [
+          {
+            linkName: "Resources",
+            link: "#",
+          },
+          {
+            linkName: "Partnerships",
+            link: "#",
+          },
+          {
+            linkName: "Advertise",
+            link: "#",
+          },
+          {
+            linkName: "Become a Partner",
+            link: "#",
+          },
+          {
+            linkName: "Support Center",
+            link: "#",
+          },
+        ],
+      },
+      {
+        title: "Knowledge Base",
+        subLinks: [
+          {
+            linkName: "Help & Support",
+            link: "#",
+          },
+          {
+            linkName: "Frequently Asked",
+            link: "#",
+          },
+          {
+            linkName: "Questions",
+            link: "#",
+          },
+          {
+            linkName: "Contact Us",
+            link: "#",
+          },
+          {
+            linkName: "Customer Support",
+            link: "#",
+          },
+          {
+            linkName: "Submit a Ticket",
+            link: "#",
+          },
+        ],
+      },
+      {
+        title: "Company",
+        subLinks: [
+          {
+            linkName: "About Us",
+            link: "#",
+          },
+          {
+            linkName: "Our Mission",
+            link: "#",
+          },
+          {
+            linkName: "Company",
+            link: "#",
+          },
+          {
+            linkName: "News",
+            link: "#",
+          },
+          {
+            linkName: "Newsletter",
+            link: "#",
+          },
+          {
+            linkName: "Company Blog",
+            link: "#",
+          },
+        ],
+      },
+    ];
   return (
     <div className="p-10 lg:p-20  bg-[#781393]">
       <div className="top lg:flex items-start justify-between">

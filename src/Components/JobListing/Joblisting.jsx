@@ -5,6 +5,7 @@ import Steps from "./Steps/Steps";
 import Stories from "./Stories/Stories";
 import Connect from "./Connect/Connect";
 import Footer from "../Footer";
+import FaqSection from "./FaqSection/FaqSection";
 
 const Joblisting = () => {
   return (
@@ -14,6 +15,7 @@ const Joblisting = () => {
       <Steps/>
       <Stories/>
       <Connect/>
+      <FaqSection/>
       <Footer/>
     </div>
   );

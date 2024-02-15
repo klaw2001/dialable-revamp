@@ -14,7 +14,7 @@ body{
     transition: all 0.5s;
   }
   .btn:active {
-    scale: 0.9;
+    scale: 0.96;
   }
 
   .montserrat {
@@ -36,8 +36,6 @@ body{
     width: 76%;
     background-color: black;
     top: 0;
-    left: 0;
-    /* right: 0; */
     left: 12%;
 
   }
