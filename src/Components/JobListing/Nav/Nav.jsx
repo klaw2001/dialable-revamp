@@ -44,15 +44,15 @@ const Nav = () => {
         <p className="text-sm text-black font-medium roboto">
           Listed Businesses
         </p>
-        <div className=" items-center flex">
+        <div className="flex items-center mt-4 text-lg">
           <span>
             <MdOutlineLocalPhone />
           </span>
-          <Link href={"tel:1234567890"} className="text-sm hidden lg:block">
+          <Link href={"tel:1234567890"} >
           12345 67890
           </Link>
         </div>
-        <button className="hidden lg:block text-white btn bg-[#FF6004] py-2 px-8 text-sm font-semibold cursor-pointer roboto">
+        <button className="mt-8 text-white btn bg-[#FF6004] py-2 px-8 text-sm font-semibold cursor-pointer roboto">
           Sign Up
         </button>
         </Drawer>

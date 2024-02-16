@@ -2,11 +2,11 @@ import React from "react";
 import Link from "next/link";
 const Connect = () => {
   return (
-    <div className="py-20 px-24 bg-[#781393] flex items-center flex-col gap-4">
-      <h1 className="text-[8.5vw] text-white text-center lg:text-[2.5vw] montserrat w-[48%] font-bold leading-[10vw] lg:leading-[3vw]">
+    <div className="p-10 lg:py-20 lg:px-24 bg-[#781393] flex items-center flex-col gap-4">
+      <h1 className="text-[4.5vw] text-white text-center lg:text-[2.5vw] montserrat lg:w-[48%] font-bold leading-[8vw] lg:leading-[3vw]">
       Connect with New Customers & Grow Your Business
       </h1>
-      <p className="roboto text-white font-medium text-[4.5vw] text-center  lg:text-[1vw]">
+      <p className="roboto text-white font-medium text-[2.5vw] text-center  lg:text-[1vw]">
       Register Your Business Today
       </p>
       
@@ -22,11 +22,11 @@ const Connect = () => {
               </div>
             </div>
 
-            <button className="text-white btn  bg-[#FF6004] py-2 px-8 text-[1.2vw] cursor-pointer montserrat font-medium">
+            <button className="text-white btn  bg-[#FF6004] py-2 px-4 lg:px-8 lg:text-[1.2vw] cursor-pointer montserrat font-medium">
               Start Now
             </button>
           </div>
-          <p className="montserrat text-white text-[1vw]">By continuing, you agree to our  Terms of Use , Privacy & Infringement Policy</p>
+          <p className="montserrat text-white text-[2vw] lg:text-[1vw]">By continuing, you agree to our  Terms of Use , Privacy & Infringement Policy</p>
     </div>
   );
 };

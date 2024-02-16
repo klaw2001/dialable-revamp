@@ -41,7 +41,7 @@ const Register = () => {
             <ul>
               <li className="py-2">
                 <div className="flex items-center gap-2 roboto text-sm lg:text-lg font-normal ">
-                  <div className="relative w-[4vw] lg:w-[2vw]">
+                  <div className="relative w-[7vw] lg:w-[2vw]">
                     <Image
                       src={Check}
                       alt="check"
@@ -53,7 +53,7 @@ const Register = () => {
               </li>
               <li className="py-2">
                 <div className="flex items-center gap-2 roboto text-sm lg:text-lg font-normal ">
-                  <div className="relative w-[4vw] lg:w-[2vw]">
+                  <div className="relative w-[7vw] lg:w-[2vw]">
                     <Image
                       src={Check}
                       alt="check"
@@ -65,7 +65,7 @@ const Register = () => {
               </li>
               <li className="py-2">
                 <div className="flex items-center gap-2 roboto text-sm lg:text-lg font-normal  ">
-                  <div className="relative w-[4vw] lg:w-[2vw]">
+                  <div className="relative w-[7vw] lg:w-[2vw]">
                     <Image
                       src={Check}
                       alt="check"

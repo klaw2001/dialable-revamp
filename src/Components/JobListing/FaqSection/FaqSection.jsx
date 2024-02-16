@@ -28,12 +28,12 @@ const FaqSection = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
   return (
-    <div className="px-16 flex mt-16 flex-col">
+    <div className="px-10 lg:px-16 flex mt-16 flex-col">
       <div className="">
-        <h1 className="text-black text-[3.5vw] font-bold montserrat">
+        <h1 className="text-black text-[6vw] lg:text-[3.5vw] font-bold montserrat">
           Frequently Asked Questions
         </h1>
-        <p className="text-[1.2vw] text-black font-semibold montserrat">
+        <p className="text-[2vw]lg:text-[1.2vw] text-black font-semibold montserrat">
           Your faq catalogue - simplifying complex queries.
         </p>
       </div>
@@ -42,28 +42,28 @@ const FaqSection = () => {
           <div
             onClick={() => handleClick(index)}
             key={index}
-            className="questions cursor-pointer transition-all text-[1.2vw]  font-semibold montserrat border my-4 border-black p-4"
+            className="questions cursor-pointer transition-all text-[3vw] lg:text-[1.2vw]  font-semibold montserrat border my-4 border-black p-4"
           >
             <div className="flex items-center justify-between ">
-              <p className="text-[1.2vw] font-bold montserrat">
+              <p className="text-[2.4vw] lg:text-[1.2vw] font-bold montserrat">
                 {faq.question}
               </p>
               {activeIndex === index ? <FiMinus /> : <FiPlus />}
             </div>
             {activeIndex === index && (
-              <p className="text-[1vw] my-2 font-medium">{faq.ans}</p>
+              <p className="text-[2vw] lg:text-[1vw] my-2 font-medium">{faq.ans}</p>
             )}
           </div>
         ))}
       </div>
-      <div className="flex justify-between items-start">
-        <div className="mt-32">
-          <h1 className="text-[2.3vw] montserrat font-medium">Still have a question?</h1>
+      <div className="lg:flex justify-between items-start">
+        <div className="mt-10  lg:mt-32">
+          <h1 className="text-[4.3vw] lg:text-[2.3vw] montserrat font-medium">Still have a question?</h1>
           <button className="btn border mt-4 montserrat text-[#FF6004] font-medium text-[4.5vw] lg:text-[1.2vw] border-[#FF6004] px-6 py-3">
             Contact
           </button>
         </div>
-        <div className="relative w-[50%]">
+        <div className="relative mt-4 lg:mt-0 w-full lg:w-[50%]">
             <Image src={FaqImg} alt="faq-img" className="object-cover h-full w-full"/>
         </div>
       </div>
