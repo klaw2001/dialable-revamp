@@ -5,7 +5,7 @@ import Image from "next/image";
 const TopCategories = () => {
   return (
     <div className="flex  items-center overflow-hidden relative p-28 z-[3]">
-      <div className="w-[90%] grow-[.5]">
+      <div className="w-[90%]  lg:grow-[.7] xl:grow-[.4]">
         <div className="flex justify-between">
           <h1 className="text-black montserrat font-semibold lg:text-[3.5vw]">
             Top Categories
