@@ -1,24 +1,35 @@
-import Image from 'next/image'
-import React from 'react'
-import accessibility from "../../public/Images/accessibility.svg"
+import Image from "next/image";
+import React from "react";
 import { FaAngleDown } from "react-icons/fa6";
 import { PiGlobe } from "react-icons/pi";
 const TopBar = () => {
   return (
-    <div className='flex justify-between items-center lg:pr-14 lg:pl-20 px-10 py-4  montserrat'>
-        <div className='flex items-center justify-center gap-2 text-xs cursor-pointer font-normal'>
-            <div className='image-cont relative w-[6vw] lg:w-[2vw]'>
-                <Image src={accessibility} alt='logo' objectFit='cover' className='h-full w-full'/>
-            </div>
-            <span className='text-xs'>Accessibility Settings</span>
-            <FaAngleDown  />
+    <div className="flex bg-[#FF8037] justify-between items-center lg:px-4 px-10 py-4  montserrat">
+      <div className="flex items-center justify-center gap-2 text-xs cursor-pointer font-normal">
+        <div className="text-white font-semibold text-[.8vw]">
+          FREE DELIVERY on all orders above 999 AED | No coupon required
         </div>
-        <div className='flex items-center justify-center font-medium gap-2 text-lg cursor-pointer'>
-          <PiGlobe />
-            <span className='text-xs'>English</span>
+      </div>
+      <div className="flex items-center justify-center font-medium gap-3">
+        <div className="text-lg flex items-center justify-center  cursor-pointer gap-[.2vw] text-white font-semibold">
+          <PiGlobe/>
+          <select name="" id="" className="border-none bg-transparent text-[.8vw] font-semibold ">
+            <option>Language</option>
+          </select>
         </div>
+        <div className="country  px-2 text-white border-2 border-white">
+          <select className="py-2 text-[.85vw] bg-transparent border-none focus-visible:outline-none">
+            <option value="">Select Country</option>
+          </select>
+        </div>
+        <div className="State  px-2 text-white border-2 border-white">
+          <select className="bg-transparent py-2 text-[.85vw] border-none focus-visible:outline-none">
+            <option value="" className="p-2">Select State</option>
+          </select>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default TopBar
+export default TopBar;
