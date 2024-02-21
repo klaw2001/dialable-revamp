@@ -10,7 +10,7 @@ const TopCategories = () => {
           <h1 className="text-black montserrat font-semibold lg:text-[3.5vw]">
             Top Categories
           </h1>
-          <button className="text-black montserrat font-bold h-[4vw]  btn text-[1vw] py-2 px-4 leading-none border-[1.5px] border-black ">
+          <button className="text-black montserrat shadow-xl font-bold h-[4vw]  btn text-[1vw] py-2 px-4 leading-none border-[1.5px] border-black ">
             View all categories
           </button>
         </div>
@@ -33,13 +33,13 @@ const TopCategories = () => {
             <div className="flex absolute right-[-16.5%]  top-[75%] gap-4 rotate-[-90deg] w-[10%] ">
               <Link
                 href="#"
-                className="btn text-black bg-[#FF8037] border rounded-lg border-black text-[1.5vw] font-semibold montserrat leading-none px-14 py-12"
+                className="btn text-black box-shadow-2 bg-[#FF8037] border rounded-lg border-black text-[1.5vw] font-semibold montserrat leading-none px-14 py-12"
               >
                 Advertise
               </Link>
               <Link
                 href="#"
-                className="btn text-black bg-[#FF8038] border rounded-lg border-black text-[1.5vw] font-semibold montserrat leading-none px-12 py-12"
+                className="btn text-black box-shadow-2 bg-[#FF8038] border rounded-lg border-black text-[1.5vw] font-semibold montserrat leading-none px-12 py-12"
               >
                 Free&nbsp;Listing
               </Link>

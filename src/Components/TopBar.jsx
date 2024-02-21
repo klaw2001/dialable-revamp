@@ -12,7 +12,7 @@ const TopBar = () => {
       </div>
       <div className="flex items-center justify-center font-medium gap-3">
         <div className="text-lg flex items-center justify-center  cursor-pointer gap-[.2vw] text-white font-semibold">
-          <PiGlobe/>
+          <PiGlobe size="1.5vw"/>
           <select name="" id="" className="border-none bg-transparent text-[.8vw] font-semibold ">
             <option>Language</option>
           </select>
