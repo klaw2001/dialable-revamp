@@ -5,6 +5,23 @@ body{
   scroll-behavior: smooth !important;
   overflow-x: hidden
 }
+
+.swiper{
+  overflow: unset !important;
+ 
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+  bottom: -28px !important;
+}
+
+.swiper-pagination{
+  text-align: left !important;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: black !important;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
