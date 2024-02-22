@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Serif:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Serif:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,900&display=swap');
 
 
 body{
@@ -6,6 +6,8 @@ body{
   overflow-x: hidden
 }
 
+
+/* swiper */
 .swiper{
   overflow: unset !important;
  
@@ -22,6 +24,32 @@ body{
 .swiper-pagination-bullet-active{
   background-color: black !important;
 }
+
+
+/* accessebility */
+
+.accessibility{
+  position: relative;
+  z-index: 2;
+  width: unset !important;
+  cursor: pointer;
+
+}
+.tools{
+  position: absolute !important;
+  transform: translateY(-1rem) !important;
+  opacity: 0 !important;
+  transition: all .3s !important;
+  top: 120% !important;
+  z-index: 10 !important;
+}
+
+.accessibility:hover .tools{
+
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -40,6 +68,9 @@ body{
   }
   .roboto{
     font-family: 'Roboto Serif', serif;
+  }
+  .Inter{
+    font-family: "Inter", sans-serif;
   }
   .box-shadow{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

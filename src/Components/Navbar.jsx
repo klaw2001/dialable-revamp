@@ -40,7 +40,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className="flex items-center justify-between lg:px-8 px-10 py-6 border-t border-b bg-white border-zinc-300 montserrat sticky top-0 z-[99]">
+    <div className="flex items-center justify-between  lg:px-8 px-10 py-6 border-t border-b bg-white border-zinc-300 montserrat sticky top-0 z-[99]">
       <div className="logo-links flex  items-center">
         <div className="logo relative w-[33vw] lg:w-[11vw]">
           <Link href={"#"}>
@@ -89,14 +89,63 @@ const Navbar = () => {
           </button>
         </Drawer>
       </div>
-      <div className="flex gap-5 items-center">
-        <div className="accessibility text-black text-sm flex items-center">
-          <div>
-            <RxAccessibility size="2.5rem" />
+      <div className="flex gap-5 items-center relative">
+        <div className="cursor-pointer accessibility ">
+          <div className=" text-black  cursor-pointer text-sm gap-1 flex items-center">
+            <div>
+              <RxAccessibility size="2.5rem" />
+            </div>
+            <FaChevronDown />
           </div>
-          <select name="" className="bg-transparent border-none" id="">
-            <option value=""></option>
-          </select>
+          <div className="tools shadow-xl   bg-white py-6 rounded-xl px-8">
+            <div>
+              <h1 className="montserrat text-black uppercase text-[1vw] font-semibold">
+                Accessibility Tools
+              </h1>
+
+              <div className="flex flex-col items-start border-b-2 gap-3 mt-6">
+                <h3 className="font-medium text-[1vw]">Contrast:</h3>
+                <div className="flex items-center gap-5 mb-4">
+                  <div className="white cursor-pointer">
+                    <div className="bg-white mb-2 border-2 border-black w-[4vw] h-[4vw] rounded-full"></div>
+                    <span className="text-black text-xs font-normal montserrat">
+                      White Mode
+                    </span>
+                  </div>
+                  <div className="black cursor-pointer">
+                    <div className="bg-black mb-2 border-2 border-black w-[4vw] h-[4vw] rounded-full"></div>
+                    <span className="text-black text-xs font-normal montserrat">
+                      Dark Mode
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <h3 className="font-medium text-[.94vw] mt-6">Text Size:</h3>
+              <div className="flex items-center gap-4 mt-4">
+                <div className="border-2 w-[4vw] flex items-center justify-center border-black p-2">
+                  <span className="text-[.86vw] text-center font-semibold">
+                    A
+                  </span>
+                </div>
+                <div className="border-2 w-[4vw] flex items-center justify-center border-black p-2">
+                  <span className="text-[.96vw] text-center font-semibold">
+                    A
+                  </span>
+                </div>
+                <div className="border-2 w-[4vw] flex items-center justify-center border-black p-2">
+                  <span className="text-[1vw] text-center font-semibold">
+                    A
+                  </span>
+                </div>
+                <div className="border-2 w-[4vw] flex items-center justify-center border-black p-2">
+                  <span className="text-[1.2vw] text-center font-semibold">
+                    A
+                  </span>
+                </div>
+              </div>
+            </div>
+            <button className="text-white montserrat text-[1.3vw] font-semibold btn text-center bg-[#781393] py-2 px-4 w-[100%] mt-4">Reset</button>
+          </div>
         </div>
         <div className="search montserrat">
           <form action="">
@@ -113,7 +162,7 @@ const Navbar = () => {
         </div>
         <Link
           href={"/joblisting"}
-          className="hidden lg:block text-white btn font-semibold bg-[#781393] py-3 px-4 montserrat text-md cursor-pointer"
+          className="hidden lg:block text-white text-[1vw] btn font-semibold bg-[#781393] py-3 px-4 montserrat text-md cursor-pointer"
         >
           Sign Up
         </Link>
