@@ -33,13 +33,13 @@ const TopCategories = () => {
             <div className="flex absolute right-[-16.5%]  top-[75%] gap-4 rotate-[-90deg] w-[10%] ">
               <Link
                 href="#"
-                className="btn text-black box-shadow-2 bg-[#FF8037] border rounded-lg border-black text-[1.5vw] font-semibold montserrat leading-none px-14 py-12"
+                className="btn text-white box-shadow-2 bg-[#781393]  rounded-lg  text-[2vw] font-semibold montserrat leading-none px-12 py-10"
               >
                 Advertise
               </Link>
               <Link
                 href="#"
-                className="btn text-black box-shadow-2 bg-[#FF8038] border rounded-lg border-black text-[1.5vw] font-semibold montserrat leading-none px-12 py-12"
+                className="btn text-white box-shadow-2 bg-[#FF8038]  rounded-lg  text-[2vw] font-semibold montserrat leading-none px-12 py-10"
               >
                 Free&nbsp;Listing
               </Link>

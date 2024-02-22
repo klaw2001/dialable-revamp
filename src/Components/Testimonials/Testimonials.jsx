@@ -32,7 +32,7 @@ const Testimonials = () => {
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           spaceBetween={200}
-          slidesPerView={2.9}
+          slidesPerView={2.6}
           loop="true"
           navigation
           pagination={{ clickable: true }}
@@ -46,7 +46,7 @@ const Testimonials = () => {
         >
           <SwiperSlide>
             {" "}
-            <div className="testionial w-[35vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
+            <div className="testionial w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
               <div className="flex items-center gap-1">
                 <FaStar />
                 <FaStar />
@@ -80,7 +80,7 @@ const Testimonials = () => {
           </SwiperSlide>
           <SwiperSlide>
             {" "}
-            <div className="testionial w-[35vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
+            <div className="testionial w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
               <div className="flex items-center gap-1">
                 <FaStar />
                 <FaStar />
@@ -114,7 +114,7 @@ const Testimonials = () => {
           </SwiperSlide>
           <SwiperSlide>
             {" "}
-            <div className="testionial w-[35vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
+            <div className="testionial w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
               <div className="flex items-center gap-1">
                 <FaStar />
                 <FaStar />
@@ -148,7 +148,7 @@ const Testimonials = () => {
           </SwiperSlide>
           <SwiperSlide>
             {" "}
-            <div className="testionial w-[35vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
+            <div className="testionial w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
               <div className="flex items-center gap-1">
                 <FaStar />
                 <FaStar />
@@ -182,7 +182,7 @@ const Testimonials = () => {
           </SwiperSlide>
           <SwiperSlide>
             {" "}
-            <div className="testionial w-[35vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
+            <div className="testionial w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
               <div className="flex items-center gap-1">
                 <FaStar />
                 <FaStar />
@@ -216,7 +216,7 @@ const Testimonials = () => {
           </SwiperSlide>
           <SwiperSlide>
             {" "}
-            <div className="testionial w-[35vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
+            <div className="testionial w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
               <div className="flex items-center gap-1">
                 <FaStar />
                 <FaStar />
@@ -251,7 +251,7 @@ const Testimonials = () => {
           
         </Swiper>
 
-        {/* <div className="testionial w-[35vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
+        {/* <div className="testionial w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
           <div className="flex items-center gap-1">
             <FaStar />
             <FaStar />
@@ -282,7 +282,7 @@ const Testimonials = () => {
             </div>
           </div>
         </div>
-        <div className="testionial w-[35vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
+        <div className="testionial w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
           <div className="flex items-center gap-1">
             <FaStar />
             <FaStar />
@@ -313,7 +313,7 @@ const Testimonials = () => {
             </div>
           </div>
         </div>
-        <div className="testionial w-[35vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
+        <div className="testionial w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
           <div className="flex items-center gap-1">
             <FaStar />
             <FaStar />

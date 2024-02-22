@@ -3,6 +3,7 @@ import React from "react";
 import award_1 from "../../public/Images/award1.png";
 import award_2 from "../../public/Images/award2.png";
 import placeholder from "../../public/Images/Lightbox.png";
+import text_speech from "../../public/Images/text-to-speech.svg";
 const Hero = () => {
   
   return (
@@ -17,6 +18,12 @@ const Hero = () => {
         />
       </div>
       <div className="hero-cont lg:w-[45%]  sm:w-full flex items-start gap-6  flex-col  ">
+        <button className="flex items-center gap-3 p-2 border-2 btn border-black text-black montserrat uppercase font-bold">
+          <div className="w-[1.5vw]">
+            <Image src={text_speech} alt="text-to-speech" className="object-cover h-full w-full"/>
+          </div>
+          <span>Listen</span>
+        </button>
         <h1 className="lg:text-[3.5vw] text-[10vw] leading-[13vw] lg:leading-[5vw] font-semibold text-[black]">
           Welcome to Dialable
         </h1>

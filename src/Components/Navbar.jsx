@@ -10,6 +10,7 @@ import { IoCartOutline } from "react-icons/io5";
 import { Button, Drawer } from "antd";
 import { useRouter } from "next/navigation";
 import Menu from "../../public/Images/menu.svg";
+import { FaChevronDown } from "react-icons/fa6";
 
 const Navbar = () => {
   const router = useRouter();
@@ -51,14 +52,15 @@ const Navbar = () => {
             <Link
               key={index}
               href={item.href}
-              className="text-zinc-600 font-medium hover:text-black"
+              className="text-zinc-600 font-medium cursor-pointer hover:text-black"
             >
               {index === 2 ? (
                 <span>{item.title}</span>
               ) : (
-                <select className="flex gap-2 items-center">
-                  <option value="">{item.title}</option>
-                </select>
+                <div className="flex gap-2 items-center">
+                  <span value="">{item.title}</span>
+                  <FaChevronDown />
+                </div>
               )}
             </Link>
           ))}
