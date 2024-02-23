@@ -1,7 +1,10 @@
+'use client'
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const ContactUs = () => {
+    const [active, setActive]=useState("sydney")
+  
   return (
     <div className="p-20">
       <div>
@@ -14,7 +17,7 @@ const ContactUs = () => {
       </div>
       <div className="flex my-12">
         <div className="w-[45%]">
-          <div className="flex flex-col gap-3 my-10">
+          <div onClick={()=>setActive("sydney")} className={active==="sydney"?`flex cursor-pointer flex-col gap-3 my-10 p-2  border-l-[3px] border-black`:`flex flex-col gap-3 my-10 p-2 `}>
             <h1 className="text-black tracking-tight capitalize text-[2vw]  font-bold">
               Sydney
             </h1>
@@ -25,7 +28,7 @@ const ContactUs = () => {
               View Map
             </Link>
           </div>
-          <div className="flex flex-col gap-3 my-10">
+          <div onClick={()=>setActive("newyork")} className={active==="newyork"?`flex cursor-pointer flex-col gap-3 my-10 p-2  border-l-[3px] border-black`:`flex flex-col gap-3 my-10 p-2 `}>
             <h1 className="text-black tracking-tight capitalize text-[2vw]  font-bold">
               Newyork
             </h1>
@@ -34,7 +37,7 @@ const ContactUs = () => {
               View Map
             </Link>
           </div>
-          <div className="flex flex-col gap-3 my-10">
+          <div onClick={()=>setActive("london")} className={active==="london"?`flex cursor-pointer flex-col gap-3 my-10 p-2  border-l-[3px] border-black`:`flex flex-col gap-3 my-10 p-2 `}>
             <h1 className="text-black tracking-tight capitalize text-[2vw]  font-bold">
               London
             </h1>
@@ -49,7 +52,6 @@ const ContactUs = () => {
             src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d13251.162394346955!2d151.19646880485027!3d-33.86928710496642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s123%20Sample%20St%2C%20Sydney%20NSW%202000%20AU!5e0!3m2!1sen!2sin!4v1708677816757!5m2!1sen!2sin"
             className="h-full w-full"
             style={{ border: 0 }}
-            allowfullscreen=""
             loading="lazy"
           ></iframe>
         </div>
