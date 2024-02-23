@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Logo from "../../public/Images/dialable-logo.png";
 import { RxAccessibility } from "react-icons/rx";
 import { IoCartOutline } from "react-icons/io5";
@@ -13,11 +13,28 @@ import Menu from "../../public/Images/menu.svg";
 import { FaChevronDown } from "react-icons/fa6";
 
 const Navbar = () => {
-  const router = useRouter();
   const [open, setOpen] = useState(false);
+  const toolBox = useRef(null);
+
   const showDrawer = () => {
     setOpen(true);
   };
+
+  const handleMouseOver = () => {
+    toolBox.current.style.opacity = "1";
+    toolBox.current.style.transform = "translateY(0)";
+    toolBox.current.style.transform="scaleY(1)";
+
+    console.log("first");
+  };
+  const handleMouseLeave = () => {
+    setTimeout(() => {
+      toolBox.current.style.opacity = "0";
+      toolBox.current.style.transform = "translateY(-1rem)";
+      toolBox.current.style.transform = "scaleY(0)";
+    }, 3000);
+  };
+
   const onClose = () => {
     setOpen(false);
   };
@@ -36,11 +53,12 @@ const Navbar = () => {
     },
     {
       title: "About Us",
-      href: "#",
+      href: "/about",
     },
   ];
+
   return (
-    <div className="flex items-center justify-between  lg:px-8 px-10 py-6 border-t border-b bg-white border-zinc-300 montserrat sticky top-0 z-[99]">
+    <div className="flex items-center justify-between   lg:px-8 px-10 py-6 border-t border-b bg-white border-zinc-300 montserrat sticky top-0 z-[99]">
       <div className="logo-links flex  items-center">
         <div className="logo relative w-[33vw] lg:w-[11vw]">
           <Link href={"#"}>
@@ -90,14 +108,21 @@ const Navbar = () => {
         </Drawer>
       </div>
       <div className="flex gap-5 items-center relative">
-        <div className="cursor-pointer accessibility ">
-          <div className=" text-black  cursor-pointer text-sm gap-1 flex items-center">
+        <div className="accessibility ">
+          <div
+            onMouseOver={handleMouseOver}
+            onMouseLeave={handleMouseLeave}
+            className="cursor-pointer text-black   text-sm gap-1 flex items-center"
+          >
             <div>
               <RxAccessibility size="2.5rem" />
             </div>
             <FaChevronDown />
           </div>
-          <div className="tools shadow-xl   bg-white py-6 rounded-xl px-8">
+          <div
+            ref={toolBox}
+            className="tools shadow-xl   bg-white py-6 rounded-xl px-8"
+          >
             <div>
               <h1 className="montserrat text-black uppercase text-[1vw] font-semibold">
                 Accessibility Tools
@@ -106,13 +131,13 @@ const Navbar = () => {
               <div className="flex flex-col items-start border-b-2 gap-3 mt-6">
                 <h3 className="font-medium text-[1vw]">Contrast:</h3>
                 <div className="flex items-center gap-5 mb-4">
-                  <div className="white cursor-pointer">
+                  <div className="white">
                     <div className="bg-white mb-2 border-2 border-black w-[4vw] h-[4vw] rounded-full"></div>
                     <span className="text-black text-xs font-normal montserrat">
                       White Mode
                     </span>
                   </div>
-                  <div className="black cursor-pointer">
+                  <div className="black">
                     <div className="bg-black mb-2 border-2 border-black w-[4vw] h-[4vw] rounded-full"></div>
                     <span className="text-black text-xs font-normal montserrat">
                       Dark Mode
@@ -144,7 +169,9 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <button className="text-white montserrat text-[1.3vw] font-semibold btn text-center bg-[#781393] py-2 px-4 w-[100%] mt-4">Reset</button>
+            <button className="text-white montserrat text-[1.3vw] font-semibold btn text-center bg-[#781393] py-2 px-4 w-[100%] mt-4">
+              Reset
+            </button>
           </div>
         </div>
         <div className="search montserrat">

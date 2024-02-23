@@ -32,23 +32,25 @@ body{
   position: relative;
   z-index: 2;
   width: unset !important;
-  cursor: pointer;
+
 
 }
 .tools{
   position: absolute !important;
-  transform: translateY(-1rem) !important;
-  opacity: 0 !important;
+  transform: translateY(-1rem) ;
+  opacity: 0 ;
   transition: all .3s !important;
   top: 120% !important;
-  z-index: 10 !important;
+  z-index: -10;
+  transform: scaleY(0);
+  transform-origin: top;
 }
 
-.accessibility:hover .tools{
+/* .accessibility:hover .tools{
 
   opacity: 1 !important;
   transform: translateY(0) !important;
-}
+} */
 
 @tailwind base;
 @tailwind components;

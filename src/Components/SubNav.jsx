@@ -33,7 +33,7 @@ const SubNav = () => {
     },
   ];
   return (
-    <div className="py-4 px-8 flex items-center justify-between border border-b text-black">
+    <div className="py-4 px-8 flex items-center justify-between relative z-[98] border border-b text-black">
       {subNavLinks.map((link, i) => (
         <div key={i}>
           <Link href={link.href} className="text-[1vw] font-medium montserrat">
