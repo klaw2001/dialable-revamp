@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Filter from "../../../../public/Images/Filters.svg";
 import Image from "next/image";
 import { Select } from "antd";
@@ -9,6 +11,12 @@ import { IoCloseOutline } from "react-icons/io5";
 import marketData from "../index.js";
 import { RiStarSFill } from "react-icons/ri";
 const Products = () => {
+  const [activePage, setActivePage] = useState(1);
+  const[visibleItem, setvisibleItem]=useState(15)
+ 
+  const loadMore=()=>{
+    setvisibleItem(prev=>prev+15)
+  }
   return (
     <div className="p-20">
       <div className="breadcrumb text-[1vw] text-black font-medium montserrat">
@@ -41,7 +49,7 @@ const Products = () => {
         <span className="text-black Inter text-[1vw]">Showing 15 of 100</span>
       </div>
       <div className="flex my-20 items-center justify-between gap-8 flex-wrap">
-        {marketData.map((product, i) => (
+        {marketData.slice(0,visibleItem).map((product, i) => (
           <div key={i} className=" product-card border w-[27vw] py-3 px-2">
             <div className="py-2 px-3 bg-[#F4F4F4] w-24 flex  font-medium items-center gap-2 text-black Inter text-[1vw]">
               <span className="block grow ml-2">In Stock</span>
@@ -84,14 +92,35 @@ const Products = () => {
       </div>
       <div className="pagination py-3 flex items-center  justify-between border-y border-black text-[1.2vw] font-semibold">
         <div className="flex items-center gap-4">
-          <div className="w-[2vw] btn cursor-pointer flex items-center justify-center border border-black rounded-full">
+          <div
+          onClick={()=>setActivePage(1)}
+            className={`w-[2vw] btn cursor-pointer flex items-center justify-center ${
+              activePage === 1 && `border border-black rounded-full`
+            }`}
+          >
             1
           </div>
-          <div className="w-[2vw] btn cursor-pointer flex items-center justify-center">2</div>
-          <div className="w-[2vw] btn cursor-pointer flex items-center justify-center">3</div>
+          <div
+          onClick={()=>setActivePage(2)}
+            className={`w-[2vw] btn cursor-pointer flex items-center justify-center ${
+              activePage === 2 && `border border-black rounded-full`
+            }`}
+          >
+            2
+          </div>
+          <div
+          onClick={()=>setActivePage(3)}
+            className={`w-[2vw] btn cursor-pointer flex items-center justify-center ${
+              activePage === 3 && `border border-black rounded-full`
+            }`}
+          >
+            3
+          </div>
           <FaAngleRight size={".9vw"} />
         </div>
-        <button className="button py-3 px-5 border-2 border-black text-[1vw]">Load More</button>
+        <button onClick={loadMore} className="button py-3 px-5 border-2 border-black text-[1vw]">
+          Load More
+        </button>
       </div>
     </div>
   );

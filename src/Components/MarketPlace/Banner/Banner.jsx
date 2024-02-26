@@ -7,6 +7,8 @@ const Banner = () => {
     <div className="relative">
       <Image
         src={Discount}
+        loading="lazy"
+        placeholder="blur"
         alt="banner"
         className="object-cover h-full w-full"
       />
