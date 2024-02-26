@@ -2,38 +2,29 @@ import React from "react";
 import marketData from "./index.js";
 import Image from "next/image";
 import { RiStarSFill,RiStarLine } from "react-icons/ri";
+import TopBar from "../TopBar.jsx";
+import Navbar from "../Navbar.jsx";
+import SubNav from "../SubNav.jsx";
+import Footer from "../Footer.jsx";
+import Offers from "./Offers/Offers.jsx";
+import Banner from "./Banner/Banner.jsx";
+import Products from "./Products/Products.jsx";
+import OurNewsLetter from "../AboutUs/OurNewsLetter/OurNewsLetter.jsx";
 
 const MarketPlace = () => {
   return (
-    <div className="flex items-center my-10 justify-center gap-10 flex-col p-10 lg:p-20">
-      <div className="market-cont mt-20 flex items-center justify-center gap-6  flex-col">
-        <h1 className="text-[9vw] lg:text-[3vw] w-full lg:w-[53%] text-center font-bold montserrat leading-[12vw] lg:leading-[3.5vw]">
-          Explore Our Marketplace and Find Amazing Products
-        </h1>
-        <p className="font-normal roboto text-lg w-full lg:w-[72%] text-center">{`Welcome to our marketplace, where you can browse and purchase a wide range of products and services. With just a few clicks, you'll find exactly what you're looking for.`}</p>
-        <button className="text-white btn bg-[#781393] py-4 px-8 text-md montserrat">Browse</button>
+    <div>
+      <TopBar/>
+      <Navbar/>
+      <SubNav/>
+      <Offers/>
+      <Banner/>
+      <Products/>
+      <div className="mt-20 mb-40">
+
+      <OurNewsLetter/>
       </div>
-      <div className="block lg:flex items-center justify-center p-[2vw] mt-6 gap-[2vw]">
-          {marketData.map((item,index)=>(
-            <div className="relative montserrat my-10 lg:my-0" key={index}>
-                <div className="img relative w-[80vw] lg:w-[28vw] bg-white mb-2">
-                  <Image src={item.img} alt={item.title} objectFit="cover" className="w-full h-full mix-blend-multiply"/>
-                </div>
-                <div className="cardinfo relative bar right-[-1%] z-[2] w-[98%] bg-white box-shadow  p-4 mt-[-10%]">
-                  <div className="flex items-center justify-between">
-                    <h1 className="text-[3.5vw] lg:text-[1.5vw] font-semibold">{item.title}</h1>
-                    {index===2?<span className="flex"><RiStarSFill /><RiStarSFill /><RiStarSFill /><RiStarSFill /><RiStarLine/></span>:<span className="flex items-center"><RiStarSFill /><RiStarSFill /><RiStarSFill /><RiStarSFill /><RiStarSFill /></span>}
-                  </div>
-                  <p className="text-black font-medium text-[2.5vw] lg:text-[.9vw]">{item.desc}</p>
-                  <div className="flex items-center justify-between mt-2 ">
-                    <div className="tag p-2 bg-[#F4F4F4] rounded text-[#8F8F8F] text-[2vw] lg:text-[.8vw]">{item.cat}</div>
-                    <h1 className="text-black font-semibold text-[3vw] lg:text-[1.1vw]">{item.price}</h1>
-                  </div>
-                  <button className="w-full mt-6 btn px-4 py-2 border-2 border-black text-black font-medium">Add To Cart</button>
-                </div>
-            </div>
-          ))}
-      </div>
+      <Footer/>
     </div>
   );
 };

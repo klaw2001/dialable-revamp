@@ -1,56 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Serif:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Serif:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,900&display=swap");
 
-
-body{
+body {
   scroll-behavior: smooth !important;
-  overflow-x: hidden
+  overflow-x: hidden;
 }
-
 
 /* swiper */
-.swiper{
+.swiper {
   overflow: unset !important;
- 
 }
 
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
   bottom: -28px !important;
 }
 
-.swiper-pagination{
+.swiper-pagination {
   text-align: left !important;
 }
 
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
   background-color: black !important;
 }
 
-
 /* accessebility */
 
-.accessibility{
+.accessibility {
   position: relative;
   z-index: 2;
   width: unset !important;
-
-
 }
-.tools{
+.tools {
   position: absolute !important;
-  transform: translateY(-1rem) ;
-  opacity: 0 ;
-  transition: all .3s !important;
+
   top: 120% !important;
-  z-index: -10;
-  transform: scaleY(0);
-  transform-origin: top;
+
+ 
+  display: none;
 }
 
-/* .accessibility:hover .tools{
-
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-} */
+.accessibility:hover .tools {
+  display: block;
+}
 
 @tailwind base;
 @tailwind components;
@@ -68,22 +61,22 @@ body{
   .montserrat {
     font-family: "Montserrat", sans-serif;
   }
-  .roboto{
-    font-family: 'Roboto Serif', serif;
+  .roboto {
+    font-family: "Roboto Serif", serif;
   }
-  .Inter{
+  .Inter {
     font-family: "Inter", sans-serif;
   }
-  .box-shadow{
+  .box-shadow {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
-  .box-shadow-2{
-    box-shadow:-5px 11px 20px 0px rgba(0, 0, 0, 0.25);
+  .box-shadow-2 {
+    box-shadow: -5px 11px 20px 0px rgba(0, 0, 0, 0.25);
   }
-  .bar{
+  .bar {
     position: relative;
   }
-  .bar::after{
+  .bar::after {
     content: "";
     position: absolute;
     height: 1.5px;
@@ -91,10 +84,9 @@ body{
     background-color: black;
     top: 0;
     left: 12%;
-
   }
-  .Transition{
-    transition: all .5s;
+  .Transition {
+    transition: all 0.5s;
   }
   /* .connect{
     background-image: url('./Images/connect.png');
@@ -103,7 +95,6 @@ body{
 
   } */
 }
-
 
 .ant-drawer .ant-drawer-header-title {
   flex-direction: row-reverse !important;

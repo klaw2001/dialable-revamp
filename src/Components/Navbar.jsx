@@ -20,20 +20,20 @@ const Navbar = () => {
     setOpen(true);
   };
 
-  const handleMouseOver = () => {
-    toolBox.current.style.opacity = "1";
-    toolBox.current.style.transform = "translateY(0)";
-    toolBox.current.style.transform="scaleY(1)";
+  // const handleMouseOver = () => {
+  //   toolBox.current.style.opacity = "1";
+  //   toolBox.current.style.transform = "translateY(0)";
+  //   toolBox.current.style.transform="scaleY(1)";
 
-    console.log("first");
-  };
-  const handleMouseLeave = () => {
-    setTimeout(() => {
-      toolBox.current.style.opacity = "0";
-      toolBox.current.style.transform = "translateY(-1rem)";
-      toolBox.current.style.transform = "scaleY(0)";
-    }, 3000);
-  };
+  //   console.log("first");
+  // };
+  // const handleMouseLeave = () => {
+  //   setTimeout(() => {
+  //     toolBox.current.style.opacity = "0";
+  //     toolBox.current.style.transform = "translateY(-1rem)";
+  //     toolBox.current.style.transform = "scaleY(0)";
+  //   }, 3000);
+  // };
 
   const onClose = () => {
     setOpen(false);
@@ -49,7 +49,7 @@ const Navbar = () => {
     },
     {
       title: "MarketPlace",
-      href: "#",
+      href: "/marketplace",
     },
     {
       title: "About Us",
@@ -61,7 +61,7 @@ const Navbar = () => {
     <div className="flex items-center justify-between   lg:px-8 px-10 py-6 border-t border-b bg-white border-zinc-300 montserrat sticky top-0 z-[99]">
       <div className="logo-links flex  items-center">
         <div className="logo relative w-[33vw] lg:w-[11vw]">
-          <Link href={"#"}>
+          <Link href={"/"}>
             <Image src={Logo} alt="dialable-logo" objectFit="cover" />
           </Link>
         </div>
@@ -110,8 +110,7 @@ const Navbar = () => {
       <div className="flex gap-5 items-center relative">
         <div className="accessibility ">
           <div
-            onMouseOver={handleMouseOver}
-            onMouseLeave={handleMouseLeave}
+           
             className="cursor-pointer text-black   text-sm gap-1 flex items-center"
           >
             <div>
@@ -120,7 +119,7 @@ const Navbar = () => {
             <FaChevronDown />
           </div>
           <div
-            ref={toolBox}
+        
             className="tools shadow-xl   bg-white py-6 rounded-xl px-8"
           >
             <div>
@@ -131,13 +130,13 @@ const Navbar = () => {
               <div className="flex flex-col items-start border-b-2 gap-3 mt-6">
                 <h3 className="font-medium text-[1vw]">Contrast:</h3>
                 <div className="flex items-center gap-5 mb-4">
-                  <div className="white">
+                  <div className="white cursor-pointer">
                     <div className="bg-white mb-2 border-2 border-black w-[4vw] h-[4vw] rounded-full"></div>
                     <span className="text-black text-xs font-normal montserrat">
                       White Mode
                     </span>
                   </div>
-                  <div className="black">
+                  <div className="black cursor-pointer">
                     <div className="bg-black mb-2 border-2 border-black w-[4vw] h-[4vw] rounded-full"></div>
                     <span className="text-black text-xs font-normal montserrat">
                       Dark Mode
@@ -147,22 +146,22 @@ const Navbar = () => {
               </div>
               <h3 className="font-medium text-[.94vw] mt-6">Text Size:</h3>
               <div className="flex items-center gap-4 mt-4">
-                <div className="border-2 w-[4vw] flex items-center justify-center border-black p-2">
+                <div className="border-2 w-[4vw] cursor-pointer flex items-center justify-center border-black p-2">
                   <span className="text-[.86vw] text-center font-semibold">
                     A
                   </span>
                 </div>
-                <div className="border-2 w-[4vw] flex items-center justify-center border-black p-2">
+                <div className="border-2 w-[4vw] cursor-pointer flex items-center justify-center border-black p-2">
                   <span className="text-[.96vw] text-center font-semibold">
                     A
                   </span>
                 </div>
-                <div className="border-2 w-[4vw] flex items-center justify-center border-black p-2">
+                <div className="border-2 w-[4vw] cursor-pointer flex items-center justify-center border-black p-2">
                   <span className="text-[1vw] text-center font-semibold">
                     A
                   </span>
                 </div>
-                <div className="border-2 w-[4vw] flex items-center justify-center border-black p-2">
+                <div className="border-2 w-[4vw] cursor-pointer flex items-center justify-center border-black p-2">
                   <span className="text-[1.2vw] text-center font-semibold">
                     A
                   </span>

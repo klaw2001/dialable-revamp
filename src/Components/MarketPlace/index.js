@@ -6,14 +6,14 @@ const marketData = [
     title: "Insulin Cooler Bottle",
     desc: `2-8℃ Medical Storage Refrigerator for Vaccine Diabetic`,
     cat: "Diagonostic tool and supplies",
-    price: "₹2500 /-",
+    price: "₹2500",
     img:Bottle,
   },
   {
-    title: "Overbed Table",
+    title: "Healthshine Grade 1 Air Mattress Overlay",
     desc: `Adjustable Height Office Work Station Desk Side Table`,
     cat: "Hospital & homecare furniture",
-    price: "₹1999 /-",
+    price: "₹1999",
     img:Bed,
 
   },
@@ -21,7 +21,99 @@ const marketData = [
     title: "Ear Plugs",
     desc: `Reusable Silicone Earplugs for Hearing Protection`,
     cat: "Orthopedic",
-    price: "₹500 /-",
+    price: "₹500",
+    img:Buds,
+
+  },
+  {
+    title: "Insulin Cooler Bottle",
+    desc: `2-8℃ Medical Storage Refrigerator for Vaccine Diabetic`,
+    cat: "Diagonostic tool and supplies",
+    price: "₹2500",
+    img:Bottle,
+  },
+  {
+    title: "Healthshine Grade 1 Air Mattress Overlay",
+    desc: `Adjustable Height Office Work Station Desk Side Table`,
+    cat: "Hospital & homecare furniture",
+    price: "₹1999",
+    img:Bed,
+
+  },
+  {
+    title: "Ear Plugs",
+    desc: `Reusable Silicone Earplugs for Hearing Protection`,
+    cat: "Orthopedic",
+    price: "₹500",
+    img:Buds,
+
+  },
+  {
+    title: "Insulin Cooler Bottle",
+    desc: `2-8℃ Medical Storage Refrigerator for Vaccine Diabetic`,
+    cat: "Diagonostic tool and supplies",
+    price: "₹2500",
+    img:Bottle,
+  },
+  {
+    title: "Healthshine Grade 1 Air Mattress Overlay",
+    desc: `Adjustable Height Office Work Station Desk Side Table`,
+    cat: "Hospital & homecare furniture",
+    price: "₹1999",
+    img:Bed,
+
+  },
+  {
+    title: "Ear Plugs",
+    desc: `Reusable Silicone Earplugs for Hearing Protection`,
+    cat: "Orthopedic",
+    price: "₹500",
+    img:Buds,
+
+  },
+  {
+    title: "Insulin Cooler Bottle",
+    desc: `2-8℃ Medical Storage Refrigerator for Vaccine Diabetic`,
+    cat: "Diagonostic tool and supplies",
+    price: "₹2500",
+    img:Bottle,
+  },
+  {
+    title: "Healthshine Grade 1 Air Mattress Overlay",
+    desc: `Adjustable Height Office Work Station Desk Side Table`,
+    cat: "Hospital & homecare furniture",
+    price: "₹1999",
+    img:Bed,
+
+  },
+  {
+    title: "Ear Plugs",
+    desc: `Reusable Silicone Earplugs for Hearing Protection`,
+    cat: "Orthopedic",
+    price: "₹500",
+    img:Buds,
+
+  },
+  {
+    title: "Insulin Cooler Bottle",
+    desc: `2-8℃ Medical Storage Refrigerator for Vaccine Diabetic`,
+    cat: "Diagonostic tool and supplies",
+    price: "₹2500",
+    img:Bottle,
+  },
+  {
+    title: "Healthshine Grade 1 Air Mattress Overlay",
+    desc: `Adjustable Height Office Work Station Desk Side Table`,
+    cat: "Hospital & homecare furniture",
+    price: "₹1999",
+    img:Bed,
+
+  },
+  {
+    title: "Ear Plugs",
+    desc: `Reusable Silicone Earplugs for Hearing Protection`,
+    cat: "Orthopedic",
+    price: "₹500",
     img:Buds,
 
   },

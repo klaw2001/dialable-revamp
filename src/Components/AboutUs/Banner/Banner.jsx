@@ -11,7 +11,7 @@ const Banner = () => {
         className="object-cover h-full w-full"
       />
 
-      <div className="flex items-center absolute z-[99]  top-[50%] translate-x-[-50%] left-[50%] translate-y-[-50%]  tra flex-col gap-2 p-20">
+      <div className="flex items-center absolute z-[90]  top-[50%] translate-x-[-50%] left-[50%] translate-y-[-50%]  tra flex-col gap-2 p-20">
         <h1 className="text-white  text-[3.5vw] font-bold">Our Story</h1>
         <BreadCrumb
           homeElement={"Home"}
