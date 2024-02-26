@@ -99,3 +99,10 @@ body {
 .ant-drawer .ant-drawer-header-title {
   flex-direction: row-reverse !important;
 }
+.ant-drawer .ant-drawer-header{
+  border-bottom: none;
+}
+
+.product .ant-drawer-content-wrapper{
+  height:95%;
+}
