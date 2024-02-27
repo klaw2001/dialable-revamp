@@ -26,6 +26,10 @@ const ProductsRow = ({open, onClose, placement, visibleItem}) => {
         className=" border-t border-black"
       >
         <Filters/>
+        <div className="border-t mt-12 border-black flex items-center justify-between p-4">
+            <button className="text-black text-[1vw] font-medium">Clear all</button>
+            <button className="text-white text-[1vw] font-medium btn py-3 px-6 bg-[#781393]">Apply</button>
+        </div>
       </Drawer>
       <div className="flex py-10 px-20 items-center gap-14 flex-wrap">
         {marketData.slice(0, visibleItem).map((product, i) => (

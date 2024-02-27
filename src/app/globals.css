@@ -104,5 +104,27 @@ body {
 }
 
 .product .ant-drawer-content-wrapper{
-  height:95%;
+  height:100vw;
 }
+
+.brand[type="checkbox"]::after{
+  content: "";
+  display: inline-block;
+  width: 0.34em; 
+  height: 0.7em; 
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg); 
+  position: absolute;
+  top: 10%; 
+  left: 35%;
+  transform-origin: center; 
+  opacity: 0;
+}
+
+.brand[type="checkbox"]:checked::after {
+  opacity: 1;
+}
+
+
+
