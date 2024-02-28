@@ -11,13 +11,13 @@ const Banner = () => {
         className="object-cover h-full w-full"
       />
 
-      <div className="flex items-center absolute z-[90]  top-[50%] translate-x-[-50%] left-[50%] translate-y-[-50%]  tra flex-col gap-2 p-20">
-        <h1 className="text-white  text-[3.5vw] font-bold">Our Story</h1>
+      <div className="flex items-center absolute z-[90]  top-[50%] translate-x-[-50%] left-[50%] translate-y-[-50%]   flex-col gap-2 p-20">
+        <h1 className="text-white text-[6vw] lg:text-[3.5vw] font-bold">Our Story</h1>
         <BreadCrumb
           homeElement={"Home"}
           separator={<span className="text-white font-bold"> / </span>}
           activeClasses="text-white"
-          containerClasses="flex py-5"
+          containerClasses="flex py-0 text-[3vw] lg:text-[1.5vw] lg:py-5"
           listClasses="hover:underline mx-2 font-bold"
           capitalizeLinks
         />

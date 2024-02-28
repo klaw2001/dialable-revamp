@@ -7,30 +7,30 @@ import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa6";
 const CustomerStories = () => {
   return (
-    <div className="p-20">
+    <div className="p-10 lg:p-20">
       <div className="flex items-start flex-col Inter">
-        <h3 className=" font-semibold text-black tracking-tight capitalize text-[1vw] mb-3 ">
+        <h3 className=" font-semibold text-black tracking-tight capitalize text-[3vw] lg:text-[1vw] mb-3 ">
           Case studies
         </h3>
-        <h1 className="text-black tracking-tight  capitalize text-[3vw] mb-3 font-bold">
+        <h1 className="text-black tracking-tight  capitalize text-[6vw] lg:text-[3vw]  lg:mb-3 font-bold">
           Customer stories
         </h1>
-        <p className="font-medium   text-[1.2vw] w-[60%] text-black ">
+        <p className="font-medium text-[3.2vw] lg:text-[1.2vw] w-full lg:w-[60%] text-black ">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
       </div>
-      <div className="flex items-center my-20 gap-8">
+      <div className="flex flex-col lg:flex-row items-center my-10 lg:my-20 gap-8">
         <div className="story border-2 p-6 bg-[#F4EBFF] border-[#781393]">
-          <div className="img w-[8vw]">
+          <div className="img w-[20vw] lg:w-[8vw]">
             <Image
               src={webflow}
               alt="webflow"
               className="object-cover h-full w-full"
             />
           </div>
-          <p className="text-[1.3vw] text-black font-medium mt-10">{`"A customer testimonial that highlights features and answers potential customer doubts about your product or service. Showcase testimonials from a similar demographic to your customers."`}</p>
-          <div className="flex gap-4 mt-8">
-            <div className="img w-[3vw]">
+          <p className="text-[3.3vw] lg:text-[1.3vw] text-black font-medium mt-5 lg:mt-10">{`"A customer testimonial that highlights features and answers potential customer doubts about your product or service. Showcase testimonials from a similar demographic to your customers."`}</p>
+          <div className="flex gap-2 lg:gap-4 mt-8">
+            <div className="img  w-[12vw] lg:w-[3vw]">
               <Image
                 src={beds}
                 alt="dummy"
@@ -38,10 +38,10 @@ const CustomerStories = () => {
               />
             </div>
             <div className="montserrat capitalize black">
-              <p className="text-black text-[.8vw] font-semibold">
+              <p className="text-black text-[3vw] lg:text-[.8vw] font-semibold">
                 name surname
               </p>
-              <span className="text-black text-[.8vw] font-normal">
+              <span className="text-black text-[3vw] lg:text-[.8vw] font-normal">
                 position, company name
               </span>
             </div>
@@ -52,16 +52,16 @@ const CustomerStories = () => {
           </Link>
         </div>
         <div className="story border-2 p-6 bg-[#F4EBFF] border-[#781393]">
-          <div className="img w-[8vw]">
+          <div className="img w-[20vw] lg:w-[8vw]">
             <Image
               src={relume}
               alt="webflow"
               className="object-cover h-full w-full"
             />
           </div>
-          <p className="text-[1.3vw] text-black font-medium mt-10">{`"A customer testimonial that highlights features and answers potential customer doubts about your product or service. Showcase testimonials from a similar demographic to your customers."`}</p>
+          <p className="text-[3.3vw] lg:text-[1.3vw] text-black font-medium mt-10">{`"A customer testimonial that highlights features and answers potential customer doubts about your product or service. Showcase testimonials from a similar demographic to your customers."`}</p>
           <div className="flex gap-4 mt-8">
-            <div className="img w-[3vw]">
+            <div className="img w-[12vw] lg:w-[3vw]">
               <Image
                 src={beds}
                 alt="dummy"
@@ -69,10 +69,10 @@ const CustomerStories = () => {
               />
             </div>
             <div className="montserrat capitalize black">
-              <p className="text-black text-[.8vw] font-semibold">
+              <p className="text-black text-[3vw] lg:text-[.8vw] font-semibold">
                 name surname
               </p>
-              <span className="text-black text-[.8vw] font-normal">
+              <span className="text-black text-[3vw] lg:text-[.8vw] font-normal">
                 position, company name
               </span>
             </div>
