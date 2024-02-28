@@ -4,11 +4,11 @@ import Blogs from "./Blogs/Blogs";
 
 const Posts = () => {
   return (
-    <div className="flex  justify-between p-16">
-      <div className="w-[50%]">
+    <div className="block lg:flex  justify-between p-10 lg:p-16">
+      <div className="w-full lg:w-[50%]">
         <Treatment />
       </div>
-      <div className="w-[50%]">
+      <div className="w-full mt-8 lg:mt-0 lg:w-[50%]">
         <Blogs />
       </div>
     </div>

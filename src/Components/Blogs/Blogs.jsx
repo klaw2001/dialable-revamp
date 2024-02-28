@@ -30,22 +30,22 @@ const Blogs = () => {
   ];
   return (
     <div>
-      <h1 className="text-black montserrat text-[3.5vw] font-semibold">
+      <h1 className="text-black montserrat text-[6vw] lg:text-[3.5vw] font-semibold">
         Latest posts
       </h1>
       <p>Your Best Practices Guide for all your local services needs</p>
-      <div className="my-10">
+      <div className="my-10 ">
         {blogs.map((blog, index) => (
-          <div key={index} className="blog my-8  flex ">
-            <div className="img relative w-[23vw] h-[10vw] ">
+          <div key={index} className="blog shadow-lg lg:shadow-none my-8  flex flex-col gap-3 lg:gap-0 lg:flex-row">
+            <div className="img relative w-full lg:w-[23vw] lg:h-[10vw] ">
               <Image
                 src={blog.img}
                 alt="blog_img"
-                className="object-contain h-full w-full"
+                className="object-cover lg:object-contain h-full w-full"
                 placeholder="blur"
               />
             </div>
-            <div className="info flex flex-col gap-1 bg-white">
+            <div className="info flex flex-col p-4 lg:p-0 gap-1 bg-white">
               <div className="flex items-center  gap-8">
                 <div className="tag text-[2.5vw] lg:text-[.9vw] text-black montserrat font-semibold ">
                   {blog.cat}
@@ -67,7 +67,7 @@ const Blogs = () => {
             </div>
           </div>
         ))}
-        <button className="text-black mt-3 montserrat shadow-xl font-bold h-[3vw] ml-5  btn text-[1vw] py-2 px-6 leading-none border-[2px] border-black ">
+        <button className="text-black mt-3 montserrat shadow-xl font-bold lg:h-[3vw] lg:ml-5  btn text-[3vw] lg:text-[1vw] py-2 px-6 leading-none border-[2px] border-black ">
           View More
         </button>
       </div>
