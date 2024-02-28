@@ -13,11 +13,11 @@ import { RiStarSFill } from "react-icons/ri";
 import ProductsRow from "./ProductsRow";
 const Products = () => {
   const [activePage, setActivePage] = useState(1);
-  const[visibleItem, setVisibleItem]=useState(15)
+  const[visibleItem, setVisibleItem]=useState(16)
   const [open, setOpen] = useState(false);
   const [placement,setPlacement]=useState("left")
   const loadMore=()=>{
-    const newVisibleItems = visibleItem + 15;
+    const newVisibleItems = visibleItem + 14;
     setVisibleItem(Math.min(newVisibleItems, marketData.length));
   }
   const showDrawer = () => {
@@ -28,16 +28,16 @@ const Products = () => {
     setOpen(false);
   };
   return (
-    <div className="py-20">
-      <div className="breadcrumb px-20 text-[1vw] text-black font-medium montserrat">
+    <div className="py-10 lg:py-20">
+      <div className="breadcrumb px-10 lg:px-20 text-[3vw] lg:text-[1vw] text-black font-medium montserrat">
         <Link href={"/"}>Home</Link> / Products
       </div>
-      <h1 className="text-[2.6vw] px-20 text-black  font-semibold montserrat">
+      <h1 className="text-[5.6vw] lg:text-[2.6vw] px-10 lg:px-20 text-black  font-semibold montserrat">
         Shop All
       </h1>
-      <div className="flex px-20 items-center justify-between mt-10 mb-4">
-        <button onClick={showDrawer} className="btn py-3 px-5 bg-[#781393] flex items-center gap-3 text-white Inter text-[1vw]">
-          <div className="w-[1.5vw]">
+      <div className="flex px-10 lg:px-20 items-center justify-between mt-10 mb-4">
+        <button onClick={showDrawer} className="btn py-3 px-5 bg-[#781393] flex items-center gap-1 lg:gap-3 text-white Inter text-[3vw] lg:text-[1vw]">
+          <div className="w-[3.5vw] lg:w-[1.5vw]">
             <Image
               src={Filter}
               alt="filter_icon"
@@ -46,24 +46,24 @@ const Products = () => {
           </div>
           <span>Filters</span>
         </button>
-        <button className="btn py-3 px-2 border-2 border-black flex items-center gap-3 text-Black Inter text-[1vw]">
+        <button className="btn py-3 px-2 border-2 border-black flex items-center gap-3 text-Black Inter text-[3vw] lg:text-[1vw]">
           <span>Sort by</span>
           <FaChevronDown />
         </button>
       </div>
-      <div className="flex px-20 items-center justify-between mb-4">
-        <div className="py-2 px-3 bg-[#F4F4F4] flex items-center gap-2 text-black Inter text-[1vw]">
+      <div className="flex px-10 lg:px-20 items-center justify-between mb-4">
+        <div className="py-2 px-3 bg-[#F4F4F4] flex items-center gap-2 text-black Inter text-[3vw] lg:text-[1vw]">
           <span>Tag</span>
           <IoCloseOutline />
         </div>
-        <span className="text-black Inter text-[1vw]">Showing {visibleItem} of 100</span>
+        <span className="text-black Inter text-[3vw] lg:text-[1vw]">Showing {visibleItem} of 100</span>
       </div>
       <ProductsRow onClose={onClose} open={open} placement={placement} visibleItem={visibleItem} />
-      <div className="mx-20 pagination py-3 flex items-center  justify-between border-y border-black text-[1.2vw] font-semibold">
-        <div className="flex items-center gap-4">
+      <div className="mx-10 lg:mx-20 my-8 pagination py-3 flex items-center  justify-between border-y border-black text-[1.2vw] font-semibold">
+        <div className="flex items-center gap-2 lg:gap-4">
           <div
           onClick={()=>setActivePage(1)}
-            className={`w-[2vw] btn cursor-pointer flex items-center justify-center ${
+            className={`w-[6vw] h-[6vw] lg:h-[2vw] text-[3vw] lg:text-[1vw] lg:w-[2vw] btn cursor-pointer flex items-center justify-center ${
               activePage === 1 && `border border-black rounded-full`
             }`}
           >
@@ -71,7 +71,7 @@ const Products = () => {
           </div>
           <div
           onClick={()=>setActivePage(2)}
-            className={`w-[2vw] btn cursor-pointer flex items-center justify-center ${
+            className={`w-[6vw] h-[6vw] lg:h-[2vw] text-[3vw] lg:text-[1vw] lg:w-[2vw] btn cursor-pointer flex items-center justify-center ${
               activePage === 2 && `border border-black rounded-full`
             }`}
           >
@@ -79,7 +79,7 @@ const Products = () => {
           </div>
           <div
           onClick={()=>setActivePage(3)}
-            className={`w-[2vw] btn cursor-pointer flex items-center justify-center ${
+            className={`w-[6vw] h-[6vw] lg:h-[2vw] text-[3vw] lg:text-[1vw] lg:w-[2vw] btn cursor-pointer flex items-center justify-center ${
               activePage === 3 && `border border-black rounded-full`
             }`}
           >

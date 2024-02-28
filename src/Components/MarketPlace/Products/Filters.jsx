@@ -12,7 +12,7 @@ const Filters = () => {
   return (
     <div className="px-6">
       <div className=" border-black border-b">
-        <h1 className="text-[1.5vw] text-black font-semibold Inter">Filters</h1>
+        <h1 className="text-[3.5vw] lg:text-[1.5vw] text-black font-semibold Inter">Filters</h1>
         <div className="py-4">
           <ul>
             {[
@@ -34,7 +34,7 @@ const Filters = () => {
         </div>
       </div>
       <div className=" py-4 border-black border-b">
-        <h1 className="text-[1vw] text-black font-semibold Inter"> Brands</h1>
+        <h1 className="text-[3vw] lg:text-[1vw] text-black font-semibold Inter"> Brands</h1>
         <div className="py-4">
           <ul>
             {[
@@ -61,7 +61,7 @@ const Filters = () => {
         </div>
       </div>
       <div className=" py-4 border-black border-b">
-        <h1 className="text-[1vw] text-black font-semibold Inter">Color</h1>
+        <h1 className="text-[3vw] lg:text-[1vw] text-black font-semibold Inter">Color</h1>
         <div className="flex gap-14 pt-4">
           {/* First Column */}
           <ul className="flex flex-col justify-start gap-2">
@@ -106,7 +106,7 @@ const Filters = () => {
         </div>
       </div>
       <div className=" py-4 border-black border-b">
-        <h1 className="text-[1vw] text-black font-semibold Inter">Material</h1>
+        <h1 className="text-[3vw] lg:text-[1vw] text-black font-semibold Inter">Material</h1>
 
         <div className="flex items center pt-4 gap-2 flex-wrap w-[70%]">
           <div
@@ -142,7 +142,7 @@ const Filters = () => {
         </div>
       </div>
       <div className=" py-4 border-black border-b">
-        <h1 className="text-[1vw] text-black font-semibold Inter">Gender</h1>
+        <h1 className="text-[3vw] lg:text-[1vw] text-black font-semibold Inter">Gender</h1>
 
         <div className="flex items center pt-4 gap-2 flex-wrap w-[80%]">
           <div
@@ -188,7 +188,7 @@ const Filters = () => {
         </div>
       </div>
       <div className="search py-4 border-black border-b">
-        <h1 className="text-[1vw] text-black font-semibold Inter">
+        <h1 className="text-[3vw] lg:text-[1vw] text-black font-semibold Inter">
           Weight Capacity
         </h1>
 
@@ -202,13 +202,13 @@ const Filters = () => {
         </form>
       </div>
       <div className="py-4 border-black border-b">
-        <h1 className="text-[1vw] text-black font-semibold Inter">Size</h1>
-        <select className="py-3 mt-4 text-[1vw] font-medium Inter w-full border border-black bg-transparent  focus-visible:outline-none fous-visible:border-[1.5px]">
+        <h1 className="text-[3vw] lg:text-[1vw] text-black font-semibold Inter">Size</h1>
+        <select className="py-3 mt-4 text-[3vw] lg:text-[1vw] font-medium Inter w-full border border-black bg-transparent  focus-visible:outline-none fous-visible:border-[1.5px]">
           <option value="">Select</option>
         </select>
       </div>
       <div className="py-4 border-black border-b">
-        <h1 className="text-[1vw] text-black font-semibold Inter">
+        <h1 className="text-[3vw] lg:text-[1vw] text-black font-semibold Inter">
           Price Range
         </h1>
         <div className="my-4">
@@ -236,7 +236,7 @@ const Filters = () => {
         </div>
       </div>
       <div className="py-4 border-black border-b">
-        <h1 className="text-[1vw] text-black font-semibold Inter">Age Range</h1>
+        <h1 className="text-[3vw] lg:text-[1vw] text-black font-semibold Inter">Age Range</h1>
         <div className="my-4">
           <input
             type="range"
@@ -263,7 +263,7 @@ const Filters = () => {
       </div>
 
       <div className="py-4 border-black border-b">
-        <h1 className="text-[1vw] text-black font-semibold Inter">Dark Mode</h1>
+        <h1 className="text-[3vw] lg:text-[1vw] text-black font-semibold Inter">Dark Mode</h1>
         <div>
           <Switch {...label} defaultChecked />
         </div>

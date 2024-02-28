@@ -104,9 +104,13 @@ body {
 }
 
 .product .ant-drawer-content-wrapper{
-  height:100vw;
+  height:auto;
 }
+.ant-drawer .ant-drawer-body{
+  padding: 0;
+  position: relative;
 
+}
 .brand[type="checkbox"]::after{
   content: "";
   display: inline-block;

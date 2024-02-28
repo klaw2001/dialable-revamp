@@ -20,7 +20,7 @@ const MarketPlace = () => {
       <Offers />
       <Banner />
       <Products />
-      <div className="mt-20 mb-40">
+      <div className="my-10 lg:mt-20 lg:mb-40">
         <OurNewsLetter />
       </div>
       <Footer />
