@@ -58,7 +58,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex items-center justify-between   lg:px-8 px-10 py-6 border-t border-b bg-white border-zinc-300 montserrat sticky top-0 z-[99]">
+    <div className="flex items-center justify-between lg:px-8 px-4 py-6 border-t border-b bg-white border-zinc-300 montserrat sticky top-0 z-[99]">
       <div className="logo-links flex  items-center">
         <div className="logo relative w-[33vw] lg:w-[11vw]">
           <Link href={"/"}>
@@ -107,7 +107,7 @@ const Navbar = () => {
           </button>
         </Drawer>
       </div>
-      <div className="flex gap-5 items-center relative">
+      <div className="hidden lg:flex gap-5 items-center relative">
         <div className="accessibility ">
           <div
            

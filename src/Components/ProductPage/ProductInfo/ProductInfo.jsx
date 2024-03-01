@@ -47,32 +47,46 @@ const ProductInfo = () => {
     },
   ];
   return (
-    <div className="py-20 px-10 mb-10 ">
-      <div className="flex border-b-2">
-        <div className="w-1/2">
+    <div className="p-10 lg:py-20 lg:px-10 mb-10 relative overflow-x-clip">
+      <div className="flex lg:flex-row flex-col lg:border-b-2 lg:border-black">
+        <div className="w-full lg:w-1/2">
           <div className="img1 w-[70%]">
-            <Image src={prod_1} className="h-full w-full object-cover" alt="front" />
+            <Image
+              src={prod_1}
+              className="h-full w-full object-cover"
+              alt="front"
+            />
           </div>
           <div className="flex items-center">
-            <div className="img1 w-[40%]">
-              <Image src={prod_1} className="h-full w-full object-cover" alt="right" />
+            <div className="img1 w-[50%] grow lg:w-[40%]">
+              <Image
+                src={prod_1}
+                className="h-full w-full object-cover"
+                alt="right"
+              />
             </div>
-            <div className="img1 w-[40%]">
-              <Image src={prod_2} className="h-full w-full object-cover" alt="left" />
+            <div className="img1 w-[50%] grow lg:w-[40%]">
+              <Image
+                src={prod_2}
+                className="h-full w-full object-cover"
+                alt="left"
+              />
             </div>
           </div>
         </div>
-        <div className="w-1/2">
-          <div className="breadcrumb">
+        <div className="w-full lg:w-1/2">
+          <div className="breadcrumb text-black text-[3.1vw] lg:text-[1.1vw] font-medium">
             <Link href={"/marketPlace"}>Shop all</Link> {`>`} Category {`>`}{" "}
-            <span>Karma Ergo Lite Silver</span>
+            <span className="font-semibold">Karma Ergo Lite Silver</span>
           </div>
           <div className="info">
-            <div className="flex justify-between">
-              <h1>Karma Ergo Lite Silver</h1>
-              <h3>₹2500</h3>
+            <div className="flex justify-between my-4 text-[5vw] lg:text-[3vw]">
+              <h1 className="Sans  font-bold">
+                Karma Ergo Lite Silver
+              </h1>
+              <h3 className="Inter font-bold">₹2500</h3>
             </div>
-            <div className="review flex items-center">
+            <div className="review flex items-center text-[3vw] lg:text-[1vw]">
               <div className="flex items-center gap-1">
                 <RiStarFill />
                 <RiStarFill />
@@ -82,7 +96,7 @@ const ProductInfo = () => {
               </div>
               <span>&nbsp;(3.5 stars) . 10 reviews</span>
             </div>
-            <div className="desc">
+            <div className="desc text-[3vw] lg:text-[1.1vw] font-medium my-4">
               <p>
                 Ultra-Lightweight & Sturdy
                 <br />
@@ -103,9 +117,9 @@ const ProductInfo = () => {
                 Add To WhishList
               </button>
             </div>
-            <div className="options">
+            <div className="options my-4">
               <p>Variant</p>
-              <div className="flex items center pt-4 gap-2">
+              <div className="flex items center text-[3vw] lg:text-[1.1vw]  pt-4 gap-2">
                 <div
                   onClick={() => setSelectedVariant(1)}
                   className={`py-2 px-4 text-black Inter font-medium cursor-pointer ${
@@ -142,28 +156,29 @@ const ProductInfo = () => {
 
             <div className="quantity">
               <p>Quantity</p>
-              <div className="flex gap-2">
+              <div className="flex gap-2 mt-4">
                 <input
                   value={quantity}
-                  className="py-3 text-black px-2 border w-[4vw] border-black"
+                  readOnly
+                  className="py-3 text-black px-2 border w-[12vw] lg:w-[4vw] border-black"
                   type="text"
                 />
                 <button
                   onClick={increaseQuantity}
-                  className="btn py-3 px-2 border w-[2vw] border-black"
+                  className="btn py-3 px-2 border w-[8vw] flex items-center justify-center lg:w-[2vw] border-black"
                 >
                   +
                 </button>
                 <button
                   onClick={decreaseQuantity}
-                  className="btn py-3 px-2 border w-[2vw] border-black"
+                  className="btn py-3 px-2 border w-[8vw] flex items-center justify-center lg:w-[2vw] border-black"
                 >
                   -
                 </button>
               </div>
             </div>
 
-            <div className="buttons mt-4 flex flex-col gap-4">
+            <div className="buttons my-4 flex flex-col gap-4">
               <button className="btn py-3 px-2 w-full text-white bg-[#781393]">
                 Add To Cart
               </button>
@@ -171,7 +186,9 @@ const ProductInfo = () => {
                 Buy Now
               </button>
             </div>
-            <p className="text-center my-4">Free Shipping over $50</p>
+            <p className="text-center text-[2.95vw] lg:text-[.95vw] font-medium my-4">
+              Free Shipping over $50
+            </p>
           </div>
           <div className="w-full  mt-10 mb-20">
             <div className="">
@@ -189,7 +206,9 @@ const ProductInfo = () => {
                       className="flex justify-between items-center cursor-pointer "
                       onClick={() => toggleFAQ(index)}
                     >
-                      <h2 className="text-[1vw] font-semibold">{faq.title}</h2>
+                      <h2 className="text-[4vw] lg:text-[1.3vw] font-semibold">
+                        {faq.title}
+                      </h2>
                       <svg
                         className={`w-6 h-6 ${
                           activeIndex === index ? "transform rotate-180" : ""
@@ -208,7 +227,7 @@ const ProductInfo = () => {
                       </svg>
                     </div>
                     {activeIndex === index && (
-                      <p className="text-gray-600 mt-2 text-[3.5vw] lg:text-[1vw]">
+                      <p className="text-gray-600 mt-2 text-[3.5vw] font-medium lg:text-[1.1vw]">
                         {faq.desc}
                       </p>
                     )}
@@ -218,6 +237,20 @@ const ProductInfo = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex absolute right-[-14%] lg:right-[-3.5%]  top-[100%] gap-4 rotate-[-90deg] w-[10%] ">
+        <Link
+          href="#"
+          className="btn text-white box-shadow-2 bg-[#781393]  rounded-lg  text-[1vw] font-semibold montserrat leading-none px-4 py-4 lg:py-6"
+        >
+          Advertise
+        </Link>
+        <Link
+          href="#"
+          className="btn text-white box-shadow-2 bg-[#FF6004]  rounded-lg  text-[1vw] font-semibold montserrat leading-none px-4 py-4 lg:py-6"
+        >
+          Free&nbsp;Listing
+        </Link>
       </div>
     </div>
   );

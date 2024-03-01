@@ -38,21 +38,21 @@ const Faq = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
   return (
-    <div className=" my-20 lg:my-40 lg:flex items-start justify-between p-10 lg:p-20 Transition">
+    <div className="lg:flex items-start justify-between p-10 lg:p-20 Transition">
       <div className="lg:w-1/3 w-full flex items-start flex-col gap-6">
-        <h1 className="text-[9.5vw] lg:text-[3.1vw] montserrat text-[black] font-bold leading-[12vw] lg:leading-[3vw]">
-         Frequently Asked Questions
+        <h1 className="text-[9.5vw] lg:text-[3.1vw] Inter text-[black] font-bold leading-[12vw] lg:leading-[3vw]">
+         FAQs
         </h1>
-        <p className="montserrat font-medium text-[4.5vw] lg:text-[1vw]">
+        <p className="Inter font-medium text-[4.5vw] lg:text-[1vw]">
         Find answers to common questions about our website and its accessibility features.
         </p>
-        <Link href={"#"} className="text-white btn bg-[#FF6004] py-4 px-8  cursor-pointer text-[4.8vw] lg:text-[1.2vw] font-normal  montserrat">
+        <Link href={"#"} className="text-black btn border border-black py-4 px-8  cursor-pointer text-[4.8vw] lg:text-[1.2vw] font-normal  Inter">
           Contact
         </Link >
       </div>
       <div className="w-full lg:w-1/2 mt-10 lg:mt-0">
         <div className="">
-          <div className="space-y-4 montserrat">
+          <div className="space-y-4 Inter">
             {faqs.map((faq, index) => (
               <div
                 key={index}
