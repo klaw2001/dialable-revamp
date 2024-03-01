@@ -12,7 +12,7 @@ const Banner = () => {
       />
 
       <div className="flex items-center absolute z-[90]  top-[50%] translate-x-[-50%] left-[50%] translate-y-[-50%]   flex-col gap-2 p-20">
-        <h1 className="text-white text-[6vw] lg:text-[3.5vw] font-bold">Our Story</h1>
+        <h1 className="text-white Sans text-[6vw] lg:text-[3.5vw] font-bold">Our Story</h1>
         <BreadCrumb
           homeElement={"Home"}
           separator={<span className="text-white font-bold"> / </span>}

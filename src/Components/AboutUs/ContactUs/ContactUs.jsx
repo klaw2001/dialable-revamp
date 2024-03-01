@@ -8,7 +8,7 @@ const ContactUs = () => {
   return (
     <div className="p-10 lg:p-20">
       <div>
-        <h1 className="text-black tracking-tight  capitalize text-[6vw] lg:text-[3vw] mb-3 font-bold">
+        <h1 className="text-black tracking-tight Sans capitalize text-[6vw] lg:text-[3vw] mb-3 font-bold">
           Contact Us
         </h1>
         <p className="font-medium   text-[1.2vw]  text-black ">

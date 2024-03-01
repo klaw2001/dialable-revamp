@@ -31,7 +31,7 @@ const OurGoals = () => {
         <h3 className=" font-semibold text-black tracking-tight capitalize text-[3vw] lg:text-[1vw] mb-3 ">
           Our values
         </h3>
-        <h1 className="text-black tracking-tight  capitalize text-[6vw] lg:text-[3vw] mb-3 font-bold">
+        <h1 className="text-black tracking-tight Sans  capitalize text-[6vw] lg:text-[3vw] mb-3 font-bold">
           Our Ambitious Goals
         </h1>
         <p className="font-medium text-center text-[3.2vw]  lg:text-[1.2vw] w-full lg:w-[60%] text-black ">

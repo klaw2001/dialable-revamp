@@ -7,9 +7,10 @@ import OurStory from './OurStory/OurStory'
 import OurGoals from './OurGoals/OurGoals'
 import OurExperience from './OurExperience/OurExperience'
 import CustomerStories from './CustomerStories/CustomerStories'
-import OurNewsLetter from './OurNewsLetter/OurNewsLetter'
+
 import ContactUs from './ContactUs/ContactUs'
 import Footer from '../Footer'
+import NewsLetter from '../NewsLetter/NewsLetter'
 
 const AboutUs = () => {
   return (
@@ -22,7 +23,12 @@ const AboutUs = () => {
         <OurGoals/>
         <OurExperience/>
         <CustomerStories/>
-        <OurNewsLetter/>
+        <NewsLetter
+        className="gradient p-10 lg:px-20 lg:py-32 text-white flex-col flex lg:flex-row justify-between items-center"
+        formClass="mt-8 flex flex-col gap-3"
+        heading="Join our newsletter"
+        color="text-black"
+      />
         <ContactUs/>
         <Footer/>
     </div>

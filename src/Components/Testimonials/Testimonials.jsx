@@ -19,7 +19,7 @@ const Testimonials = () => {
   
   return (
     <div className="p-10  overflow-clip">
-      <h1 className="montserrat text-[2vw] text-black font-bold">
+      <h1 className="montserrat text-[2vw] Sans text-black font-bold">
         A Service You Can Trust
       </h1>
 

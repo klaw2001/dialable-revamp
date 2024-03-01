@@ -24,7 +24,7 @@ const Hero = () => {
           </div>
           <span>Listen</span>
         </button>
-        <h1 className="lg:text-[3.5vw] text-[10vw] leading-[13vw] lg:leading-[5vw] font-semibold text-[black]">
+        <h1 className="lg:text-[3.5vw] text-[10vw] leading-[13vw] lg:leading-[5vw] Sans font-semibold text-[black]">
           Welcome to Dialable
         </h1>
         <div className="desc montserrat w-[80%]">

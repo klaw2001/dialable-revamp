@@ -7,7 +7,7 @@ const TopCategories = () => {
     <div className="flex  items-center overflow-hidden relative p-10 lg:p-28 z-[3]">
       <div className="w-[90%] grow lg:grow-[.7] xl:grow-[.4]">
         <div className="flex justify-between">
-          <h1 className="text-black montserrat font-semibold text-[6vw] lg:text-[3.5vw]">
+          <h1 className="text-black Sans font-semibold text-[6vw] lg:text-[3.5vw]">
             Top Categories
           </h1>
           <button className="text-black montserrat shadow-xl font-bold lg:h-[4vw] p-2  btn text-[2vw] lg:text-[1vw] lg:py-2 lg:px-4 leading-none border-[1.5px] border-black ">

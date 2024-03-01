@@ -32,7 +32,7 @@ const Products = () => {
       <div className="breadcrumb px-10 lg:px-20 text-[3vw] lg:text-[1vw] text-black font-medium montserrat">
         <Link href={"/"}>Home</Link> / Products
       </div>
-      <h1 className="text-[5.6vw] lg:text-[2.6vw] px-10 lg:px-20 text-black  font-semibold montserrat">
+      <h1 className="text-[5.6vw] Sans lg:text-[2.6vw] px-10 lg:px-20 text-black  font-semibold montserrat">
         Shop All
       </h1>
       <div className="flex px-10 lg:px-20 items-center justify-between mt-10 mb-4">

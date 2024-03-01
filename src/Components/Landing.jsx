@@ -24,7 +24,12 @@ const Landing = () => {
       <OurPartners />
       <Posts />
       <ValuedPartners />
-      <NewsLetter />
+      <NewsLetter
+        className="m-20 gradient p-10 lg:px-20 lg:py-10 text-white flex-col flex  justify-between items-center"
+        formClass="mt-8 flex flex-col gap-3"
+        heading="Subscribe our newsletter"
+        color="text-white"
+      />
       <Testimonials />
       <Footer />
     </div>

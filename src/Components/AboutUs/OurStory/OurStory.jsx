@@ -9,7 +9,7 @@ const OurStory = () => {
         <h3 className="text-black tracking-tight capitalize text-[3vw] lg:text-[1vw] mb-1 lg:mb-3 font-semibold">
           About us
         </h3>
-        <h1 className="text-black tracking-tight  capitalize text-[5vw] lg:text-[2.7vw] mb-3 font-bold">
+        <h1 className="text-black tracking-tight Sans capitalize text-[5vw] lg:text-[2.7vw] mb-3 font-bold">
           Who We Are
         </h1>
         <div>

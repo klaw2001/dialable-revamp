@@ -27,7 +27,7 @@ const RentalProducts = () => {
   return (
     <div className="p-10">
       <div className="flex flex-col items-center gap-4">
-        <h1 className="text-black montserrat font-semibold text-[6vw] lg:text-[3.5vw]">Rental Products</h1>
+        <h1 className="text-black Sans font-semibold text-[6vw] lg:text-[3.5vw]">Rental Products</h1>
         <p className="text-black roboto font-bold text-[3vw] text-center lg:text-[1.2vw]">
           Not looking to buy? Check out our rental products, available for a
           period that suits you

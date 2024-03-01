@@ -24,7 +24,7 @@ const OurPartners = () => {
           </div>
         </div>
         <div className="w-full md:w-[50%] bg-[#F4EBFF] py-8 lg:py-16 px-4 lg:px-8 xl:px-12 montserrat capitalize border border-y rounded-b-lg  lg:rounded-b-none lg:rounded-e-lg border-right border-[#781393]">
-          <h2 className="text-black uppercase font-bold text-[4vw] md:text-[2.3vw]">
+          <h2 className="text-black uppercase Sans font-bold text-[4vw] md:text-[2.3vw]">
             our partners like us
           </h2>
           <ul className="my-4 md:mt-8 md:mb-6">

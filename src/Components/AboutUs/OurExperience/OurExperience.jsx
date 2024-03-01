@@ -13,7 +13,7 @@ const OurExperience = () => {
     >
       <div className="p-10 lg:p-20 flex flex-col lg:flex-row justify-between">
         <div className="w-full lg:w-1/2">
-          <h1 className="text-black tracking-tight  capitalize text-[6vw] lg:text-[3vw] mb-3 font-bold">
+          <h1 className="text-black tracking-tight Sans capitalize text-[6vw] lg:text-[3vw] mb-3 font-bold">
             Our Experience
           </h1>
         </div>

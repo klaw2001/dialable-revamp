@@ -30,10 +30,10 @@ const Blogs = () => {
   ];
   return (
     <div>
-      <h1 className="text-black montserrat text-[6vw] lg:text-[3.5vw] font-semibold">
+      <h1 className="text-black Sans text-[6vw] lg:text-[3.5vw] font-semibold">
         Latest posts
       </h1>
-      <p>Your Best Practices Guide for all your local services needs</p>
+      <p className="roboto">Your Best Practices Guide for all your local services needs</p>
       <div className="my-10 ">
         {blogs.map((blog, index) => (
           <div key={index} className="blog shadow-lg lg:shadow-none my-8  flex flex-col gap-3 lg:gap-0 lg:flex-row">

@@ -5,7 +5,7 @@ import Image from "next/image";
 const ValuedPartners = () => {
   return (
     <div className="p-10 flex items-center flex-col">
-      <h1 className="text-center text-black montserrat text-[6vw] lg:text-[3vw] font-bold">
+      <h1 className="text-center text-black Sans  text-[6vw] lg:text-[3vw] font-bold">
         Most Valued Partners
       </h1>
       <div className="mt-6 lg:mt-12">

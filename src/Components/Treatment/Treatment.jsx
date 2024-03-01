@@ -19,7 +19,7 @@ const Treatment = () => {
   ];
   return (
     <div>
-      <h1 className="text-black montserrat text-[6vw] lg:text-[3.5vw] font-semibold">
+      <h1 className="text-black montserrat text-[6vw] Sans lg:text-[3.5vw] font-semibold">
         Treat your condition
       </h1>
       <div className="mt-8 lg:mt-16 flex items-center gap-3 lg:gap-10 flex-wrap ">
