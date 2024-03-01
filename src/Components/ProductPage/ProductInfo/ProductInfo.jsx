@@ -47,7 +47,7 @@ const ProductInfo = () => {
     },
   ];
   return (
-    <div className="p-10 lg:py-20 lg:px-10 lg:mb-10 relative overflow-x-clip">
+    <div className="p-10 lg:py-32 lg:px-10 lg:mb-10 relative overflow-x-clip">
       <div className="flex lg:flex-row flex-col lg:border-b-2 lg:border-black">
         <div className="w-full lg:w-1/2">
           <div className="img1 w-[70%]">

@@ -23,7 +23,7 @@ const ProductsRow = ({open, onClose, placement, visibleItem}) => {
         placement={placement}
         getContainer={false}
         closable={true}
-        className=" border-t border-black"
+        className="filter border-t border-black"
       >
         <Filters/>
         <div className="border-t absolute w-full bottom-0 mt-12 bg-white border-black flex items-center justify-between p-4">

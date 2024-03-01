@@ -109,7 +109,7 @@ body {
 .product .ant-drawer-content-wrapper{
   height:auto;
 }
-.ant-drawer .ant-drawer-body{
+.filter .ant-drawer .ant-drawer-body{
   padding: 0;
   position: relative;
 
