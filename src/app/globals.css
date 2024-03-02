@@ -45,6 +45,10 @@ body {
   display: block;
 }
 
+h1,h2,h3{
+  letter-spacing: -1px;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -53,6 +57,7 @@ body {
   .btn {
     position: relative;
     transition: all 0.5s;
+    letter-spacing: -1px;
   }
   .btn:active {
     scale: 0.96;

@@ -8,17 +8,17 @@ const ContactUs = () => {
   return (
     <div className="p-10 lg:p-20">
       <div>
-        <h1 className="text-black tracking-tight Sans capitalize text-[6vw] lg:text-[3vw] mb-3 font-bold">
+        <h1 className="text-black tracking-tight Sans capitalize text-[6vw] md:text-[4.5vw] lg:text-[3vw] mb-3 font-bold">
           Contact Us
         </h1>
-        <p className="font-medium   text-[1.2vw]  text-black ">
+        <p className="font-medium text-[3.2vw] md:text-[2.2vw]  lg:text-[1.2vw]  text-black ">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
       </div>
       <div className="flex flex-col lg:flex-row my-6 lg:my-12">
         <div className="w-full lg:w-[45%]">
           <div onClick={()=>setActive("sydney")} className={active==="sydney"?`flex cursor-pointer flex-col gap-3 my-10 p-2  border-l-[3px] border-black`:`flex flex-col gap-3 my-10 p-2 border-l-[3px] border-white`}>
-            <h1 className="text-black tracking-tight capitalize text-[3vw] lg:text-[2vw]  font-bold">
+            <h1 className="text-black tracking-tight capitalize text-[3vw]  md:text-[2.5vw] lg:text-[2vw]  font-bold">
               Sydney
             </h1>
             <p className="text-black text-[3vw] lg:text-[1vw]">
@@ -29,7 +29,7 @@ const ContactUs = () => {
             </Link>
           </div>
           <div onClick={()=>setActive("newyork")} className={active==="newyork"?`flex cursor-pointer flex-col gap-3 my-10 p-2  border-l-[3px] border-black`:`flex flex-col gap-3 my-10 p-2 border-l-[3px] border-white`}>
-            <h1 className="text-black tracking-tight capitalize text-[5vw] lg:text-[2vw]  font-bold">
+            <h1 className="text-black tracking-tight capitalize text-[5vw] md:text-[2.5vw] lg:text-[2vw]  font-bold">
               Newyork
             </h1>
             <p className="text-black text-[3vw] lg:text-[1vw]">123 Sample St, Newyork NY 1000 USA</p>
@@ -38,7 +38,7 @@ const ContactUs = () => {
             </Link>
           </div>
           <div onClick={()=>setActive("london")} className={active==="london"?`flex cursor-pointer flex-col gap-3 my-10 p-2  border-l-[3px] border-black`:`flex flex-col gap-3 my-10 p-2 border-l-[3px] border-white`}>
-            <h1 className="text-black tracking-tight capitalize text-[5vw] lg:text-[2vw]  font-bold">
+            <h1 className="text-black tracking-tight capitalize text-[5vw] md:text-[2.5vw] lg:text-[2vw]  font-bold">
               London
             </h1>
             <p className="text-black text-[3vw] lg:text-[1vw]">123 Sample St, London W1C 1DE, United Kingdom</p>

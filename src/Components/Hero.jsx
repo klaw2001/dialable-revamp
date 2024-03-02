@@ -7,9 +7,9 @@ import text_speech from "../../public/Images/text-to-speech.svg";
 const Hero = () => {
   
   return (
-    <div className="lg:flex  justify-between items-center gap-10 montserrat bg-[#F4EBFF] block p-10 sm:p-20 lg:p-0 ">
+    <div className="md:flex  justify-between items-center gap-10 montserrat bg-[#F4EBFF] block p-10 sm:p-20 md:p-0 ">
       
-      <div className="hero-img lg:w-[50.3%] w-full mt-10 lg:mt-0 relative">
+      <div className="hero-img md:w-[50.3%] w-full mt-10 md:mt-0 relative">
         <Image
           src={placeholder}
           alt="hero-img"
@@ -17,14 +17,14 @@ const Hero = () => {
           className="h-full w-full"
         />
       </div>
-      <div className="hero-cont lg:w-[45%] mt-8 md:mt-6 lg:mt-0  w-full flex items-start gap-4 lg:gap-6  flex-col  ">
-        <button className="flex items-center gap-3 p-2 border-2 btn border-black text-black montserrat uppercase font-bold">
-          <div className="w-[4vw] lg:w-[1.5vw]">
+      <div className="hero-cont md:w-[45%] mt-8 md:mt-6 lg:mt-0  w-full flex items-start gap-4 md:gap-6  flex-col  ">
+        <button className="flex items-center gap-2 lg:gap-3 p-2 border-2 btn border-black text-black montserrat uppercase font-bold">
+          <div className="w-[4vw] md:w-[2.5vw] lg:w-[1.5vw]">
             <Image src={text_speech} alt="text-to-speech" className="object-cover h-full w-full"/>
           </div>
           <span>Listen</span>
         </button>
-        <h1 className="lg:text-[3.5vw] text-[10vw] leading-[13vw] lg:leading-[5vw] Sans font-semibold text-[black]">
+        <h1 className="md:text-[3vw] text-[8vw] leading-[11vw] md:leading-[3vw] Sans font-semibold text-[black]">
           Welcome to Dialable
         </h1>
         <div className="desc montserrat w-[80%]">

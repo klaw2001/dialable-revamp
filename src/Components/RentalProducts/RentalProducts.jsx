@@ -27,12 +27,12 @@ const RentalProducts = () => {
   return (
     <div className="p-10">
       <div className="flex flex-col items-center gap-4">
-        <h1 className="text-black Sans font-semibold text-[6vw] lg:text-[3.5vw]">Rental Products</h1>
-        <p className="text-black roboto font-bold text-[3vw] text-center lg:text-[1.2vw]">
+        <h1 className="text-black Sans font-semibold text-[6vw] md:text-[4.5vw] lg:text-[3.5vw]">Rental Products</h1>
+        <p className="text-black roboto font-bold text-[3vw] text-center md:text-[2vw] lg:text-[1.2vw]">
           Not looking to buy? Check out our rental products, available for a
           period that suits you
         </p>
-        <button className="text-black mt-2 montserrat shadow-xl font-bold lg:h-[3vw]  btn text-[3vw] lg:text-[1vw] py-2 px-6 leading-none border-[2px] border-black ">
+        <button className="text-black mt-2 montserrat shadow-xl font-bold lg:h-[3vw] md:text-[2vw]  btn text-[3vw] lg:text-[1vw] py-2 px-6 leading-none border-[2px] border-black ">
           Browse
         </button>
       </div>
@@ -40,10 +40,10 @@ const RentalProducts = () => {
             {
                 rentalProducts.map((rentalProduct,i)=>(
                     <div key={i} className="flex items-center flex-col gap-2">
-                        <div className="img w-[30vw] lg:w-[20vw]">
+                        <div className="img w-[30vw] md:w-[28vw] lg:w-[20vw]">
                             <Image src={rentalProduct.img} alt={rentalProduct.title} className="object-cover h-full w-full"/>
                         </div>
-                        <p className="montserrat text-black text-[3vw] lg:text-[1.3vw] font-bold">{rentalProduct.title}</p>
+                        <p className="montserrat text-black text-[3vw] md:text-[2vw] lg:text-[1.3vw] font-bold">{rentalProduct.title}</p>
                     </div>
                 ))
             }

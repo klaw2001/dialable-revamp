@@ -9,7 +9,7 @@ import {
   RiStarSFill,
 } from "react-icons/ri";
 import prod_1 from "../../../../public/Images/wheelchairfront.png";
-import prod_2 from "../../../../public/Images/wheelchairLeft.png";
+import prod_2 from "../../../../public/Images/wheelchairleft.png";
 import Image from "next/image";
 const ProductInfo = () => {
   const [selectedVariant, setSelectedVariant] = useState(1);

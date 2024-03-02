@@ -19,11 +19,11 @@ const Testimonials = () => {
   
   return (
     <div className="p-10  overflow-clip">
-      <h1 className="montserrat text-[2vw] Sans text-black font-bold">
+      <h1 className="montserrat text-[6vw] md:text-[5vw] lg:text-[3.5vw] Sans text-black font-bold">
         A Service You Can Trust
       </h1>
 
-      <p className="text-black roboto text-[.9vw] mt-4">
+      <p className="text-black roboto text-[2.9vw] md:text-[1.9vw] lg:text-[.9vw] mt-4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </p>
 
