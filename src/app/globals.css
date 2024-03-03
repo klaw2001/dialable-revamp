@@ -58,6 +58,8 @@ h1,h2,h3{
     position: relative;
     transition: all 0.5s;
     letter-spacing: -1px;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
   }
   .btn:active {
     scale: 0.96;

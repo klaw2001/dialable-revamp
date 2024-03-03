@@ -4,21 +4,21 @@ import categories from "./categories";
 import Image from "next/image";
 const TopCategories = () => {
   return (
-    <div className="flex  items-center overflow-hidden relative p-10 md:p-18 lg:p-28 z-[3]">
+    <div className="flex  items-center overflow-hidden relative p-10 md:p-24  z-[3]">
       <div className="w-[90%] grow lg:grow-[.7] xl:grow-[.4]">
-        <div className="flex justify-between">
+        <div className="flex items-baseline justify-between">
           <h1 className="text-black Sans font-semibold text-[6vw] md:text-[5vw] lg:text-[3.5vw]">
             Top Categories
           </h1>
-          <button className="text-black montserrat shadow-xl font-bold lg:h-[4vw] p-2 md:p-3  btn text-[2vw] md:text-[1.5vw] lg:text-[1vw] lg:py-2 lg:px-4 leading-none border-[1.5px] border-black ">
+          <button className="text-black montserrat shadow-xl font-bold lg:h-[3vw] p-2 md:p-3  btn text-[2vw] md:text-[1.5vw] lg:text-[1vw] lg:py-2 lg:px-4 leading-none border-[1.5px] border-black ">
             View all categories
           </button>
         </div>
         <div>
-          <div className="flex items-center relative justify-center md:justify-between gap-8 lg:gap-16 mt-16 flex-wrap ">
+          <div className="flex items-center relative justify-center md:justify-between gap-8 lg:gap-12 lg:justify-start mt-16 flex-wrap ">
             {categories.map((category, i) => (
-              <div key={i} className="flex flex-col items-center">
-                <div className="image_wrapper w-[30vw] md:w-[20vw] lg:w-[10vw]">
+              <div key={i} className="flex flex-col grow items-center">
+                <div className="image_wrapper w-[30vw] md:w-[20vw] lg:w-[12vw]">
                   <Image
                     src={category.img}
                     alt={category.title}
@@ -30,16 +30,16 @@ const TopCategories = () => {
                 </p>
               </div>
             ))}
-            <div className="flex absolute right-[-14%] lg:right-[-16.5%]  top-[75%] gap-4 rotate-[-90deg] w-[10%] ">
+            <div className="flex fixed right-[-14%] lg:right-[-3%]  top-[80%] gap-4 rotate-[-90deg] w-[10%] ">
               <Link
                 href="#"
-                className="btn text-white box-shadow-2 bg-[#781393]  rounded-lg  text-[2vw] font-semibold montserrat leading-none px-12 py-4 lg:py-10"
+                className="text-white active:scale-[.95] transition-all duration-[.5s] box-shadow-2 bg-[#781393]  rounded-xl text-[0.8rem] md:text-[1rem] lg:text-[1.5vw] font-semibold montserrat leading-none px-[1.35rem] py-4 lg:py-8"
               >
                 Advertise
               </Link>
               <Link
                 href="#"
-                className="btn text-white box-shadow-2 bg-[#FF8038]  rounded-lg  text-[2vw] font-semibold montserrat leading-none px-12 py-4 lg:py-10"
+                className="text-white active:scale-[.95] transition-all duration-[.5s] box-shadow-2 bg-[#FF6004]  rounded-xl text-[0.8rem] md:text-[1rem] lg:text-[1.5vw] font-semibold montserrat leading-none px-[1.35rem] py-4 lg:py-8"
               >
                 Free&nbsp;Listing
               </Link>

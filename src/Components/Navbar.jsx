@@ -58,14 +58,14 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex items-center justify-between lg:px-8 px-4 py-4 lg:py-6 border-t border-b bg-white border-zinc-300 montserrat sticky top-0 z-[99]">
+    <div className="flex items-center justify-between lg:px-8 px-4 py-4 lg:py-3 border-t border-b bg-white border-zinc-300 montserrat sticky top-0 z-[99]">
       <div className="logo-links flex  items-center">
         <div className="logo relative w-[33vw] md:w-[22vw] lg:w-[11vw]">
           <Link href={"/"}>
             <Image src={Logo} alt="dialable-logo" objectFit="cover" />
           </Link>
         </div>
-        <div className="lg:flex hidden gap-5 mx-12 text-[1vw] items-center leading-none">
+        <div className="lg:flex hidden gap-5 mx-12 text-[1.05vw] items-center leading-none">
           {links.map((item, index) => (
             <Link
               key={index}
@@ -188,7 +188,7 @@ const Navbar = () => {
         </div>
         <Link
           href={"/joblisting"}
-          className="hidden lg:block text-white text-[1vw] btn font-semibold bg-[#781393] py-3 px-4 montserrat text-md cursor-pointer"
+          className="hidden lg:block text-white text-[1vw] btn font-semibold bg-[#781393] py-2 px-4 montserrat  cursor-pointer"
         >
           Sign Up
         </Link>

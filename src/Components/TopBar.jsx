@@ -4,7 +4,7 @@ import { FaAngleDown } from "react-icons/fa6";
 import { PiGlobe } from "react-icons/pi";
 const TopBar = () => {
   return (
-    <div className="flex bg-[#FF8037] justify-between items-center lg:px-4 px-4 py-4  montserrat">
+    <div className="flex bg-[#FF8037] justify-between items-center lg:px-4 px-4 py-2  montserrat">
       <div className="flex items-center justify-center gap-2 text-xs cursor-pointer font-normal">
         <div className="text-white font-semibold text-[1.5vw] lg:text-[.8vw]">
           FREE DELIVERY on all orders above 999 AED | No coupon required

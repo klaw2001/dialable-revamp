@@ -15,6 +15,7 @@ const Hero = () => {
           alt="hero-img"
           objectFit="cover"
           className="h-full w-full"
+          placeholder="blur"
         />
       </div>
       <div className="hero-cont md:w-[45%] mt-8 md:mt-6 lg:mt-0  w-full flex items-start gap-4 md:gap-6  flex-col  ">

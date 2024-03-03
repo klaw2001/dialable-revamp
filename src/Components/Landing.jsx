@@ -25,7 +25,7 @@ const Landing = () => {
       <Posts />
       <ValuedPartners />
       <NewsLetter
-        className="m-20 md:m-10 gradient p-10 lg:px-20 lg:py-10 text-white flex-col flex  justify-between items-center"
+        className="m-0 lg:m-20 md:m-10 gradient p-10 lg:px-20 lg:py-10 text-white flex-col flex  justify-between items-center"
         formClass="mt-8 flex flex-col gap-3"
         heading="Subscribe our newsletter"
         color="text-white"
