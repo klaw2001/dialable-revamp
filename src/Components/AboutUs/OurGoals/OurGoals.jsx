@@ -26,7 +26,7 @@ const OurGoals = () => {
     },
   ];
   return (
-    <div className="p-10 lg:px-20 lg:py-32 bg-[#F4EBFF]">
+    <div className="p-10 lg:px-12 lg:py-24 bg-[#F4EBFF]">
       <div className="flex items-center flex-col Inter">
         <h3 className=" font-semibold text-black tracking-tight capitalize text-[3vw] md:text-[2vw] lg:text-[1vw] mb-3 ">
           Our values

@@ -29,13 +29,13 @@ const Products = () => {
   };
   return (
     <div className="py-10 lg:py-20">
-      <div className="breadcrumb px-10 lg:px-20 text-[3vw] lg:text-[1vw] text-black font-medium montserrat">
+      <div className="breadcrumb px-10 lg:px-14 text-[3vw] lg:text-[1vw] text-black font-medium montserrat">
         <Link href={"/"}>Home</Link> / Products
       </div>
-      <h1 className="text-[5.6vw] Sans lg:text-[2.6vw] px-10 lg:px-20 text-black  font-semibold montserrat">
+      <h1 className="text-[5.6vw] Sans lg:text-[2.6vw] px-10 lg:px-14 text-black  font-semibold montserrat">
         Shop All
       </h1>
-      <div className="flex px-10 lg:px-20 items-center justify-between mt-10 mb-4">
+      <div className="flex px-10 lg:px-14 items-center justify-between mt-10 mb-4">
         <button onClick={showDrawer} className="btn py-3 px-5 bg-[#781393] flex items-center gap-1 lg:gap-3 text-white Inter text-[3vw] lg:text-[1vw]">
           <div className="w-[3.5vw] lg:w-[1.5vw]">
             <Image
@@ -51,7 +51,7 @@ const Products = () => {
           <FaChevronDown />
         </button>
       </div>
-      <div className="flex px-10 lg:px-20 items-center justify-between mb-4">
+      <div className="flex px-10 lg:px-14 items-center justify-between mb-4">
         <div className="py-2 px-3 bg-[#F4F4F4] flex items-center gap-2 text-black Inter text-[3vw] lg:text-[1vw]">
           <span>Tag</span>
           <IoCloseOutline />

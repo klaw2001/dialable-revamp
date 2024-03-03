@@ -116,7 +116,7 @@ h1,h2,h3{
 .product .ant-drawer-content-wrapper{
   height:auto;
 }
-.filter .ant-drawer .ant-drawer-body{
+.product .ant-drawer .ant-drawer-body{
   padding: 0;
   position: relative;
 
