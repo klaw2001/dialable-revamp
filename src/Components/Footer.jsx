@@ -169,7 +169,7 @@ const Footer = () => {
       },
     ];
   return (
-    <div className="p-10 md:p-15 lg:p-20  bg-[#781393]">
+    <div className="p-10 md:p-15 lg:p-10  bg-[#781393]">
       <div className="top lg:flex items-start justify-between">
         <div>
           <div className="img relative w-[30vw] md:w-[20vw] lg:w-[12vw]">
@@ -225,7 +225,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="links   grid grid-cols-2 md:grid-cols-3 lg:flex  items-start justify-between border-t-2 border-b-2  py-8 lg:py-16 mt-14">
+      <div className="links   grid grid-cols-2 md:grid-cols-3 lg:flex  items-start justify-between border-t-2 border-b-2  py-8 lg:py-10 mt-10">
         {footerLinks.map((item, index) => (
           <div key={index} className="flex flex-col items-start gap-[2vw] mb-4 lg:mb-0 roboto text-white">
             <h1 className="text-[4vw] md:text-[3vw] lg:text-[16px]">{item.title}</h1>
@@ -239,7 +239,7 @@ const Footer = () => {
           </div>
         ))}
       </div>
-      <div className="bottom flex items-center justify-between text-white text-center lg:text-left text-[2.3vw] md:text-[1.5vw] lg:text-[1vw] font-normal roboto mt-10">
+      <div className="bottom flex items-center justify-between text-white text-center lg:text-left text-[2.3vw] md:text-[1.5vw] lg:text-[1vw] font-normal roboto mt-4">
           <p>&copy;2024 Dialable. All rights reserved</p>
           <Link href={"#"}>BACK TO TOP</Link>
           <p>Credits By ABC Company</p>
