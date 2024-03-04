@@ -9,7 +9,7 @@ import Footer from "../Footer.jsx";
 import Offers from "./Offers/Offers.jsx";
 import Banner from "./Banner/Banner.jsx";
 import Products from "./Products/Products.jsx";
-import OurNewsLetter from "../AboutUs/OurNewsLetter/OurNewsLetter.jsx";
+import NewsLetter from "../NewsLetter/NewsLetter.jsx";
 
 const MarketPlace = () => {
   return (
@@ -20,9 +20,12 @@ const MarketPlace = () => {
       <Offers />
       <Banner />
       <Products />
-      <div className="my-10 lg:mt-20 lg:mb-40">
-        <OurNewsLetter />
-      </div>
+      <NewsLetter
+        className="bg-[#F4EBFF] p-6 lg:px-20 lg:py-32 text-black mb-16 flex-col flex lg:flex-row justify-between items-center"
+        formClass="mt-8 flex flex-col gap-3"
+        heading="Join our newsletter"
+        color="text-black"
+      />
       <Footer />
     </div>
   );

@@ -47,8 +47,8 @@ const ProductInfo = () => {
     },
   ];
   return (
-    <div className="p-10 lg:py-32 lg:px-10 lg:mb-10 relative overflow-x-clip">
-      <div className="flex lg:flex-row flex-col lg:border-b-2 lg:border-black">
+    <div className="p-6 md:p-8 lg:pt-20 lg:pb-10 lg:px-10 lg:mb-10 relative overflow-x-clip">
+      <div className="flex lg:flex-row flex-col lg:border-b lg:border-black">
         <div className="w-full lg:w-1/2">
           <div className="img1 w-[70%]">
             <Image
@@ -75,18 +75,18 @@ const ProductInfo = () => {
           </div>
         </div>
         <div className="w-full lg:w-1/2">
-          <div className="breadcrumb text-black text-[3.1vw] lg:text-[1.1vw] font-medium">
+          <div className="breadcrumb text-black text-[3.1vw] md:text-[2vw] lg:text-[1.05vw] font-medium">
             <Link href={"/marketPlace"}>Shop all</Link> {`>`} Category {`>`}{" "}
             <span className="font-semibold">Karma Ergo Lite Silver</span>
           </div>
           <div className="info">
-            <div className="flex justify-between my-4 text-[5vw] lg:text-[3vw]">
+            <div className="flex justify-between my-4 text-[5vw] md:text-[4vw] lg:text-[2.5vw]">
               <h1 className="Sans  font-bold">
                 Karma Ergo Lite Silver
               </h1>
               <h3 className="Inter font-bold">₹2500</h3>
             </div>
-            <div className="review flex items-center text-[3vw] lg:text-[1vw]">
+            <div className="review flex items-center text-[3vw] md:text-[2vw] lg:text-[1vw]">
               <div className="flex items-center gap-1">
                 <RiStarFill />
                 <RiStarFill />
@@ -96,7 +96,7 @@ const ProductInfo = () => {
               </div>
               <span>&nbsp;(3.5 stars) . 10 reviews</span>
             </div>
-            <div className="desc text-[3vw] lg:text-[1.1vw] font-medium my-4">
+            <div className="desc text-[3vw] md:text-[2vw] lg:text-[1.05vw] font-medium my-4">
               <p>
                 Ultra-Lightweight & Sturdy
                 <br />
@@ -109,17 +109,17 @@ const ProductInfo = () => {
             <div className="color mt-4 flex items-center gap-3">
               <div className="w-[50%]">
                 <label className="block">Variant</label>
-                <select className="py-3 px-2 mt-4 text-[3vw] lg:text-[1vw] font-medium Inter w-full border border-black bg-transparent  focus-visible:outline-none fous-visible:border-[1.5px]">
+                <select className="py-2 px-2 mt-4 text-[3vw] md:text-[2vw] lg:text-[1vw] font-medium Inter w-full border border-black bg-transparent  focus-visible:outline-none fous-visible:border-[1.5px]">
                   <option value="">Color</option>
                 </select>
               </div>
-              <button className="btn py-3 px-2 mt-10 text-left text-[3vw]  lg:text-[1vw] font-medium Inter w-[50%] border  border-black bg-transparent ">
+              <button className="btn py-3 px-2 mt-10 text-left text-[3vw] md:text-[2vw]  lg:text-[1vw] font-medium Inter w-[50%] border  border-black bg-transparent ">
                 Add To WhishList
               </button>
             </div>
             <div className="options my-4">
               <p>Variant</p>
-              <div className="flex items center text-[3vw] lg:text-[1.1vw]  pt-4 gap-2">
+              <div className="flex items center text-[3vw] md:text-[2vw]  lg:text-[1.05vw]  pt-4 gap-2">
                 <div
                   onClick={() => setSelectedVariant(1)}
                   className={`py-2 px-4 text-black Inter font-medium cursor-pointer ${
@@ -156,7 +156,7 @@ const ProductInfo = () => {
 
             <div className="quantity">
               <p>Quantity</p>
-              <div className="flex gap-2 mt-4">
+              <div className="flex text-[3vw] md:text-[2vw] lg:text-[1.05vw] gap-2 mt-4">
                 <input
                   value={quantity}
                   readOnly
@@ -186,11 +186,11 @@ const ProductInfo = () => {
                 Buy Now
               </button>
             </div>
-            <p className="text-center text-[2.95vw] lg:text-[.95vw] font-medium my-4">
+            <p className="text-center text-[2.95vw] md:text-[1.95vw] lg:text-[.95vw] font-medium my-4">
               Free Shipping over $50
             </p>
           </div>
-          <div className="w-full  mt-10 mb-20">
+          <div className="w-full  mt-10 mb-6 md:mb-20">
             <div className="">
               <div className="space-y-4 ">
                 {faqs.map((faq, index) => (
@@ -206,7 +206,7 @@ const ProductInfo = () => {
                       className="flex justify-between items-center cursor-pointer "
                       onClick={() => toggleFAQ(index)}
                     >
-                      <h2 className="text-[4vw] lg:text-[1.3vw] font-semibold">
+                      <h2 className="text-[4vw] md:text-[2.5vw] lg:text-[1.3vw] font-semibold">
                         {faq.title}
                       </h2>
                       <svg
@@ -227,7 +227,7 @@ const ProductInfo = () => {
                       </svg>
                     </div>
                     {activeIndex === index && (
-                      <p className="text-gray-600 mt-2 text-[3.5vw] font-medium lg:text-[1.1vw]">
+                      <p className="text-gray-600 mt-2 text-[3.5vw] font-medium md:text-[1.9vw] lg:text-[1.1vw]">
                         {faq.desc}
                       </p>
                     )}
@@ -238,20 +238,20 @@ const ProductInfo = () => {
           </div>
         </div>
       </div>
-      <div className="flex absolute right-[-14%] lg:right-[-3.5%]  top-[100%] gap-4 rotate-[-90deg] w-[10%] ">
-        <Link
-          href="#"
-          className="btn text-white box-shadow-2 bg-[#781393]  rounded-lg  text-[1vw] font-semibold montserrat leading-none px-4 py-4 lg:py-6"
-        >
-          Advertise
-        </Link>
-        <Link
-          href="#"
-          className="btn text-white box-shadow-2 bg-[#FF6004]  rounded-lg  text-[1vw] font-semibold montserrat leading-none px-4 py-4 lg:py-6"
-        >
-          Free&nbsp;Listing
-        </Link>
-      </div>
+      <div className="flex fixed md:right-[-3.5%] right-[-2.5%] z-[20] top-[80%] gap-4 rotate-[-90deg] w-[10%] ">
+          <Link
+            href="#"
+            className="text-white active:scale-[.95] transition-all duration-[.5s] box-shadow-2 bg-[#781393] rounded-xl md:rounded-lg  lg:rounded-xl text-[0.8rem] md:text-[1rem] lg:text-[1.3vw] font-semibold montserrat leading-none px-[1.35rem] py-4 lg:py-6"
+          >
+            Advertise
+          </Link>
+          <Link
+            href="#"
+            className="text-white active:scale-[.95] transition-all duration-[.5s] box-shadow-2 bg-[#FF6004] rounded-xl md:rounded-lg  lg:rounded-xl text-[0.8rem] md:text-[1rem] lg:text-[1.3vw] font-semibold montserrat leading-none px-[1.35rem] py-4 lg:py-6"
+          >
+            Free&nbsp;Listing
+          </Link>
+        </div>
     </div>
   );
 };

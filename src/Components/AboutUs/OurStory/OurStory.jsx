@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 const OurStory = () => {
   return (
-    <div className="flex flex-col  lg:flex-row gap-20 p-10 md:px-6 overflow-x-clip  lg:py-14 lg:px-14">
+    <div className="flex flex-col  lg:flex-row gap-4 lg:gap-20 p-6 md:px-6 overflow-x-clip  lg:py-14 lg:px-14">
       <div className="w-full lg:w-[55%] my-8 lg:my-16 Inter">
         <h3 className="text-black tracking-tight capitalize text-[3vw] md:text-[2vw] lg:text-[1vw] mb-1 lg:mb-3 font-semibold">
           About us

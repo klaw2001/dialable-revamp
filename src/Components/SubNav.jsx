@@ -33,10 +33,10 @@ const SubNav = () => {
     },
   ];
   return (
-    <div className="py-3 px-8 hidden bg-white md:flex items-center justify-between relative z-[98] border border-b text-black">
+    <div className="py-3 md:px-4 lg:px-8 px-8 hidden bg-white md:flex items-center justify-between relative z-[98] border border-b text-black">
       {subNavLinks.map((link, i) => (
         <div key={i}>
-          <Link href={link.href} className="text-[1.05vw] font-medium montserrat">
+          <Link href={link.href} className="md:text-[1.2vw] lg:text-[1.05vw] font-medium montserrat">
             {link.title}
           </Link>
         </div>

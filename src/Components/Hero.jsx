@@ -7,7 +7,7 @@ import text_speech from "../../public/Images/text-to-speech.svg";
 const Hero = () => {
   
   return (
-    <div className="md:flex  justify-between items-center gap-10 montserrat bg-[#F4EBFF] block p-10 sm:p-20 md:p-0 ">
+    <div className="md:flex  justify-between items-center gap-10 montserrat bg-[#F4EBFF] block p-6 lg:p-10 sm:p-20 md:p-0 ">
       
       <div className="hero-img md:w-[50.3%] w-full mt-10 md:mt-0 relative">
         <Image
@@ -35,10 +35,10 @@ const Hero = () => {
           </p>
         </div>
         <div className="search flex gap-4 ">
-            <div className="w-[9vw]">
+            <div className="w-[14vw] md:w-[12vw] lg:w-[9vw]">
               <Image src={award_2} alt="award_1" className="object-cover h-full w-full"/>
             </div>
-            <div className="w-[9vw]">
+            <div className="w-[14vw] md:w-[12vw] lg:w-[9vw]">
               <Image src={award_1} alt="award_1" className="object-cover h-full w-full"/>
             </div>
         </div>

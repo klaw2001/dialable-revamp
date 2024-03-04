@@ -7,7 +7,7 @@ import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa6";
 const CustomerStories = () => {
   return (
-    <div className="p-10 lg:py-18 lg:px-14">
+    <div className="p-6 lg:py-18 lg:px-14">
       <div className="flex items-start flex-col Inter">
         <h3 className=" font-semibold text-black tracking-tight capitalize text-[3vw] md:text-[2vw] lg:text-[1vw] mb-3 ">
           Case studies

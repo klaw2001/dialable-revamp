@@ -11,7 +11,7 @@ const OurExperience = () => {
       onEnter={() => setCountOn(true)}
       onExit={() => setCountOn(false)}
     >
-      <div className="p-10 lg:py-18 lg:px-14 flex flex-col lg:flex-row justify-between">
+      <div className="p-6 lg:py-18 lg:px-14 flex flex-col lg:flex-row justify-between">
         <div className="w-full lg:w-1/2">
           <h1 className="text-black tracking-tight Sans capitalize text-[6vw] md:text-[4.5vw] lg:text-[3vw] mb-3 font-bold">
             Our Experience

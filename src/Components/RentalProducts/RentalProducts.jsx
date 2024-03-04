@@ -25,7 +25,7 @@ const RentalProducts = () => {
   ];
 
   return (
-    <div className="p-10">
+    <div className="p-6 lg:p-10">
       <div className="flex flex-col items-center gap-4">
         <h1 className="text-black Sans font-semibold text-[6vw] md:text-[4.5vw] lg:text-[3.5vw]">Rental Products</h1>
         <p className="text-black roboto font-bold text-[3vw] text-center md:text-[2vw] lg:text-[1.2vw]">
@@ -36,11 +36,11 @@ const RentalProducts = () => {
           Browse
         </button>
       </div>
-      <div className="flex items-center flex-wrap lg:flex-nowrap justify-center gap-8 px-2 py-16">
+      <div className="flex items-center flex-wrap md:flex-nowrap justify-center gap-8 px-2 py-16">
             {
                 rentalProducts.map((rentalProduct,i)=>(
                     <div key={i} className="flex items-center flex-col gap-2">
-                        <div className="img w-[30vw] md:w-[28vw] lg:w-[19vw]">
+                        <div className="img w-[30vw] md:w-[20vw] lg:w-[19vw]">
                             <Image src={rentalProduct.img} alt={rentalProduct.title} className="object-cover h-full w-full"/>
                         </div>
                         <p className="montserrat text-black text-[3vw] md:text-[2vw] lg:text-[1.3vw] font-bold">{rentalProduct.title}</p>

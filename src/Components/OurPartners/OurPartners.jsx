@@ -111,7 +111,7 @@ const OurPartners = () => {
         </div>
       ) : (
         <div className="block md:flex justify-center my-8 lg:my-16 px-0 lg:px-36">
-          <div className="w-full md:w-[50%] rounded-t-lg md:rounded-t-none md:rounded-s-lg border-[1.5px]  border-left overflow-clip border-[#781393]">
+          <div className="w-full md:w-[50%] rounded-t-lg md:rounded-l-lg  border-[1.5px]  border-left overflow-clip border-[#781393]">
             <div className="img h-full w-full">
               <Image
                 src={partners}

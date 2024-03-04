@@ -6,7 +6,7 @@ const ContactUs = () => {
     const [active, setActive]=useState("sydney")
   
   return (
-    <div className="p-10 lg:py-18 lg:px-14">
+    <div className="p-6 lg:py-18 lg:px-14">
       <div>
         <h1 className="text-black tracking-tight Sans capitalize text-[6vw] md:text-[4.5vw] lg:text-[3vw] mb-3 font-bold">
           Contact Us

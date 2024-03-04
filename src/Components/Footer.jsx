@@ -169,7 +169,7 @@ const Footer = () => {
       },
     ];
   return (
-    <div className="p-10 md:p-15 lg:p-14  bg-[#781393]">
+    <div className="p-6 md:p-15 lg:p-14  bg-[#781393]">
       <div className="top lg:flex items-start justify-between">
         <div>
           <div className="img relative w-[30vw] md:w-[20vw] lg:w-[12vw]">
@@ -239,7 +239,7 @@ const Footer = () => {
           </div>
         ))}
       </div>
-      <div className="bottom flex items-center justify-between text-white text-center lg:text-left text-[2.3vw] md:text-[1.5vw] lg:text-[1vw] font-normal roboto mt-4">
+      <div className="bottom flex items-center justify-between text-white text-center lg:text-left text-[2vw] md:text-[1.5vw] lg:text-[1vw] font-normal roboto mt-4">
           <p>&copy;2024 Dialable. All rights reserved</p>
           <Link href={"#"}>BACK TO TOP</Link>
           <p>Credits By ABC Company</p>
