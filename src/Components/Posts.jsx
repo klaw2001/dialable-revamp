@@ -4,7 +4,7 @@ import Blogs from "./Blogs/Blogs";
 
 const Posts = () => {
   return (
-    <div className="block lg:flex  justify-between p-10 lg:p-16">
+    <div className="block lg:flex  justify-between p-6 lg:p-16">
       <div className="w-full lg:w-[50%]">
         <Treatment />
       </div>

@@ -18,7 +18,7 @@ const Testimonials = () => {
 
   
   return (
-    <div className="p-10  overflow-clip">
+    <div className="p-6 lg:p-10  overflow-clip">
       <h1 className="montserrat text-[6vw] md:text-[5vw] lg:text-[3.5vw] Sans text-black font-bold">
         A Service You Can Trust
       </h1>
@@ -46,7 +46,7 @@ const Testimonials = () => {
         >
           <SwiperSlide>
             {" "}
-            <div className="testionial w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
+            <div className="testionial w-[80vw] md:w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
               <div className="flex items-center gap-1">
                 <FaStar />
                 <FaStar />
@@ -80,7 +80,7 @@ const Testimonials = () => {
           </SwiperSlide>
           <SwiperSlide>
             {" "}
-            <div className="testionial w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
+            <div className="testionial w-[80vw] md:w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
               <div className="flex items-center gap-1">
                 <FaStar />
                 <FaStar />
@@ -114,7 +114,7 @@ const Testimonials = () => {
           </SwiperSlide>
           <SwiperSlide>
             {" "}
-            <div className="testionial w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
+            <div className="testionial w-[80vw] md:w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
               <div className="flex items-center gap-1">
                 <FaStar />
                 <FaStar />
@@ -148,7 +148,7 @@ const Testimonials = () => {
           </SwiperSlide>
           <SwiperSlide>
             {" "}
-            <div className="testionial w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
+            <div className="testionial w-[80vw] md:w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
               <div className="flex items-center gap-1">
                 <FaStar />
                 <FaStar />
@@ -182,7 +182,7 @@ const Testimonials = () => {
           </SwiperSlide>
           <SwiperSlide>
             {" "}
-            <div className="testionial w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
+            <div className="testionial w-[80vw] md:w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
               <div className="flex items-center gap-1">
                 <FaStar />
                 <FaStar />
@@ -216,7 +216,7 @@ const Testimonials = () => {
           </SwiperSlide>
           <SwiperSlide>
             {" "}
-            <div className="testionial w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
+            <div className="testionial w-[80vw] md:w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
               <div className="flex items-center gap-1">
                 <FaStar />
                 <FaStar />
@@ -251,7 +251,7 @@ const Testimonials = () => {
           
         </Swiper>
 
-        {/* <div className="testionial w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
+        {/* <div className="testionial w-[80vw] md:w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
           <div className="flex items-center gap-1">
             <FaStar />
             <FaStar />
@@ -282,7 +282,7 @@ const Testimonials = () => {
             </div>
           </div>
         </div>
-        <div className="testionial w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
+        <div className="testionial w-[80vw] md:w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
           <div className="flex items-center gap-1">
             <FaStar />
             <FaStar />
@@ -313,7 +313,7 @@ const Testimonials = () => {
             </div>
           </div>
         </div>
-        <div className="testionial w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
+        <div className="testionial w-[80vw] md:w-[40vw] bg-[#F4EBFF] border border-[#781393] p-4 ">
           <div className="flex items-center gap-1">
             <FaStar />
             <FaStar />

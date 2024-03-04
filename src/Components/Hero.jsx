@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <div className="md:flex  justify-between items-center gap-10 montserrat bg-[#F4EBFF] block p-6 lg:p-10 sm:p-20 md:p-0 ">
       
-      <div className="hero-img md:w-[50.3%] w-full mt-10 md:mt-0 relative">
+      <div className="hero-img md:w-[50.3%] w-full mt-0 relative">
         <Image
           src={placeholder}
           alt="hero-img"

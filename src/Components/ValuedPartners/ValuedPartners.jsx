@@ -4,7 +4,7 @@ import relume from "../../../public/Images/relume.svg";
 import Image from "next/image";
 const ValuedPartners = () => {
   return (
-    <div className="p-10 flex items-center flex-col">
+    <div className="p-6 lg:p-10 flex items-center flex-col">
       <h1 className="text-center text-black Sans  text-[6vw] md:text-[4vw] lg:text-[3vw] font-bold">
         Most Valued Partners
       </h1>

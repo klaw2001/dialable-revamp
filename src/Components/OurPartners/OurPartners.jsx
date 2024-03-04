@@ -7,7 +7,7 @@ import Image from "next/image";
 const OurPartners = () => {
   const [activeTab, setActiveTab] = useState("abled");
   return (
-    <div className="p-10">
+    <div className="p-6 lg:p-10">
       <div className="buttons flex items-center justify-center">
         <button
           onClick={() => setActiveTab("abled")}
@@ -187,10 +187,10 @@ const OurPartners = () => {
               </li>
             </ul>
             <div className="flex items-center ml-4 gap-6 mg:gap-8">
-              <button className="capitalize text-white bg-[#781393] active:sacle-[.98] transition-all duration-75 text-[1.09vw] btn lg:py-3 px-4 md:p-4 font-medium">
+              <button className="capitalize text-white bg-[#781393] active:sacle-[.98] transition-all duration-75 text-[3vw] md:text-[2vw] lg:text-[1.09vw] btn lg:py-3 px-4 md:p-4 font-medium">
                 hire part time
               </button>
-              <button className="capitalize text-white bg-[#781393] active:sacle-[.98] transition-all duration-75 text-[1.09vw] btn lg:py-3 px-4 md:p-4 font-medium">
+              <button className="capitalize text-white bg-[#781393] active:sacle-[.98] transition-all duration-75 text-[3vw] md:text-[2vw] lg:text-[1.09vw] btn lg:py-3 px-4 md:p-4 font-medium">
                 hire full time
               </button>
             </div>
