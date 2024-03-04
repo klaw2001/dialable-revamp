@@ -30,7 +30,7 @@ const TopCategories = () => {
                 </p>
               </div>
             ))}
-            <div className="flex fixed right-[-3%] md:right-[-3.5%] z-[20] top-[80%] gap-4 rotate-[-90deg] w-[10%] ">
+            <div className="flex fixed right-[-2%] md:right-[-3.5%] z-[20] top-[80%] gap-4 rotate-[-90deg] w-[10%] ">
               <Link
                 href="#"
                 className="text-white active:scale-[.95] transition-all duration-[.5s] box-shadow-2 bg-[#781393] rounded-lg md:rounded-xl text-[0.8rem] md:text-[1rem] lg:text-[1.3vw] font-semibold montserrat leading-none px-[1.35rem] py-4 lg:py-6"
