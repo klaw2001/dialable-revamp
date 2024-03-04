@@ -5,7 +5,7 @@ import Image from "next/image";
 import { RiDeleteBin6Line } from "react-icons/ri";
 const Cart = () => {
   return (
-    <div className="py-10 px-4 lg:py-32 lg:px-10 lg:mb-10 relative overflow-x-clip">
+    <div className="py-10 px-4 lg:py-20 lg:px-10 lg:mb-8 relative overflow-x-clip">
       <div className="breadcrumb text-black text-[3vw] md:text-[2vw] lg:text-[1.1vw] font-medium">
         <Link href={"/"}>Home</Link> {`>`} Cart
       </div>
@@ -14,7 +14,7 @@ const Cart = () => {
         <div className="w-full lg:w-1/2">
           <div className="pt-10 pb-4 border-y-2 border-black">
             <div className="flex md:flex-row flex-col gap-3">
-              <div className="img w-full md:w-[40%] lg:w-[7vw] lg:h-[7vw] border border-black">
+              <div className="img w-full md:w-[20%] md:h-[20%] lg:w-[7vw] lg:h-[7vw] border border-black">
                 <Image
                   src={Prod}
                   alt="productimg"
@@ -22,20 +22,20 @@ const Cart = () => {
                 />
               </div>
               <div className="grow">
-                <div className="flex flex-col lg:flex-row justify-between">
+                <div className="flex flex-col md:flex-row justify-between">
                   <div className="flex gap-3">
                     <div className="info ">
-                      <h1 className="font-bold text-[5.2vw] md:text-[3.2vw] lg:text-[1.2vw]">
+                      <h1 className="font-bold text-[5.2vw] md:text-[2vw]  lg:text-[1.2vw]">
                         Karma Ergo Lite Silver
                       </h1>
-                      <p className="text-[2.85vw] md:text-[1.85vw] lg:text-[.85vw]">Color: Black</p>
-                      <p className="text-[2.85vw] md:text-[1.85vw] lg:text-[.85vw]">Size: 16 inch</p>
-                      <p className="text-[2.85vw] md:text-[1.85vw] lg:text-[.85vw]">In Stock</p>
+                      <p className="text-[2.85vw] md:text-[1.5vw] lg:text-[.85vw]">Color: Black</p>
+                      <p className="text-[2.85vw] md:text-[1.5vw] lg:text-[.85vw]">Size: 16 inch</p>
+                      <p className="text-[2.85vw] md:text-[1.5vw] lg:text-[.85vw]">In Stock</p>
                     </div>
                   </div>
-                  <div className="flex flex-col lg:flex-row gap-6 lg:gap-10">
-                    <div className="quantity mt-4 lg:mt-0">
-                      <h1 className="font-bold text-[5.2vw] md:text-[3.2vw] lg:text-[1.2vw]">Quantity</h1>
+                  <div className="flex flex-col md:flex-row gap-6 md:gap-10">
+                    <div className="quantity mt-4 md:mt-0">
+                      <h1 className="font-bold text-[5.2vw] md:text-[2vw]  lg:text-[1.2vw]">Quantity</h1>
                       <select
                         name=""
                         className="border mt-2 focus-visible:rounded-none border-black py-2 px-6 "
@@ -47,18 +47,18 @@ const Cart = () => {
                       </select>
                     </div>
                     <div className="total">
-                      <h1 className="font-bold text-[5.2vw] md:text-[3.2vw] lg:text-[1.2vw] text-left lg:text-right">
+                      <h1 className="font-bold text-[5.2vw] md:text-[2vw]  lg:text-[1.2vw] text-left lg:text-right">
                         Total
                       </h1>
-                      <p className="font-bold text-[4vw] md:text-[2.6vw] lg:text-[1vw] mt-3">₹2500 /-</p>
+                      <p className="font-bold text-[4vw] md:text-[1.8vw] lg:text-[1vw] mt-3">₹2500 /-</p>
                     </div>
                   </div>
                 </div>
                 <div className="flex justify-between  mt-8 items-center">
                   <div className="buttons flex items-center gap-3 montserrat">
-                    <button className="text-[2.85vw] md:text-[1.85vw] lg:text-[.85vw]">Edit</button>
-                    <button className="text-[2.85vw] md:text-[1.85vw] lg:text-[.85vw]">Move to Wishlist</button>
-                    <button className="text-[2.85vw] md:text-[1.85vw] lg:text-[.85vw]">Save for Later</button>
+                    <button className="text-[2.85vw] md:text-[1.5vw] lg:text-[.85vw]">Edit</button>
+                    <button className="text-[2.85vw] md:text-[1.5vw] lg:text-[.85vw]">Move to Wishlist</button>
+                    <button className="text-[2.85vw] md:text-[1.5vw] lg:text-[.85vw]">Save for Later</button>
                   </div>
                   <button className="btn">
                     <RiDeleteBin6Line />
