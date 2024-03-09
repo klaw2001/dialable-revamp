@@ -50,7 +50,7 @@ const OurPartners = () => {
                   one stop solutions for all inclusion needs
                 </span>
               </li>
-              <li className="flex items-center gap-2 py-2 md:py-4">
+              <li className="flex items-center gap-2 pb-2 md:py-4">
                 <div className="w-[3vw] md:w-[1.2vw]">
                   <Image
                     src={check}
@@ -62,7 +62,7 @@ const OurPartners = () => {
                   training and education
                 </span>
               </li>
-              <li className="flex items-center gap-2 py-2 md:py-4">
+              <li className="flex items-center gap-2 pb-2 md:py-4">
                 <div className="w-[3vw] md:w-[1.2vw]">
                   <Image
                     src={check}
@@ -74,7 +74,7 @@ const OurPartners = () => {
                   verified talent profiles
                 </span>
               </li>
-              <li className="flex items-center gap-2 py-2 md:py-4">
+              <li className="flex items-center gap-2 pb-2 md:py-4">
                 <div className="w-[3vw] md:w-[1.2vw]">
                   <Image
                     src={check}
@@ -86,7 +86,7 @@ const OurPartners = () => {
                   large number of products
                 </span>
               </li>
-              <li className="flex items-center gap-2 py-2 md:py-4">
+              <li className="flex items-center gap-2 pb-2 md:py-4">
                 <div className="w-[3vw] md:w-[1.2vw]">
                   <Image
                     src={check}
@@ -111,21 +111,23 @@ const OurPartners = () => {
         </div>
       ) : (
         <div className="block md:flex justify-center my-8 lg:my-16 mx-0 lg:mx-36 border-[1.5px] border-[#781393] rounded-lg overflow-clip">
-          <div className="w-full md:w-[50%] ">
-            <div className="img h-full w-full">
+          <div className="  ">
+            <div className="img">
               <Image
                 src={partners}
                 alt="partners"
-                className="object-cover h-full w-full"
+                width="500px"
+                height="400px"
+                className="object-cover"
               />
             </div>
           </div>
-          <div className="w-full md:w-[50%] bg-[white] py-8  px-4  xl:px-12 montserrat capitalize ">
+          <div className="w-full  bg-[white] py-8  px-4  xl:px-12 montserrat capitalize ">
             <h2 className="text-black uppercase Sans font-bold text-[4vw] md:text-[1.6vw]">
               our partners like us
             </h2>
             <ul className="my-4 md:mt-8 md:mb-6">
-              <li className="flex items-center gap-2 py-2 md:py-4">
+              <li className="flex items-center gap-2 pb-2 md:py-4">
                 <div className="w-[3vw] md:w-[1.2vw]">
                   <Image
                     src={check}
@@ -137,7 +139,7 @@ const OurPartners = () => {
                   one stop solutions for all inclusion needs
                 </span>
               </li>
-              <li className="flex items-center gap-2 py-2 md:py-4">
+              <li className="flex items-center gap-2 pb-2 md:py-4">
                 <div className="w-[3vw] md:w-[1.2vw]">
                   <Image
                     src={check}

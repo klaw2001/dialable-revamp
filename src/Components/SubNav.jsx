@@ -4,31 +4,51 @@ import React from "react";
 const SubNav = () => {
   const subNavLinks = [
     {
-      title: "Homecare",
+      title: "Products",
       href: "#",
     },
     {
-      title: "Mobility Aids",
+      title: "Store",
       href: "#",
     },
     {
-      title: "Orthopedic Supports",
+      title: "Support",
       href: "#",
     },
     {
-      title: "Compression Garments",
+      title: "Enablers",
       href: "#",
     },
     {
-      title: "Respiratory Care",
+      title: "B2B",
       href: "#",
     },
     {
-      title: "Active Daily Living - ADL",
+      title: "Employment",
       href: "#",
     },
     {
-      title: "Used Products",
+      title: "Learn",
+      href: "#",
+    },
+    {
+      title: "Community",
+      href: "#",
+    },
+    {
+      title: "Events",
+      href: "#",
+    },
+    {
+      title: "Policy",
+      href: "#",
+    },
+    {
+      title: "Change Makers",
+      href: "#",
+    },
+    {
+      title: "Alliances",
       href: "#",
     },
   ];
@@ -36,7 +56,7 @@ const SubNav = () => {
     <div className="py-3 md:px-4 lg:px-8 px-8 hidden bg-white md:flex items-center justify-between relative z-[98] border border-b text-black">
       {subNavLinks.map((link, i) => (
         <div key={i}>
-          <Link href={link.href} className="md:text-[1.2vw] lg:text-[1.05vw] font-medium montserrat">
+          <Link href={link.href} className="md:text-[1.2vw] lg:text-[0.8vw] font-medium montserrat">
             {link.title}
           </Link>
         </div>
@@ -44,7 +64,7 @@ const SubNav = () => {
       <div>
         <Link
           href="#"
-          className="text-[1vw] btn shadow-xl font-semibold py-2 px-3 block border-2 border-black montserrat"
+          className="text-[0.7vw] btn shadow-xl font-semibold py-2 px-3 block border-2 border-black montserrat"
         >
           Special Offers
         </Link>

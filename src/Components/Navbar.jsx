@@ -65,7 +65,7 @@ const Navbar = () => {
             <Image src={Logo} alt="dialable-logo" objectFit="cover" />
           </Link>
         </div>
-        <div className="lg:flex hidden gap-5 mx-12 text-[1.05vw] items-center leading-none">
+        <div className="lg:flex hidden gap-5 mx-12 text-[0.8vw] items-center leading-none">
           {links.map((item, index) => (
             <Link
               key={index}
@@ -184,11 +184,11 @@ const Navbar = () => {
           </form>
         </div>
         <div>
-          <IoCartOutline size="2.5rem" />
+          <IoCartOutline size="2rem" />
         </div>
         <Link
           href={"/joblisting"}
-          className="hidden lg:block text-white text-[1vw] btn font-semibold bg-[#781393] py-2 px-4 montserrat  cursor-pointer"
+          className="hidden lg:block text-white text-[0.7vw] btn font-semibold bg-[#781393] py-2 px-4 montserrat  cursor-pointer"
         >
           Sign Up
         </Link>
