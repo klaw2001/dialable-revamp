@@ -4,20 +4,20 @@ import categories from "./categories";
 import Image from "next/image";
 const TopCategories = () => {
   return (
-    <div className="flex  items-center overflow-hidden relative p-6 lg:p-24  z-[3]">
+    <div className="flex  items-center overflow-hidden relative p-6 lg:p-24 justify-center z-[3]">
       <div className="w-[90%] grow lg:grow-[.7] xl:grow-[.4]">
         <div className="flex items-baseline justify-between">
-          <h1 className="text-black Sans font-semibold text-[6vw] md:text-[5vw] lg:text-[3.5vw]">
+          <h1 className="text-black Sans font-semibold text-[6vw] md:text-[5vw] lg:text-[1.5vw]">
             Top Categories
           </h1>
-          <button className="text-black montserrat shadow-xl font-bold lg:h-[3vw] p-2 md:p-3  btn text-[2vw] md:text-[1.5vw] lg:text-[1vw] lg:py-2 lg:px-4 leading-none border-[1.5px] border-black ">
+          <button className="text-black montserrat shadow-xl font-bold lg:h-[3vw] p-2 md:p-3  btn text-[2vw] md:text-[1.5vw] lg:text-[0.7vw] lg:py-2 lg:px-4 leading-none border-[1.5px] border-black ">
             View all categories
           </button>
         </div>
         <div>
-          <div className="flex items-center relative justify-center md:justify-start md:items-start gap-8 md:gap-2 lg:gap-24 lg:justify-start mt-16 flex-wrap ">
+          <div className="flex items-center relative justify-center md:justify-center md:items-start gap-8 md:gap-2 lg:gap-24 lg:justify-center mt-16 flex-wrap ">
             {categories.map((category, i) => (
-              <div key={i} className="flex flex-col md:my-2 lg:my-0 grow items-center justify-start">
+              <div key={i} className="flex flex-col md:my-2 lg:my-0 items-center justify-start">
                 <div className="image_wrapper w-[30vw]  md:w-[100px]">
                   <Image
                     src={category.img}
