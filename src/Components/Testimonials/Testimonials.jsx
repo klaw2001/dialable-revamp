@@ -37,6 +37,20 @@ const Testimonials = () => {
           navigation
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
+          breakpoints={{
+            320:{
+              slidesPerView:1.5,
+              spaceBetween:150,
+            },
+            768:{
+              slidesPerView:2.3,
+              spaceBetween:50,
+            },
+            1024:{
+              slidesPerView:2.6,
+              spaceBetween:200
+            }
+          }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
           autoplay
@@ -60,7 +74,7 @@ const Testimonials = () => {
                 vero illum aliquid veniam.
               </p>
               <div className="flex gap-4 mt-6">
-                <div className="img w-[3vw]">
+                <div className="img w-[6vw] md:w-[3vw]">
                   <Image
                     src={beds}
                     alt="dummy"
@@ -94,7 +108,7 @@ const Testimonials = () => {
                 vero illum aliquid veniam.
               </p>
               <div className="flex gap-4 mt-6">
-                <div className="img w-[3vw]">
+                <div className="img w-[6vw] md:w-[3vw]">
                   <Image
                     src={beds}
                     alt="dummy"
@@ -128,7 +142,7 @@ const Testimonials = () => {
                 vero illum aliquid veniam.
               </p>
               <div className="flex gap-4 mt-6">
-                <div className="img w-[3vw]">
+                <div className="img w-[6vw] md:w-[3vw]">
                   <Image
                     src={beds}
                     alt="dummy"
@@ -162,7 +176,7 @@ const Testimonials = () => {
                 vero illum aliquid veniam.
               </p>
               <div className="flex gap-4 mt-6">
-                <div className="img w-[3vw]">
+                <div className="img w-[6vw] md:w-[3vw]">
                   <Image
                     src={beds}
                     alt="dummy"
@@ -196,7 +210,7 @@ const Testimonials = () => {
                 vero illum aliquid veniam.
               </p>
               <div className="flex gap-4 mt-6">
-                <div className="img w-[3vw]">
+                <div className="img w-[6vw] md:w-[3vw]">
                   <Image
                     src={beds}
                     alt="dummy"
@@ -230,7 +244,7 @@ const Testimonials = () => {
                 vero illum aliquid veniam.
               </p>
               <div className="flex gap-4 mt-6">
-                <div className="img w-[3vw]">
+                <div className="img w-[6vw] md:w-[3vw]">
                   <Image
                     src={beds}
                     alt="dummy"
@@ -265,7 +279,7 @@ const Testimonials = () => {
             vero illum aliquid veniam.
           </p>
           <div className="flex gap-4 mt-6">
-            <div className="img w-[3vw]">
+            <div className="img w-[6vw] md:w-[3vw]">
               <Image
                 src={beds}
                 alt="dummy"
@@ -296,7 +310,7 @@ const Testimonials = () => {
             vero illum aliquid veniam.
           </p>
           <div className="flex gap-4 mt-6">
-            <div className="img w-[3vw]">
+            <div className="img w-[6vw] md:w-[3vw]">
               <Image
                 src={beds}
                 alt="dummy"
@@ -327,7 +341,7 @@ const Testimonials = () => {
             vero illum aliquid veniam.
           </p>
           <div className="flex gap-4 mt-6">
-            <div className="img w-[3vw]">
+            <div className="img w-[6vw] md:w-[3vw]">
               <Image
                 src={beds}
                 alt="dummy"
