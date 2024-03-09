@@ -68,24 +68,24 @@ const Testimonials = () => {
                 <FaStar />
                 <FaStar />
               </div>
-              <p className="text-[.9vw] mt-6 roboto">
+              <p className="text-[1.9vw] lg:text-[.9vw] mt-6 roboto">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
                 rerum assumenda voluptatem blanditiis, deserunt quibusdam maxime
                 vero illum aliquid veniam.
               </p>
-              <div className="flex gap-4 mt-6">
-                <div className="img w-[6vw] md:w-[3vw]">
+              <div className="flex gap-2 md:gap-4 mt-6">
+                <div className="img w-[9vw] md:w-[3vw]">
                   <Image
                     src={beds}
                     alt="dummy"
-                    className="object-cover h-full w-ful"
+                    className="object-cover h-full w-full"
                   />
                 </div>
                 <div className="montserrat capitalize black">
-                  <p className="text-black text-[.8vw] font-semibold">
+                  <p className="text-black text-[1.8vw] lg:text-[.8vw] font-semibold">
                     name surname
                   </p>
-                  <span className="text-black text-[.8vw] font-normal">
+                  <span className="text-black text-[1.8vw] lg:text-[.8vw] font-normal">
                     position, company name
                   </span>
                 </div>
@@ -102,24 +102,24 @@ const Testimonials = () => {
                 <FaStar />
                 <FaStar />
               </div>
-              <p className="text-[.9vw] mt-6 roboto">
+              <p className="text-[1.9vw] lg:text-[.9vw] mt-6 roboto">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
                 rerum assumenda voluptatem blanditiis, deserunt quibusdam maxime
                 vero illum aliquid veniam.
               </p>
-              <div className="flex gap-4 mt-6">
-                <div className="img w-[6vw] md:w-[3vw]">
+              <div className="flex gap-2 md:gap-4 mt-6">
+                <div className="img w-[9vw] md:w-[3vw]">
                   <Image
                     src={beds}
                     alt="dummy"
-                    className="object-cover h-full w-ful"
+                    className="object-cover h-full w-full"
                   />
                 </div>
                 <div className="montserrat capitalize black">
-                  <p className="text-black text-[.8vw] font-semibold">
+                  <p className="text-black text-[1.8vw] lg:text-[.8vw] font-semibold">
                     name surname
                   </p>
-                  <span className="text-black text-[.8vw] font-normal">
+                  <span className="text-black text-[1.8vw] lg:text-[.8vw] font-normal">
                     position, company name
                   </span>
                 </div>
@@ -136,24 +136,24 @@ const Testimonials = () => {
                 <FaStar />
                 <FaStar />
               </div>
-              <p className="text-[.9vw] mt-6 roboto">
+              <p className="text-[1.9vw] lg:text-[.9vw] mt-6 roboto">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
                 rerum assumenda voluptatem blanditiis, deserunt quibusdam maxime
                 vero illum aliquid veniam.
               </p>
-              <div className="flex gap-4 mt-6">
-                <div className="img w-[6vw] md:w-[3vw]">
+              <div className="flex gap-2 md:gap-4 mt-6">
+                <div className="img w-[9vw] md:w-[3vw]">
                   <Image
                     src={beds}
                     alt="dummy"
-                    className="object-cover h-full w-ful"
+                    className="object-cover h-full w-full"
                   />
                 </div>
                 <div className="montserrat capitalize black">
-                  <p className="text-black text-[.8vw] font-semibold">
+                  <p className="text-black text-[1.8vw] lg:text-[.8vw] font-semibold">
                     name surname
                   </p>
-                  <span className="text-black text-[.8vw] font-normal">
+                  <span className="text-black text-[1.8vw] lg:text-[.8vw] font-normal">
                     position, company name
                   </span>
                 </div>
@@ -170,24 +170,24 @@ const Testimonials = () => {
                 <FaStar />
                 <FaStar />
               </div>
-              <p className="text-[.9vw] mt-6 roboto">
+              <p className="text-[1.9vw] lg:text-[.9vw] mt-6 roboto">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
                 rerum assumenda voluptatem blanditiis, deserunt quibusdam maxime
                 vero illum aliquid veniam.
               </p>
-              <div className="flex gap-4 mt-6">
-                <div className="img w-[6vw] md:w-[3vw]">
+              <div className="flex gap-2 md:gap-4 mt-6">
+                <div className="img w-[9vw] md:w-[3vw]">
                   <Image
                     src={beds}
                     alt="dummy"
-                    className="object-cover h-full w-ful"
+                    className="object-cover h-full w-full"
                   />
                 </div>
                 <div className="montserrat capitalize black">
-                  <p className="text-black text-[.8vw] font-semibold">
+                  <p className="text-black text-[1.8vw] lg:text-[.8vw] font-semibold">
                     name surname
                   </p>
-                  <span className="text-black text-[.8vw] font-normal">
+                  <span className="text-black text-[1.8vw] lg:text-[.8vw] font-normal">
                     position, company name
                   </span>
                 </div>
@@ -204,24 +204,24 @@ const Testimonials = () => {
                 <FaStar />
                 <FaStar />
               </div>
-              <p className="text-[.9vw] mt-6 roboto">
+              <p className="text-[1.9vw] lg:text-[.9vw] mt-6 roboto">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
                 rerum assumenda voluptatem blanditiis, deserunt quibusdam maxime
                 vero illum aliquid veniam.
               </p>
-              <div className="flex gap-4 mt-6">
-                <div className="img w-[6vw] md:w-[3vw]">
+              <div className="flex gap-2 md:gap-4 mt-6">
+                <div className="img w-[9vw] md:w-[3vw]">
                   <Image
                     src={beds}
                     alt="dummy"
-                    className="object-cover h-full w-ful"
+                    className="object-cover h-full w-full"
                   />
                 </div>
                 <div className="montserrat capitalize black">
-                  <p className="text-black text-[.8vw] font-semibold">
+                  <p className="text-black text-[1.8vw] lg:text-[.8vw] font-semibold">
                     name surname
                   </p>
-                  <span className="text-black text-[.8vw] font-normal">
+                  <span className="text-black text-[1.8vw] lg:text-[.8vw] font-normal">
                     position, company name
                   </span>
                 </div>
@@ -238,24 +238,24 @@ const Testimonials = () => {
                 <FaStar />
                 <FaStar />
               </div>
-              <p className="text-[.9vw] mt-6 roboto">
+              <p className="text-[1.9vw] lg:text-[.9vw] mt-6 roboto">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
                 rerum assumenda voluptatem blanditiis, deserunt quibusdam maxime
                 vero illum aliquid veniam.
               </p>
-              <div className="flex gap-4 mt-6">
-                <div className="img w-[6vw] md:w-[3vw]">
+              <div className="flex gap-2 md:gap-4 mt-6">
+                <div className="img w-[9vw] md:w-[3vw]">
                   <Image
                     src={beds}
                     alt="dummy"
-                    className="object-cover h-full w-ful"
+                    className="object-cover h-full w-full"
                   />
                 </div>
                 <div className="montserrat capitalize black">
-                  <p className="text-black text-[.8vw] font-semibold">
+                  <p className="text-black text-[1.8vw] lg:text-[.8vw] font-semibold">
                     name surname
                   </p>
-                  <span className="text-black text-[.8vw] font-normal">
+                  <span className="text-black text-[1.8vw] lg:text-[.8vw] font-normal">
                     position, company name
                   </span>
                 </div>
@@ -273,13 +273,13 @@ const Testimonials = () => {
             <FaStar />
             <FaStar />
           </div>
-          <p className="text-[.9vw] mt-6 roboto">
+          <p className="text-[1.9vw] lg:text-[.9vw] mt-6 roboto">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
             rerum assumenda voluptatem blanditiis, deserunt quibusdam maxime
             vero illum aliquid veniam.
           </p>
-          <div className="flex gap-4 mt-6">
-            <div className="img w-[6vw] md:w-[3vw]">
+          <div className="flex gap-2 md:gap-4 mt-6">
+            <div className="img w-[9vw] md:w-[3vw]">
               <Image
                 src={beds}
                 alt="dummy"
@@ -287,10 +287,10 @@ const Testimonials = () => {
               />
             </div>
             <div className="montserrat capitalize black">
-              <p className="text-black text-[.8vw] font-semibold">
+              <p className="text-black text-[1.8vw] lg:text-[.8vw] font-semibold">
                 name surname
               </p>
-              <span className="text-black text-[.8vw] font-normal">
+              <span className="text-black text-[1.8vw] lg:text-[.8vw] font-normal">
                 position, company name
               </span>
             </div>
@@ -304,13 +304,13 @@ const Testimonials = () => {
             <FaStar />
             <FaStar />
           </div>
-          <p className="text-[.9vw] mt-6 roboto">
+          <p className="text-[1.9vw] lg:text-[.9vw] mt-6 roboto">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
             rerum assumenda voluptatem blanditiis, deserunt quibusdam maxime
             vero illum aliquid veniam.
           </p>
-          <div className="flex gap-4 mt-6">
-            <div className="img w-[6vw] md:w-[3vw]">
+          <div className="flex gap-2 md:gap-4 mt-6">
+            <div className="img w-[9vw] md:w-[3vw]">
               <Image
                 src={beds}
                 alt="dummy"
@@ -318,10 +318,10 @@ const Testimonials = () => {
               />
             </div>
             <div className="montserrat capitalize black">
-              <p className="text-black text-[.8vw] font-semibold">
+              <p className="text-black text-[1.8vw] lg:text-[.8vw] font-semibold">
                 name surname
               </p>
-              <span className="text-black text-[.8vw] font-normal">
+              <span className="text-black text-[1.8vw] lg:text-[.8vw] font-normal">
                 position, company name
               </span>
             </div>
@@ -335,13 +335,13 @@ const Testimonials = () => {
             <FaStar />
             <FaStar />
           </div>
-          <p className="text-[.9vw] mt-6 roboto">
+          <p className="text-[1.9vw] lg:text-[.9vw] mt-6 roboto">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
             rerum assumenda voluptatem blanditiis, deserunt quibusdam maxime
             vero illum aliquid veniam.
           </p>
-          <div className="flex gap-4 mt-6">
-            <div className="img w-[6vw] md:w-[3vw]">
+          <div className="flex gap-2 md:gap-4 mt-6">
+            <div className="img w-[9vw] md:w-[3vw]">
               <Image
                 src={beds}
                 alt="dummy"
@@ -349,10 +349,10 @@ const Testimonials = () => {
               />
             </div>
             <div className="montserrat capitalize black">
-              <p className="text-black text-[.8vw] font-semibold">
+              <p className="text-black text-[1.8vw] lg:text-[.8vw] font-semibold">
                 name surname
               </p>
-              <span className="text-black text-[.8vw] font-normal">
+              <span className="text-black text-[1.8vw] lg:text-[.8vw] font-normal">
                 position, company name
               </span>
             </div>

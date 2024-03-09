@@ -57,6 +57,57 @@ const Navbar = () => {
     },
   ];
 
+  const subNavLinks = [
+    {
+      title: "Products",
+      href: "#",
+    },
+    {
+      title: "Store",
+      href: "#",
+    },
+    {
+      title: "Support",
+      href: "#",
+    },
+    {
+      title: "Enablers",
+      href: "#",
+    },
+    {
+      title: "B2B",
+      href: "#",
+    },
+    {
+      title: "Employment",
+      href: "#",
+    },
+    {
+      title: "Learn",
+      href: "#",
+    },
+    {
+      title: "Community",
+      href: "#",
+    },
+    {
+      title: "Events",
+      href: "#",
+    },
+    {
+      title: "Policy",
+      href: "#",
+    },
+    {
+      title: "Change Makers",
+      href: "#",
+    },
+    {
+      title: "Alliances",
+      href: "#",
+    },
+  ];
+
   return (
     <div className="flex items-center justify-between lg:px-8 px-4 py-2 md:py-2 lg:py-[0.85rem] border-t border-b bg-white border-zinc-300 montserrat sticky top-0 z-[99]">
       <div className="logo-links flex  items-center">
@@ -89,7 +140,7 @@ const Navbar = () => {
           <Image src={Menu} alt="menu" objectFit="cover" />
         </button>
         <Drawer title="" onClose={onClose} open={open}>
-          <div className="flex items-start flex-col gap-4  text-lg font-medium montserrat ">
+          <div className="flex items-start flex-col   text-[3vw] font-medium montserrat ">
             {links.map((linkItem, index) => (
               <Link key={index} href={linkItem.href} className="py-4">
                 {index === 0 ? (
@@ -101,27 +152,30 @@ const Navbar = () => {
                 )}
               </Link>
             ))}
+
+            {subNavLinks.map((subLinkItem, index) => (
+              <Link key={index} href={subLinkItem.href} className="py-4">
+                {subLinkItem.title}
+              </Link>
+            ))}
           </div>
-          <button className=" mt-4 text-white btn bg-[#FF6004] py-2 px-8 text-lg cursor-pointer">
-            Join
-          </button>
+          <Link
+            href={"/joblisting"}
+            className=" text-white text-[3vw] btn font-semibold bg-[#781393] py-2 px-4 montserrat  cursor-pointer"
+          >
+            Sign Up
+          </Link>
         </Drawer>
       </div>
       <div className="hidden lg:flex gap-5 items-center relative">
         <div className="accessibility ">
-          <div
-           
-            className="cursor-pointer text-black   text-sm gap-1 flex items-center"
-          >
+          <div className="cursor-pointer text-black   text-sm gap-1 flex items-center">
             <div>
               <RxAccessibility size="2.5rem" />
             </div>
             <FaChevronDown />
           </div>
-          <div
-        
-            className="tools shadow-xl   bg-white py-6 rounded-xl px-8"
-          >
+          <div className="tools shadow-xl   bg-white py-6 rounded-xl px-8">
             <div>
               <h1 className="montserrat text-black uppercase text-[1vw] font-semibold">
                 Accessibility Tools
