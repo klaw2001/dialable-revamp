@@ -9,13 +9,13 @@ const CustomerStories = () => {
   return (
     <div className="p-6 lg:py-18 lg:px-14">
       <div className="flex items-start flex-col Inter">
-        <h3 className=" font-semibold text-black tracking-tight capitalize text-[3vw] md:text-[2vw] lg:text-[1vw] mb-3 ">
+        <h3 className=" font-semibold text-black tracking-tight capitalize text-[3vw] md:text-[2vw] lg:text-[.8vw] mb-3 ">
           Case studies
         </h3>
-        <h1 className="text-black tracking-tight Sans capitalize text-[6vw] md:text-[4.5vw] lg:text-[3vw]  lg:mb-3 font-bold">
+        <h1 className="text-black tracking-tight Sans capitalize text-[6vw] md:text-[4.5vw] lg:text-[1.5vw]  lg:mb-3 font-bold">
           Customer stories
         </h1>
-        <p className="font-medium text-[3.2vw] md:text-[2.2vw] lg:text-[1.2vw] w-full lg:w-[60%] text-black ">
+        <p className="font-normal text-[3.2vw] md:text-[2.2vw] lg:text-[.9vw] w-full lg:w-[60%] text-black ">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
       </div>
