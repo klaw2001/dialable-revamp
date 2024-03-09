@@ -30,10 +30,10 @@ const FaqSection = () => {
   return (
     <div className="px-10 lg:px-16 flex mt-16 flex-col">
       <div className="">
-        <h1 className="text-black text-[6vw] lg:text-[3.5vw] font-bold montserrat">
+        <h1 className="text-black text-[6vw] lg:text-[1.8vw] font-bold montserrat">
           Frequently Asked Questions
         </h1>
-        <p className="text-[2vw]lg:text-[1.2vw] text-black font-semibold montserrat">
+        <p className="text-[2vw]lg:text-[.9vw] text-black font-normal montserrat">
           Your faq catalogue - simplifying complex queries.
         </p>
       </div>
@@ -56,15 +56,15 @@ const FaqSection = () => {
           </div>
         ))}
       </div>
-      <div className="lg:flex justify-between items-start">
+      <div className="lg:flex justify-center items-center gap-10 py-12">
         <div className="mt-10  lg:mt-32">
-          <h1 className="text-[4.3vw] lg:text-[2.3vw] montserrat font-medium">Still have a question?</h1>
+          <h1 className="text-[4.3vw] lg:text-[1.5vw] montserrat font-medium">Still have a question?</h1>
           <button className="btn border mt-4 montserrat text-[#FF6004] font-medium text-[4.5vw] lg:text-[1.2vw] border-[#FF6004] px-6 py-3">
             Contact
           </button>
         </div>
-        <div className="relative mt-4 lg:mt-0 w-full lg:w-[50%]">
-            <Image src={FaqImg} alt="faq-img" className="object-cover h-full w-full"/>
+        <div className="relative mt-4 lg:mt-0 ">
+            <Image src={FaqImg} alt="faq-img" className="object-cover" width={500} height={500}/>
         </div>
       </div>
     </div>
