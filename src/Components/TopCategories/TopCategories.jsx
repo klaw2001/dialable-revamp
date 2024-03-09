@@ -15,10 +15,10 @@ const TopCategories = () => {
           </button>
         </div>
         <div>
-          <div className="flex items-center relative justify-center md:justify-start md:items-start gap-8 md:gap-2 lg:gap-12 lg:justify-start mt-16 flex-wrap ">
+          <div className="flex items-center relative justify-center md:justify-start md:items-start gap-8 md:gap-2 lg:gap-24 lg:justify-start mt-16 flex-wrap ">
             {categories.map((category, i) => (
-              <div key={i} className="flex flex-col md:my-2 lg:my-0 grow items-center">
-                <div className="image_wrapper w-[30vw]  md:w-[12vw]">
+              <div key={i} className="flex flex-col md:my-2 lg:my-0 grow items-center justify-start">
+                <div className="image_wrapper w-[30vw]  md:w-[100px]">
                   <Image
                     src={category.img}
                     alt={category.title}

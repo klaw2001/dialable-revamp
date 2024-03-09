@@ -9,12 +9,12 @@ const Hero = () => {
   return (
     <div className="md:flex  justify-between items-center gap-10 montserrat bg-[#F4EBFF] block p-6  md:p-0 ">
       
-      <div className="hero-img md:w-[50.3%] w-full mt-0 relative">
+      <div className="hero-img md:w-[50.3%] md:h-[80vh] h-full w-full  mt-0 relative">
         <Image
           src={placeholder}
           alt="hero-img"
-          objectFit="cover"
-          className="h-full w-full"
+         
+          className="h-full object-cover w-full"
           placeholder="blur"
         />
       </div>
