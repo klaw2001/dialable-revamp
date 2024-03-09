@@ -231,7 +231,7 @@ const Footer = () => {
             <h1 className="text-[4vw] md:text-[3vw] lg:text-[16px]">{item.title}</h1>
             <div className=" flex items-start flex-col gap-[.75vw]">
               {item.subLinks.map((sublink, subIndex) => (
-                <Link key={subIndex} href={sublink.link} className="text-[2vw] md:text-[1.5vw] lg:text-[.8vw]">
+                <Link key={subIndex} href={sublink.link} className="text-[2.3vw] md:text-[1.5vw] lg:text-[.8vw]">
                   {sublink.linkName}
                 </Link>
               ))}
@@ -241,7 +241,7 @@ const Footer = () => {
       </div>
       <div className="bottom flex items-center justify-between text-white text-center lg:text-left text-[2vw] md:text-[1.5vw] lg:text-[1vw] font-normal roboto mt-4">
           <p>&copy;2024 Dialable. All rights reserved</p>
-          <Link href={"#"}>BACK TO TOP</Link>
+          <Link href={"#"} className="hidden md:block">BACK TO TOP</Link>
           <p>Credits By ABC Company</p>
       </div>
     </div>
