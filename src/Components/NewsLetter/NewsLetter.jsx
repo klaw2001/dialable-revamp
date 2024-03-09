@@ -5,7 +5,7 @@ const NewsLetter = ({ className, formClass ,heading, color }) => {
     <div>
       <div className={className}>
         <div>
-          <h1 className="Sans text-center font-bold text-[6vw] md:text-[4.5vw] lg:text-[3vw] montserrat">
+          <h1 className="Sans text-center font-bold text-[6vw] md:text-[4.5vw] lg:text-[2vw] montserrat">
             {heading}
           </h1>
           <p className="text-[3vw] mt-2 Inter md:text-[2vw] lg:text-[.8vw] roboto  font-normal text-center">
@@ -29,7 +29,7 @@ const NewsLetter = ({ className, formClass ,heading, color }) => {
               </button>
             </form>
           </div>
-          <p className={`roboto mt-2 ${color} text-[1.7vw] md:text-[1.3vw] lg:text-[.7vw] font-medium`}>
+          <p className={`roboto mt-2 ${color} text-[1.7vw] md:text-[1.3vw] lg:text-[.7vw] font-medium text-center`}>
             By  clicking  Get  Started,  you  agree  to  our  Terms  and  Conditions.
           </p>
         </div>

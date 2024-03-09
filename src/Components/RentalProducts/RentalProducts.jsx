@@ -27,13 +27,13 @@ const RentalProducts = () => {
   return (
     <div className="p-6 lg:p-10">
       <div className="flex flex-col items-center gap-4">
-        <h1 className="text-black Sans font-semibold text-[6vw] md:text-[4.5vw] lg:text-[3.5vw]">Rental Products</h1>
-        <p className="text-black roboto font-bold text-[3vw] text-center md:text-[2vw] lg:text-[1vw]">
+        <h1 className="text-black Sans font-semibold text-[6vw] md:text-[4.5vw] lg:text-[1.5vw]">Rental Products</h1>
+        <p className="text-black roboto font-normal text-[3vw] text-center md:text-[2vw] lg:text-[0.8vw]">
           Not looking to buy? Check out our rental products, available for a
           period that suits you
         </p>
-        <button className="text-black mt-2 montserrat shadow-xl font-bold lg:h-[3vw] md:text-[2vw]  btn text-[3vw] lg:text-[1vw] py-2 px-6 leading-none border-[2px] border-black ">
-          Browse
+        <button className="text-black mt-2 montserrat shadow-xl font-medium lg:h-[3vw] md:text-[2vw]  btn text-[3vw] lg:text-[0.8vw] py-1 px-6 leading-none border-[2px] border-black ">
+          Browse More
         </button>
       </div>
       <div className="flex items-center flex-wrap md:flex-nowrap justify-center gap-8 px-2 py-16">
