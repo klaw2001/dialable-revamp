@@ -78,7 +78,7 @@ const Testimonials = () => {
                   <Image
                     src={beds}
                     alt="dummy"
-                    className="object-cover h-full w-ful"
+                    className="object-cover h-full w-full"
                   />
                 </div>
                 <div className="montserrat capitalize black">
@@ -112,7 +112,7 @@ const Testimonials = () => {
                   <Image
                     src={beds}
                     alt="dummy"
-                    className="object-cover h-full w-ful"
+                    className="object-cover h-full w-full"
                   />
                 </div>
                 <div className="montserrat capitalize black">
@@ -146,7 +146,7 @@ const Testimonials = () => {
                   <Image
                     src={beds}
                     alt="dummy"
-                    className="object-cover h-full w-ful"
+                    className="object-cover h-full w-full"
                   />
                 </div>
                 <div className="montserrat capitalize black">
@@ -180,7 +180,7 @@ const Testimonials = () => {
                   <Image
                     src={beds}
                     alt="dummy"
-                    className="object-cover h-full w-ful"
+                    className="object-cover h-full w-full"
                   />
                 </div>
                 <div className="montserrat capitalize black">
@@ -214,7 +214,7 @@ const Testimonials = () => {
                   <Image
                     src={beds}
                     alt="dummy"
-                    className="object-cover h-full w-ful"
+                    className="object-cover h-full w-full"
                   />
                 </div>
                 <div className="montserrat capitalize black">
@@ -248,7 +248,7 @@ const Testimonials = () => {
                   <Image
                     src={beds}
                     alt="dummy"
-                    className="object-cover h-full w-ful"
+                    className="object-cover h-full w-full"
                   />
                 </div>
                 <div className="montserrat capitalize black">
