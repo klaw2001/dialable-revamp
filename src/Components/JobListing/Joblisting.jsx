@@ -1,14 +1,11 @@
 import React from "react";
-
-import Register from "./Register/Register";
-import Steps from "./Steps/Steps";
-import Stories from "./Stories/Stories";
-import Connect from "./Connect/Connect";
-import Footer from "../Footer";
-import FaqSection from "./FaqSection/FaqSection";
 import TopBar from "../TopBar";
 import Navbar from "../Navbar";
 import SubNav from "../SubNav";
+import Footer from "../Footer";
+import JobBanner from "./JobBanner/JobBanner";
+import Positions from "./Positions/Positions";
+
 
 const Joblisting = () => {
   return (
@@ -16,12 +13,10 @@ const Joblisting = () => {
       <TopBar/>
       <Navbar/>
       <SubNav />
-      <Register/>
-      <Steps/>
-      <Stories/>
-      <Connect/>
-      <FaqSection/>
+      <JobBanner/>
+      <Positions/>
       <Footer/>
+
     </div>
   );
 };
