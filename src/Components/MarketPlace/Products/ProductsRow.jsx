@@ -104,7 +104,7 @@ const ProductsRow = ({ open, onClose, placement, visibleItem }) => {
         ) : (
           <>
            
-          <h1 className="text-center py-32">Products Fetching</h1>
+          <h1 className="text-center py-32">Products Not Found</h1>
 
           </>
         )}
