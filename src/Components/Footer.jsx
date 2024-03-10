@@ -179,7 +179,7 @@ const Footer = () => {
               className="h-full w-full object-cover"
             />
           </div>
-          <p className="montserrat text-[4vw] md:text-[2.5vw] lg:text-[.7vw] font-normal mt-6 text-white lg:w-[26vw]">
+          <p className="montserrat text-[4vw] md:text-[2vw] lg:text-[.7vw] font-normal mt-6 text-white lg:w-[26vw]">
             We strive to make our platform accessible to all individuals,
             including those with disabilities. If you encounter any
             accessibility barriers or have suggestions for improvement, please
