@@ -3,9 +3,10 @@ import React from "react";
 import Filter from "../../../../public/Images/Filters.svg";
 import Card from "./Card";
 import { cardData } from "./CardData";
+import Link from "next/link";
 const Positions = () => {
   return (
-    <div className="px-4 py-6 lg:px-10 lg:py-16">
+    <div className="px-4 py-6 lg:px-10 lg:py-16 relative">
       <div className=" mb-8 lg:mb-12">
         <h1 className="Sans my-5 text-black text-[5vw]  md:text-[4vw] font-bold md:leading-[4.8vw] lg:leading-[3.2vw] lg:text-[2.5vw]">
           Open Positions
@@ -63,6 +64,20 @@ const Positions = () => {
       >
         Load More
       </button>
+      <div className="flex fixed right-[-2%] md:right-[-3.5%] z-[20] top-[80%] gap-4 rotate-[-90deg] w-[10%] ">
+              <Link
+                href="#"
+                className="text-white active:scale-[.95] transition-all duration-[.5s] box-shadow-2 bg-[#781393] rounded-lg md:rounded-xl text-[0.8rem] md:text-[1rem] lg:text-[1.3vw] font-semibold montserrat leading-none px-[1.35rem] py-4 lg:py-6"
+              >
+                Advertise
+              </Link>
+              <Link
+                href="#"
+                className="text-white active:scale-[.95] transition-all duration-[.5s] box-shadow-2 bg-[#FF6004] rounded-lg md:rounded-xl text-[0.8rem] md:text-[1rem] lg:text-[1.3vw] font-semibold montserrat leading-none px-[1.35rem] py-4 lg:py-6"
+              >
+                Free&nbsp;Listing
+              </Link>
+            </div>
     </div>
   );
 };
