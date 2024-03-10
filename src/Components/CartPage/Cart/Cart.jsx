@@ -1,9 +1,69 @@
+"use client"
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Prod from "../../../../public/Images/wheelchairfront.png";
 import Image from "next/image";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { useParams } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { getCartItems } from "@/utils";
 const Cart = () => {
+  const {id} = useParams() 
+  const [cartItems , setCartItems] = useState([])
+  useEffect(()=>{
+    const myFunction = async () =>{
+      const cart = await getCartItems(id)
+      console.log(cart)
+      setCartItems(cart)
+    }
+    myFunction()
+  },[])
+  const formatNumberWithCommas = (number) => {
+    const parts = number.toString().split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return parts.join(".");
+  };
+  const totalamt = () => {
+    return cartItems.reduce((total, product) => {
+      return total + product.price * (product.quantity || 1);
+    }, 0);
+  };
+  const handleIncrement = async (index) => {
+    const updatedCart = [...cartItems];
+    updatedCart[index].quantity += 1;
+    setCartItems(updatedCart);
+
+    // Make API request to update quantity in the backend
+    try {
+      const cartID = updatedCart[index]._id;
+      await axios.put(`/api/cart/${cartID}?updatetype=increment`);
+    } catch (error) {
+      console.error("Error updating quantity:", error);
+    }
+
+    // Update localStorage
+    // localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+  };
+
+  const handleDecrement = async (index) => {
+    const updatedCart = [...cartItems];
+    if (updatedCart[index].quantity > 1) {
+      updatedCart[index].quantity -= 1;
+      setCartItems(updatedCart);
+
+      // Make API request to update quantity in the backend
+      try {
+        const cartID = updatedCart[index]._id;
+        await axios.put(`/api/cart/${cartID}?updatetype=decrement`);
+      } catch (error) {
+        console.error("Error updating quantity:", error);
+      }
+
+      // Update localStorage
+      // localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+    }
+  };
+
   return (
     <div className="py-10 px-4 lg:py-20 lg:px-10 lg:mb-8 relative overflow-x-clip">
       <div className="breadcrumb text-black text-[3vw] md:text-[2vw] lg:text-[1.1vw] font-medium">
@@ -11,12 +71,16 @@ const Cart = () => {
       </div>
       <h1 className="Sans text-[5vw] md:text-[4vw] lg:text-[3vw] font-bold mb-4 md:mb-6 lg:mb-8">My Cart</h1>
       <div className="flex gap-6 flex-col lg:flex-row montserrat">
+        {
+          cartItems?.map((product , ind) =>(
         <div className="w-full lg:w-1/2">
           <div className="pt-10 pb-4 border-y-2 border-black">
             <div className="flex md:flex-row flex-col gap-3">
               <div className="img w-full md:w-[20%] md:h-[20%] lg:w-[7vw] lg:h-[7vw] border border-black">
                 <Image
-                  src={Prod}
+                  src={product.productID.thumbnail}
+                  width={132}
+                  height={132}
                   alt="productimg"
                   className="object-cover h-full w-full"
                 />
@@ -26,31 +90,27 @@ const Cart = () => {
                   <div className="flex gap-3">
                     <div className="info ">
                       <h1 className="font-bold text-[5.2vw] md:text-[2vw]  lg:text-[1.2vw]">
-                        Karma Ergo Lite Silver
+                      {product.productID.name}
                       </h1>
                       <p className="text-[2.85vw] md:text-[1.5vw] lg:text-[.85vw]">Color: Black</p>
                       <p className="text-[2.85vw] md:text-[1.5vw] lg:text-[.85vw]">Size: 16 inch</p>
-                      <p className="text-[2.85vw] md:text-[1.5vw] lg:text-[.85vw]">In Stock</p>
+                      <p className="text-[2.85vw] md:text-[1.5vw] lg:text-[.85vw]"> Price - ₹{product.productID.price}</p>
                     </div>
                   </div>
                   <div className="flex flex-col md:flex-row gap-6 md:gap-10">
-                    <div className="quantity mt-4 md:mt-0">
-                      <h1 className="font-bold text-[5.2vw] md:text-[2vw]  lg:text-[1.2vw]">Quantity</h1>
-                      <select
-                        name=""
-                        className="border mt-2 focus-visible:rounded-none border-black py-2 px-6 "
-                        id=""
-                      >
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                      </select>
-                    </div>
+                  <div className="flex items-center">
+                          {/* Decrement button */}
+                          <button className="border border-gray-300 rounded-full w-8 h-8 flex justify-center items-center" onClick={() => handleDecrement(ind)}>-</button>
+                          {/* Display quantity */}
+                          <p className="border border-gray-300 rounded-full w-8 h-8 flex justify-center items-center">{product.quantity}</p>
+                          {/* Increment button */}
+                          <button className="border border-gray-300 rounded-full w-8 h-8 flex justify-center items-center" onClick={() => handleIncrement(ind)}>+</button>
+                        </div>
                     <div className="total">
                       <h1 className="font-bold text-[5.2vw] md:text-[2vw]  lg:text-[1.2vw] text-left lg:text-right">
                         Total
                       </h1>
-                      <p className="font-bold text-[4vw] md:text-[1.8vw] lg:text-[1vw] mt-3">₹2500 /-</p>
+                      <p className="font-bold text-[4vw] md:text-[1.8vw] lg:text-[1vw] mt-3">₹{formatNumberWithCommas(totalamt())}</p>
                     </div>
                   </div>
                 </div>
@@ -68,6 +128,9 @@ const Cart = () => {
             </div>
           </div>
         </div>
+
+          ))
+        }
         <div className="w-full lg:w-1/2">
           <div className="montserrat border-2 py-2 px-4 lg:py-4 lg:px-6 bg-[#F4EBFF] lg:h-[35vw] border-[#781393]">
             <div>
@@ -100,7 +163,7 @@ const Cart = () => {
               </div>
               <div className="total font-bold flex justify-between my-10">
                 <p className="text-[#000000BF]">Estimated Total</p>
-                <p>₹2500 /-</p>
+                <p>₹{formatNumberWithCommas(totalamt())}</p>
               </div>
               <button className="p-4 w-full bg-[#781393] text-white font-medium btn">
                   Checkout

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   RiStarFill,
   RiStarHalfFill,
@@ -11,11 +11,40 @@ import {
 import prod_1 from "../../../../public/Images/wheelchairfront.png";
 import prod_2 from "../../../../public/Images/wheelchairleft.png";
 import Image from "next/image";
+import { useParams, useRouter } from "next/navigation";
+import { getSingleProduct } from "@/utils";
+import axios from "axios";
 const ProductInfo = () => {
+  const router = useRouter();
+  const { id } = useParams();
   const [selectedVariant, setSelectedVariant] = useState(1);
   const [quantity, setQuantity] = useState(1);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [singleProduct, setSingleProduct] = useState({});
+  useEffect(() => {
+    const myFunction = async () => {
+      const sin = await getSingleProduct(id);
+      console.log(sin);
+      setSingleProduct(sin);
+    };
+    myFunction();
+  }, []);
 
+  const userID = "65cb74adbee9d7c924ba9739";
+  const handleCart = async (productID) => {
+    await axios
+      .post("/api/cart/add-cart", { userID, productID })
+      .then((res) => {
+        setTimeout(() => {
+          // Navigate to the cart page after 3 seconds
+          router.push(`/cart/${userID}`);
+        }, 3000);
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error("Failed to add item to cart. Please try again.");
+      });
+  };
   const increaseQuantity = () => {
     setQuantity(quantity + 1);
   };
@@ -52,24 +81,30 @@ const ProductInfo = () => {
         <div className="w-full lg:w-1/2">
           <div className="img1 w-[70%]">
             <Image
-              src={prod_1}
+              src={singleProduct?.thumbnail}
               className="h-full w-full object-cover"
               alt="front"
+              width={600}
+              height={500}
             />
           </div>
           <div className="flex items-center">
             <div className="img1 w-[50%] grow lg:w-[40%]">
               <Image
-                src={prod_1}
+                src={singleProduct?.thumbnail}
                 className="h-full w-full object-cover"
                 alt="right"
+                width={300}
+                height={300}
               />
             </div>
             <div className="img1 w-[50%] grow lg:w-[40%]">
               <Image
-                src={prod_2}
+                src={singleProduct?.thumbnail}
                 className="h-full w-full object-cover"
                 alt="left"
+                width={300}
+                height={300}
               />
             </div>
           </div>
@@ -77,14 +112,14 @@ const ProductInfo = () => {
         <div className="w-full lg:w-1/2">
           <div className="breadcrumb text-black text-[3.1vw] md:text-[2vw] lg:text-[1.05vw] font-medium">
             <Link href={"/marketPlace"}>Shop all</Link> {`>`} Category {`>`}{" "}
-            <span className="font-semibold">Karma Ergo Lite Silver</span>
+            <span className="font-semibold">
+              {singleProduct?.category?.name}
+            </span>
           </div>
           <div className="info">
             <div className="flex justify-between my-4 text-[5vw] md:text-[4vw] lg:text-[2.5vw]">
-              <h1 className="Sans  font-bold">
-                Karma Ergo Lite Silver
-              </h1>
-              <h3 className="Inter font-bold">₹2500</h3>
+              <h1 className="Sans  font-bold">{singleProduct.name}</h1>
+              <h3 className="Inter font-bold">₹{singleProduct.price}</h3>
             </div>
             <div className="review flex items-center text-[3vw] md:text-[2vw] lg:text-[1vw]">
               <div className="flex items-center gap-1">
@@ -97,14 +132,7 @@ const ProductInfo = () => {
               <span>&nbsp;(3.5 stars) . 10 reviews</span>
             </div>
             <div className="desc text-[3vw] md:text-[2vw] lg:text-[1.05vw] font-medium my-4">
-              <p>
-                Ultra-Lightweight & Sturdy
-                <br />
-                Ergo Lite is KARMA’s lightest attendant-propelled wheelchair.
-                This compact design is ideal for female and elderly attendants.
-                It is also equipped with Karma’s unique S-Ergo seating system.
-                We take care of both caregiver and user’s need.
-              </p>
+              <p>{singleProduct?.shortDescription}</p>
             </div>
             <div className="color mt-4 flex items-center gap-3">
               <div className="w-[50%]">
@@ -179,7 +207,10 @@ const ProductInfo = () => {
             </div>
 
             <div className="buttons my-4 flex flex-col gap-4">
-              <button className="btn py-3 px-2 w-full text-white bg-[#781393]">
+              <button
+                className="btn py-3 px-2 w-full text-white bg-[#781393]"
+                onClick={() => handleCart(singleProduct._id)}
+              >
                 Add To Cart
               </button>
               <button className="btn py-3 px-2 w-full border  border-black">
@@ -239,19 +270,19 @@ const ProductInfo = () => {
         </div>
       </div>
       <div className="flex fixed md:right-[-3.5%] right-[-2.5%] z-[20] top-[80%] gap-4 rotate-[-90deg] w-[10%] ">
-          <Link
-            href="#"
-            className="text-white active:scale-[.95] transition-all duration-[.5s] box-shadow-2 bg-[#781393] rounded-xl md:rounded-lg  lg:rounded-xl text-[0.8rem] md:text-[1rem] lg:text-[1.3vw] font-semibold montserrat leading-none px-[1.35rem] py-4 lg:py-6"
-          >
-            Advertise
-          </Link>
-          <Link
-            href="#"
-            className="text-white active:scale-[.95] transition-all duration-[.5s] box-shadow-2 bg-[#FF6004] rounded-xl md:rounded-lg  lg:rounded-xl text-[0.8rem] md:text-[1rem] lg:text-[1.3vw] font-semibold montserrat leading-none px-[1.35rem] py-4 lg:py-6"
-          >
-            Free&nbsp;Listing
-          </Link>
-        </div>
+        <Link
+          href="#"
+          className="text-white active:scale-[.95] transition-all duration-[.5s] box-shadow-2 bg-[#781393] rounded-xl md:rounded-lg  lg:rounded-xl text-[0.8rem] md:text-[1rem] lg:text-[1.3vw] font-semibold montserrat leading-none px-[1.35rem] py-4 lg:py-6"
+        >
+          Advertise
+        </Link>
+        <Link
+          href="#"
+          className="text-white active:scale-[.95] transition-all duration-[.5s] box-shadow-2 bg-[#FF6004] rounded-xl md:rounded-lg  lg:rounded-xl text-[0.8rem] md:text-[1rem] lg:text-[1.3vw] font-semibold montserrat leading-none px-[1.35rem] py-4 lg:py-6"
+        >
+          Free&nbsp;Listing
+        </Link>
+      </div>
     </div>
   );
 };

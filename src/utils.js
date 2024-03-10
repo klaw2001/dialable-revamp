@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export const activeNavMenu = (path) => {
   const navItem = document.querySelectorAll(".main-menu li a");
   navItem.forEach((nav) => {
@@ -31,3 +33,29 @@ export const imageUpload = async (file) => {
   console.log(res2);
   return res2.url;
 };
+
+export const getAllProducts = async () => {
+  try {
+    const response = await axios.get("/api/products/all-products");
+    return response.data.data;
+  } catch (error) {
+    console.error("Error fetching products:", error);
+  }
+};
+
+export const getSingleProduct = async (id) => {
+  try {
+    const response = await axios.get(`/api/products/single-product/${id}`);
+    return response.data.data;
+  } catch (error) {
+    console.error("Error fetching single product:", error);
+  }
+};
+export const getCartItems = async (id) =>{
+  try {
+    const response = await axios.get(`/api/cart/${id}`)
+    return response.data.data
+  } catch (error) {
+    console.error("Error fetching cart product:", error);
+  }
+}
