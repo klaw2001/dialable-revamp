@@ -3,7 +3,13 @@ import TopBar from "../TopBar";
 import Navbar from "../Navbar";
 import SubNav from "../SubNav";
 import Register from "../BusinessListing/Register/Register";
-import grow from "../../../public/Images/grow.png"
+import grow from "../../../public/Images/grow.png";
+import Stories from "../BusinessListing/Stories/Stories";
+import FaqSection from "../BusinessListing/FaqSection/FaqSection";
+import Footer from "../Footer";
+import Features from "./Features/Features";
+import Pricing from "./Pricing/Pricing";
+import Competition from "./Competition/Competition";
 const Advertise = () => {
   return (
     <div>
@@ -18,6 +24,12 @@ const Advertise = () => {
         }
         img={grow}
       />
+      <Features/>
+      <Stories />
+      <Pricing/>
+      <Competition/>
+      <FaqSection />
+      <Footer />
     </div>
   );
 };

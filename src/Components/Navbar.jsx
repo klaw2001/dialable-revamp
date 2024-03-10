@@ -233,7 +233,7 @@ const Navbar = () => {
               type="text"
               placeholder="&#xF002;   Search"
               style={{ fontFamily: "Montserrat, FontAwesome" }}
-              className="py-2 bg-[rgba(217,217,217,0.50)] montserrat border border-[rgba(0,0,0,0.25)] px-4"
+              className="py-2 montserrat border border-[rgba(0,0,0,0.25)] px-4"
             />
           </form>
         </div>
@@ -241,7 +241,7 @@ const Navbar = () => {
           <IoCartOutline size="2rem" />
         </div>
         <Link
-          href={"/joblisting"}
+          href={"/signup"}
           className="hidden lg:block text-white text-[0.7vw] btn font-semibold bg-[#781393] py-2 px-4 montserrat  cursor-pointer"
         >
           Sign Up
