@@ -40,7 +40,7 @@ const Faq = () => {
   return (
     <div className="lg:flex items-start justify-between p-6 lg:p-20 Transition">
       <div className="lg:w-1/3 w-full flex items-start flex-col gap-6">
-        <h1 className="text-[9.5vw] md:text-[6vw] lg:text-[3.1vw] Inter text-[black] font-bold leading-[12vw] md:leading-none lg:leading-[3vw]">
+        <h1 className="text-[9.5vw] md:text-[6vw] lg:text-[1.5vw] Inter text-[black] font-bold leading-[12vw] md:leading-none lg:leading-[3vw]">
          FAQs
         </h1>
         <p className="Inter font-medium text-[3vw] md:text-[2vw] lg:text-[1.05vw]">

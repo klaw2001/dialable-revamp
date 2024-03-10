@@ -169,7 +169,7 @@ const Footer = () => {
       },
     ];
   return (
-    <div className="p-6 md:p-15 lg:p-14  bg-[#781393]">
+    <div className="p-6 md:p-15 lg:pt-14 lg:pb-4 lg:px-14 bg-[#781393]">
       <div className="top lg:flex items-start justify-between">
         <div>
           <div className="img relative w-[30vw] md:w-[20vw] lg:w-[12vw]">
@@ -179,7 +179,7 @@ const Footer = () => {
               className="h-full w-full object-cover"
             />
           </div>
-          <p className="montserrat text-[4vw] md:text-[2.5vw] lg:text-[1vw] font-normal mt-6 text-white lg:w-[26vw]">
+          <p className="montserrat text-[4vw] md:text-[2.5vw] lg:text-[.7vw] font-normal mt-6 text-white lg:w-[26vw]">
             We strive to make our platform accessible to all individuals,
             including those with disabilities. If you encounter any
             accessibility barriers or have suggestions for improvement, please
@@ -187,7 +187,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="socials mt-5 md:mt-3 lg:mt-0">
-          <h1 className="roboto text-[6.4vw] md:text-[4.4vw] lg:text-[2.4vw] text-white font-medium">
+          <h1 className="roboto text-[6vw] md:text-[4.4vw] lg:text-[1.5vw] text-white font-medium">
             Follow Us
           </h1>
           <div className="socials_icons flex items-center gap-4 lg:gap-[1vw] my-4">
@@ -231,7 +231,7 @@ const Footer = () => {
             <h1 className="text-[4vw] md:text-[3vw] lg:text-[16px]">{item.title}</h1>
             <div className=" flex items-start flex-col gap-[.75vw]">
               {item.subLinks.map((sublink, subIndex) => (
-                <Link key={subIndex} href={sublink.link} className="text-[2.3vw] md:text-[1.5vw] lg:text-[.8vw]">
+                <Link key={subIndex} href={sublink.link} className="text-[2.6vw] md:text-[1.5vw] lg:text-[.8vw]">
                   {sublink.linkName}
                 </Link>
               ))}
@@ -239,7 +239,7 @@ const Footer = () => {
           </div>
         ))}
       </div>
-      <div className="bottom flex items-center justify-between text-white text-center lg:text-left text-[2vw] md:text-[1.5vw] lg:text-[1vw] font-normal roboto mt-4">
+      <div className="bottom flex items-center justify-between text-white text-center lg:text-left text-[2vw] md:text-[1.5vw] lg:text-[.8vw] font-normal roboto mt-4">
           <p>&copy;2024 Dialable. All rights reserved</p>
           <Link href={"#"} className="hidden md:block">BACK TO TOP</Link>
           <p>Credits By ABC Company</p>

@@ -31,18 +31,18 @@ const ProductsRow = ({open, onClose, placement, visibleItem}) => {
             <button className="text-white text-[3vw] md:text-[2vw] lg:text-[1vw] font-medium btn py-3 px-6 bg-[#781393]">Apply</button>
         </div>
       </Drawer>
-      <div className="flex p-6 lg:py-10 lg:px-20 items-center gap-1 md:gap-[1rem] lg:gap-[2vw] flex-wrap">
+      <div className="flex p-6 lg:py-10 lg:px-20 items-center gap-1 md:gap-[1rem] lg:gap-[2vw] flex-wrap justify-center">
         {marketData.slice(0, visibleItem).map((product, i) => (
-          <div key={i} className=" product-card grow lg:grow-0 flex-auto w-[45%] lg:w-[20vw] py-3 px-2">
-            <div className="py-2 px-3 bg-[#F4F4F4] w-20 lg:w-24 flex  font-medium items-center gap-2 text-black Inter text-[2vw] md:text-[1.5vw] lg:text-[1vw]">
-              <span className="block grow ml-2">In Stock</span>
+          <div key={i} className=" product-card grow lg:grow-0 flex-auto w-[45%] lg:w-[20vw] py-3 px-2 mb-4">
+            <div className="py-2 px-3 bg-[#4d7c0f]  lg:w-24 flex  font-medium items-center gap-2 text-white Inter text-[2vw] md:text-[1.5vw] lg:text-[1vw]">
+              <span className="block grow ml-2 text-sm ">In Stock</span>
             </div>
-            <div className="w-full my-3 lg:my-6 mix-blend-multiply">
+            <div className="my-3 lg:my-6 mix-blend-multiply">
               <Image
                 src={product.img}
                 alt={product.title + i}
                 width={300}
-                className="object-cover"
+                // className="object-cover"
               />
             </div>
             <div className="product-info mt-3 lg:mt-6">
@@ -52,18 +52,18 @@ const ProductsRow = ({open, onClose, placement, visibleItem}) => {
                 <span
                   className={` truncate ${
                     product.title === "Healthshine Grade 1 Air Mattress Overlay"
-                      ? ` text-[2vw] md:text-[1.7vw] lg:text-[1.1vw]`
-                      : `text-[2.2vw] md:text-[2vw] lg:text-[1.2vw]`
+                      ? ` text-[2vw] md:text-[1.7vw] lg:text-[1vw]`
+                      : `text-[2.2vw] md:text-[2vw] lg:text-[1vw]`
                   } font-semibold text-black Inter`}
                 >
                   {product.title}
                 </span>
                 <span>{product.price}</span>
               </div>
-              <span className="text-[1.8vw] md:text-[1.2vw] lg:text-[.8vw] Inter capitalize font-medium">
+              <span className="text-[1.8vw] md:text-[1.2vw] lg:text-[.7vw] Inter capitalize font-normal">
                 {product.cat}
               </span>
-              <div className="my-4 hidden lg:flex items-center">
+              {/* <div className="my-4 hidden lg:flex items-center">
                 <RiStarSFill size={`1.5vw`} />
                 <RiStarSFill size={`1.5vw`} />
                 <RiStarSFill size={`1.5vw`} />
@@ -76,7 +76,7 @@ const ProductsRow = ({open, onClose, placement, visibleItem}) => {
                 <RiStarSFill size={`2.5vw`} />
                 <RiStarSFill size={`2.5vw`} />
                 <RiStarSFill size={`2.5vw`} />
-              </div>
+              </div> */}
             </div>
           </div>
         ))}

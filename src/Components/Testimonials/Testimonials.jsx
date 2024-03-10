@@ -19,15 +19,16 @@ const Testimonials = () => {
   
   return (
     <div className="p-6 lg:p-10  overflow-clip">
-      <h1 className="montserrat text-[6vw] md:text-[5vw] lg:text-[3.5vw] Sans text-black font-bold">
+      <h1 className="montserrat text-[6vw] md:text-[5vw] lg:text-[1.5vw] Sans text-black font-bold">
         A Service You Can Trust
       </h1>
 
-      <p className="text-black roboto text-[2.9vw] md:text-[1.9vw] lg:text-[.9vw] mt-4">
+      <p className="text-black roboto text-[2.9vw] md:text-[1.2vw] lg:text-[.9vw] mt-4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </p>
 
       <div className="mt-12 mb-10   items-center">
+
         <Swiper
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}

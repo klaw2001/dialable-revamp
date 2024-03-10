@@ -2,11 +2,11 @@ import React from "react";
 import Link from "next/link";
 const Connect = () => {
   return (
-    <div className="p-10 lg:py-20 lg:px-24 bg-[#781393] flex items-center flex-col gap-4">
-      <h1 className="text-[4.5vw] text-white text-center lg:text-[2.5vw] montserrat lg:w-[48%] font-bold leading-[8vw] lg:leading-[3vw]">
+    <div className="p-10 lg:py-16 lg:px-24 bg-[#781393] flex items-center flex-col gap-4">
+      <h1 className="text-[4.5vw] text-white text-center lg:text-[1.5vw] montserrat lg:w-[48%] font-bold leading-[8vw] lg:leading-[3vw]">
       Connect with New Customers & Grow Your Business
       </h1>
-      <p className="roboto text-white font-medium text-[2.5vw] text-center  lg:text-[1vw]">
+      <p className="roboto text-white font-normal text-[2.5vw] text-center  lg:text-[.9vw]">
       Register Your Business Today
       </p>
       

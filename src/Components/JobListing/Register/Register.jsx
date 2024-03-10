@@ -14,7 +14,7 @@ const Register = () => {
           <div className="search flex">
             <div className="flex border items-center gap-2 border-black p-4">
               <p className="montserrat text-lg font-medium">+91</p>
-              <div className="text-black lg:w-[20vw] w-[40vw]">
+              <div className="text-black lg:w-[10vw] w-[40vw]">
                 <input
                   type="number"
                   className="w-full montserrat focus-within:outline-none"
@@ -23,11 +23,11 @@ const Register = () => {
               </div>
             </div>
 
-            <button className="text-white btn  bg-[#FF6004] py-2 px-4 lg:px-8 text-[2.8vw] lg:text-[1.2vw] cursor-pointer montserrat font-medium">
+            <button className="text-white btn  bg-[#FF6004] p-2 lg:px-8 text-[2.8vw] lg:text-[.9vw] cursor-pointer montserrat font-medium">
               Start Now
             </button>
           </div>
-          <div className="flex montserrat gap-4 text-[2.5vw] lg:text-[1.2vw] mt-2">
+          <div className="flex montserrat gap-4 text-[2.5vw] lg:text-[.9vw] mt-2">
             <span>Already Registered?</span>
             <Link href={"#"} className="font-semibold montserrat">
               Sign Up
