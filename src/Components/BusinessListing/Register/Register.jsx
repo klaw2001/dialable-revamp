@@ -1,24 +1,20 @@
 import React from "react";
-import Vector from "../../../../public/Images/joblisting.png";
 import Image from "next/image";
 import Link from "next/link";
 import Check from "../../../../public/Images/check.svg";
-const Register = () => {
+const Register = ({title, heading, desc, img}) => {
   return (
-    <div className="py-10 px-4 lg:px-14 flex items-center flex-col">
+    <div className="py-10 px-4 lg:py-20 lg:px-14 flex items-center flex-col">
       <div className="block md:flex items-start">
         <div className="w-full md:w-[48%] lg:mt-14 grow">
           <p className="montserrat font-semibold text-[3vw] md:text-[1.2vw] lg:text-[1vw]">
-            Free Listing with Dialable
+            {title}
           </p>
           <h1 className="Sans text-[6.5vw] md:text-[3.4vw] lg:text-[3.5vw] md:w-[85%] mt-2 leading-[6.2vw] md:leading-[4vw] font-bold">
-            List Your Business For Free. Get Enquires!
+            {heading}
           </h1>
           <p className="montserrat text-[3vw] md:text-[1.2vw] lg:text-[1vw] font-medium my-4 md:w-[75%]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique. Duis cursus, mi quis
-            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
-            vitae erat.
+           {desc}
           </p>
           <div className="search flex gap-2">
             <div className="flex border items-center gap-2 border-black p-1 lg:px-4 lg:py-2 text-[3vw] md:text-[1.2vw] lg:text-[1vw]">
@@ -85,7 +81,7 @@ const Register = () => {
         </div>
         <div className="relative w-full md:w-[50%] mt-6 h-full md:h-[68vh] lg:h-[80vh] lg:mt-0 grow">
           <Image
-            src={Vector}
+            src={img}
             alt="register"
             className="object-cover h-full w-full"
           />

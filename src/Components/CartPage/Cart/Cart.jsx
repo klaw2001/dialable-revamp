@@ -73,7 +73,7 @@ const Cart = () => {
       <div className="flex gap-6 flex-col lg:flex-row montserrat">
         {
           cartItems?.map((product , ind) =>(
-        <div className="w-full lg:w-1/2">
+        <div key={ind} className="w-full lg:w-1/2">
           <div className="pt-10 pb-4 border-y-2 border-black">
             <div className="flex md:flex-row flex-col gap-3">
               <div className="img w-full md:w-[20%] md:h-[20%] lg:w-[7vw] lg:h-[7vw] border border-black">
