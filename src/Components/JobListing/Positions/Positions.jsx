@@ -58,26 +58,23 @@ const Positions = () => {
         ))}
       </div>
 
-      <button
-     
-        className="button my-2 md:my-4 lg:my-8 btn py-3 px-5 border-2 border-black text-[3vw] md:text-[2vw] lg:text-[1vw]"
-      >
+      <button className="button my-2 md:my-4 lg:my-8 btn py-3 px-5 border-2 border-black text-[3vw] md:text-[2vw] lg:text-[1vw]">
         Load More
       </button>
       <div className="flex fixed right-[-2%] md:right-[-3.5%] z-[20] top-[80%] gap-4 rotate-[-90deg] w-[10%] ">
-              <Link
-                href="#"
-                className="text-white active:scale-[.95] transition-all duration-[.5s] box-shadow-2 bg-[#781393] rounded-lg md:rounded-xl text-[0.8rem] md:text-[1rem] lg:text-[1.3vw] font-semibold montserrat leading-none px-[1.35rem] py-4 lg:py-6"
-              >
-                Advertise
-              </Link>
-              <Link
-                href="#"
-                className="text-white active:scale-[.95] transition-all duration-[.5s] box-shadow-2 bg-[#FF6004] rounded-lg md:rounded-xl text-[0.8rem] md:text-[1rem] lg:text-[1.3vw] font-semibold montserrat leading-none px-[1.35rem] py-4 lg:py-6"
-              >
-                Free&nbsp;Listing
-              </Link>
-            </div>
+        <Link
+          href="#"
+          className="text-white active:scale-[.95] transition-all duration-[.5s] box-shadow-2 bg-[#781393] rounded-lg md:rounded-xl text-[0.8rem] md:text-[1rem] lg:text-[1.3vw] font-semibold montserrat leading-none px-[1.35rem] py-4 lg:py-6"
+        >
+          Advertise
+        </Link>
+        <Link
+          href="#"
+          className="text-white active:scale-[.95] transition-all duration-[.5s] box-shadow-2 bg-[#FF6004] rounded-lg md:rounded-xl text-[0.8rem] md:text-[1rem] lg:text-[1.3vw] font-semibold montserrat leading-none px-[1.35rem] py-4 lg:py-6"
+        >
+          Free&nbsp;Listing
+        </Link>
+      </div>
     </div>
   );
 };
