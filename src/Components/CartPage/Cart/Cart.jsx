@@ -6,18 +6,18 @@ import Image from "next/image";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { useParams } from "next/navigation";
 import { useRouter } from "next/navigation";
-import { getCartItems } from "@/utils";
+import { getCartItems, initializeRazorpay } from "@/utils";
 const Cart = () => {
   const {id} = useParams() 
   const [cartItems , setCartItems] = useState([])
   useEffect(()=>{
     const myFunction = async () =>{
       const cart = await getCartItems(id)
-      console.log(cart)
       setCartItems(cart)
     }
     myFunction()
   },[])
+  const userID = "65cb74adbee9d7c924ba9739"
   const formatNumberWithCommas = (number) => {
     const parts = number.toString().split(".");
     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -63,6 +63,62 @@ const Cart = () => {
       // localStorage.setItem("cartItems", JSON.stringify(updatedCart));
     }
   };
+
+  const makePayment = async () => {
+    const res = await initializeRazorpay();
+    if (!res) {
+      // toast.error("Razorpay SDK Failed to load");
+      return;
+    }
+
+    try {
+      // Make API call to the serverless API
+      const response = await fetch("/api/razorpay-payment/razorpay", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          price: totalamt() * 100, // Assuming totalamt is in rupees, convert to paise for Razorpay
+        }),
+      });
+
+      // const { firstName, lastName, email, contact } = userData;
+
+      const data = await response.json();
+
+      const options = {
+        key: process.env.RAZORPAY_KEY, // Use NEXT_PUBLIC_RAZORPAY_KEY for client-side access
+        name: "Dialable",
+        currency: data.currency,
+        amount: data.amount,
+        order_id: data.id,
+        description: "Thank you for your purchase",
+        image: "http://res.cloudinary.com/dqpj1vyjn/image/upload/v1704696575/jh8xzhfpc4vtgtpfg7fi.jpg",
+        handler: function (response) {
+          // Validate payment at the server - using webhooks is a better idea.
+          alert("Razorpay Response: " + response.razorpay_payment_id);
+
+          clearCartItems();
+          storeOrder(response.razorpay_payment_id, data.amount);
+          // Additional processing or confirmation can be done here
+        },
+        prefill: {
+            // name: `${firstName} ${lastName}`, // Concatenate firstName and lastName
+            // email: email,
+            // contact: contact,
+          userID : userID
+        },
+      };
+
+      const paymentObject = new window.Razorpay(options);
+      paymentObject.open();
+    } catch (error) {
+      console.error("Error making Razorpay payment:", error);
+      // toast.error("Error processing payment");
+    }
+  };
+
 
   return (
     <div className="py-10 px-4 lg:py-20 lg:px-10 lg:mb-8 relative overflow-x-clip">
@@ -165,7 +221,7 @@ const Cart = () => {
                 <p className="text-[#000000BF]">Estimated Total</p>
                 <p>₹{formatNumberWithCommas(totalamt())}</p>
               </div>
-              <button className="p-4 w-full bg-[#781393] text-white font-medium btn">
+              <button className="p-4 w-full bg-[#781393] text-white font-medium btn" onClick={makePayment}>
                   Checkout
                 </button>
             </div>
