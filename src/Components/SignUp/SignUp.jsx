@@ -1,39 +1,42 @@
-'use client'
-import axios from 'axios'
-import e from 'cors'
-import Link from 'next/link'
-import { useRouter } from 'next/navigation'
-import React, { useState } from 'react'
-import { FaFacebook, FaGoogle } from 'react-icons/fa6'
+"use client";
+import axios from "axios";
+import e from "cors";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import React, { useState } from "react";
+import { FaFacebook, FaGoogle } from "react-icons/fa6";
+import { ToastContainer, toast } from "react-toastify";
 
 const SignUp = () => {
-  const router = useRouter()
-  const [name, setName] = useState("")
-  const [password, setPassword] = useState("")
-  const [email, setEmail] = useState("")
+  const router = useRouter();
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
 
-  const handleSubmit =async (e) =>{
-    e.preventDefault()
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    if(!email || !password){
-      console.log("all fields are necessary")
+    if (!email || !password) {
+      toast.error("All fields are required");
+      console.log("all fields are necessary");
     }
 
-    console.log(email , password)
     try {
-      const res = await axios.post('/api/auth/signup',{
-        email , password
-      })
-
-      if(res.ok){
-        router.push('/login')
+      const res = await axios.post("/api/auth/signup", {
+        email,
+        password,
+      });
+      toast.success("Signup Successful");
+      if (res.status === 201) {
+        setTimeout(() => {
+          router.push("/login");
+        }, 2000);
       }
-      
     } catch (error) {
-      console.log(error)
+      toast.error(error.response.data.message);
+      console.log(error);
     }
-  
-  }
+  };
   return (
     <div className="py-6 md:py-10 px-4 md:px-16">
       <div className="login  p-4  flex flex-col items-center gap-4">
@@ -42,7 +45,9 @@ const SignUp = () => {
             Signup to Dialable
           </h1>
 
-          <p className="montserrat text-[3.5vw] md:text-[2vw] lg:text-[1.05vw] text-center">Lorem ipsum dolor sit amet.</p>
+          <p className="montserrat text-[3.5vw] md:text-[2vw] lg:text-[1.05vw] text-center">
+            Lorem ipsum dolor sit amet.
+          </p>
         </div>
         <form
           onSubmit={handleSubmit}
@@ -54,7 +59,7 @@ const SignUp = () => {
               className="input p-3 w-full border border-black rounded-none"
               id="email"
               value={email}
-              onChange={(e)=>setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
               required={true}
             />
             <label className="label" htmlFor="email">
@@ -67,7 +72,7 @@ const SignUp = () => {
               className="input p-3 w-full border border-black rounded-none"
               id="password"
               value={password}
-              onChange={(e)=>setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
               required={true}
             />
             <label className="label" htmlFor="password">
@@ -91,12 +96,16 @@ const SignUp = () => {
             Sign Up with Facebook
           </button>
         </div>
-    
-        <p className=" my-2 block text-black">{`Already have an account?`} <Link href={"#"} className="underline">Log in</Link></p>
 
+        <p className=" my-2 block text-black">
+          {`Already have an account?`}{" "}
+          <Link href={"#"} className="underline">
+            Log in
+          </Link>
+        </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SignUp
+export default SignUp;

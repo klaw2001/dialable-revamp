@@ -1,9 +1,35 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../../public/Images/dialable-logo.png";
 import { FaFacebook, FaGoogle } from "react-icons/fa6";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { signIn } from "next-auth/react";
+import { toast } from "react-toastify";
+import axios from "axios";
 const Login = () => {
+  const router = useRouter();
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await axios.post("/api/auth/login", {
+        email,
+        password,
+      });
+      if (res.status === 200) {
+        toast.success("Sign in Successful");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="py-6 md:py-10 px-4 md:px-16">
       <div className="login  p-4  flex flex-col items-center gap-4">
@@ -12,10 +38,12 @@ const Login = () => {
             Login to Dialable
           </h1>
 
-          <p className="montserrat text-[3.5vw] md:text-[2vw] lg:text-[1.05vw] text-center">Lorem ipsum dolor sit amet.</p>
+          <p className="montserrat text-[3.5vw] md:text-[2vw] lg:text-[1.05vw] text-center">
+            Lorem ipsum dolor sit amet.
+          </p>
         </div>
         <form
-          action=""
+          onSubmit={handleSubmit}
           className="flex pt-4 py-8 w-full md:w-[50%] lg:w-[30%] border-b-2 border-black flex-col gap-4"
         >
           <div className="inputCont">
@@ -23,6 +51,8 @@ const Login = () => {
               type="text"
               className="input p-3 w-full border border-black rounded-none"
               id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required={true}
             />
             <label className="label" htmlFor="email">
@@ -34,6 +64,8 @@ const Login = () => {
               type="password"
               className="input p-3 w-full border border-black rounded-none"
               id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               required={true}
             />
             <label className="label" htmlFor="password">
@@ -57,9 +89,15 @@ const Login = () => {
             Login in with Facebook
           </button>
         </div>
-        <Link href={"#"} className="underline my-2 block text-black">Forgot your password?</Link>
-        <p className=" my-2 block text-black">{`Don't have an account?`} <Link href={"#"} className="underline">Signup</Link></p>
-
+        <Link href={"#"} className="underline my-2 block text-black">
+          Forgot your password?
+        </Link>
+        <p className=" my-2 block text-black">
+          {`Don't have an account?`}{" "}
+          <Link href={"#"} className="underline">
+            Signup
+          </Link>
+        </p>
       </div>
     </div>
   );

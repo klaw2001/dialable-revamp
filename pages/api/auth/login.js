@@ -4,7 +4,8 @@ import cookieParser from "cookie-parser";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import Cookies from "cookies";
-
+import connectDB from "@/dbConfig/dbConfig.js";
+connectDB()
 export default async function handler(req, res) {
   try {
     if (req.method === "POST") {
