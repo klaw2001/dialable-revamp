@@ -5,24 +5,18 @@ const OurGoals = () => {
   const goals = [
     {
       img: icon,
-      title: "Describe value one",
-      desc: `  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam vero
-      distinctio nam nisi quod ipsa voluptatum repellendus blanditiis
-      obcaecati corrupti? ipsum de amit`,
+      title: "Accessibility First",
+      desc: `At Dialable, accessibility is our cornerstone. We're committed to dismantling barriers and ensuring equitable access to information and services. With our intuitive platform, we empower individuals with disabilities to navigate the world confidently.`,
     },
     {
       img: icon,
-      title: "Describe value one",
-      desc: `  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam vero
-      distinctio nam nisi quod ipsa voluptatum repellendus blanditiis
-      obcaecati corrupti? ipsum de amit`,
+      title: "Community Engagement",
+      desc: `Building a supportive community lies at the heart of our mission. Through partnerships and advocacy, we champion diversity and inclusion. By amplifying marginalized voices, we aim to foster meaningful connections and drive societal change.`,
     },
     {
       img: icon,
-      title: "Describe value one",
-      desc: `  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam vero
-      distinctio nam nisi quod ipsa voluptatum repellendus blanditiis
-      obcaecati corrupti? ipsum de amit`,
+      title: "Business Empowerment",
+      desc: ` Dialable isn't just a directory; it's a platform for business growth. We support businesses that prioritize accessibility, providing them with visibility to a diverse audience. By spotlighting inclusive businesses, we inspire others to embrace accessibility and create positive impacts within their communities,`,
     },
   ];
   return (
@@ -35,9 +29,9 @@ const OurGoals = () => {
           Our Ambitious Goals
         </h1>
         <p className="font-normal text-center text-[3.2vw] md:text-[2.2vw]  lg:text-[.9vw] w-full lg:w-[60%] text-black ">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-          ornare.
+          Dialable is dedicated to fostering accessibility, community
+          engagement, and business empowerment. Join us as we strive to create a
+          more inclusive world for all
         </p>
       </div>
       <div className="flex flex-col lg:flex-row gap-4 items-center gap-3 mt-2 lg:mt-[2rem] lg:mx-24">
@@ -52,8 +46,12 @@ const OurGoals = () => {
                 className="object-cover "
               />
             </div>
-            <h1 className="font-bold Inter text-[#781393] my-2 lg:my-5 text-[5vw] md:text-[3vw] lg:text-[1vw]">{goal.title}</h1>
-            <p className="Inter font-normal text-[3vw] md:text-[2vw] lg:text-[.9vw]">{goal.desc}</p>
+            <h1 className="font-bold Inter text-[#781393] my-2 lg:my-5 text-[5vw] md:text-[3vw] lg:text-[1vw]">
+              {goal.title}
+            </h1>
+            <p className="Inter font-normal text-[3vw] md:text-[2vw] lg:text-[.9vw]">
+              {goal.desc}
+            </p>
           </div>
         ))}
       </div>
