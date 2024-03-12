@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { notification } from "antd";
 import React, { useEffect, useState } from "react";
 import {
   RiStarFill,
@@ -39,9 +40,15 @@ const ProductInfo = () => {
           // Navigate to the cart page after 3 seconds
           router.push(`/cart/${userID}`);
         }, 3000);
+       notification.open({
+        message:"Product Added Succesfully"
+       })
       })
       .catch((err) => {
         console.log(err);
+        notification.open({
+          message:err
+         })
         toast.error("Failed to add item to cart. Please try again.");
       });
   };
@@ -78,8 +85,8 @@ const ProductInfo = () => {
   return (
     <div className="p-6 md:p-8 lg:pt-20 lg:pb-10 lg:px-10 lg:mb-10 relative overflow-x-clip">
       <div className="flex lg:flex-row flex-col lg:border-b lg:border-black">
-        <div className="w-full lg:w-1/2">
-          <div className="img1 w-[70%]">
+        <div className="w-full  lg:w-1/2">
+          <div className="img1 p-4 w-full">
             <Image
               src={singleProduct?.thumbnail}
               className="h-full w-full object-cover"
@@ -89,7 +96,7 @@ const ProductInfo = () => {
             />
           </div>
           <div className="flex items-center">
-            <div className="img1 w-[50%] grow lg:w-[40%]">
+            <div className="img1 w-[50%] p-[10px] grow lg:w-[40%]">
               <Image
                 src={singleProduct?.thumbnail}
                 className="h-full w-full object-cover"
@@ -98,7 +105,7 @@ const ProductInfo = () => {
                 height={300}
               />
             </div>
-            <div className="img1 w-[50%] grow lg:w-[40%]">
+            <div className="img1 w-[50%] p-[10px] grow lg:w-[40%]">
               <Image
                 src={singleProduct?.thumbnail}
                 className="h-full w-full object-cover"

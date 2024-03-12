@@ -16,7 +16,7 @@ const CustomerStories = () => {
           Customer stories
         </h1>
         <p className="font-normal text-[3.2vw] md:text-[2.2vw] lg:text-[.9vw] w-full lg:w-[60%] text-black ">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        {`Read how Dialable's solutions have transformed accessibility through real-world case studies.`}
         </p>
       </div>
       <div className="flex flex-col lg:flex-row items-center my-10 md:m-15 lg:my-20 gap-8">

@@ -14,25 +14,20 @@ const OurStory = () => {
         </h1>
         <div>
           <p className="font-normal my-6 text-[3.2vw] md:text-[2.2vw] lg:text-[.9vw] text-black ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo rerum
-            explicabo quis assumenda? Earum accusamus labore recusandae.
-            Asperiores nobis eaque magnam ratione nisi dolorum, quia officia
-            consequatur excepturi deleniti, dolores sapiente veniam optio sint!
-            Voluptates id velit optio quae sunt ut vitae, maxime eos libero
-            quidem mollitia illo molestias excepturi dicta dolore maiores
-            ducimus veniam eum. Deleniti reprehenderit numquam maiores.
+            {`In a digital landscape bustling with directories, Dialable emerges as a beacon of inclusivity and accessibility. Designed as a formidable contender against industry giants, Dialable takes a revolutionary approach, focusing on the often-overlooked needs of individuals with disabilities. Our platform isn't just about business listings; it's about empowerment and connection. With a user-centric interface tailored to accommodate diverse abilities, Dialable ensures that every search yields results catered to the unique needs of each user. Whether it's finding wheelchair-accessible restaurants, deaf-friendly businesses, or sensory-friendly attractions, Dialable is the gateway to a more inclusive world.`}
           </p>
           <p className="font-normal my-6 text-[3.2vw] md:text-[2.2vw] lg:text-[.9vw] text-black ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo rerum
-            explicabo quis assumenda? Earum accusamus labore recusandae.
-            Asperiores nobis eaque magnam ratione nisi dolorum, quia officia
-            consequatur excepturi deleniti, dolores sapiente veniam optio sint!
-            Voluptates id velit optio quae sunt ut vitae, maxime eos libero
-            quidem mollitia illo molestias excepturi dicta dolore maiores
-            ducimus veniam eum. Deleniti reprehenderit numquam maiores. Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Sapiente odit
-            dignissimos accusantium dicta fugit cumque aliquam assumenda
-            aliquid. Facilis, repudiandae nobis. Minus ea ducimus odio!
+           {` At Dialable, we believe in harnessing the power of technology to
+            foster genuine connections and opportunities for all. Beyond merely
+            listing businesses, our platform features a dynamic marketplace
+            where businesses can showcase their products and services,
+            specifically tailored to cater to the disability community.From
+            adaptive technologies to inclusive services, our marketplace
+            amplifies the voices of businesses committed to accessibility,
+            creating a space where customers with disabilities can shop, engage,
+            and thrive. With Dialable, inclusivity isn't just a feature – it's
+            our mission. Join us as we pave the way for a more accessible and
+            equitable future, one listing at a time.`}
           </p>
         </div>
       </div>
@@ -45,7 +40,7 @@ const OurStory = () => {
           className="object-cover md:object-contain lg:object-cover"
         />
 
-        <div className="flex fixed right-[-14%] lg:right-[-3.5%] z-[20] top-[80%] gap-4 rotate-[-90deg] w-[10%] ">
+        <div className="flex fixed right-[-2%] lg:right-[-3.5%] z-[20] top-[80%] gap-4 rotate-[-90deg] w-[10%] ">
           <Link
             href="#"
             className="text-white active:scale-[.95] transition-all duration-[.5s] box-shadow-2 bg-[#781393]  rounded-xl text-[0.8rem] md:text-[1rem] lg:text-[1.3vw] font-semibold montserrat leading-none px-[1.35rem] py-4 lg:py-6"
