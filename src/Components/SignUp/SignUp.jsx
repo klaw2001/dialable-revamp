@@ -1,8 +1,39 @@
+'use client'
+import axios from 'axios'
+import e from 'cors'
 import Link from 'next/link'
-import React from 'react'
+import { useRouter } from 'next/navigation'
+import React, { useState } from 'react'
 import { FaFacebook, FaGoogle } from 'react-icons/fa6'
 
 const SignUp = () => {
+  const router = useRouter()
+  const [name, setName] = useState("")
+  const [password, setPassword] = useState("")
+  const [email, setEmail] = useState("")
+
+  const handleSubmit =async (e) =>{
+    e.preventDefault()
+
+    if(!email || !password){
+      console.log("all fields are necessary")
+    }
+
+    console.log(email , password)
+    try {
+      const res = await axios.post('/api/auth/signup',{
+        email , password
+      })
+
+      if(res.ok){
+        router.push('/login')
+      }
+      
+    } catch (error) {
+      console.log(error)
+    }
+  
+  }
   return (
     <div className="py-6 md:py-10 px-4 md:px-16">
       <div className="login  p-4  flex flex-col items-center gap-4">
@@ -14,7 +45,7 @@ const SignUp = () => {
           <p className="montserrat text-[3.5vw] md:text-[2vw] lg:text-[1.05vw] text-center">Lorem ipsum dolor sit amet.</p>
         </div>
         <form
-          action=""
+          onSubmit={handleSubmit}
           className="flex pt-4 py-8 w-full md:w-[50%] lg:w-[30%] border-b-2 border-black flex-col gap-4"
         >
           <div className="inputCont">
@@ -22,6 +53,8 @@ const SignUp = () => {
               type="text"
               className="input p-3 w-full border border-black rounded-none"
               id="email"
+              value={email}
+              onChange={(e)=>setEmail(e.target.value)}
               required={true}
             />
             <label className="label" htmlFor="email">
@@ -33,6 +66,8 @@ const SignUp = () => {
               type="password"
               className="input p-3 w-full border border-black rounded-none"
               id="password"
+              value={password}
+              onChange={(e)=>setPassword(e.target.value)}
               required={true}
             />
             <label className="label" htmlFor="password">
