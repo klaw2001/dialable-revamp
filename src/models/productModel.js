@@ -44,6 +44,28 @@ const productSchema = new Schema({
     type: String,
     default: "",
   },
+  variant: {
+    type: String,
+    default: null,
+  },
+  size: {
+    type: String,
+    enum: ["s", "m", "l", "xl", "xxl", "xxxl"],
+    default: null,
+  },
+  shipping: {
+    type: String,
+  },
+  returns: {
+    type: String,
+  },
+  specialization: {
+    type: String,
+  },
+  status: {
+    type: String,
+    enum: ["In Stock", "Out Of Stock"],
+  },
   createdAt: {
     type: Date,
     default: Date.now(),

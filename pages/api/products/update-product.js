@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import Product from "../../../src/models/productModel";
 
+// Configure multer storage
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     const uploadPath = "./uploads";
@@ -32,21 +33,23 @@ const storage = multer.diskStorage({
   },
 });
 
+// Initialize multer instance
 const upload = multer({ storage: storage });
 
+// Controller function to handle PUT requests for product update
 export default async function PUT(req, res) {
   try {
-    const uploadData = upload.fields([
-      { name: "thumbnail", maxCount: 1 },
-      { name: "images", maxCount: 4 },
-    ]);
-
-    uploadData(req, res, async function (err) {
+    // Handle file uploads
+    upload(req, res, async function (err) {
       if (err) return res.status(400).json({ message: err.message });
 
+      // Retrieve product ID from request parameters
       const product_id = req.params.product_id;
 
+      // Find the product in the database
       const productData = await Product.findOne({ _id: product_id });
+
+      // Destructure product data from the request body
       const {
         name,
         category,
@@ -55,50 +58,65 @@ export default async function PUT(req, res) {
         price,
         shortdescription,
         description,
+        thumbnail,
+        images,
+        variant,
+        size,
+        shipping,
+        returns,
+        specialization,
+        status,
       } = req.body;
 
-      let thumbnail = productData.thumbnail;
+      // Update thumbnail if a new one is uploaded
+      let updatedThumbnail = productData.thumbnail;
       if (req.files && req.files["thumbnail"]) {
-        thumbnail = req.files["thumbnail"][0].filename;
+        updatedThumbnail = req.files["thumbnail"][0].filename;
+        // Delete the previous thumbnail file if it exists
         if (fs.existsSync("./uploads/products/" + productData.thumbnail)) {
           fs.unlinkSync("./uploads/products/" + productData.thumbnail);
         }
       }
 
-      let images = productData.images;
+      // Update images if new ones are uploaded
+      let updatedImages = productData.images;
       if (req.files && req.files["images"]) {
         req.files["images"].forEach((file) => {
-          images.push(file.filename);
+          updatedImages.push(file.filename);
         });
-        if (fs.existsSync("./uploads/products" + productData.images)) {
-          fs.unlinkSync("./uploads/products" + productData.images);
-        }
+        // Delete the previous images files if they exist
+        updatedImages.forEach((image) => {
+          if (fs.existsSync("./uploads/products/" + image)) {
+            fs.unlinkSync("./uploads/products/" + image);
+          }
+        });
       }
 
-      // console.log('Files:', req.files);
-
+      // Update product data in the database
       const updatedData = await Product.updateOne(
         { _id: product_id },
         {
           $set: {
-            name: name,
-            category: category,
-            subcategory: subcategory,
-            quantity: quantity,
-            price: price,
-            shortdescription: shortdescription,
-            description: description,
-            thumbnail: thumbnail,
-            images: images,
+            name,
+            category,
+            subcategory,
+            quantity,
+            price,
+            shortdescription,
+            description,
+            thumbnail: updatedThumbnail,
+            images: updatedImages,
+            variant,
+            size,
+            shipping,
+            returns,
+            specialization,
+            status,
           },
         }
       );
 
-      const validationError = productData.validateSync();
-      if (validationError) {
-        return res.status(400).json({ message: validationError.message });
-      }
-
+      // Send response
       if (updatedData) {
         return res.status(200).json({
           data: updatedData,
