@@ -1,10 +1,10 @@
-'use client'
+"use client";
 import Link from "next/link";
 import React, { useState } from "react";
 
 const ContactUs = () => {
-    const [active, setActive]=useState("sydney")
-  
+  const [active, setActive] = useState("sydney");
+
   return (
     <div className="p-6 lg:py-20 lg:px-14">
       <div>
@@ -12,37 +12,71 @@ const ContactUs = () => {
           Contact Us
         </h1>
         <p className="font-normal text-[3.2vw] md:text-[2.2vw]  lg:text-[.9vw]  text-black ">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Reach Out at Our Three Convenient Locations
         </p>
       </div>
       <div className="flex flex-col lg:flex-row my-6 lg:mt-12">
         <div className="w-full lg:w-[45%]">
-          <div onClick={()=>setActive("sydney")} className={active==="sydney"?`flex cursor-pointer flex-col gap-3 my-10 p-2  border-l-[3px] ps-4 border-black`:`flex flex-col gap-3 my-10 p-2 border-l-[3px] border-white`}>
+          <div
+            onClick={() => setActive("sydney")}
+            className={
+              active === "sydney"
+                ? `flex cursor-pointer flex-col gap-3 my-10 p-2  border-l-[3px] ps-4 border-black`
+                : `flex flex-col gap-3 my-10 p-2 border-l-[3px] border-white`
+            }
+          >
             <h1 className="text-black tracking-tight capitalize text-[3vw]  md:text-[2.5vw] lg:text-[1vw]  font-bold">
               Sydney
             </h1>
             <p className="text-black text-[3vw] lg:text-[.9vw]">
               123 Sample St, Sydney NSW 2000 AU
             </p>
-            <Link href={"#"} className="text-[3vw] lg:text-[.8vw] font-semibold">
+            <Link
+              href={"#"}
+              className="text-[3vw] lg:text-[.8vw] font-semibold"
+            >
               View Map
             </Link>
           </div>
-          <div onClick={()=>setActive("newyork")} className={active==="newyork"?`flex cursor-pointer flex-col gap-3 my-10 p-2  border-l-[3px] ps-4 border-black`:`flex flex-col gap-3 my-10 p-2 border-l-[3px] border-white`}>
+          <div
+            onClick={() => setActive("newyork")}
+            className={
+              active === "newyork"
+                ? `flex cursor-pointer flex-col gap-3 my-10 p-2  border-l-[3px] ps-4 border-black`
+                : `flex flex-col gap-3 my-10 p-2 border-l-[3px] border-white`
+            }
+          >
             <h1 className="text-black tracking-tight capitalize text-[5vw] md:text-[2.5vw] lg:text-[1vw]  font-bold">
               Newyork
             </h1>
-            <p className="text-black text-[3vw] lg:text-[.9vw]">123 Sample St, Newyork NY 1000 USA</p>
-            <Link href={"#"} className="text-[3vw] lg:text-[.8vw] font-semibold">
+            <p className="text-black text-[3vw] lg:text-[.9vw]">
+              123 Sample St, Newyork NY 1000 USA
+            </p>
+            <Link
+              href={"#"}
+              className="text-[3vw] lg:text-[.8vw] font-semibold"
+            >
               View Map
             </Link>
           </div>
-          <div onClick={()=>setActive("london")} className={active==="london"?`flex cursor-pointer flex-col gap-3 my-10 p-2  border-l-[3px] ps-4 border-black`:`flex flex-col gap-3 my-10 p-2 border-l-[3px] border-white`}>
+          <div
+            onClick={() => setActive("london")}
+            className={
+              active === "london"
+                ? `flex cursor-pointer flex-col gap-3 my-10 p-2  border-l-[3px] ps-4 border-black`
+                : `flex flex-col gap-3 my-10 p-2 border-l-[3px] border-white`
+            }
+          >
             <h1 className="text-black tracking-tight capitalize text-[5vw] md:text-[2.5vw] lg:text-[1vw]  font-bold">
               London
             </h1>
-            <p className="text-black text-[3vw] lg:text-[.9vw]">123 Sample St, London W1C 1DE, United Kingdom</p>
-            <Link href={"#"} className="text-[3vw] lg:text-[.8vw] font-semibold">
+            <p className="text-black text-[3vw] lg:text-[.9vw]">
+              123 Sample St, London W1C 1DE, United Kingdom
+            </p>
+            <Link
+              href={"#"}
+              className="text-[3vw] lg:text-[.8vw] font-semibold"
+            >
               View Map
             </Link>
           </div>
