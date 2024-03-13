@@ -39,7 +39,7 @@ const Login = () => {
           </h1>
 
           <p className="montserrat text-[3.5vw] md:text-[2vw] lg:text-[1.05vw] text-center">
-            Lorem ipsum dolor sit amet.
+            Welcome Back, please sign in
           </p>
         </div>
         <form
