@@ -1,9 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import React, { useState } from "react";
 import { FiPlus, FiMinus } from "react-icons/fi";
-import FaqImg from "../../../../public/Images/faq.png"
 const FaqSection = () => {
   const [activeIndex, setActiveIndex] = useState("0");
   const faqs = [

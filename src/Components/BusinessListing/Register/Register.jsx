@@ -18,12 +18,11 @@ const Register = ({title, heading, desc, img}) => {
           </p>
           <div className="search flex gap-2">
             <div className="flex border items-center gap-2 border-black p-1 lg:px-4 lg:py-2 text-[3vw] md:text-[1.2vw] lg:text-[1vw]">
-              <p className="montserrat  font-medium">+91</p>
               <div className="text-black w-[50vw] md:w-[20vw] lg:w-[15vw] ">
                 <input
-                  type="number"
+                  type="text"
                   className="w-full montserrat focus-within:outline-none"
-                  placeholder="Mobile Number"
+                  placeholder="Enter Email Address"
                 />
               </div>
             </div>
