@@ -12,12 +12,11 @@ const Connect = () => {
       
       <div className="search flex">
             <div className="flex  bg-white items-center gap-2  border-y border-l border-black p-2 text-[3vw] md:text-[2.5vw] lg:text-[1.06vw] md:p-4">
-              <p className="montserrat  font-medium text-[3vw] md:text-[2.5vw] lg:text-[1.06vw]">+91</p>
               <div className="text-black lg:w-[20vw] w-[36vw]">
                 <input
-                  type="number"
+                  type="text"
                   className="w-full montserrat focus-within:outline-none"
-                  placeholder="Mobile Number"
+                  placeholder="Enter Email Address"
                 />
               </div>
             </div>
