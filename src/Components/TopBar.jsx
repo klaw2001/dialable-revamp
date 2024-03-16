@@ -6,7 +6,7 @@
   import { FaAngleDown } from "react-icons/fa6";
   import { PiGlobe } from "react-icons/pi";
   const TopBar = () => {
-    const isBrowser = typeof window !== "undefined";
+    const isBrowser = typeof window !== "undefined"; 
     const [selectedCountry, setSelectedCountry] = useState(
       isBrowser?localStorage.getItem("selectedCountry") || "":""
     );
@@ -65,12 +65,12 @@
           </div>
         </div>
         <div className="flex items-center self-start  justify-center font-medium gap-6 md:gap-3">
-          <div className="text-lg flex items-center justify-center cursor-pointer gap-[.2vw] text-white font-semibold">
+          <div className="text-lg flex items-center justify-end cursor-pointer gap-[.2vw] shrink text-white font-semibold">
             <PiGlobe />
             <select
               name=""
               id=""
-              className="border-none bg-transparent text-[2vw] md:text-[.8vw] font-semibold "
+              className="border-none bg-transparent text-[2vw] w-full md:w-[20%] md:text-[.8vw] font-semibold "
             >
               <option>Language</option>
               {languages.map((lang, ind) => (
@@ -82,7 +82,7 @@
           </div>
           <div className="country">
             <select
-              className="p-1 md:p-2 text-[2.5vw] md:text-[.85vw] bg-transparent focus-visible:outline-none text-white border-2 border-white"
+              className="p-1 md:p-2 text-[2.5vw] md:text-[.85vw] w-[25vw] md:w-[11vw] lg:w-[8vw] bg-transparent focus-visible:outline-none text-white border-2 border-white"
               value={selectedCountry}
               onChange={handleCountryChange}
             >
@@ -98,7 +98,7 @@
             <select
               value={selectedState}
               onChange={handleStateChange}
-              className="bg-transparent p-1 md:p-2 text-[2.5vw] md:text-[.85vw] focus-visible:outline-none text-white border-2 border-white"
+              className="bg-transparent p-1 md:p-2 text-[2.5vw] md:text-[.85vw] w-[25vw] md:w-[11vw] lg:w-[8vw] focus-visible:outline-none text-white border-2 border-white"
             >
               <option value="" className="p-2">
                 Select State
