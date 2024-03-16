@@ -41,11 +41,11 @@ const Navbar = () => {
   const links = [
     {
       title: "For Abled",
-      href: "#",
+      href: "/business",
     },
     {
       title: "For Corporates",
-      href: "#",
+      href: "/businesslisting",
     },
     {
       title: "MarketPlace",
@@ -60,15 +60,15 @@ const Navbar = () => {
   const subNavLinks = [
     {
       title: "Products",
-      href: "#",
+      href: "/advertise",
     },
     {
       title: "Store",
-      href: "#",
+      href: "/marketplace",
     },
     {
       title: "Support",
-      href: "#",
+      href: "/contact",
     },
     {
       title: "Enablers",
@@ -76,11 +76,11 @@ const Navbar = () => {
     },
     {
       title: "B2B",
-      href: "#",
+      href: "/marketplace",
     },
     {
       title: "Employment",
-      href: "#",
+      href: "/joblisting",
     },
     {
       title: "Learn",
