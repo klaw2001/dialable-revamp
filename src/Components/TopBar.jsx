@@ -82,7 +82,7 @@
           </div>
           <div className="country">
             <select
-              className="p-1 md:p-2 text-[2.5vw] md:text-[.85vw] w-[25vw] md:w-[11vw] lg:w-[8vw] bg-transparent focus-visible:outline-none text-white border-2 border-white"
+              className="p-1 md:p-2 text-[2.5vw] md:text-[.85vw] w-[28vw] md:w-[11vw] lg:w-[8vw] bg-transparent focus-visible:outline-none text-white border-2 border-white"
               value={selectedCountry}
               onChange={handleCountryChange}
             >
