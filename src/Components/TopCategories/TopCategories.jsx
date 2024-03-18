@@ -22,6 +22,7 @@ const TopCategories = () => {
                   <Image
                     src={category.img}
                     alt={category.title}
+                    loading="eager"
                     className="object-cover h-full w-full"
                   />
                 </div>

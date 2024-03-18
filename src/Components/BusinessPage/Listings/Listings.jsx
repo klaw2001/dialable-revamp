@@ -9,18 +9,18 @@ const Listings = () => {
     <div className="p-4 md:p-6 lg:p-10 relative">
       <div className="flex items-center justify-between">
         <div className="options flex items-center gap-3">
-          <div className="btn txt-black p-2 font-medium text-[2.2vw] md:text-[2vw] lg:text-[1vw] border-2">
+          <button className="btn txt-black p-2 font-medium text-[2.2vw] md:text-[2vw] lg:text-[1vw] border-2">
             View all
-          </div>
-          <div className="btn txt-black p-2 font-medium text-[2.2vw] md:text-[2vw] lg:text-[1vw]">
+          </button>
+          <button className="btn txt-black p-2 font-medium text-[2.2vw] md:text-[2vw] lg:text-[1vw]">
             Verified
-          </div>
-          <div className="btn txt-black p-2 font-medium text-[2.2vw] md:text-[2vw] lg:text-[1vw]">
+          </button>
+          <button className="btn txt-black p-2 font-medium text-[2.2vw] md:text-[2vw] lg:text-[1vw]">
             Top Ratings
-          </div>
-          <div className="btn txt-black p-2 font-medium text-[2.2vw] md:text-[2vw] lg:text-[1vw]">
+          </button>
+          <button className="btn txt-black p-2 font-medium text-[2.2vw] md:text-[2vw] lg:text-[1vw]">
             India
-          </div>
+          </button>
         </div>
         <button className="btn py-3 px-2 bg-[#781393] flex items-center text-white Inter text-[2.2vw] md:text-[2vw] lg:text-[1vw]">
           <div className="w-[3.5vw] md:w-[2.5vw] lg:w-[1.5vw]">

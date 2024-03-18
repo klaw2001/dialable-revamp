@@ -8,6 +8,7 @@ const Banner = () => {
       <Image
         src={story}
         alt="our-story-bg"
+        loading="lazy"
         className="object-cover h-full w-full"
       />
 

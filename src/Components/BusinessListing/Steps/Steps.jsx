@@ -18,6 +18,7 @@ const Steps = () => {
         <div className="flex flex-col items-center gap-1 mt-8 lg:mt-0 lg:w-[22.33vw]">
           <div className="w-[12vw] md:w-[8vw] lg:w-[5vw] mb-4">
             <Image
+            loading="lazy"
               src={user}
               alt="steps"
               className="object-cover h-full w-full"
@@ -35,6 +36,7 @@ const Steps = () => {
           <div className="w-[12vw] md:w-[8vw] lg:w-[5vw] mb-4">
             <Image
               src={bag}
+              loading="lazy"
               alt="steps"
               className="object-cover h-full w-full"
             />
@@ -52,6 +54,7 @@ const Steps = () => {
             <Image
               src={verification}
               alt="steps"
+              loading="lazy"
               className="object-cover h-full w-full"
             />
           </div>

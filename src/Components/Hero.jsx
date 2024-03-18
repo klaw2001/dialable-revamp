@@ -13,8 +13,8 @@ const Hero = () => {
         <Image
           src={placeholder}
           alt="hero-img"
-         
-          className="h-full object-cover w-full h-full"
+          loading="eager"
+          className="h-full object-cover w-full"
           placeholder="blur"
         />
       </div>
@@ -36,10 +36,10 @@ const Hero = () => {
         </div>
         <div className="search flex gap-4 ">
             <div className="w-[14vw] md:w-[12vw] lg:w-[9vw]">
-              <Image src={award_2} alt="award_1" className="object-cover h-full w-full"/>
+              <Image loading="eager" src={award_2} alt="award_1" className="object-cover h-full w-full"/>
             </div>
             <div className="w-[14vw] md:w-[12vw] lg:w-[9vw]">
-              <Image src={award_1} alt="award_1" className="object-cover h-full w-full"/>
+              <Image loading="eager" src={award_1} alt="award_1" className="object-cover h-full w-full"/>
             </div>
         </div>
       </div>

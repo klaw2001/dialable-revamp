@@ -26,7 +26,7 @@ const Treatment = () => {
         {treatments.map((treatment,i)=>(
             <div key={i} className="flex self-start flex-col md:grow lg:flex-row items-center gap-2 md:gap-3 lg:gap-5 w-[40%] md:w-[25vw] lg:w-[19vw]">
                 <div className="w-[20vw] md:w-[10vw] lg:w-[5vw]">
-                    <Image src={treatment.img} alt={treatment.title} className="object-cover h-full w-full"/>
+                    <Image loading="eager" src={treatment.img} alt={treatment.title} className="object-cover h-full w-full"/>
                 </div>
                 <p className="text-black montserrat font-semibold text-[2.5vw] text-center md:text-[1.95vw]  lg:text-[.95vw]">{treatment.title}</p>
             </div>

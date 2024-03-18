@@ -12,44 +12,44 @@ const ValuedPartners = () => {
         <div className="flex justify-center items-center flex-wrap  gap-2 mb-2">
           <div className="partner-bg flex justify-center bg-[#F4EBFF] p-7">
             <div className="">
-              <Image src={webflow} alt="webflow" className="object-cover w-[100px] md:w-[150px]" />
+              <Image loading="eager" src={webflow} alt="webflow" className="object-cover w-[100px] md:w-[150px]" />
             </div>
           </div>
           <div className="partner-bg flex justify-center bg-[#F4EBFF] p-7 ">
             <div className="">
-              <Image src={relume} alt="relume" className="object-cover w-[100px] md:w-[150px]" />
+              <Image loading="eager" src={relume} alt="relume" className="object-cover w-[100px] md:w-[150px]" />
             </div>
           </div>
           <div className="partner-bg flex justify-center bg-[#F4EBFF] p-7 ">
             <div className="">
-              <Image src={webflow} alt="webflow" className="object-cover w-[100px] md:w-[150px]" />
+              <Image loading="eager" src={webflow} alt="webflow" className="object-cover w-[100px] md:w-[150px]" />
             </div>
           </div>
           <div className="partner-bg flex justify-center bg-[#F4EBFF] p-7 ">
             <div className="">
-              <Image src={webflow} alt="webflow" className="object-cover w-[100px] md:w-[150px]" />
+              <Image loading="eager" src={webflow} alt="webflow" className="object-cover w-[100px] md:w-[150px]" />
             </div>
           </div>
         </div>
         <div className="flex justify-center items-center flex-wrap  gap-2">
           <div className="partner-bg flex justify-center bg-[#F4EBFF] p-7">
             <div className="">
-              <Image src={webflow} alt="webflow" className="object-cover w-[100px] md:w-[150px]" />
+              <Image loading="eager" src={webflow} alt="webflow" className="object-cover w-[100px] md:w-[150px]" />
             </div>
           </div>
           <div className="partner-bg flex justify-center bg-[#F4EBFF] p-7 ">
             <div className="">
-              <Image src={relume} alt="relume" className="object-cover w-[100px] md:w-[150px]" />
+              <Image loading="eager" src={relume} alt="relume" className="object-cover w-[100px] md:w-[150px]" />
             </div>
           </div>
           <div className="partner-bg flex justify-center bg-[#F4EBFF] p-7 ">
             <div className="">
-              <Image src={relume} alt="relume" className="object-cover w-[100px] md:w-[150px]" />
+              <Image loading="eager" src={relume} alt="relume" className="object-cover w-[100px] md:w-[150px]" />
             </div>
           </div>
           <div className="partner-bg flex justify-center bg-[#F4EBFF] p-7 ">
             <div className="">
-              <Image src={webflow} alt="webflow" className="object-cover w-[100px] md:w-[150px]" />
+              <Image loading="eager" src={webflow} alt="webflow" className="object-cover w-[100px] md:w-[150px]" />
             </div>
           </div>
         </div>

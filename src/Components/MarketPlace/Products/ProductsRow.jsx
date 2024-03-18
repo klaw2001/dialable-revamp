@@ -37,7 +37,7 @@ const ProductsRow = ({ open, onClose, placement, visibleItem }) => {
         className="filter border-t border-black"
       >
         <Filters />
-        <div className="border-t absolute w-full bottom-0 mt-12 bg-white border-black flex items-center justify-between p-4">
+        <div className="border-t sticky w-full bottom-0 mt-12 bg-white border-black flex items-center justify-between p-4">
           <button className="text-black text-[3vw] md:text-[2vw] lg:text-[1vw] font-medium">
             Clear all
           </button>
@@ -64,6 +64,7 @@ const ProductsRow = ({ open, onClose, placement, visibleItem }) => {
                  alt={product.name + i}
                  width={300}
                  height={300}
+                 loading="lazy"
                  // className="object-cover"
                />
              </div>

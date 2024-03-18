@@ -111,6 +111,7 @@ const OurPartners = () => {
                 alt="partners"
                 width={400}
                 height={500}
+                loading="eager"
                 className="object-cover"
               />
             </div>
@@ -124,6 +125,7 @@ const OurPartners = () => {
                 src={partners}
                 alt="partners"
                 width={400}
+                loading="eager"
                 height={500}
                 className="object-cover border-0"
               />

@@ -14,26 +14,12 @@ import { FaChevronDown } from "react-icons/fa6";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [slectedFontSize, setSlectedFontSize] = useState(0);
   const toolBox = useRef(null);
 
   const showDrawer = () => {
     setOpen(true);
   };
-
-  // const handleMouseOver = () => {
-  //   toolBox.current.style.opacity = "1";
-  //   toolBox.current.style.transform = "translateY(0)";
-  //   toolBox.current.style.transform="scaleY(1)";
-
-  //   console.log("first");
-  // };
-  // const handleMouseLeave = () => {
-  //   setTimeout(() => {
-  //     toolBox.current.style.opacity = "0";
-  //     toolBox.current.style.transform = "translateY(-1rem)";
-  //     toolBox.current.style.transform = "scaleY(0)";
-  //   }, 3000);
-  // };
 
   const onClose = () => {
     setOpen(false);
@@ -108,6 +94,10 @@ const Navbar = () => {
     },
   ];
 
+  // font size
+  const handleTextSize = (size) => {
+   setSlectedFontSize(size)
+  };
   return (
     <div className="flex items-center justify-between lg:px-8 px-4 py-2 md:py-2 lg:py-[0.85rem] border-t border-b bg-white border-zinc-300 montserrat sticky top-0 z-[99]">
       <div className="logo-links flex  items-center">
@@ -116,22 +106,23 @@ const Navbar = () => {
             <Image src={Logo} alt="dialable-logo" objectFit="cover" />
           </Link>
         </div>
-        <div className="lg:flex hidden gap-5 mx-12 text-[0.8vw] items-center leading-none">
+        <div className={`lg:flex hidden gap-5 mx-12 text-[${0.8+ slectedFontSize}vw] items-center leading-none`}>
           {links.map((item, index) => (
-            <Link
-              key={index}
-              href={item.href}
-              className="text-zinc-600 font-medium cursor-pointer hover:text-black"
-            >
-              {index === 2 ? (
-                <span>{item.title}</span>
-              ) : (
-                <div className="flex gap-2 items-center">
-                  <span value="">{item.title}</span>
-                  <FaChevronDown />
-                </div>
-              )}
-            </Link>
+            <button key={index}>
+              <Link
+                href={item.href}
+                className="text-zinc-600 font-medium cursor-pointer hover:text-black"
+              >
+                {index === 2 ? (
+                  <span>{item.title}</span>
+                ) : (
+                  <div className="flex gap-2 items-center">
+                    <span value="">{item.title}</span>
+                    <FaChevronDown />
+                  </div>
+                )}
+              </Link>
+            </button>
           ))}
         </div>
       </div>
@@ -169,12 +160,12 @@ const Navbar = () => {
       </div>
       <div className="hidden lg:flex gap-5 items-center relative">
         <div className="accessibility ">
-          <div className="cursor-pointer text-black   text-sm gap-1 flex items-center">
+          <button className="cursor-pointer text-black   text-sm gap-1 flex items-center">
             <div>
               <RxAccessibility size="2.5rem" />
             </div>
             <FaChevronDown />
-          </div>
+          </button>
           <div className="tools shadow-xl   bg-white py-6 rounded-xl px-8">
             <div>
               <h1 className="montserrat text-black uppercase text-[1vw] font-semibold">
@@ -184,42 +175,54 @@ const Navbar = () => {
               <div className="flex flex-col items-start border-b-2 gap-3 mt-6">
                 <h3 className="font-medium text-[1vw]">Contrast:</h3>
                 <div className="flex items-center gap-5 mb-4">
-                  <div className="white cursor-pointer">
+                  <button className="white cursor-pointer">
                     <div className="bg-white mb-2 border-2 border-black w-[4vw] h-[4vw] rounded-full"></div>
                     <span className="text-black text-xs font-normal montserrat">
                       White Mode
                     </span>
-                  </div>
-                  <div className="black cursor-pointer">
+                  </button>
+                  <button className="black cursor-pointer">
                     <div className="bg-black mb-2 border-2 border-black w-[4vw] h-[4vw] rounded-full"></div>
                     <span className="text-black text-xs font-normal montserrat">
                       Dark Mode
                     </span>
-                  </div>
+                  </button>
                 </div>
               </div>
               <h3 className="font-medium text-[.94vw] mt-6">Text Size:</h3>
               <div className="flex items-center gap-4 mt-4">
-                <div className="border-2 w-[4vw] cursor-pointer flex items-center justify-center border-black p-2">
+                <button
+                  onClick={()=>handleTextSize(0)}
+                  className="border-2 w-[4vw] cursor-pointer flex items-center justify-center border-black p-2"
+                >
                   <span className="text-[.86vw] text-center font-semibold">
                     A
                   </span>
-                </div>
-                <div className="border-2 w-[4vw] cursor-pointer flex items-center justify-center border-black p-2">
+                </button>
+                <button
+                  onClick={()=>handleTextSize(0.1)}
+                  className="border-2 w-[4vw] cursor-pointer flex items-center justify-center border-black p-2"
+                >
                   <span className="text-[.96vw] text-center font-semibold">
                     A
                   </span>
-                </div>
-                <div className="border-2 w-[4vw] cursor-pointer flex items-center justify-center border-black p-2">
+                </button>
+                <button
+                  onClick={()=>handleTextSize(.5)}
+                  className="border-2 w-[4vw] cursor-pointer flex items-center justify-center border-black p-2"
+                >
                   <span className="text-[1vw] text-center font-semibold">
                     A
                   </span>
-                </div>
-                <div className="border-2 w-[4vw] cursor-pointer flex items-center justify-center border-black p-2">
+                </button>
+                <button
+                  onClick={()=>handleTextSize(1.2)}
+                  className="border-2 w-[4vw] cursor-pointer flex items-center justify-center border-black p-2"
+                >
                   <span className="text-[1.2vw] text-center font-semibold">
                     A
                   </span>
-                </div>
+                </button>
               </div>
             </div>
             <button className="text-white montserrat text-[1.3vw] font-semibold btn text-center bg-[#781393] py-2 px-4 w-[100%] mt-4">
@@ -237,15 +240,17 @@ const Navbar = () => {
             />
           </form>
         </div>
-        <div>
+        <button>
           <IoCartOutline size="2rem" />
-        </div>
-        <Link
-          href={"/signup"}
-          className="hidden lg:block text-white text-[0.7vw] btn font-semibold bg-[#781393] py-2 px-4 montserrat  cursor-pointer"
-        >
-          Sign Up
-        </Link>
+        </button>
+        <button>
+          <Link
+            href={"/signup"}
+            className="hidden lg:block text-white text-[0.7vw] btn font-semibold bg-[#781393] py-2 px-4 montserrat  cursor-pointer"
+          >
+            Sign Up
+          </Link>
+        </button>
       </div>
     </div>
   );

@@ -56,6 +56,7 @@ const Register = ({title, heading, desc, img}) => {
                   <div className="relative w-[7vw] md:w-[4vw] lg:w-[2vw]">
                     <Image
                       src={Check}
+                      loading="lazy"
                       alt="check"
                       className="object-cover h-full w-full"
                     />
@@ -68,6 +69,7 @@ const Register = ({title, heading, desc, img}) => {
                   <div className="relative w-[7vw] md:w-[4vw] lg:w-[2vw]">
                     <Image
                       src={Check}
+                      loading="lazy"
                       alt="check"
                       className="object-cover h-full w-full"
                     />
@@ -81,6 +83,7 @@ const Register = ({title, heading, desc, img}) => {
         <div className="relative w-full md:w-[50%] mt-6 h-full md:h-[68vh] lg:h-[80vh] lg:mt-0 grow">
           <Image
             src={img}
+            loading="lazy"
             alt="register"
             className="object-cover h-full w-full"
           />

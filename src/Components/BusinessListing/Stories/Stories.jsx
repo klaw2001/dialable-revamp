@@ -12,6 +12,7 @@ const Stories = () => {
             <Image
               src={Story_1}
               width={400}
+              loading="lazy"
               height={600}
               alt="story_1"
               className="object-cover"
@@ -43,6 +44,7 @@ const Stories = () => {
               alt="story_2"
               width={400}
               height={600}
+              loading="lazy"
               className="object-cover"
             />
           </div>
@@ -63,6 +65,7 @@ const Stories = () => {
                 <Image
                   src={Play}
                   alt="play"
+                  loading="lazy"
                   className="object-contain h-full w-full"
                 />
               </div>

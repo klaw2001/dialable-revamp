@@ -41,7 +41,7 @@ const RentalProducts = () => {
                 rentalProducts.map((rentalProduct,i)=>(
                     <div key={i} className="flex items-center flex-col gap-2">
                         <div className="img w-[30vw] md:w-[20vw] lg:w-[200px]">
-                            <Image src={rentalProduct.img} alt={rentalProduct.title} className="object-cover h-full w-full"/>
+                            <Image loading="eager" src={rentalProduct.img} alt={rentalProduct.title} className="object-cover h-full w-full"/>
                         </div>
                         <p className="montserrat text-black text-[3vw] md:text-[2vw] lg:text-[1.3vw] font-bold">{rentalProduct.title}</p>
                     </div>

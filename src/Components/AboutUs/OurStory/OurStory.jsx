@@ -36,6 +36,7 @@ const OurStory = () => {
           src={storyImg}
           width={400}
           height={400}
+          loading="lazy"
           alt="about.png"
           className="object-cover md:object-contain lg:object-cover"
         />

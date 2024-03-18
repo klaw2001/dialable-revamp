@@ -11,6 +11,7 @@ const BusinessCard = () => {
           src={businessImg}
           alt="businessimg"
           className="object-cover h-full w-full"
+          loading="lazy"
         />
       </div>
       <div className="info bg-white p-4">

@@ -46,6 +46,7 @@ const Blogs = () => {
               <Image
                 src={blog.img}
                 alt="blog_img"
+                loading="eager"
                 // width={250}
                 // height={250}
 
