@@ -10,7 +10,7 @@ connectDB()
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
-    const { email, firstName, lastName, password, role } = req.body;
+    const { email, fullName, password, role } = req.body;
 
     const existedUser = await User.findOne({ email });
 
@@ -22,8 +22,8 @@ export default async function handler(req, res) {
 
     const user = await User.create({
       email,
-      firstName,
-      lastName,
+      fullName,
+
       password,
       role: role || "CUSTOMER",
     });
@@ -40,7 +40,7 @@ export default async function handler(req, res) {
 
     return res.status(201).json({
       status: 200,
-      data: { user: createdUser },
+      data: user,
       message:
         "Users registered successfully and verification email has been sent on your email.",
     });

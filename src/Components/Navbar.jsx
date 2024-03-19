@@ -2,24 +2,32 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Logo from "../../public/Images/dialable-logo.png";
 import { RxAccessibility } from "react-icons/rx";
 import { IoCartOutline } from "react-icons/io5";
+import { VscAccount } from "react-icons/vsc";
 
 import { Button, Drawer } from "antd";
 import { useRouter } from "next/navigation";
 import Menu from "../../public/Images/menu.svg";
 import { FaChevronDown } from "react-icons/fa6";
+import { getUserFromLocalStorage } from "@/utils";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [slectedFontSize, setSlectedFontSize] = useState(0);
   const toolBox = useRef(null);
+  const [user, setUser] = useState(null);
 
   const showDrawer = () => {
     setOpen(true);
   };
+
+  useEffect(() => {
+    const userData = getUserFromLocalStorage();
+    setUser(userData);
+  }, []);
 
   const onClose = () => {
     setOpen(false);
@@ -96,7 +104,7 @@ const Navbar = () => {
 
   // font size
   const handleTextSize = (size) => {
-   setSlectedFontSize(size)
+    setSlectedFontSize(size);
   };
   return (
     <div className="flex items-center justify-between lg:px-8 px-4 py-2 md:py-2 lg:py-[0.85rem] border-t border-b bg-white border-zinc-300 montserrat sticky top-0 z-[99]">
@@ -106,7 +114,11 @@ const Navbar = () => {
             <Image src={Logo} alt="dialable-logo" objectFit="cover" />
           </Link>
         </div>
-        <div className={`lg:flex hidden gap-5 mx-12 text-[${0.8+ slectedFontSize}vw] items-center leading-none`}>
+        <div
+          className={`lg:flex hidden gap-5 mx-12 text-[${
+            0.8 + slectedFontSize
+          }vw] items-center leading-none`}
+        >
           {links.map((item, index) => (
             <button key={index}>
               <Link
@@ -192,7 +204,7 @@ const Navbar = () => {
               <h3 className="font-medium text-[.94vw] mt-6">Text Size:</h3>
               <div className="flex items-center gap-4 mt-4">
                 <button
-                  onClick={()=>handleTextSize(0)}
+                  onClick={() => handleTextSize(0)}
                   className="border-2 w-[4vw] cursor-pointer flex items-center justify-center border-black p-2"
                 >
                   <span className="text-[.86vw] text-center font-semibold">
@@ -200,7 +212,7 @@ const Navbar = () => {
                   </span>
                 </button>
                 <button
-                  onClick={()=>handleTextSize(0.1)}
+                  onClick={() => handleTextSize(0.1)}
                   className="border-2 w-[4vw] cursor-pointer flex items-center justify-center border-black p-2"
                 >
                   <span className="text-[.96vw] text-center font-semibold">
@@ -208,7 +220,7 @@ const Navbar = () => {
                   </span>
                 </button>
                 <button
-                  onClick={()=>handleTextSize(.5)}
+                  onClick={() => handleTextSize(0.5)}
                   className="border-2 w-[4vw] cursor-pointer flex items-center justify-center border-black p-2"
                 >
                   <span className="text-[1vw] text-center font-semibold">
@@ -216,7 +228,7 @@ const Navbar = () => {
                   </span>
                 </button>
                 <button
-                  onClick={()=>handleTextSize(1.2)}
+                  onClick={() => handleTextSize(1.2)}
                   className="border-2 w-[4vw] cursor-pointer flex items-center justify-center border-black p-2"
                 >
                   <span className="text-[1.2vw] text-center font-semibold">
@@ -243,14 +255,22 @@ const Navbar = () => {
         <button>
           <IoCartOutline size="2rem" />
         </button>
-        <button>
-          <Link
-            href={"/signup"}
-            className="hidden lg:block text-white text-[0.7vw] btn font-semibold bg-[#781393] py-2 px-4 montserrat  cursor-pointer"
-          >
-            Sign Up
-          </Link>
-        </button>
+        {user ? (
+          <button>
+            <Link href={"/profile"}>
+              <VscAccount size="2rem" />
+            </Link>
+          </button>
+        ) : (
+          <button>
+            <Link
+              href={"/signup"}
+              className="hidden lg:block text-white text-[0.7vw] btn font-semibold bg-[#781393] py-2 px-4 montserrat  cursor-pointer"
+            >
+              Sign Up
+            </Link>
+          </button>
+        )}
       </div>
     </div>
   );

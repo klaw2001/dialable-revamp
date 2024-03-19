@@ -16,6 +16,16 @@ export const activeNavMenu = (path) => {
   });
 };
 
+export const getUserFromLocalStorage = () => {
+  try {
+    const userData = localStorage.getItem("user");
+    return userData ? JSON.parse(userData) : null;
+  } catch (error) {
+    console.error("Error fetching user from localStorage:", error);
+    return null;
+  }
+};
+
 export const imageUpload = async (file) => {
   const data = new FormData();
   data.append("file", file);

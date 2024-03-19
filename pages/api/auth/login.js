@@ -38,7 +38,7 @@ export default async function handler(req, res) {
         "mysecretkey",
         { expiresIn: "1h" }
       );
-
+      
       var cookies = new Cookies(req, res);
       cookies.set("users", JSON.stringify(existUser));
 
