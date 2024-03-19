@@ -138,10 +138,29 @@ const Navbar = () => {
           ))}
         </div>
       </div>
+    
       <div className="lg:hidden">
+      <div className="flex items-center gap-4 lg:hidden">
+        {user ? (
+          <button>
+            <Link href={"/profile"}>
+              <VscAccount size="2rem" />
+            </Link>
+          </button>
+        ) : (
+          <button>
+            <Link
+              href={"/signup"}
+              className="hidden lg:block text-white text-[0.7vw] btn font-semibold bg-[#781393] py-2 px-4 montserrat  cursor-pointer"
+            >
+              Sign Up
+            </Link>
+          </button>
+        )}
         <button onClick={showDrawer} className="relative md:w-[5vw] w-[7vw]">
           <Image src={Menu} alt="menu" objectFit="cover" />
         </button>
+      </div>
         <Drawer title="" onClose={onClose} open={open}>
           <div className="flex items-start flex-col   text-[3vw] font-medium montserrat ">
             {links.map((linkItem, index) => (
@@ -162,12 +181,8 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
-          <Link
-            href={"/joblisting"}
-            className=" text-white text-[3vw] btn font-semibold bg-[#781393] py-2 px-4 montserrat  cursor-pointer"
-          >
-            Sign Up
-          </Link>
+       
+       
         </Drawer>
       </div>
       <div className="hidden lg:flex gap-5 items-center relative">
