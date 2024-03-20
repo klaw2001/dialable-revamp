@@ -14,28 +14,30 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [user, setUser] = useState(null);
 
-  function getCookie(name) {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts.pop().split(';').shift();
-  }
-  
-  // Get the user cookie
-  const userCookie = getCookie('users');
-  
-  // Parse the JSON string to get the user object
-  if (userCookie) {
-    const user = JSON.parse(userCookie);
+  useEffect(()=>{
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    }
     
-    // Access the email property
-    const userEmail = user.email;
+    // Get the user cookie
+    const userCookie = getCookie('users');
     
-    // Now you can use the userEmail variable as needed
-    console.log('User email:', userEmail);
-  } else {
-    console.log('User cookie not found');
-  }
-  console.log(user)
+    // Parse the JSON string to get the user object
+    if (userCookie) {
+      const user = JSON.parse(userCookie);
+      
+      // Access the email property
+      const userEmail = user.email;
+      
+      // Now you can use the userEmail variable as needed
+      console.log('User email:', userEmail);
+    } else {
+      console.log('User cookie not found');
+    }
+    console.log(user)
+  },[])
   const handleSubmit = async (e) => {
     e.preventDefault();
 
