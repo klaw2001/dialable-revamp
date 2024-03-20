@@ -138,7 +138,7 @@ const PersonalInfo = () => {
             </div>
           </div>
           <button
-            className="btn px-3 mt-8 mb-12 text-white shadow-md montserrat font-medium bg-[#781393] text-[3vw] md:text-[2vw] lg md:text-[2vw]:lg:text-[1vw]"
+            className="btn px-3 mt-8 mb-12 text-white shadow-md montserrat font-medium bg-[#781393] text-[3vw] md:text-[2vw] lg:text-[1vw]"
             type="submit"
           >
             Save Changes
