@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { RiStarSFill } from "react-icons/ri";
 import marketData from "../index.js";
 import Filters from "./Filters.jsx";
-import { useAPI } from "@/context/context.js";
 import { getAllProducts } from "@/utils.js";
 import Link from "next/link.js";
 
