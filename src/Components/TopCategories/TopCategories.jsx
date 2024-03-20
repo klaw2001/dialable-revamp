@@ -17,7 +17,7 @@ const TopCategories = () => {
         <div>
           <div className="flex items-center relative justify-center md:justify-center md:items-start gap-8 md:gap-2 lg:gap-24 lg:justify-center mt-16 flex-wrap ">
             {categories.map((category, i) => (
-              <div key={i} className="flex flex-col md:my-2 lg:my-0 items-center justify-center">
+              <div key={i} className="flex flex-col grow md:my-2 lg:my-0 items-center justify-center">
                 <div className="image_wrapper w-[80px]  md:w-[100px]">
                   <Image
                     src={category.img}

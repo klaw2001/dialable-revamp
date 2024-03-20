@@ -1,9 +1,12 @@
-import React from 'react'
+import Profile from "@/Components/Profile/Profile";
+import React from "react";
 
 const page = () => {
   return (
-    <div>page</div>
-  )
-}
+    <div>
+      <Profile />
+    </div>
+  );
+};
 
-export default page
+export default page;
