@@ -61,15 +61,14 @@ export const getSingleProduct = async (id) => {
     console.error("Error fetching single product:", error);
   }
 };
-export const getCartItems = async (id) =>{
+export const getCartItems = async (id) => {
   try {
-    const response = await axios.get(`/api/cart/${id}`)
-    return response.data.data
+    const response = await axios.get(`/api/cart/${id}`);
+    return response.data.data;
   } catch (error) {
     console.error("Error fetching cart product:", error);
   }
-}
-
+};
 
 export const initializeRazorpay = () => {
   return new Promise((resolve) => {
@@ -85,4 +84,13 @@ export const initializeRazorpay = () => {
 
     document.body.appendChild(script);
   });
+};
+
+export const deleteCartItems = async (cartID) => {
+  try {
+    const respone = await axios.delete(`/api/cart/${cartID}`);
+    return respone.data.data
+  } catch (error) {
+    console.log(error);
+  }
 };

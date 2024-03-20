@@ -7,7 +7,8 @@ import Image from "next/image";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { useParams } from "next/navigation";
 import { useRouter } from "next/navigation";
-import { getCartItems, initializeRazorpay } from "@/utils";
+import { deleteCartItems, getCartItems, initializeRazorpay } from "@/utils";
+import { toast } from "react-toastify";
 const Cart = () => {
   const { id } = useParams();
   const [cartItems, setCartItems] = useState([]);
@@ -23,7 +24,7 @@ const Cart = () => {
     const parts = number.toString().split(".");
     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     return parts.join(".");
-  }; 
+  };
   const totalamt = () => {
     return cartItems.reduce((total, product) => {
       return total + product.price * (product.quantity || 1);
@@ -62,6 +63,18 @@ const Cart = () => {
 
       // Update localStorage
       // localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+    }
+  };
+
+  const handleDelete = async (cartID) => {
+    try {
+      const res = await deleteCartItems(cartID);
+      toast.success("Cart Item Deleted");
+      setCartItems((prevCartItems) =>
+        prevCartItems.filter((item) => item._id !== cartID)
+      );
+    } catch (error) {
+      toast.error(error.response.data.message);
     }
   };
 
@@ -134,7 +147,11 @@ const Cart = () => {
           <div className="flex gap-4 flex-col montserrat">
             {cartItems?.map((product, ind) => (
               <div key={ind}>
-                <div className={`pt-10 pb-4 ${ind===0?"border-y-2":"border-b-2"} border-black`}>
+                <div
+                  className={`pt-10 pb-4 ${
+                    ind === 0 ? "border-y-2" : "border-b-2"
+                  } border-black`}
+                >
                   <div className="flex md:flex-row flex-col gap-3">
                     <div className="img w-full md:w-[20%] md:h-[20%] lg:w-[7vw] lg:h-[7vw] border border-black">
                       <Image
@@ -185,14 +202,14 @@ const Cart = () => {
                               +
                             </button>
                           </div>
-                          <div className="total">
+                          {/* <div className="total">
                             <h1 className="font-bold text-[5.2vw] md:text-[2vw]  lg:text-[1.2vw] text-left lg:text-right">
                               Total
                             </h1>
                             <p className="font-bold text-[4vw] md:text-[1.8vw] lg:text-[1vw] mt-3">
                               ₹{formatNumberWithCommas(totalamt())}
                             </p>
-                          </div>
+                          </div>  */}
                         </div>
                       </div>
                       <div className="flex justify-between  mt-8 items-center">
@@ -207,7 +224,10 @@ const Cart = () => {
                             Save for Later
                           </button>
                         </div>
-                        <button className="btn">
+                        <button
+                          className="btn"
+                          onClick={() => handleDelete(product._id)}
+                        >
                           <RiDeleteBin6Line />
                         </button>
                       </div>
