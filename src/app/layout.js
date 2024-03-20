@@ -3,7 +3,7 @@ import "./globals.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 import AuthProvider from "@/Components/AuthProvider";
 import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,14 +14,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <AuthProvider>
-
     <html lang="en">
-      <ToastContainer/>
+      <ToastContainer />
       <body className={inter.className}>
         {children}
       </body>
     </html>
-    </AuthProvider>
   );
 }
