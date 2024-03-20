@@ -15,7 +15,8 @@
     );
     const [selectedStates, setSelectedStates] = useState([]);
     const [countriesWithStates, setCountriesWithStates] = useState([]);
-
+    const [userLocation, setUserLocation] = useState(null);
+    const [error, setError] = useState(null);
     const handleCountryChange = (event) => {
       const selectedCountryName = event.target.value;
       const selectedCountry = countries.find(
@@ -46,6 +47,29 @@
     console.log(localStorage.getItem("selectedCountry"));
     console.log(localStorage.getItem("selectedState"));
    }
+   const getUserLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          setUserLocation({
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude
+          });
+        },
+        (error) => {
+          setError(error.message);
+        }
+      );
+    } else {
+      setError("Geolocation is not supported by this browser.");
+    }
+  };
+  useEffect(() => {
+    getUserLocation();
+  }, []);
+
+  
+  
     useEffect(() => {
       if (selectedCountry) {
         const selectedCountryObj = countries.find(
