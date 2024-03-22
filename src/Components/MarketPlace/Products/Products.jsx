@@ -14,7 +14,6 @@ import ProductsRow from "./ProductsRow";
 import { useParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 const Products = () => {
-  
   const [activePage, setActivePage] = useState(1);
   const [visibleItem, setVisibleItem] = useState(16);
   const [open, setOpen] = useState(false);

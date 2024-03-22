@@ -94,3 +94,12 @@ export const deleteCartItems = async (cartID) => {
     console.log(error);
   }
 };
+export const getAllListings = async()=>{
+  try {
+    const response = await axios.get('/api/listing/get-all-listings')
+    return response.data.data
+  } catch (error) {
+    console.error("Error fetching all listings:", error);
+    
+  }
+}

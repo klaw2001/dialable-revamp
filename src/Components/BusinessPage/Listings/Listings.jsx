@@ -3,6 +3,7 @@ import React from "react";
 import Filter from "../../../../public/Images/Filters.svg";
 import BusinessCard from "../BusinessCard";
 import Link from "next/link";
+import BusinessListingComp from "./BusinessListingComp";
 
 const Listings = () => {
   return (
@@ -33,21 +34,7 @@ const Listings = () => {
           <span> All Filters</span>
         </button>
       </div>
-      <div className="flex items-center justify-center gap-8 flex-wrap py-10 mb-8">
-            <BusinessCard/>
-            <BusinessCard/>
-            <BusinessCard/>
-            <BusinessCard/>
-            <BusinessCard/>
-            <BusinessCard/>
-            <BusinessCard/>
-            <BusinessCard/>
-            <BusinessCard/>
-            <BusinessCard/>
-            <BusinessCard/>
-            <BusinessCard/>
-            
-      </div>
+     <BusinessListingComp/>
       <div className="flex fixed right-[-2%] md:right-[-3.5%] z-[20] top-[80%] gap-4 rotate-[-90deg] w-[10%] ">
         <Link
           href="#"
