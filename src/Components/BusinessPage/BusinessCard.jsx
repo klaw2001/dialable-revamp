@@ -6,7 +6,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import Link from "next/link";
 const BusinessCard = ({ thumbnail, placeName, category, description , id }) => {
   return (
-    <div className="w-full md:w-[32%] lg:w-[20%] rounded-lg shadow-md border border-black grow overflow-clip" key={id}>
+    <div className="w-full md:w-[47%] lg:w-[24%] rounded-lg md::grow-0 shadow-md border border-black  overflow-clip" key={id}>
       <Link href={`/single-listing/${id}`}>
         <div className="w-full">
           <Image
@@ -20,7 +20,7 @@ const BusinessCard = ({ thumbnail, placeName, category, description , id }) => {
         </div>
         <div className="info bg-white p-4">
           <div className="flex items-center justify-between mb-4">
-            <div className="flex gap-4 items-center montserrat font-bold text-[3vw] md:text-[2.5vw] lg:text-[1.5vw]">
+            <div className="flex gap-4 items-center montserrat font-bold text-[3vw] md:text-[2.5vw] lg:text-[1.3vw]">
               {placeName}
             </div>
             <span className="dept font-semibold text-[2vw] md:text-[1.5vw] lg:text-[.9vw]  rounded-md bg-[#F4EBFF] p-1">

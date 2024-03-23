@@ -1,11 +1,22 @@
+"use client"
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Filter from "../../../../public/Images/Filters.svg";
 import BusinessCard from "../BusinessCard";
 import Link from "next/link";
 import BusinessListingComp from "./BusinessListingComp";
 
 const Listings = () => {
+  const [open, setOpen] = useState(false);
+  const [placement, setPlacement] = useState("right");
+
+  const showDrawer = () => {
+    setOpen(true);
+    console.log("first");
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
   return (
     <div className="p-4 md:p-6 lg:p-10 relative">
       <div className="flex items-center justify-between">
@@ -23,7 +34,7 @@ const Listings = () => {
             India
           </button>
         </div>
-        <button className="btn py-3 px-2 bg-[#781393] flex items-center text-white Inter text-[2.2vw] md:text-[2vw] lg:text-[1vw]">
+        <button onClick={showDrawer} className="btn py-3 px-2 bg-[#781393] flex items-center text-white Inter text-[2.2vw] md:text-[2vw] lg:text-[1vw]">
           <div className="w-[3.5vw] md:w-[2.5vw] lg:w-[1.5vw]">
             <Image
               src={Filter}
@@ -34,7 +45,11 @@ const Listings = () => {
           <span> All Filters</span>
         </button>
       </div>
-     <BusinessListingComp/>
+     <BusinessListingComp
+        open={open}
+        close={onClose}
+        placement={placement}
+     />
       <div className="flex fixed right-[-2%] md:right-[-3.5%] z-[20] top-[80%] gap-4 rotate-[-90deg] w-[10%] ">
         <Link
           href="#"

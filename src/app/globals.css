@@ -139,6 +139,10 @@ div#\:0\.targetLanguage {
   position: relative;
 
 }
+
+.ant-drawer-body::-webkit-scrollbar{
+  display: none;
+}
 .brand[type="checkbox"]::after{
   content: "";
   display: inline-block;

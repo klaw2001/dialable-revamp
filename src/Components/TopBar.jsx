@@ -97,6 +97,7 @@ const TopBar = () => {
     );
     document.body.appendChild(addScript);
     window.googleTranslateElementInit = googleTranslateElementInit;
+ 
   }, []);
 
   
