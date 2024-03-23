@@ -9,7 +9,6 @@ import ListingFilter from "./ListingFilter";
 const BusinessListingComp = ({close, open , placement}) => {
   const [listings, setListings] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [cardsToShow, setCardsToShow] = useState(4);
   useEffect(() => {
     const myListings = async () => {
       const res = await getAllListings();
@@ -18,29 +17,11 @@ const BusinessListingComp = ({close, open , placement}) => {
     };
     myListings();
   }, []);
-  useEffect(() => {
-    const updateCardsNo = () => {
-      const screenWidth = window.innerWidth;
-      let cards;
-      if (screenWidth >= 1024) {
-        cards = 4;
-      } else if (screenWidth >= 768) {
-        cards = 2;
-      } else {
-        cards = 1;
-      }
-      setCardsToShow(cards);
-    };
-    updateCardsNo();
-    window.addEventListener("resize", updateCardsNo);
-    return () => {
-      window.removeEventListener("resize", updateCardsNo);
-    };
-  }, []);
+
   console.log(listings);
 
   // off-canvas styling
-  const { token } = theme.useToken();
+
   const containerStyle = {
     position: "relative",
     zIndex: 2,

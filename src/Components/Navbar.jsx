@@ -103,9 +103,9 @@ const Navbar = () => {
   ];
 
   // font size
-  const handleTextSize = (size) => {
-    setSlectedFontSize(size);
-  };
+  // const handleTextSize = (size) => {
+  //   setSlectedFontSize(size);
+  // };
   return (
     <div className="flex items-center justify-between lg:px-8 px-4 py-2 md:py-2 lg:py-[0.85rem] border-t border-b bg-white border-zinc-300 montserrat sticky top-0 z-[1001]">
       <div className="logo-links flex  items-center">
@@ -115,9 +115,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div
-          className={`lg:flex hidden gap-5 mx-12 text-[${
-            0.8 + slectedFontSize
-          }vw] items-center leading-none`}
+          className={`lg:flex hidden gap-5 mx-12 text-[0.8vw] items-center leading-none`}
         >
           {links.map((item, index) => (
             <button key={index}>
@@ -219,7 +217,7 @@ const Navbar = () => {
               <h3 className="font-medium text-[.94vw] mt-6">Text Size:</h3>
               <div className="flex items-center gap-4 mt-4">
                 <button
-                  onClick={() => handleTextSize(0)}
+                  // onClick={() => handleTextSize(0)}
                   className="border-2 w-[4vw] cursor-pointer flex items-center justify-center border-black p-2"
                 >
                   <span className="text-[.86vw] text-center font-semibold">
@@ -227,7 +225,7 @@ const Navbar = () => {
                   </span>
                 </button>
                 <button
-                  onClick={() => handleTextSize(0.1)}
+                  // onClick={() => handleTextSize(0.1)}
                   className="border-2 w-[4vw] cursor-pointer flex items-center justify-center border-black p-2"
                 >
                   <span className="text-[.96vw] text-center font-semibold">
@@ -235,7 +233,7 @@ const Navbar = () => {
                   </span>
                 </button>
                 <button
-                  onClick={() => handleTextSize(0.5)}
+                  // onClick={() => handleTextSize(0.5)}
                   className="border-2 w-[4vw] cursor-pointer flex items-center justify-center border-black p-2"
                 >
                   <span className="text-[1vw] text-center font-semibold">
