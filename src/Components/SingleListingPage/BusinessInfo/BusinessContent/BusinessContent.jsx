@@ -131,7 +131,7 @@ const BusinessContent = () => {
         <h3 className="text-[6vw] mb-4 text-black montserrat font-semibold md:text-[3vw] lg:text-[1.5vw]">
           Jawed Habib Hair & Beauty
         </h3>
-        <p className="text-[1vw] Inter text-black font-medium">{`Who doesn't like looking at their best? This is especially true when there is a special day around the corner or simply when you need to look presentable for an event. Salons, also known as beauty salons or beauty parlours, is a facility or establishment that provides beauty treatments to both women and men. If you are looking for a makeover or any cosmetic treatment, you can choose from a range of various salons available in Thane.`}</p>
+        <p className="text-[3vw] md:text-[2vw] lg:text-[1vw] Inter text-black font-medium">{`Who doesn't like looking at their best? This is especially true when there is a special day around the corner or simply when you need to look presentable for an event. Salons, also known as beauty salons or beauty parlours, is a facility or establishment that provides beauty treatments to both women and men. If you are looking for a makeover or any cosmetic treatment, you can choose from a range of various salons available in Thane.`}</p>
       </div>
       <div className="features py-8 border-b border-gray-300">
         <h3 className="text-[6vw] mb-4 text-black montserrat font-semibold md:text-[3vw] lg:text-[1.5vw]">

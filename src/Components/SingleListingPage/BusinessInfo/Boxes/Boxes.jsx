@@ -84,7 +84,7 @@ const Boxes = () => {
             <div>
               <IoLocationSharp />
             </div>
-            <span className="text-black montserrat font-medium text-[2vw] lg:text-[1vw]">
+            <span className="text-black montserrat font-medium text-[3vw] md:text-[2vw] lg:text-[1vw]">
               {" "}
               California, USA
             </span>
@@ -94,7 +94,7 @@ const Boxes = () => {
               <FaPhoneAlt />
             </div>
             <Link href={"tel:798098089"}>
-              <span className="text-black montserrat font-medium text-[2vw] lg:text-[1vw]">
+              <span className="text-black montserrat font-medium text-[3vw] md:text-[2vw] lg:text-[1vw]">
                 {" "}
                 8700376389
               </span>
@@ -104,7 +104,7 @@ const Boxes = () => {
             <div>
               <IoMailOutline />
             </div>
-            <span className="text-black montserrat font-medium text-[2vw] lg:text-[1vw]">
+            <span className="text-black montserrat font-medium text-[3vw] md:text-[2vw] lg:text-[1vw]">
               {" "}
               example@gmail.com
             </span>
@@ -113,7 +113,7 @@ const Boxes = () => {
             <div>
               <CiGlobe />
             </div>
-            <span className="text-black montserrat font-medium text-[2vw] lg:text-[1vw]">
+            <span className="text-black montserrat font-medium text-[3vw] md:text-[2vw] lg:text-[1vw]">
               {" "}
               www.fioxen.com
             </span>
@@ -121,22 +121,22 @@ const Boxes = () => {
         </div>
         <div className="socials mt-4 flex items-center gap-3">
           <Link href={"/"}>
-            <div className="bg-white flex items-center hover:bg-[#FF8037] text-black hover:text-white justify-center md:h-8 lg:h-12 md:w-8 lg:w-12 border border-gray-200">
+            <div className="bg-white flex items-center hover:bg-[#FF8037] text-black h-10 w-10 hover:text-white justify-center md:h-8 lg:h-12 md:w-8 lg:w-12 border border-gray-200">
               <FaFacebookF />
             </div>
           </Link>
           <Link href={"/"}>
-            <div className="bg-white flex items-center hover:bg-[#FF8037] text-black hover:text-white justify-center md:h-8 lg:h-12 md:w-8 lg:w-12 border border-gray-200">
+            <div className="bg-white flex items-center hover:bg-[#FF8037] text-black h-10 w-10 hover:text-white justify-center md:h-8 lg:h-12 md:w-8 lg:w-12 border border-gray-200">
               <FaInstagram />
             </div>
           </Link>
           <Link href={"/"}>
-            <div className="bg-white flex items-center hover:bg-[#FF8037] text-black hover:text-white justify-center md:h-8 lg:h-12 md:w-8 lg:w-12 border border-gray-200">
+            <div className="bg-white flex items-center hover:bg-[#FF8037] text-black h-10 w-10 hover:text-white justify-center md:h-8 lg:h-12 md:w-8 lg:w-12 border border-gray-200">
               <FaXTwitter />
             </div>
           </Link>
           <Link href={"/"}>
-            <div className="bg-white flex items-center hover:bg-[#FF8037] text-black hover:text-white justify-center md:h-8 lg:h-12 md:w-8 lg:w-12 border border-gray-200">
+            <div className="bg-white flex items-center hover:bg-[#FF8037] text-black h-10 w-10 hover:text-white justify-center md:h-8 lg:h-12 md:w-8 lg:w-12 border border-gray-200">
               <FaPinterestP />
             </div>
           </Link>
