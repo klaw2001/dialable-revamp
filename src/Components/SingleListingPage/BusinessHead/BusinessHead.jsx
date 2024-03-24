@@ -9,7 +9,7 @@ import { FaRegShareFromSquare } from "react-icons/fa6";
 
 const BusinessHead = () => {
   return (
-    <div className="flex border-b border-gray-300 items-center gap-10 md:gap-20 lg:gap-36 px-10 py-12 flex-wrap">
+    <div className="flex border-b border-gray-300 items-center gap-10 md:gap-20 lg:gap-36 p-4 lg:px-10 lg:py-12 flex-wrap">
       <div className="flex items-center gap-3 ">
         <div className="img">
           <Image src={""} height={100} width={150} alt="img" />
@@ -62,7 +62,7 @@ const BusinessHead = () => {
       </div>
       <div className="flex items-center justify-end gap-2 grow ">
         <button className="p-4 border text-black font-medium flex items-center justify-center text-[5vw] transition-[all.5s] active:scale-[.98] lg:text-[3vw] border-black h-16 w-16">
-          <IoMdHeartEmpty />
+          <IoMdHeartEmpty  />
         </button>
         <button className="p-4 border text-black font-medium flex items-center justify-center text-[5vw] transition-[all.5s] active:scale-[.98] lg:text-[3vw] border-black h-16 w-16">
           <FaRegShareFromSquare />

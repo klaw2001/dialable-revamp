@@ -4,12 +4,12 @@ import Boxes from './Boxes/Boxes'
 
 const BusinessInfo = () => {
   return (
-    <div className='px-10 py-12 flex items-center justify-center gap-4 '>
-        <div className='w-[70%]'>
+    <div className='p-4 lg:px-10 lg:py-12 flex items-start justify-center gap-4 '>
+        <div className='w-[65%]'>
 
         <BusinessContent/>
         </div>
-        <div className='w-[30%]'>
+        <div className='w-[33%]'>
 
         <Boxes/>
         </div>
