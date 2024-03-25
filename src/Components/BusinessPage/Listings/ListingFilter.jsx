@@ -22,10 +22,10 @@ const ListingFilter = () => {
             />
           </div>
           <div className="form_group w-full">
-            <h1 className="text-[3vw] lg:text-[1vw] text-black font-semibold montserrat">
+            <h1 className="text-[3vw] md:text-[2vw] lg:text-[1vw] text-black font-semibold montserrat">
               Category
             </h1>
-            <select className="py-3 mt-4 text-[3vw] lg:text-[1vw] font-medium montserrat w-full border border-black bg-transparent  focus-visible:outline-none fous-visible:border-[1.5px]">
+            <select className="py-3 mt-4 text-[3vw] md:text-[2vw] lg:text-[1vw] font-medium montserrat w-full border border-black bg-transparent  focus-visible:outline-none fous-visible:border-[1.5px]">
               <option value="">Select</option>
               <option value="1">Museums</option>
               <option value="2">Restaurant</option>
@@ -38,10 +38,10 @@ const ListingFilter = () => {
             </select>
           </div>
           <div className="form_group w-full">
-            <h1 className="text-[3vw] lg:text-[1vw] text-black font-semibold montserrat">
+            <h1 className="text-[3vw] md:text-[2vw] lg:text-[1vw] text-black font-semibold montserrat">
               Location
             </h1>
-            <select className="py-3 mt-4 text-[3vw] lg:text-[1vw] font-medium montserrat w-full border border-black bg-transparent  focus-visible:outline-none fous-visible:border-[1.5px]">
+            <select className="py-3 mt-4 text-[3vw] md:text-[2vw] lg:text-[1vw] font-medium montserrat w-full border border-black bg-transparent  focus-visible:outline-none fous-visible:border-[1.5px]">
               <option disabled="" selected="">
                 Select
               </option>
@@ -56,10 +56,10 @@ const ListingFilter = () => {
             </select>
           </div>
           <div className="form_group w-full">
-            <h1 className="text-[3vw] lg:text-[1vw] text-black font-semibold montserrat">
+            <h1 className="text-[3vw] md:text-[2vw] lg:text-[1vw] text-black font-semibold montserrat">
               Country
             </h1>
-            <select className="py-3 mt-4 text-[3vw] lg:text-[1vw] font-medium montserrat w-full border border-black bg-transparent  focus-visible:outline-none fous-visible:border-[1.5px]">
+            <select className="py-3 mt-4 text-[3vw] md:text-[2vw] lg:text-[1vw] font-medium montserrat w-full border border-black bg-transparent  focus-visible:outline-none fous-visible:border-[1.5px]">
               <option disabled="" selected="">
                 Select
               </option>
@@ -74,10 +74,10 @@ const ListingFilter = () => {
             </select>
           </div>
           <div className="form_group w-full">
-            <h1 className="text-[3vw] lg:text-[1vw] text-black font-semibold montserrat">
+            <h1 className="text-[3vw] md:text-[2vw] lg:text-[1vw] text-black font-semibold montserrat">
               By Place
             </h1>
-            <select className="py-3 mt-4 text-[3vw] lg:text-[1vw] font-medium montserrat w-full border border-black bg-transparent  focus-visible:outline-none fous-visible:border-[1.5px]">
+            <select className="py-3 mt-4 text-[3vw] md:text-[2vw] lg:text-[1vw] font-medium montserrat w-full border border-black bg-transparent  focus-visible:outline-none fous-visible:border-[1.5px]">
               <option disabled="" selected="">
                 Select
               </option>
@@ -101,7 +101,7 @@ const ListingFilter = () => {
               <input
                 type="range"
                 value={price}
-                step={.01}
+                step={0.01}
                 onChange={(e) => setPrice(e.target.value)}
                 className="slider w-full"
                 name=""
@@ -110,30 +110,32 @@ const ListingFilter = () => {
                 id="price"
               />
             </div>
-            <div className="price-number mt-1 text-[1vw] font-medium montserrat">
+            <div className="price-number mt-1 text-[3vw]  md:text-[2vw] lg:text-[1vw] font-medium montserrat">
               <span className="amount">$0.00 - ${`${price}`}</span>
-      
-
             </div>
           </div>
-          <div className=""> 
-          <h4 className="text-[3vw] lg:text-[1vw]  text-black font-semibold montserrat">
-            Default Price
-          </h4>
-          <select className="py-3 mt-4 text-[3vw] lg:text-[1vw] font-medium montserrat w-full border border-black bg-transparent  focus-visible:outline-none fous-visible:border-[1.5px]">
-            <option disabled="" selected="">
-              Selcted
-            </option>
-            <option value="1">$10-$30</option>
-            <option value="2">$30-$70</option>
-            <option value="3">$70-$100</option>
-            <option value="4">$100-$130</option>
-            <option value="5">$130-$150</option>
-          </select>
+          <div className="">
+            <h4 className="text-[3vw] md:text-[2vw] lg:text-[1vw]  text-black font-semibold montserrat">
+              Default Price
+            </h4>
+            <select className="py-3 mt-4 text-[3vw] md:text-[2vw] lg:text-[1vw] font-medium montserrat w-full border border-black bg-transparent  focus-visible:outline-none fous-visible:border-[1.5px]">
+              <option disabled="" selected="">
+                Selcted
+              </option>
+              <option value="1">$10-$30</option>
+              <option value="2">$30-$70</option>
+              <option value="3">$70-$100</option>
+              <option value="4">$100-$130</option>
+              <option value="5">$130-$150</option>
+            </select>
           </div>
         </div>
-        <div >
-          <button type="submit" className="text-white text-[3vw] mt-10 md:text-[2vw] lg:text-[1vw] font-medium btn py-3 px-6 bg-[#781393]" fdprocessedid="w10pp">
+        <div>
+          <button
+            type="submit"
+            className="text-white text-[3vw] mt-10 md:text-[2vw] lg:text-[1vw] font-medium btn py-3 px-6 bg-[#781393]"
+            fdprocessedid="w10pp"
+          >
             Search Now
           </button>
         </div>

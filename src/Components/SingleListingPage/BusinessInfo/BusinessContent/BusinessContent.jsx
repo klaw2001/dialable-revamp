@@ -2,12 +2,35 @@
 
 import Faq from "@/Components/Faq";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaRegCreditCard, FaReply } from "react-icons/fa";
 import beds from "../../../../../public/Images/rentalProducts/beds.png";
 import { FaStar } from "react-icons/fa6";
 
 const BusinessContent = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const[size ,setSize]=useState(0)
+    useEffect(()=>{
+      const updateSize=()=>{
+        let updatedSize
+        let screenWidth=window.innerWidth;
+        if (screenWidth >= 768){
+          updatedSize=150
+        }else if(screenWidth>=320){
+          updatedSize=350
+        }else{
+          updatedSize=100
+        }
+        setSize(updatedSize)
+      }
+      updateSize()
+  
+      window.addEventListener("resize",updateSize)
+      return ()=>{
+        window.removeEventListener('resize',updateSize)
+      }
+      
+    },[])
   const featureData = [
     {
       icon: <FaRegCreditCard />,
@@ -120,7 +143,6 @@ const BusinessContent = () => {
     },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(0);
 
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -260,12 +282,12 @@ const BusinessContent = () => {
           <div className="py-4">
             {reviews?.map((review, i) => (
               <div key={i} className="flex items-start py-4 gap-6">
-                <div className="image rounded-full">
+                <div className="image relative rounded-full">
                   <Image
                     src={review.img}
                     alt="profile"
-                    width={100}
-                    height={100}
+                    height={size}
+                    width={size}                    
                   />
                 </div>
                 <div className="info">

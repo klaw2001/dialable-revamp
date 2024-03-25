@@ -18,7 +18,7 @@ const BusinessHead = () => {
           <h4 className="text-[5vw]  lg:text-[2.1vw]  text-black font-semibold Sans">
             Jawed Habib Hair & Beauty
           </h4>
-          <p className="text-black montserrat font-medium text-[2vw] lg:text-[1vw]">
+          <p className="text-black montserrat font-medium text-[3vw] md:text-[2vw] lg:text-[1vw]">
             Popular restraunt, California
           </p>
         </div>
@@ -34,7 +34,7 @@ const BusinessHead = () => {
             href={"#reviews"}
             className="transition-[all.5s] hover:underline"
           >
-            <span className="text-black montserrat font-medium text-[2vw] lg:text-[1vw]">
+            <span className="text-black montserrat font-medium text-[3vw] md:text-[2vw] lg:text-[1vw]">
               (02 reviews)
             </span>
           </Link>
@@ -43,7 +43,7 @@ const BusinessHead = () => {
           <div>
             <IoLocationSharp />
           </div>
-          <span className="text-black montserrat font-medium text-[2vw] lg:text-[1vw]">
+          <span className="text-black montserrat font-medium text-[3vw] md:text-[2vw] lg:text-[1vw]">
             {" "}
             California, USA
           </span>
@@ -53,7 +53,7 @@ const BusinessHead = () => {
             <FaPhoneAlt />
           </div>
           <Link href={"tel:798098089"} className="underline ">
-            <span className="text-black montserrat font-medium text-[2vw] lg:text-[1vw]">
+            <span className="text-black montserrat font-medium text-[3vw] md:text-[2vw] lg:text-[1vw]">
               {" "}
               8700376389
             </span>
@@ -61,10 +61,10 @@ const BusinessHead = () => {
         </div>
       </div>
       <div className="flex items-center justify-end gap-2 grow ">
-        <button className="p-4 border text-black font-medium flex items-center justify-center text-[5vw] transition-[all.5s] active:scale-[.98] lg:text-[3vw] border-black h-16 w-16">
+        <button className="p-2 md:p-4 border text-black font-medium flex items-center justify-center text-[5vw] transition-[all.5s] active:scale-[.98] lg:text-[3vw] border-black h-10 w-10 md:h-16 md:w-16">
           <IoMdHeartEmpty  />
         </button>
-        <button className="p-4 border text-black font-medium flex items-center justify-center text-[5vw] transition-[all.5s] active:scale-[.98] lg:text-[3vw] border-black h-16 w-16">
+        <button className="p-2 md:p-4 border text-black font-medium flex items-center justify-center text-[5vw] transition-[all.5s] active:scale-[.98] lg:text-[3vw] border-black h-10 w-10 md:h-16 md:w-16">
           <FaRegShareFromSquare />
         </button>
       </div>
