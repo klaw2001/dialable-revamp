@@ -136,52 +136,52 @@ const Navbar = () => {
           ))}
         </div>
       </div>
-    
-      <div className="lg:hidden">
-      <div className="flex items-center gap-4 lg:hidden">
-        {user ? (
-          <button>
-            <Link href={"/profile"}>
-              <VscAccount size="2rem" />
-            </Link>
-          </button>
-        ) : (
-          <button>
-            <Link
-              href={"/signup"}
-              className="hidden lg:block text-white text-[0.7vw] btn font-semibold bg-[#781393] py-2 px-4 montserrat  cursor-pointer"
-            >
-              Sign Up
-            </Link>
-          </button>
-        )}
-        <button onClick={showDrawer} className="relative md:w-[5vw] w-[7vw]">
-          <Image src={Menu} alt="menu" objectFit="cover" />
-        </button>
-      </div>
-        <Drawer title="" onClose={onClose} open={open}>
-          <div className="flex items-start flex-col   text-[3vw] font-medium montserrat ">
-            {links.map((linkItem, index) => (
-              <Link key={index} href={linkItem.href} className="py-4">
-                {index === 0 ? (
-                  <select className="flex gap-2 items-center">
-                    <option value="">{linkItem.title}</option>
-                  </select>
-                ) : (
-                  <span>{linkItem.title}</span>
-                )}
-              </Link>
-            ))}
 
-            {subNavLinks.map((subLinkItem, index) => (
-              <Link key={index} href={subLinkItem.href} className="py-4">
-                {subLinkItem.title}
+      <div className="lg:hidden">
+        <div className="flex items-center gap-4 lg:hidden">
+          {user ? (
+            <button>
+              <Link href={"/profile"}>
+                <VscAccount size="2rem" />
               </Link>
-            ))}
-          </div>
-       
-       
-        </Drawer>
+            </button>
+          ) : (
+            <button>
+              <Link
+                href={"/signup"}
+                className="hidden lg:block text-white text-[0.7vw] btn font-semibold bg-[#781393] py-2 px-4 montserrat  cursor-pointer"
+              >
+                Sign Up
+              </Link>
+            </button>
+          )}
+          <button onClick={showDrawer} className="relative md:w-[5vw] w-[7vw]">
+            <Image src={Menu} alt="menu" objectFit="cover" />
+          </button>
+        </div>
+        <div className="nav-drawer relative z-[1002]">
+          <Drawer  title="" onClose={onClose} open={open}>
+            <div className="flex items-start flex-col   text-[3vw] font-medium montserrat ">
+              {links.map((linkItem, index) => (
+                <Link key={index} href={linkItem.href} className="py-4">
+                  {index === 0 ? (
+                    <select className="flex gap-2 items-center">
+                      <option value="">{linkItem.title}</option>
+                    </select>
+                  ) : (
+                    <span>{linkItem.title}</span>
+                  )}
+                </Link>
+              ))}
+
+              {subNavLinks.map((subLinkItem, index) => (
+                <Link key={index} href={subLinkItem.href} className="py-4">
+                  {subLinkItem.title}
+                </Link>
+              ))}
+            </div>
+          </Drawer>
+        </div>
       </div>
       <div className="hidden lg:flex gap-5 items-center relative">
         <div className="accessibility ">
