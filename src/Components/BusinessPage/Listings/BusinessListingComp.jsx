@@ -25,13 +25,13 @@ const BusinessListingComp = ({close, open , placement}) => {
   const containerStyle = {
     position: "relative",
     zIndex: 2,
-    overflow: "hidden",
+    // overflow: "hidden",
     background: "white",
   };
   
   return (
-    <div >
-      <Drawer
+    <div style={containerStyle} >
+       <Drawer
         title=""
         onClose={close}
         open={open}
@@ -46,7 +46,7 @@ const BusinessListingComp = ({close, open , placement}) => {
         {loading ? (
           <Loading />
         ) : (
-          <div className="flex items-center justify-start gap-8 flex-wrap py-10 mb-8" style={containerStyle}>
+          <div className="flex items-center justify-start gap-8 flex-wrap py-12 px-10" >
             {listings.map((listing, ind) => (
               <BusinessCard
                 key={ind}
@@ -57,6 +57,7 @@ const BusinessListingComp = ({close, open , placement}) => {
                 description={listing.description}
               />
             ))}
+            
           </div>
         )}
       </>

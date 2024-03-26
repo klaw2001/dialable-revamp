@@ -18,8 +18,8 @@ const Listings = () => {
     setOpen(false);
   };
   return (
-    <div className="p-4 md:p-6 lg:p-10 relative">
-      <div className="flex items-center justify-between">
+    <div className="relative">
+      <div className="flex items-center justify-between pt-4 px-4 md:pt-6 md:px-6 lg:pt-10 lg:px-10">
         <div className="options flex items-center gap-3">
           <button className="btn txt-black p-2 font-medium text-[2.2vw] md:text-[2vw] lg:text-[1vw] border-2">
             View all

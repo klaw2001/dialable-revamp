@@ -107,7 +107,7 @@ const Navbar = () => {
   //   setSlectedFontSize(size);
   // };
   return (
-    <div className="flex items-center justify-between lg:px-8 px-4 py-2 md:py-2 lg:py-[0.85rem] border-t border-b bg-white border-zinc-300 montserrat sticky top-0 z-[1001]">
+    <div className="flex items-center justify-between lg:px-8 px-4 py-2 md:py-2 lg:py-[0.85rem] border-t border-b bg-white border-zinc-300 montserrat sticky top-0 z-[1000]">
       <div className="logo-links flex  items-center">
         <div className="logo relative w-[33vw] md:w-[20vw] lg:w-[11vw]">
           <Link href={"/"}>
@@ -159,8 +159,8 @@ const Navbar = () => {
             <Image src={Menu} alt="menu" objectFit="cover" />
           </button>
         </div>
-        <div className="nav-drawer relative z-[1002]">
-          <Drawer  title="" onClose={onClose} open={open}>
+        <div className="nav-drawer">
+          <Drawer   title="" onClose={onClose} open={open}>
             <div className="flex items-start flex-col   text-[3vw] font-medium montserrat ">
               {links.map((linkItem, index) => (
                 <Link key={index} href={linkItem.href} className="py-4">
