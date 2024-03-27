@@ -124,7 +124,7 @@ const TopBar = () => {
                 </option>
               ))}
             </select> */}
-            <div className="overflow-hidden" style={{width:'clamp(80px, 15vw, 200px)' , height:'28px'}}>
+            <div className="overflow-hidden" style={{width:'clamp(80px, 15vw, 136px)' , height:'28px'}}>
 
             <div id="google_translate_element"></div>
             </div>
