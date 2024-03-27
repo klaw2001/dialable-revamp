@@ -12,7 +12,6 @@ const SingleListingPage = () => {
         <TopBar/>
         <Navbar/>
         <SubNav/>
-        <BusinessHead/>
         <BusinessInfo/>
         
         <Footer/>

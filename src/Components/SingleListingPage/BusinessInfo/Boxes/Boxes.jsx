@@ -4,7 +4,7 @@ import { CiGlobe, CiMobile4, CiUser } from "react-icons/ci";
 import { FaFacebookF, FaPhoneAlt } from "react-icons/fa";
 import { FaInstagram, FaPinterestP, FaXTwitter } from "react-icons/fa6";
 import { IoLocationSharp, IoMailOutline } from "react-icons/io5";
-const Boxes = () => {
+const Boxes = ({phone, email, website, twitter}) => {
   return (
     <div className="w-full">
       <div className="reservation p-4 lg:px-7 lg:py-9 bg-[#f7f7f7]">
@@ -96,7 +96,7 @@ const Boxes = () => {
             <Link href={"tel:798098089"}>
               <span className="text-black montserrat font-medium text-[3vw] md:text-[2vw] lg:text-[1vw]">
                 {" "}
-                8700376389
+                {phone}
               </span>
             </Link>
           </div>
@@ -106,7 +106,7 @@ const Boxes = () => {
             </div>
             <span className="text-black montserrat font-medium text-[3vw] md:text-[2vw] lg:text-[1vw]">
               {" "}
-              example@gmail.com
+              {email}
             </span>
           </div>
           <div className="flex items-center montserrat text-black font-medium  gap-2">
@@ -115,7 +115,7 @@ const Boxes = () => {
             </div>
             <span className="text-black montserrat font-medium text-[3vw] md:text-[2vw] lg:text-[1vw]">
               {" "}
-              www.fioxen.com
+              {website}
             </span>
           </div>
         </div>
@@ -130,7 +130,7 @@ const Boxes = () => {
               <FaInstagram />
             </div>
           </Link>
-          <Link href={"/"}>
+          <Link href={twitter}>
             <div className="bg-white flex items-center hover:bg-[#FF8037] text-black h-10 w-10 hover:text-white justify-center md:h-8 lg:h-12 md:w-8 lg:w-12 border border-gray-200">
               <FaXTwitter />
             </div>

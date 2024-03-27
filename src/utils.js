@@ -103,3 +103,11 @@ export const getAllListings = async()=>{
     
   }
 }
+export const getSingleListing = async (id) => {
+  try {
+    const response = await axios.get(`/api/listing/single-listing/${id}`);
+    return response.data.data;
+  } catch (error) {
+    console.error("Error fetching single product:", error);
+  }
+};

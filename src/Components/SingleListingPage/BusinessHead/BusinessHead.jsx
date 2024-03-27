@@ -7,19 +7,19 @@ import { IoLocationSharp } from "react-icons/io5";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { FaRegShareFromSquare } from "react-icons/fa6";
 
-const BusinessHead = () => {
+const BusinessHead = ({company,placeName, thumbnail,phone }) => {
   return (
     <div className="flex border-b border-gray-300 items-center gap-10 md:gap-20 lg:gap-36 p-4 lg:px-10 lg:py-12 flex-wrap">
       <div className="flex items-center gap-3 ">
         <div className="img">
-          <Image src={""} height={100} width={150} alt="img" />
+          <Image src={thumbnail} height={100} width={150} alt="img" />
         </div>
         <div className="content">
           <h4 className="text-[5vw]  lg:text-[2.1vw]  text-black font-semibold Sans">
-            Jawed Habib Hair & Beauty
+            {placeName}
           </h4>
           <p className="text-black montserrat font-medium text-[3vw] md:text-[2vw] lg:text-[1vw]">
-            Popular restraunt, California
+            {company}
           </p>
         </div>
       </div>
@@ -54,8 +54,7 @@ const BusinessHead = () => {
           </div>
           <Link href={"tel:798098089"} className="underline ">
             <span className="text-black montserrat font-medium text-[3vw] md:text-[2vw] lg:text-[1vw]">
-              {" "}
-              8700376389
+              {phone}
             </span>
           </Link>
         </div>
