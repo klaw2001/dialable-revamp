@@ -7,10 +7,11 @@ import Logo from "../../public/Images/dialable-logo.png";
 import { RxAccessibility } from "react-icons/rx";
 import { IoCartOutline } from "react-icons/io5";
 import { VscAccount } from "react-icons/vsc";
-
+import { DownOutlined, SmileOutlined } from "@ant-design/icons";
+import { Dropdown, Space, Menu } from "antd";
 import { Button, Drawer } from "antd";
 import { useRouter } from "next/navigation";
-import Menu from "../../public/Images/menu.svg";
+import MenuSvg from "../../public/Images/menu.svg";
 import { FaChevronDown } from "react-icons/fa6";
 import { getUserFromLocalStorage } from "@/utils";
 
@@ -35,19 +36,103 @@ const Navbar = () => {
   const links = [
     {
       title: "For Abled",
-      href: "/business",
+      children: [
+        {
+          title: "Products",
+          label: <Link href={"/products"}>Products</Link>,
+        },
+        {
+          title: "Store",
+          label: <Link href={"/store"}>Store</Link>,
+        },
+        {
+          title: "Support",
+          label: <Link href={"/support"}>Support</Link>,
+        },
+        {
+          title: "Employment",
+          label: <Link href={"/employment"}>Employment</Link>,
+        },
+        {
+          title: "Learn",
+          label: <Link href={"/learn"}>Learn</Link>,
+        },
+        {
+          title: "Community",
+          label: <Link href={"/community"}>Community</Link>,
+        },
+        {
+          title: "Policy",
+          label: <Link href={"/policy"}>Policy</Link>,
+        },
+        {
+          title: "Change Makers",
+          label: <Link href={"/changeMakers"}>ChangeMakers</Link>,
+        },
+        {
+          title: "Alliances",
+          label: <Link href={"/alliances"}>Alliances</Link>,
+        },
+        {
+          title: "Special Offers",
+          label: <Link href={"/specialoffers"}>Special Offers</Link>,
+        },
+      ],
     },
     {
       title: "For Corporates",
-      href: "/businesslisting",
+      children: [
+        {
+          key: "1",
+          label: <Link href={"/b2b"}>B2B</Link>,
+        },
+        {
+          tkey: "2",
+          label: <Link href={"/employment"}>Employment</Link>,
+        },
+        {
+          key: "3",
+          label: <Link href={"/events"}>Events</Link>,
+        },
+      ],
     },
     {
       title: "MarketPlace",
-      href: "/marketplace",
+      children: [
+        {
+          key: "4",
+          label: <Link href={"/products"}>Products</Link>,
+        },
+        {
+          key: "5",
+          label: <Link href={"/store"}>Store</Link>,
+        },
+        {
+          key: "6",
+          label: <Link href={"/support"}>Support</Link>,
+        },
+      ],
     },
     {
       title: "About Us",
-      href: "/about",
+      children: [
+        {
+          key: "7",
+          label: <Link href={"/about"}>About Us</Link>,
+        },
+        {
+          key: "8",
+          label: <Link href={"/contact"}>Contact</Link>,
+        },
+        {
+          key: "9",
+          label: <Link href={"/blog"}>Blog</Link>,
+        },
+        {
+          key: "10",
+          label: <Link href={"/policy"}>Policy</Link>,
+        },
+      ],
     },
   ];
 
@@ -106,6 +191,13 @@ const Navbar = () => {
   // const handleTextSize = (size) => {
   //   setSlectedFontSize(size);
   // };
+  const generateMenu = (children) => (
+    <Menu>
+      {children.map((child) => (
+        <Menu.Item key={child.key}>{child.label}</Menu.Item>
+      ))}
+    </Menu>
+  );
   return (
     <div className="flex items-center justify-between lg:px-8 px-4 py-2 md:py-2 lg:py-[0.85rem] border-t border-b bg-white border-zinc-300 montserrat sticky top-0 z-[1000]">
       <div className="logo-links flex  items-center">
@@ -118,21 +210,19 @@ const Navbar = () => {
           className={`lg:flex hidden gap-5 mx-12 text-[0.8vw] items-center leading-none`}
         >
           {links.map((item, index) => (
-            <button key={index}>
-              <Link
-                href={item.href}
-                className="text-zinc-600 font-medium cursor-pointer hover:text-black"
-              >
-                {index === 2 ? (
-                  <span>{item.title}</span>
-                ) : (
-                  <div className="flex gap-2 items-center">
-                    <span value="">{item.title}</span>
-                    <FaChevronDown />
-                  </div>
-                )}
-              </Link>
-            </button>
+            <div key={index} className="flex gap-2 items-center">
+              <Dropdown overlay={generateMenu(item.children)}>
+                <a
+                  className="cursor-pointer"
+                  onClick={(e) => e.preventDefault()}
+                >
+                  <Space>
+                    {item.title}
+                    <DownOutlined />
+                  </Space>
+                </a>
+              </Dropdown>
+            </div>
           ))}
         </div>
       </div>
@@ -156,29 +246,29 @@ const Navbar = () => {
             </button>
           )}
           <button onClick={showDrawer} className="relative md:w-[5vw] w-[7vw]">
-            <Image src={Menu} alt="menu" objectFit="cover" />
+            <Image src={MenuSvg} alt="menu" objectFit="cover" />
           </button>
         </div>
         <div className="nav-drawer">
-          <Drawer   title="" onClose={onClose} open={open}>
-            <div className="flex items-start flex-col   text-[3vw] font-medium montserrat ">
-              {links.map((linkItem, index) => (
-                <Link key={index} href={linkItem.href} className="py-4">
-                  {index === 0 ? (
-                    <select className="flex gap-2 items-center">
-                      <option value="">{linkItem.title}</option>
-                    </select>
-                  ) : (
-                    <span>{linkItem.title}</span>
-                  )}
-                </Link>
+          <Drawer title="" onClose={onClose} open={open}>
+            <div className="flex items-start flex-col   font-medium montserrat ">
+              {links.map((item, index) => (
+                <div key={index} className="  w-full py-4 grow">
+                  <Dropdown  overlay={generateMenu(item.children)}>
+                    <a
+                      className="cursor-pointer  text-[3vw]"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      <Space className="text-[5vw]">
+                        {item.title}
+                        <DownOutlined />
+                      </Space>
+                    </a>
+                  </Dropdown>
+                </div>
               ))}
 
-              {subNavLinks.map((subLinkItem, index) => (
-                <Link key={index} href={subLinkItem.href} className="py-4">
-                  {subLinkItem.title}
-                </Link>
-              ))}
+  
             </div>
           </Drawer>
         </div>
