@@ -136,56 +136,56 @@ const Navbar = () => {
     },
   ];
 
-  const subNavLinks = [
-    {
-      title: "Products",
-      href: "/advertise",
-    },
-    {
-      title: "Store",
-      href: "/marketplace",
-    },
-    {
-      title: "Support",
-      href: "/contact",
-    },
-    {
-      title: "Enablers",
-      href: "#",
-    },
-    {
-      title: "B2B",
-      href: "/marketplace",
-    },
-    {
-      title: "Employment",
-      href: "/joblisting",
-    },
-    {
-      title: "Learn",
-      href: "#",
-    },
-    {
-      title: "Community",
-      href: "#",
-    },
-    {
-      title: "Events",
-      href: "#",
-    },
-    {
-      title: "Policy",
-      href: "#",
-    },
-    {
-      title: "Change Makers",
-      href: "#",
-    },
-    {
-      title: "Alliances",
-      href: "#",
-    },
-  ];
+  // const subNavLinks = [
+  //   {
+  //     title: "Products",
+  //     href: "/advertise",
+  //   },
+  //   {
+  //     title: "Store",
+  //     href: "/marketplace",
+  //   },
+  //   {
+  //     title: "Support",
+  //     href: "/contact",
+  //   },
+  //   {
+  //     title: "Enablers",
+  //     href: "#",
+  //   },
+  //   {
+  //     title: "B2B",
+  //     href: "/marketplace",
+  //   },
+  //   {
+  //     title: "Employment",
+  //     href: "/joblisting",
+  //   },
+  //   {
+  //     title: "Learn",
+  //     href: "#",
+  //   },
+  //   {
+  //     title: "Community",
+  //     href: "#",
+  //   },
+  //   {
+  //     title: "Events",
+  //     href: "#",
+  //   },
+  //   {
+  //     title: "Policy",
+  //     href: "#",
+  //   },
+  //   {
+  //     title: "Change Makers",
+  //     href: "#",
+  //   },
+  //   {
+  //     title: "Alliances",
+  //     href: "#",
+  //   },
+  // ];
 
   // font size
   // const handleTextSize = (size) => {
@@ -207,13 +207,13 @@ const Navbar = () => {
           </Link>
         </div>
         <div
-          className={`lg:flex hidden gap-5 mx-12 text-[0.8vw] items-center leading-none`}
+          className={`lg:flex hidden gap-5 mx-12  items-center leading-none`}
         >
           {links.map((item, index) => (
             <div key={index} className="flex gap-2 items-center">
               <Dropdown overlay={generateMenu(item.children)}>
                 <a
-                  className="cursor-pointer"
+                  className="cursor-pointer text-black text-[0.8vw] hover:text-[#ff6004]"
                   onClick={(e) => e.preventDefault()}
                 >
                   <Space>
@@ -256,7 +256,7 @@ const Navbar = () => {
                 <div key={index} className="  w-full py-4 grow">
                   <Dropdown  overlay={generateMenu(item.children)}>
                     <a
-                      className="cursor-pointer  text-[3vw]"
+                      className="cursor-pointer text-black hover:text-[#FF6004]  text-[3vw]"
                       onClick={(e) => e.preventDefault()}
                     >
                       <Space className="text-[5vw]">
