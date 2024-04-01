@@ -10,12 +10,10 @@ import SubNav from '../SubNav'
 const CartPage = () => {
   return (
     <div>
-        <TopBar/>
-        <Navbar/>
-        <SubNav/>
+       
         <Offers/>
         <Cart/>
-        <Footer/>
+
     </div>
   )
 }

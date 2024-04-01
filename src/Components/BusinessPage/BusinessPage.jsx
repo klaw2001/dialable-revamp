@@ -9,12 +9,10 @@ import Listings from './Listings/Listings'
 const BusinessPage = () => {
   return (
     <div>
-        <TopBar/>
-        <Navbar/>
-        <SubNav/>
+       
         <BusinessBanner/>
         <Listings/>
-        <Footer/>
+
 
     </div>
   )

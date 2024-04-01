@@ -40,13 +40,13 @@ const ProductInfo = () => {
           // Navigate to the cart page after 3 seconds
           router.push(`/cart/${userID}`);
         }, 3000);
-       notification.open({
+       notification.success({
         message:"Product Added Succesfully"
        })
       })
       .catch((err) => {
         console.log(err);
-        notification.open({
+        notification.error({
           message:err
          })
         toast.error("Failed to add item to cart. Please try again.");

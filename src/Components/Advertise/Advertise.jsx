@@ -13,9 +13,7 @@ import Competition from "./Competition/Competition";
 const Advertise = () => {
   return (
     <div>
-      <TopBar />
-      <Navbar />
-      <SubNav />
+    
       <Register
         title={"Advertise with Dialable"}
         heading={"Grow Your Business"}
@@ -29,7 +27,7 @@ const Advertise = () => {
       <Pricing/>
       <Competition/>
       <FaqSection />
-      <Footer />
+
     </div>
   );
 };

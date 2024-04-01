@@ -9,12 +9,10 @@ import Checkout from './Checkout/Checkout'
 const CheckOutPage = () => {
   return (
     <div>
-        <TopBar/>
-        <Navbar/>
-        <SubNav/>
+
         <Offers/>
         <Checkout/>
-        <Footer/>
+
     </div>
   )
 }

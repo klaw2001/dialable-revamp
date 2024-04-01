@@ -39,7 +39,7 @@ const Navbar = () => {
       children: [
         {
           title: "Products",
-          label: <Link href={"/products"}>Products</Link>,
+          label: <Link href={"/marketplace"}>Products</Link>,
         },
         {
           title: "Store",
@@ -101,7 +101,7 @@ const Navbar = () => {
       children: [
         {
           key: "4",
-          label: <Link href={"/products"}>Products</Link>,
+          label: <Link href={"/marketplace"}>Products</Link>,
         },
         {
           key: "5",

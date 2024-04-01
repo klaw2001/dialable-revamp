@@ -11,9 +11,7 @@ import Faq from "../Faq";
 const ProductPage = () => {
   return (
     <div>
-      <TopBar />
-      <Navbar />
-      <SubNav />
+     
       <Offers />
       <ProductInfo />
       <NewsLetter
@@ -23,7 +21,7 @@ const ProductPage = () => {
         color="text-black"
       />
       <Faq />
-      <Footer />
+
     </div>
   );
 };

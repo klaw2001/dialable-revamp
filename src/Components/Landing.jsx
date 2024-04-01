@@ -15,9 +15,7 @@ import Testimonials from "./Testimonials/Testimonials";
 const Landing = () => {
   return (
     <div>
-      <TopBar />
-      <Navbar />
-      <SubNav />
+     
       <Hero />
       <TopCategories />
       <RentalProducts />
@@ -31,7 +29,6 @@ const Landing = () => {
         color="text-white"
       />
       <Testimonials />
-      <Footer />
     </div>
   );
 };

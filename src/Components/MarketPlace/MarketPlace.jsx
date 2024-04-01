@@ -14,9 +14,7 @@ import NewsLetter from "../NewsLetter/NewsLetter.jsx";
 const MarketPlace = () => {
   return (
     <div>
-      <TopBar />
-      <Navbar />
-      <SubNav />
+    
       <Offers />
       <Banner />
       <Products />
@@ -26,7 +24,7 @@ const MarketPlace = () => {
         heading="Join our newsletter"
         color="text-black"
       />
-      <Footer />
+
     </div>
   );
 };

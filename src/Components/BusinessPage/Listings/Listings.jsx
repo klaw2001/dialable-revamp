@@ -21,16 +21,16 @@ const Listings = () => {
     <div className="relative">
       <div className="flex items-center justify-between pt-4 px-4 md:pt-6 md:px-6 lg:pt-10 lg:px-10">
         <div className="options flex items-center gap-3">
-          <button className="btn txt-black p-2 font-medium text-[2.2vw] md:text-[2vw] lg:text-[1vw] border-2">
+          <button className="btn text-black p-2 font-medium text-[2.2vw] md:text-[2vw] lg:text-[1vw] border-2">
             View all
           </button>
-          <button className="btn txt-black p-2 font-medium text-[2.2vw] md:text-[2vw] lg:text-[1vw]">
+          <button className="btn text-black p-2 font-medium text-[2.2vw] md:text-[2vw] lg:text-[1vw]">
             Verified
           </button>
-          <button className="btn txt-black p-2 font-medium text-[2.2vw] md:text-[2vw] lg:text-[1vw]">
+          <button className="btn text-black p-2 font-medium text-[2.2vw] md:text-[2vw] lg:text-[1vw]">
             Top Ratings
           </button>
-          <button className="btn txt-black p-2 font-medium text-[2.2vw] md:text-[2vw] lg:text-[1vw]">
+          <button className="btn text-black p-2 font-medium text-[2.2vw] md:text-[2vw] lg:text-[1vw]">
             India
           </button>
         </div>

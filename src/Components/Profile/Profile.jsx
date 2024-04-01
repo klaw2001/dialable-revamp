@@ -8,11 +8,9 @@ import ProfilePage from './ProfilePage/ProfilePage'
 const Profile = () => {
   return (
     <div>
-        <TopBar/>
-        <Navbar/>
-        <SubNav/>
+       
         <ProfilePage/>
-        <Footer/>
+   
     </div>
   )
 }

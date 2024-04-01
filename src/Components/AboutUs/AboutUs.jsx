@@ -15,9 +15,7 @@ import NewsLetter from '../NewsLetter/NewsLetter'
 const AboutUs = () => {
   return (
     <div>
-        <TopBar/>
-        <Navbar/>
-        <SubNav/>
+       
         <Banner/>
         <OurStory/>
         <OurGoals/>
@@ -30,7 +28,7 @@ const AboutUs = () => {
         color="text-black"
       />
         <ContactUs/>
-        <Footer/>
+
     </div>
   )
 }

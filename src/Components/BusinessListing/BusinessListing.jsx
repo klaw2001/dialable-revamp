@@ -12,9 +12,7 @@ import vector from "../../../public/Images/joblisting.png"
 const BusinessListing = () => {
   return (
     <div>
-      <TopBar />
-      <Navbar />
-      <SubNav />
+  
       <Register
         title={"Free Listing with Dialable"}
         heading={"List Your Business For Free. Get Enquires!"}
@@ -29,7 +27,7 @@ const BusinessListing = () => {
       <Stories />
       <Connect />
       <FaqSection />
-      <Footer />
+
     </div>
   );
 };

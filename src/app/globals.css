@@ -62,6 +62,10 @@ div#\:0\.targetLanguage {
   display: flex;
 }
 
+.store .swiper-button-next:after, .store .swiper-button-prev:after{
+  color:  white ;
+  font-size: 20px;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -10,12 +10,10 @@ import Positions from "./Positions/Positions";
 const Joblisting = () => {
   return (
     <div>
-      <TopBar/>
-      <Navbar/>
-      <SubNav />
+    
       <JobBanner/>
       <Positions/>
-      <Footer/>
+
 
     </div>
   );

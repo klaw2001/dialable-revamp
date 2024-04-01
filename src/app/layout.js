@@ -1,9 +1,14 @@
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 import AuthProvider from "@/Components/AuthProvider";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import TopBar from "@/Components/TopBar";
+import Navbar from "@/Components/Navbar";
+import SubNav from "@/Components/SubNav";
+import Footer from "@/Components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,11 +18,16 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       <ToastContainer />
       <body className={inter.className}>
+        <TopBar/>
+        <Navbar/>
+        <SubNav/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

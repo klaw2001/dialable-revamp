@@ -10,13 +10,11 @@ import ContactInfo from './ContactInfo/ContactInfo'
 const Contact = () => {
   return (
     <div>
-        <TopBar/>
-        <Navbar/>
-        <SubNav/>
+  
         <ContactForm/>
         <Companies/>
         <ContactInfo/>
-        <Footer/>
+
     </div>
   )
 }

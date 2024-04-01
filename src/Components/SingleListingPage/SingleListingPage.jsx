@@ -9,12 +9,9 @@ import BusinessInfo from './BusinessInfo/BusinessInfo'
 const SingleListingPage = () => {
   return (
     <div>
-        <TopBar/>
-        <Navbar/>
-        <SubNav/>
+       
         <BusinessInfo/>
         
-        <Footer/>
     </div>
   )
 }

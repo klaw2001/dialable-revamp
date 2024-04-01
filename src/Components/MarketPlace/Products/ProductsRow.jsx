@@ -25,7 +25,7 @@ const ProductsRow = ({ open, onClose, placement, visibleItem }) => {
     position: "relative",
     zIndex: 2,
     overflow: "hidden",
-    background: token.colorFillAlter,
+    background: "#fff",
   };
   return (
     <div className=" product  relative" style={containerStyle}>
