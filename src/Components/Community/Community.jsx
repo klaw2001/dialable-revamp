@@ -1,8 +1,13 @@
 import React from 'react'
+import Banner from './Banner/Banner'
+import QueryComp from './QueryComp/QueryComp'
 
 const Community = () => {
   return (
-    <div>Community</div>
+    <div>
+      <Banner/>
+      <QueryComp/>
+    </div>
   )
 }
 

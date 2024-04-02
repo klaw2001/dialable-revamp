@@ -243,3 +243,20 @@ input:focus-visible, .input:focus, .input:focus-within{
     font-size: 2.05vw;
   }
 }
+
+
+
+.overlay{
+  position: relative;
+  z-index: -1;
+}
+.overlay::after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #0000004D;
+  z-index: 2;
+  left: 0;
+  top: 0;
+}
