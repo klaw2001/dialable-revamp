@@ -66,6 +66,19 @@ div#\:0\.targetLanguage {
   color:  white ;
   font-size: 20px;
 }
+
+.animate{
+  animation: 5s linear .5s  infinite running  both slidein;
+}
+ 
+@keyframes slidein {
+  from{
+    transform: translateX(-10%)
+  }to{
+    transform: translateX(100%)
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

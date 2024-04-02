@@ -8,12 +8,12 @@ import Image from "next/image";
 
 const FeaturedCategories = () => {
   return (
-    <div className="px-10 pt-20 pb-10 overflow-hidden">
-      <h1 className="text-black Sans font-bold text-[2vw] text-center">
+    <div className="px-4 py-6 md:px-10 md:pt-20 md:pb-10  overflow-hidden">
+      <h1 className="text-black Sans font-bold md:text-[4vw] lg:text-[2vw] text-center">
         Featured Categories
       </h1>
-      <div className="mt-8 flex items-start relative justify-center gap-6">
-        <div className="w-[40%] grow-[.09]">
+      <div className="mt-8 flex flex-col md:flex-row items-start relative justify-center gap-6">
+        <div className="w-full md:w-[40%] md:grow-[.25] lg:grow-[.09]">
           <div className="relative w-full">
             <Image
               src={homeDecor}
@@ -21,12 +21,12 @@ const FeaturedCategories = () => {
               alt="home decor"
             />
           </div>
-          <p className="text-white absolute bottom-[4%] left-[8%]  montserrat font-medium text-[1.5vw]">
+          <p className="text-white absolute bottom-[5%] left-[6%]  montserrat font-medium md:text-[2vw] lg:text-[1.5vw]">
             {" "}
             Home Decor
           </p>
         </div>
-        <div className="w-[45%] grow-[.09] flex justify-evenly items-center gap-6 flex-wrap">
+        <div className="w-full md:w-[45%] md:grow-[.09] flex justify-evenly items-center gap-6 flex-wrap">
           <div className="w-[42%]  relative">
             <div>
               <Image
@@ -35,7 +35,7 @@ const FeaturedCategories = () => {
                 alt="home decor"
               />
             </div>
-            <p className="text-white absolute bottom-[5%] left-[5%] montserrat font-medium text-[1.5vw]">
+            <p className="text-white absolute bottom-[5%] left-[5%] montserrat font-medium md:text-[2vw] lg:text-[1.5vw]">
               {" "}
               Artifacts
             </p>
@@ -48,7 +48,7 @@ const FeaturedCategories = () => {
                 alt="home decor"
               />
             </div>
-            <p className="text-white absolute bottom-[5%] left-[5%] montserrat font-medium text-[1.5vw]">
+            <p className="text-white absolute bottom-[5%] left-[5%] montserrat font-medium md:text-[2vw] lg:text-[1.5vw]">
               {" "}
               Paints
             </p>
@@ -62,7 +62,7 @@ const FeaturedCategories = () => {
               />
             </div>
 
-            <p className="text-white absolute bottom-[5%] left-[5%] montserrat font-medium text-[1.5vw]">
+            <p className="text-white absolute bottom-[5%] left-[5%] montserrat font-medium md:text-[2vw] lg:text-[1.5vw]">
               {" "}
               Fashion
             </p>
@@ -76,7 +76,7 @@ const FeaturedCategories = () => {
                 alt="home decor"
               />
             </div>
-            <p className="text-white absolute bottom-[5%] left-[5%] montserrat font-medium text-[1.5vw]">
+            <p className="text-white absolute bottom-[5%] left-[5%] montserrat font-medium md:text-[2vw] lg:text-[1.5vw]">
               {" "}
               Accessories
             </p>

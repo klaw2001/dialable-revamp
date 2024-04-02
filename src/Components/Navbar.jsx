@@ -213,7 +213,7 @@ const Navbar = () => {
             <div key={index} className="flex gap-2 items-center">
               <Dropdown overlay={generateMenu(item.children)}>
                 <a
-                  className="cursor-pointer text-black text-[0.8vw] hover:text-[#ff6004]"
+                  className="cursor-pointer text-black text-[0.78vw] hover:text-[#ff6004]"
                   onClick={(e) => e.preventDefault()}
                 >
                   <Space>

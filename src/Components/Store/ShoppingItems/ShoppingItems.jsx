@@ -32,7 +32,7 @@ const ShoppingItems = ({ open, close }) => {
         <ItemCard />
       </div>
       <div className="flex items-center justify-center mt-4">
-        <button className="btn montserrat text-center font-medium py-2 px-4 text-balck border-balck text-[.8vw] border-2 mt-4">
+        <button className="btn montserrat text-center font-medium py-2 px-4 text-balck border-balck md:text-[1.5vw] lg:text-[.8vw] border-2 mt-4">
           View More
         </button>
       </div>
