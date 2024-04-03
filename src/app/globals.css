@@ -158,7 +158,9 @@ div#\:0\.targetLanguage {
 }
 
 
-
+.scroll-none::-webkit-scrollbar{
+  display: none;
+}
 .ant-drawer-body::-webkit-scrollbar{
   display: none;
 }
