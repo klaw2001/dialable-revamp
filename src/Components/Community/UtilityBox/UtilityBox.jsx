@@ -11,7 +11,7 @@ const UtilityBox = ({ title, img, infoColor, nameColor, name, info }) => {
       if (screenWidth >= 768) {
         updatedSize = 50;
       } else if (screenWidth >= 320) {
-        updatedSize = 80;
+        updatedSize = 50;
       } else {
         updatedSize = 100;
       }
@@ -26,20 +26,20 @@ const UtilityBox = ({ title, img, infoColor, nameColor, name, info }) => {
   }, []);
   return (
     <div className="w-full  bg-[#F4EBFF]  box-shadow border p-4 border-[#781393]">
-      <h1 className="text-[1.5vw] font-semibold montserrat">{title}</h1>
-      <div className="my-8">
+      <h1 className="text-[6vw] md:text-[2.5vw] lg:text-[1.5vw] font-semibold montserrat">{title}</h1>
+      <div className="my-2 md:my-4 lg:my-8">
         <div className="flex items-center py-2  border-b border-gray-300 gap-2">
           <div className="">
             <Image src={img} height={size} width={size} alt="img" />
           </div>
           <div>
             <h1
-              className={`montserrat text-[${nameColor}] font-bold text-[1vw]`}
+              className={`montserrat text-[${nameColor}] font-bold text-[6vw] md:text-[2vw] lg:text-[1vw]`}
             >
               {name}
             </h1>
             <p
-              className={`montserrat text-[${infoColor}] font-semibold text-[0.8vw]`}
+              className={`montserrat text-[${infoColor}] font-semibold text-[3vw] md:text-[1.2vw] lg:text-[0.8vw]`}
             >
               {info}
             </p>
@@ -51,12 +51,12 @@ const UtilityBox = ({ title, img, infoColor, nameColor, name, info }) => {
           </div>
           <div>
             <h1
-              className={`montserrat text-[${nameColor}] font-bold text-[1vw]`}
+              className={`montserrat text-[${nameColor}] font-bold text-[6vw] md:text-[2vw] lg:text-[1vw]`}
             >
               {name}
             </h1>
             <p
-              className={`montserrat text-[${infoColor}] font-semibold text-[0.8vw]`}
+              className={`montserrat text-[${infoColor}] font-semibold text-[3vw] md:text-[1.2vw] lg:text-[0.8vw]`}
             >
               {info}
             </p>
@@ -68,12 +68,12 @@ const UtilityBox = ({ title, img, infoColor, nameColor, name, info }) => {
           </div>
           <div>
             <h1
-              className={`montserrat text-[${nameColor}] font-bold text-[1vw]`}
+              className={`montserrat text-[${nameColor}] font-bold text-[6vw] md:text-[2vw] lg:text-[1vw]`}
             >
               {name}
             </h1>
             <p
-              className={`montserrat text-[${infoColor}] font-semibold text-[0.8vw]`}
+              className={`montserrat text-[${infoColor}] font-semibold text-[3vw] md:text-[1.2vw] lg:text-[0.8vw]`}
             >
               {info}
             </p>
@@ -85,12 +85,12 @@ const UtilityBox = ({ title, img, infoColor, nameColor, name, info }) => {
           </div>
           <div>
             <h1
-              className={`montserrat text-[${nameColor}] font-bold text-[1vw]`}
+              className={`montserrat text-[${nameColor}] font-bold text-[6vw] md:text-[2vw] lg:text-[1vw]`}
             >
               {name}
             </h1>
             <p
-              className={`montserrat text-[${infoColor}] font-semibold text-[0.8vw]`}
+              className={`montserrat text-[${infoColor}] font-semibold text-[3vw] md:text-[1.2vw] lg:text-[0.8vw]`}
             >
               {info}
             </p>

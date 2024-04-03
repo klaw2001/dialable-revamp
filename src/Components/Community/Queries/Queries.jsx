@@ -17,7 +17,7 @@ const Queries = ({queries, img}) => {
       if (screenWidth >= 768) {
         updatedSize = 50;
       } else if (screenWidth >= 320) {
-        updatedSize = 100;
+        updatedSize = 50;
       } else {
         updatedSize = 100;
       }
@@ -49,33 +49,33 @@ const Queries = ({queries, img}) => {
             <div>
               <input
                 placeholder="What do you want to ask or share?"
-                className="montserrat font-normal text-[1.067vw] py-2 px-3 bg-[#7813931F] border-black border w-full rounded-full"
+                className="montserrat font-normal text-[3vw] md:text-[2vw] lg:text-[1.067vw] py-2 px-3 bg-[#7813931F] border-black border w-full rounded-full"
                 type="text"
               />
             </div>
-            <div className="flex items-start py-2 px-10 justify-between">
-              <div className="flex items-center gap-1 text-[1vw] montserrat">
-                <span className="text-[1.3vw] text-[#781393]">
+            <div className="flex items-start py-2  md:px-10 justify-between">
+              <button className="flex items-center gap-1 md:text-[2vw] lg:text-[1vw] montserrat">
+                <span className="text-[4.3vw] md:text-[2.3vw] lg:text-[1.3vw] text-[#781393]">
                   <RiQuestionnaireLine />
                 </span>
-                <span className="text-[1.1vw] text-black font-medium">Ask</span>
-              </div>
-              <div className="flex items-center gap-1 text-[1vw] montserrat">
-                <span className="text-[1.3vw] text-[#781393]">
+                <span className="text-[4vw] md:text-[2vw] lg:text-[1.1vw] text-black font-medium">Ask</span>
+              </button>
+              <button className="flex items-center gap-1 md:text-[2vw] lg:text-[1vw] montserrat">
+                <span className="text-[4.3vw] md:text-[2.3vw] lg:text-[1.3vw] text-[#781393]">
                   <PiNotePencil />
                 </span>
-                <span className="text-[1.1vw] text-black font-medium">
+                <span className="text-[4vw] md:text-[2vw] lg:text-[1.1vw] text-black font-medium">
                   Answer
                 </span>
-              </div>
-              <div className="flex items-center gap-1 text-[1vw] montserrat">
-                <span className="text-[1.3vw] text-[#781393]">
+              </button>
+              <button className="flex items-center gap-1 md:text-[2vw] lg:text-[1vw] montserrat">
+                <span className="text-[4.3vw] md:text-[2.3vw] lg:text-[1.3vw] text-[#781393]">
                   <RiPencilLine />
                 </span>
-                <span className="text-[1.1vw] text-black font-medium">
+                <span className="text-[4vw] md:text-[2vw] lg:text-[1.1vw] text-black font-medium">
                   Post
                 </span>
-              </div>
+              </button>
             </div>
           </form>
         </div>
@@ -84,9 +84,9 @@ const Queries = ({queries, img}) => {
         {queries.slice(0, visible).map((query, i) => (
           <div
             key={i}
-            className="bg-white border border-black rounded-md py-4 px-8 my-8"
+            className="bg-white border border-black rounded-md py-4 px-4 md:px-8 my-8"
           >
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 md:gap-4">
               <div className="image rounded-full  relative">
                 <Image
                   src={beds}
@@ -97,47 +97,47 @@ const Queries = ({queries, img}) => {
                 />
               </div>
               <div className="info">
-                <h1 className="text-black font-bold montserrat text-[1.1vw]">
+                <h1 className="text-black font-bold montserrat text-[3.3vw] md:text-[2vw] lg:text-[1.1vw]">
                   {query.name}
                 </h1>
-                <p className="career-info text-black montserrat text-[.8vw] font-medium">
+                <p className="career-info text-black montserrat text-[2vw] md:text-[1vw] lg:text-[.8vw] font-medium">
                   {query.qualification}
                 </p>
               </div>
             </div>
             <div className="mt-3">
-              <h1 className="text-black font-bold montserrat text-[1.4vw]">
+              <h1 className="text-black font-bold montserrat text-[3.4vw] md:text-[2.4vw] lg:text-[1.4vw]">
                 {query.question}
               </h1>
-              <p className="montserrat mt-2 font-medium text-[1.2vw]">
+              <p className="montserrat mt-2 font-medium text-[3.2vw] md:text-[2.2vw] lg:text-[1.2vw]">
                 {query.answer}
                 more...{" "}
               </p>
-              <div className="flex items-center mt-3 gap-14">
+              <div className="flex items-center mt-3 gap-4 md:gap-14">
                 <div className="flex items-center bg-[#7813934D] rounded-full p-2 gap-2">
-                  <button className="text-[1.5vw] text-[#781393]">
+                  <button className="text-[4vw] md:text-[2.5vw] lg:text-[1.5vw] text-[#781393]">
                     <MdOutlineThumbUp />
                   </button>
-                  <span className="text-[1vw] montserrat font-medium text-black">
+                  <span className="text-[2.2vw] md:text-[1.2vw] lg:text-[1vw] montserrat font-medium text-black">
                     Upvote · 418
                   </span>
-                  <button className="text-[1.5vw] text-[#781393]">
+                  <button className="text-[4vw] md:text-[2.5vw] lg:text-[1.5vw] text-[#781393]">
                     <MdOutlineThumbDownOffAlt />
                   </button>
                 </div>
                 <button className="flex items-center gap-1">
-                  <span className="text-[1.5vw] text-[#781393]">
+                  <span className="text-[4vw] md:text-[2.5vw] lg:text-[1.5vw] text-[#781393]">
                     <BiCommentDetail />
                   </span>
-                  <span className="text-[1vw] montserrat font-medium text-black">
+                  <span className="text-[3vw] md:text-[2vw] lg:text-[1vw] montserrat font-medium text-black">
                     Comment
                   </span>
                 </button>
                 <button className="flex items-center gap-1">
-                  <span className="text-[1.5vw] text-[#781393]">
+                  <span className="text-[4vw] md:text-[2.5vw] lg:text-[1.5vw] text-[#781393]">
                     <HiOutlineShare />
                   </span>
-                  <span className="text-[1vw] montserrat font-medium text-black">
+                  <span className="text-[3vw] md:text-[2vw] lg:text-[1vw] montserrat font-medium text-black">
                     Share
                   </span>
                 </button>
@@ -148,7 +148,7 @@ const Queries = ({queries, img}) => {
 
         <button
           onClick={() => setVisible(14)}
-          className="btn p-4 bg-[#781393] text-white montserrat w-full rounded-md text-center font-bold text-[1.5vw]"
+          className="btn p-4 bg-[#781393] text-white montserrat w-full rounded-md text-center font-bold text-[4vw] md:text-[1.5vw]"
         >
           Load More Questions
         </button>
