@@ -1,6 +1,7 @@
 import { Drawer } from "antd";
 import React from "react";
 import ItemCard from "../ItemCard/ItemCard";
+import Filters from "@/Components/MarketPlace/Products/Filters";
 const containerStyle = {
   position: "relative",
   zIndex: 2,
@@ -19,7 +20,17 @@ const ShoppingItems = ({ open, close }) => {
         getContainer={false}
         closable={true}
         className="filter border-t border-black"
-      ></Drawer>
+      >
+        <Filters/>
+        <div className="border-t sticky w-full bottom-0 mt-12 bg-white border-black flex items-center justify-between p-4">
+          <button className="text-black text-[3vw] md:text-[2vw] lg:text-[1vw] font-medium">
+            Clear all
+          </button>
+          <button className="text-white text-[3vw] md:text-[2vw] lg:text-[1vw] font-medium btn py-3 px-6 bg-[#781393]">
+            Apply
+          </button>
+        </div>
+      </Drawer>
 
       <div className="flex px-8 gap-6 items-center py-6  flex-wrap justify-between">
         <ItemCard />
