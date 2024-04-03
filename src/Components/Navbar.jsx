@@ -256,10 +256,10 @@ const Navbar = () => {
                 <div key={index} className="  w-full py-4 grow">
                   <Dropdown  overlay={generateMenu(item.children)}>
                     <a
-                      className="cursor-pointer text-black hover:text-[#FF6004]  text-[3vw]"
+                      className="cursor-pointer text-black hover:text-[#FF6004]  text-[3vw] md:text-[2vw]"
                       onClick={(e) => e.preventDefault()}
                     >
-                      <Space className="text-[5vw]">
+                      <Space className="text-[5vw] md:text-[3vw]">
                         {item.title}
                         <DownOutlined />
                       </Space>
