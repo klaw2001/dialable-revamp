@@ -9,7 +9,7 @@ const SubNav = () => {
     },
     {
       title: "Store",
-      href: "/marketplace",
+      href: "/store",
     },
     {
       title: "Support",
@@ -33,7 +33,7 @@ const SubNav = () => {
     },
     {
       title: "Community",
-      href: "#",
+      href: "/community",
     },
     {
       title: "Events",
