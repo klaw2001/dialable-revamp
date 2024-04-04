@@ -121,7 +121,7 @@ export default async function PUT(req, res) {
       if (updatedData) {
         return res.status(200).json({
           data: updatedData,
-          message: "Product Updated Successfully",
+          message: "Store Updated Successfully",
         });
       }
     });
