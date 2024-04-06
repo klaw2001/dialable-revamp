@@ -124,6 +124,33 @@ div#\:0\.targetLanguage {
     left: 85%;
   }
 }
+@media screen and (min-width:320px) and (max-width:480px){
+  .events .swiper-button-next, .events .swiper-button-prev{
+    top: unset;
+    bottom: -12% !important;
+  
+  }
+  .events .swiper-button-next, .events .swiper-button-prev{
+    display: flex !important;
+  
+  }
+  .events .swiper-button-prev{
+    left: 72%;
+  }
+  .past .swiper-button-prev{
+    left: 72%;
+  }
+  .events .swiper-button-next:after, .events .swiper-button-prev:after,.past .swiper-button-next:after, .past .swiper-button-prev:after{
+    font-size: 2.2vw;
+  }
+  .countries .swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -60px !important;
+  left: 35%;
+}
+}
 .animate{
   animation: 5s linear .5s  infinite running  both slidein;
 }
@@ -290,7 +317,7 @@ input:focus-visible, .input:focus, .input:focus-within{
 }
 @media screen and (min-width:320px) and (max-width:480px) {
   .swiper-button-next, .swiper-button-prev {
-    display: none !important;
+    display: none ;
 }
   .label{
     font-size: 4.05vw;

@@ -11,14 +11,14 @@ import "swiper/css/pagination";
 import EventCard from "../FeatureEvents/EventCard";
 const PastEvents = () => {
   return (
-    <div className="bg-[#F4EBFF] px-10 py-16 ">
-      <h1 className="Sans  text-black text-[3vw] leading-2 font-semibold text-center">
+    <div className="bg-[#F4EBFF] px-4 py-6 md:px-10 md:py-16 ">
+      <h1 className="Sans  text-black text-[6vw] md:text-[4vw] lg:text-[3vw] leading-2 font-semibold text-center">
         Past Events
       </h1>
-      <p className="montserrat  text-black text-[1.2vw] font-medium text-center">
+      <p className="montserrat  text-black text-[4vw] md:text-[2vw] lg:text-[1.2vw] font-medium text-center">
         Elevate your experience, Ignite your potential
       </p>
-      <div className="past relative overflow-x-clip mt-12 mb-20 px-6">
+      <div className="past relative overflow-x-clip mt-12 mb-20 md:px-6">
         <Swiper
           // install Swiper modules
           modules={[Navigation, Scrollbar, A11y, Autoplay]}

@@ -28,8 +28,8 @@ const Industries = () => {
     },
   ];
   return (
-    <div className="py-20 px-32">
-      <div className="flex items-center justify-between">
+    <div className="p-8 md:py-12 md:px-8 lg:py-20 lg:px-32">
+      <div className="flex flex-col gap-8 md:gap-0 md:flex-row items-center justify-between">
         {industries?.map((industry, i) => (
           <div key={i}>
             <IndustryCard
@@ -39,7 +39,7 @@ const Industries = () => {
             />
           </div>
         ))}
-        <button className="bg-[#FF600480] btn text-white montserrat font-semibold rounded-lg flex p-8 items-center flex-col gap-2 shadow-3 hover:bg-[#FF6004] transition-[all.5s] w-[10vw] h-[10vw] justify-center ">
+        <button className="bg-[#FF600480] btn text-white montserrat font-semibold rounded-lg flex p-8 md:text-[2vw] lg:text-[1.2vw] items-center flex-col gap-2 shadow-3 hover:bg-[#FF6004] transition-[all.5s] h-[50vw] w-[50vw] md:w-[17vw] md:h-[17vw] lg:w-[10vw] lg:h-[10vw] justify-center ">
             View All
         </button>
       </div>

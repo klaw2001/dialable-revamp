@@ -11,11 +11,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 const CountryEvents = () => {
   return (
-    <div className="px-10 py-16">
-      <h1 className="Sans  text-black text-[3vw] leading-2 font-semibold text-left">
+    <div className="py-6 px-4 md:px-10 md:py-16">
+      <h1 className="Sans  text-black md:text-[4vw] lg:text-[3vw] leading-2 font-semibold text-left">
         Browse events by country
       </h1>
-      <p className="montserrat  text-black text-[1.2vw] font-medium text-left">
+      <p className="montserrat  text-black md:text-[2vw] lg:text-[1.2vw] font-medium text-left">
         Embark on a worldwide event journey,effortlessly tailored to your country
         of choice{" "}
       </p>
@@ -30,7 +30,7 @@ const CountryEvents = () => {
           breakpoints={{
             320: {
               slidesPerView: 2,
-              spaceBetween: 50,
+              spaceBetween: 20,
             },
             768: {
               slidesPerView: 3,
@@ -46,7 +46,7 @@ const CountryEvents = () => {
         >
           {["USA", "UK", "Germany", "France", "India"].map((elem, i) => (
             <SwiperSlide key={i}>
-              <div className="h-40 w-40 rounded-full flex items-center justify-center text-white text-[1.5vw] montserrat font-semibold bg-[#FF600480]">
+              <div className=" h-32 w-32 md:h-40 md:w-40 rounded-full flex items-center justify-center text-white text-[6vw] md:text-[2.5vw] lg:text-[1.5vw] montserrat font-semibold bg-[#FF600480]">
                 <span>{elem}</span>
               </div>
             </SwiperSlide>

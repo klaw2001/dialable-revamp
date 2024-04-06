@@ -11,19 +11,19 @@ const EventCard = ({img, type, date, location, price, desc, width}) => {
         </div>
         <div className="info bg-white p-3">
             <div className='flex items-center justify-between'>
-                <div className='py-2 px-4 bg-[#781393] text-white montserrat text-[1vw]'>
+                <div className='py-2 px-4 bg-[#781393] text-white montserrat text-[4.06vw] md:text-[2vw] lg:text-[1vw]'>
                     <span>{type}</span>
                 </div>
-                <p className='text-black montserrat text-[1.2vw] font-semibold'>{price}</p>
+                <p className='text-black montserrat text-[4.06vw] md:text-[2vw] lg:text-[1.2vw] font-semibold'>{price}</p>
             </div>
-            <p className='montserrat font-semibold mt-4 text-black text-[1.2vw]'>{desc}</p>
-            <div className='flex items-center montserrat gap-2 my-1'>
-                <span className='text-[1.3vw] text-gray-400'><FiClock/></span>
-                <span className='text-[1vw]'>{date}</span>
+            <p className='montserrat font-semibold mt-4 text-black text-[4.06vw] md:text-[2vw] lg:text-[1.2vw]'>{desc}</p>
+            <div className='flex items-center montserrat gap-2 my-3 md:my-2 lg:my-1'>
+                <span className='text-[4.3vw] md:text-[2.3vw] lg:text-[1.3vw] text-gray-400'><FiClock/></span>
+                <span className='text-[3.6vw] md:text-[1.6vw] lg:text-[1vw]'>{date}</span>
             </div>
-            <div className='flex items-center montserrat gap-2 my-1'>
-                <span className='text-[1.3vw] text-gray-400'><IoLocationSharp/></span>
-                <span className='text-[1vw]'>{location}</span>
+            <div className='flex items-center montserrat gap-2 my-3 md:my-2 lg:my-1'>
+                <span className='text-[4.3vw] md:text-[2.3vw] lg:text-[1.3vw] text-gray-400'><IoLocationSharp/></span>
+                <span className='text-[3.6vw] md:text-[1.6vw] lg:text-[1vw]'>{location}</span>
             </div>
         </div>  
     </div>
