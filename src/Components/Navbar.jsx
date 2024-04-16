@@ -10,7 +10,6 @@ import { VscAccount } from "react-icons/vsc";
 import { DownOutlined, SmileOutlined } from "@ant-design/icons";
 import { Dropdown, Space, Menu } from "antd";
 import { Button, Drawer } from "antd";
-import { useRouter } from "next/navigation";
 import MenuSvg from "../../public/Images/menu.svg";
 import { FaChevronDown } from "react-icons/fa6";
 import { getUserFromLocalStorage } from "@/utils";
@@ -351,7 +350,7 @@ const Navbar = () => {
               type="text"
               placeholder="&#xF002;   Search"
               style={{ fontFamily: "Montserrat, FontAwesome" }}
-              className="py-2 montserrat border border-[rgba(0,0,0,0.25)] px-4"
+              className="py-2 montserrat border rounded-xl border-[rgba(0,0,0,0.25)] px-4"
             />
           </form>
         </div>
@@ -360,7 +359,7 @@ const Navbar = () => {
         </button>
         {user ? (
           <button>
-            <Link href={"/profile"}>
+            <Link className="rounded-full" href={"/profile"}>
               <VscAccount size="2rem" />
             </Link>
           </button>
@@ -368,7 +367,7 @@ const Navbar = () => {
           <button>
             <Link
               href={"/signup"}
-              className="hidden lg:block text-white text-[0.7vw] btn font-semibold bg-[#781393] py-2 px-4 montserrat  cursor-pointer"
+              className="hidden rounded-xl shadow-lg lg:block text-white text-[0.7vw] btn font-semibold bg-[#781393] py-2 px-4 montserrat  cursor-pointer"
             >
               Sign Up
             </Link>
