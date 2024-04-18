@@ -7,8 +7,8 @@ import text_speech from "../../public/Images/text-to-speech.svg";
 import Link from "next/link";
 const Hero = () => {
   return (
-    <div className="md:flex  justify-between items-center gap-10 montserrat hero-gradient block p-6  md:p-0 ">
-      <div className="hero-img md:w-[50.3%] md:h-[72vh] h-full w-full  mt-0 relative">
+    <div className="md:flex  justify-between lg:h-[100vh] xl:h-[72vh] items-center gap-10 montserrat hero-gradient block p-6  md:p-0 ">
+      <div className="hero-img md:w-[50.3%]  h-full w-full  mt-0 relative">
         <Image
           src={placeholder}
           alt="hero-img"
@@ -68,7 +68,7 @@ const Hero = () => {
           <button>
             <Link
               href={"/"}
-              className="hidden rounded-xl shadow-lg lg:block text-white text-[1.1vw] btn font-semibold bg-[#781393] py-2 px-4 montserrat  cursor-pointer"
+              className=" rounded-xl shadow-lg lg:block text-white text-[1.1vw] btn font-semibold bg-[#781393] py-2 px-4 montserrat  cursor-pointer"
             >
               Register Now
             </Link>
