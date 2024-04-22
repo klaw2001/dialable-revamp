@@ -1,7 +1,7 @@
+import connectDB from "@/dbConfig/dbConfig.js";
 import User from "../../../src/models/userModel.js";
-
+connectDB()
 export default async function GET(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
 
   const users = await User.find();
 
