@@ -11,6 +11,7 @@ import Posts from "./Posts";
 import ValuedPartners from "./ValuedPartners/ValuedPartners";
 import NewsLetter from "./NewsLetter/NewsLetter";
 import Testimonials from "./Testimonials/Testimonials";
+import RentalMarquee from "./RentalMarquee/RentalMarquee";
 
 const Landing = () => {
   return (
@@ -18,6 +19,7 @@ const Landing = () => {
      
       <Hero />
       <TopCategories />
+      <RentalMarquee/>
       <RentalProducts />
       <OurPartners />
       <Posts />

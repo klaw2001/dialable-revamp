@@ -64,7 +64,7 @@ const SubNav = () => {
       <div>
         <Link
           href="#"
-          className="text-[0.7vw] btn shadow-xl font-semibold py-2 px-3 block border-2 border-black montserrat"
+          className="text-[0.7vw] btn shadow-xl rounded-xl font-semibold py-2 px-3 block border-2 border-black montserrat"
         >
           Special Offers
         </Link>

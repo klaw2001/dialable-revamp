@@ -88,18 +88,18 @@ const OurPartners = () => {
               </li>
             </ul>
             <div className="flex items-center ml-4 gap-6 justify-start md:gap-4 flex-wrap">
-              <button className="capitalize text-white bg-[#781393] text-[2vw] md:text-[1.1vw] lg:text-[0.7vw] btn lg:py-3 px-4 md:p-4 font-medium">
+              <button className="capitalize rounded-md text-white bg-[#781393] text-[2vw] md:text-[1.1vw] lg:text-[0.7vw] btn lg:py-3 px-4 md:p-4 font-medium">
                 Job Opportunities
               </button>
-              <button className="capitalize text-white bg-[#781393] text-[2vw] md:text-[1.1vw] lg:text-[0.7vw] btn lg:py-3 px-4 md:p-4 font-medium">
+              <button className="capitalize rounded-md text-white bg-[#781393] text-[2vw] md:text-[1.1vw] lg:text-[0.7vw] btn lg:py-3 px-4 md:p-4 font-medium">
                 Free Listing
               </button>
             </div>
             <div className="flex mt-4 items-center ml-4 gap-6 justify-start md:gap-4 flex-wrap">
-              <button className="capitalize text-white bg-[#781393] text-[2vw] md:text-[1.1vw] lg:text-[0.7vw] btn lg:py-3 px-4 md:p-4 font-medium">
+              <button className="capitalize rounded-md text-white bg-[#781393] text-[2vw] md:text-[1.1vw] lg:text-[0.7vw] btn lg:py-3 px-4 md:p-4 font-medium">
                 Sign up
               </button>
-              <button className="capitalize text-white bg-[#781393] text-[2vw] md:text-[1.1vw] lg:text-[0.7vw] btn lg:py-3 px-4 md:p-4 font-medium">
+              <button className="capitalize rounded-md text-white bg-[#781393] text-[2vw] md:text-[1.1vw] lg:text-[0.7vw] btn lg:py-3 px-4 md:p-4 font-medium">
                 Marketplace
               </button>
             </div>
@@ -198,10 +198,10 @@ const OurPartners = () => {
               </li>
             </ul>
             <div className="flex items-center ml-4 gap-6 md:gap-8">
-              <button className="capitalize text-white bg-[#781393] text-[2vw] md:text-[1.1vw] lg:text-[0.7vw] btn lg:py-3 px-4 md:p-4 font-medium">
+              <button className="capitalize rounded-md text-white bg-[#781393] text-[2vw] md:text-[1.1vw] lg:text-[0.7vw] btn lg:py-3 px-4 md:p-4 font-medium">
                 hire part time
               </button>
-              <button className="capitalize text-white bg-[#781393] text-[2vw] md:text-[1.1vw] lg:text-[0.7vw] btn lg:py-3 px-4 md:p-4 font-medium">
+              <button className="capitalize rounded-md text-white bg-[#781393] text-[2vw] md:text-[1.1vw] lg:text-[0.7vw] btn lg:py-3 px-4 md:p-4 font-medium">
                 hire full time
               </button>
             </div>

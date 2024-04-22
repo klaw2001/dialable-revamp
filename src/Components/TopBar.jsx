@@ -124,14 +124,14 @@ const TopBar = () => {
                 </option>
               ))}
             </select> */}
-            <div className="overflow-hidden" style={{width:'clamp(80px, 15vw, 136px)' , height:'28px'}}>
+            <div  className="overflow-hidden" style={{width:'clamp(80px, 15vw, 136px)' , height:'28px'}}>
 
             <div id="google_translate_element"></div>
             </div>
           </div>
           <div className="country">
             <select
-              className="p-1 md:p-2 text-[2.5vw] md:text-[.85vw] w-[28vw] md:w-[11vw] lg:w-[9vw] bg-transparent focus-visible:outline-none text-white border-2 border-white"
+              className="p-1 md:p-2 text-[2.5vw] rounded-xl md:text-[.85vw] w-[28vw] md:w-[11vw] lg:w-[9vw] bg-transparent focus-visible:outline-none text-white border-2 border-white"
               value={selectedCountry}
               onChange={handleCountryChange}
             >
@@ -147,7 +147,7 @@ const TopBar = () => {
             <select
               value={selectedState}
               onChange={handleStateChange}
-              className="bg-transparent p-1 md:p-2 text-[2.5vw] md:text-[.85vw] w-[25vw] md:w-[11vw] lg:w-[8vw] focus-visible:outline-none text-white border-2 border-white"
+              className="bg-transparent rounded-xl p-1 md:p-2 text-[2.5vw] md:text-[.85vw] w-[25vw] md:w-[11vw] lg:w-[8vw] focus-visible:outline-none text-white border-2 border-white"
             >
               <option value="" className="p-2">
                 Select State
