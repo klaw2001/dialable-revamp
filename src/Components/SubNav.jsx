@@ -5,7 +5,7 @@ const SubNav = () => {
   const subNavLinks = [
     {
       title: "Products",
-      href: "/advertise",
+      href: "/marketplace",
     },
     {
       title: "Store",
@@ -13,7 +13,7 @@ const SubNav = () => {
     },
     {
       title: "Support",
-      href: "/contact",
+      href: "/support",
     },
     {
       title: "Enablers",
@@ -21,7 +21,7 @@ const SubNav = () => {
     },
     {
       title: "B2B",
-      href: "/marketplace",
+      href: "/businesslisting",
     },
     {
       title: "Employment",
@@ -29,7 +29,7 @@ const SubNav = () => {
     },
     {
       title: "Learn",
-      href: "#",
+      href: "/learn",
     },
     {
       title: "Community",
@@ -37,11 +37,11 @@ const SubNav = () => {
     },
     {
       title: "Events",
-      href: "#",
+      href: "/events",
     },
     {
       title: "Policy",
-      href: "#",
+      href: "/policy",
     },
     {
       title: "Change Makers",
@@ -49,7 +49,7 @@ const SubNav = () => {
     },
     {
       title: "Alliances",
-      href: "#",
+      href: "/alliances",
     },
   ];
   return (
@@ -63,7 +63,7 @@ const SubNav = () => {
       ))}
       <div>
         <Link
-          href="#"
+          href="/specialoffers"
           className="text-[0.7vw] btn shadow-xl rounded-xl font-semibold py-2 px-3 block border-2 border-black montserrat"
         >
           Special Offers

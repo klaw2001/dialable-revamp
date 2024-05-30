@@ -22,10 +22,17 @@ const Login = () => {
         email,
         password,
       });
-      console.log(res)
+      console.log(res);
       if (res.status === 200) {
         toast.success("Sign in Successful");
-        localStorage.setItem("user",JSON.stringify(res.data.data))
+        setTimeout(() => {
+          router.push("/");
+        }, 2000);
+        localStorage.setItem("token", res.data.token),
+        localStorage.setItem(
+          "user",
+          JSON.stringify(res.data.data),
+        );
       }
     } catch (error) {
       console.log(error);

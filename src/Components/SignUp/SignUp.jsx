@@ -139,7 +139,7 @@ const SignUp = () => {
 
         <p className=" my-2 block text-black">
           {`Already have an account?`}{" "}
-          <Link href={"#"} className="underline">
+          <Link href={"/login"} className="underline">
             Log in
           </Link>
         </p>

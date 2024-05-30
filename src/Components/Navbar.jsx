@@ -355,7 +355,13 @@ const Navbar = () => {
           </form>
         </div>
         <button>
-          <IoCartOutline size="2rem" />
+          {
+            user && (
+              <Link href={'/cart/' + user._id}>
+              <IoCartOutline size="2rem" />
+              </Link>
+            )
+          }
         </button>
         {user ? (
           <button>

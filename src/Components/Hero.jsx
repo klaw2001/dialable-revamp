@@ -67,7 +67,7 @@ const Hero = () => {
 
           <button>
             <Link
-              href={"/"}
+              href={"/advertise"}
               className=" rounded-xl shadow-lg lg:block text-white text-[1.1vw] btn font-semibold bg-[#781393] py-2 px-4 montserrat  cursor-pointer"
             >
               Register Now

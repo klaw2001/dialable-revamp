@@ -250,7 +250,7 @@ const Footer = () => {
       </div>
       <div className="bottom flex items-center justify-between text-white text-center lg:text-left text-[2vw] md:text-[1.5vw] lg:text-[.8vw] font-normal roboto mt-4">
         <p>&copy;2024 Dialable. All rights reserved</p>
-        <Link href={"#"} className="hidden md:block">
+        <Link href={"/"} className="hidden md:block">
           BACK TO TOP
         </Link>
         <p>Credits By ABC Company</p>
