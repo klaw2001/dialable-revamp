@@ -13,7 +13,26 @@ body {
 .swiper {
   overflow: unset !important;
 }
-
+/* google lang */
+.goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed {
+  color: #fff !important;
+}
+.goog-te-gadget {
+  color: #fff !important;
+}
+.goog-te-gadget-icon {
+  margin-top: 4px;
+}
+.goog-te-gadget-simple {
+  background-color: transparent !important; 
+  border: none !important;
+  font-size: 10pt;
+  display: inline-block;
+  padding-top: 1px;
+  padding-bottom: 2px;
+  cursor: pointer;
+  /* border-radius: 10px; */
+}
 /* loader */
 .loader-box {
   background-color: #ffffff28;
@@ -253,23 +272,23 @@ div#\:0\.targetLanguage {
     }
   }
 
-  .montserrat {
+  /* .montserrat {
     font-family: "Montserrat", sans-serif;
   }
 
   .roboto {
     font-family: "Roboto Serif", serif;
-  }
+  } */
 
-  .Inter {
+  .Inter , .Sans {
     font-family: "Inter", sans-serif;
   }
 
-  .Sans {
+ /* {
     font-family: "Expletus Sans", sans-serif;
-  }
+  } */
 
-  .poppins {
+  .poppins , .montserrat,.roboto {
     font-family: "Poppins", sans-serif;
   }
 
