@@ -1,12 +1,16 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SideBar from "../SideBar/SideBar";
 import PersonalInfo from "../PersonalInfo/PersonalInfo";
 import Link from "next/link";
 
 const ProfilePage = () => {
   const [activeTab, setActiveTab] = useState("edit-profile");
-  const token = localStorage.getItem("token");
+  const [token, setToken] = useState(null);
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    setToken(token);
+  }, []);
   return (
     <>
       {token ? (
