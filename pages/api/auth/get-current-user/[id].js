@@ -1,8 +1,15 @@
 // pages/api/auth/get-current-user/[id].js
 
+import NextCors from "nextjs-cors";
 import getCurrentUser from "../get-single-user";
 
 export default async function GET(req, res) {
+  await NextCors(req, res, {
+    // Options
+    methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+    origin: '*',
+    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+ }); 
   try {
     const userID = req.query.id;
 

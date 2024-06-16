@@ -1,10 +1,9 @@
-import multer from "multer";
-import fs from "fs";
-import path from "path";
-import Product from "../../../src/models/productModel";
 import NextCors from "nextjs-cors";
 import connectDB from "../../../src/dbConfig/dbConfig";
-import { imageUpload } from "@/utils"; // Import your imageUpload function from the utils directory
+import Product from "../../../src/models/productModel";
+import multer from "multer";
+import { CloudinaryStorage } from "multer-storage-cloudinary";
+import cloudinary from "@/utils/cloudinary";
 
 // Connect to the database
 connectDB()
@@ -15,43 +14,25 @@ connectDB()
     console.log("not connected");
   });
 
-// Configure multer storage
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    // Define the destination folder for file uploads
-    const uploadPath = "./uploads";
-    const subfolder = "products";
-
-    // Create "uploads" folder if it doesn't exist
-    if (!fs.existsSync(uploadPath)) {
-      fs.mkdirSync(uploadPath);
-    }
-
-    // Create subfolder inside "uploads"
-    const subfolderPath = path.join(uploadPath, subfolder);
-    if (!fs.existsSync(subfolderPath)) {
-      fs.mkdirSync(subfolderPath);
-    }
-
-    cb(null, subfolderPath);
-  },
-  filename: function (req, file, cb) {
-    // Define the filename for uploaded files
-    const name = file.originalname; // abc.png
-    const ext = path.extname(name); // .png
-    const nameArr = name.split("."); // [abc,png]
-    nameArr.pop();
-    const fname = nameArr.join("."); //abc
-    const fullname = fname + "-" + Date.now() + ext; // abc-12345.png
-    cb(null, fullname);
+// Configure multer storage for thumbnails
+// Configure multer storage for thumbnails
+const storage = new CloudinaryStorage({
+  cloudinary: cloudinary,
+  params: {
+    folder: "product/thumbnails", // Cloudinary folder where uploads will be stored
+    allowed_formats: ["jpg", "png", "jpeg"], // Allowed file formats
+    public_id: (req, file) => `${Date.now()}_${file.originalname}`, // Unique public ID generator
   },
 });
+const upload = multer({ storage: storage }).single("thumbnail");
 
-// Initialize multer instance
-const upload = multer({ storage: storage });
-
-// Controller function to handle POST requests
-export default async function POST(req, res) {
+export const config = {
+  api: {
+    bodyParser: false, // Disable Next.js body parsing
+  },
+};
+// Main API route handler
+export default async function handler(req, res) {
   // Enable CORS
   await NextCors(req, res, {
     methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"],
@@ -60,81 +41,76 @@ export default async function POST(req, res) {
   });
 
   try {
-    // Destructure product data from request body
-    const {
-      name,
-      category,
-      subcategory,
-      quantity,
-      price,
-      shortdescription,
-      description,
-      variant,
-      size,
-      shipping,
-      returns,
-      specialization,
-      status,
-    } = req.body;
+    // Upload thumbnail
+    upload(req, res, async (err) => {
+      if (err) {
+        console.error("Thumbnail upload error:", err);
+        return res.status(500).json({ error: "Thumbnail upload error" });
+      }
 
-    // Check if thumbnail image exists in the request
-    const thumbnailFile = req.files?.thumbnail;
-    // Check if images exist in the request
-    const imagesFiles = req.files?.images;
+      console.log("Thumbnail upload successful");
 
-    // Upload thumbnail image to Cloudinary if it exists
-    let thumbnailUrl = "";
-    if (thumbnailFile) {
-      const thumbnailImageUrl = await imageUpload(thumbnailFile[0]); // Upload image to Cloudinary
-      thumbnailUrl = thumbnailImageUrl; // Get the URL of the uploaded image
-    }
+      // Destructure product data from request body
+      const {
+        name,
+        category,
+        subcategory,
+        quantity,
+        price,
+        shortdescription,
+        description,
+        variant,
+        size,
+        shipping,
+        returns,
+        specialization,
+        status,
+        userID,
+      } = req.body;
 
-    // Upload images to Cloudinary if they exist
-    let imagesUrls = "";
-    if (imagesFiles) {
-      const imagesUrlsArray = await Promise.all(
-        imagesFiles.map(async (file) => {
-          return await imageUpload(file); // Upload image to Cloudinary
-        })
-      );
-      imagesUrls = imagesUrlsArray.join(","); // Join the URLs of the uploaded images
-    }
+      if (!req.file) {
+        console.error("No thumbnail uploaded");
+        return res.status(400).json({ error: "No thumbnail uploaded" });
+      }
 
-    // Create product data with Cloudinary image URLs
-    const productData = new Product({
-      name,
-      category,
-      subcategory,
-      quantity,
-      price,
-      shortdescription,
-      description,
-      thumbnail: thumbnailUrl, // Set thumbnail URL
-      images: imagesUrls, // Set images URLs
-      variant,
-      size,
-      shipping,
-      returns,
-      specialization,
-      status,
-    });
+      // Create product data with Cloudinary image URL for thumbnail
+      const productData = new Product({
+        name,
+        category,
+        subcategory,
+        quantity,
+        price,
+        shortdescription,
+        description,
+        thumbnail: req.file.path, // Assuming req.file.path contains Cloudinary URL
+        variant,
+        size,
+        shipping,
+        returns,
+        specialization,
+        status,
+        userID,
+      });
 
-    // Validate product data
-    const validationError = productData.validateSync();
-    if (validationError) {
-      return res.status(400).json({ message: validationError.message });
-    }
+      // Validate product data
+      const validationError = productData.validateSync();
+      if (validationError) {
+        return res.status(400).json({ message: validationError.message });
+      }
 
-    // Save product data to the database
-    await productData.save();
+      // Save product data to the database
+      await productData.save();
 
-    // Send response
-    return res.status(201).json({
-      data: productData,
-      message: "Product Added Successfully",
+      // Send response
+      return res.status(201).json({
+        data: productData,
+        success: true,
+        message: "Product Added Successfully",
+      });
     });
   } catch (error) {
     // Handle errors
+    console.error("Error in POST handler:", error);
     return res.status(500).json({
       message: error.message,
     });

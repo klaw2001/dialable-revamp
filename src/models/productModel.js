@@ -19,6 +19,11 @@ const productSchema = new Schema({
     required: false,
     ref: SubCategory,
   },
+  userID: { 
+    type: Schema.Types.ObjectId, 
+    ref: "User", 
+    required: true 
+  },
   quantity: {
     type: Number,
     required: true,
@@ -41,8 +46,8 @@ const productSchema = new Schema({
     default: "",
   },
   images: {
-    type: String,
-    default: "",
+    type: Array,
+    default: [],
   },
   variant: {
     type: String,

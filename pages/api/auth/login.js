@@ -1,14 +1,28 @@
 import User from "../../../src/models/userModel.js";
-import express from "express";
-import cookieParser from "cookie-parser";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import Cookies from "cookies";
 import connectDB from "@/dbConfig/dbConfig.js";
-connectDB()
+import cors from "cors";
+import NextCors from "nextjs-cors";
+
+connectDB();
+
 export default async function handler(req, res) {
+  await NextCors(req, res, {
+    // Options
+    methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+    origin: '*',
+    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+ });
   try {
-    if (req.method === "POST") {
+    
+    if (req.method === "OPTIONS") {
+      // Preflight request response
+      return res.status(200).end();
+      }
+      
+      if (req.method === "POST") {
       const { email, password } = req.body;
 
       const existUser = await User.findOne({ email: email });
