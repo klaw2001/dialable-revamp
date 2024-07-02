@@ -3,6 +3,7 @@ import multer from "multer";
 import fs from "fs";
 import path from "path";
 import connectDB from "../../../src/dbConfig/dbConfig.js";
+import NextCors from "nextjs-cors";
 connectDB()
   .then(() => {
     console.log("connected");
@@ -14,7 +15,12 @@ connectDB()
 
 
 export default async function GET(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  await NextCors(req, res, {
+    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"],
+    origin: "*",
+    optionsSuccessStatus: 200,
+  });
+
 
   try {
     const categoryData = await Category.find();

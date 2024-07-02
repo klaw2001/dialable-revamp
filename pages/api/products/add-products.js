@@ -14,23 +14,37 @@ connectDB()
     console.log("not connected");
   });
 
-// Configure multer storage for thumbnails
-// Configure multer storage for thumbnails
+// Configure multer storage for both thumbnails and images
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
-  params: {
-    folder: "product/thumbnails", // Cloudinary folder where uploads will be stored
-    allowed_formats: ["jpg", "png", "jpeg"], // Allowed file formats
-    public_id: (req, file) => `${Date.now()}_${file.originalname}`, // Unique public ID generator
+  params: (req, file) => {
+    if (file.fieldname === "thumbnail") {
+      return {
+        folder: "product/thumbnails", // Cloudinary folder where thumbnails will be stored
+        allowed_formats: ["jpg", "png", "jpeg"], // Allowed file formats
+        public_id: `${Date.now()}_${file.originalname}`, // Unique public ID generator for thumbnail
+      };
+    } else if (file.fieldname === "images") {
+      return {
+        folder: "product/images", // Cloudinary folder where images will be stored
+        allowed_formats: ["jpg", "png", "jpeg"], // Allowed file formats
+      };
+    }
   },
 });
-const upload = multer({ storage: storage }).single("thumbnail");
+
+// Multer middleware to handle both thumbnail and images upload
+const upload = multer({ storage: storage }).fields([
+  { name: "thumbnail", maxCount: 1 }, // Up to 1 thumbnail
+  { name: "images", maxCount: 4 },    // Up to 4 images
+]);
 
 export const config = {
   api: {
     bodyParser: false, // Disable Next.js body parsing
   },
 };
+
 // Main API route handler
 export default async function handler(req, res) {
   // Enable CORS
@@ -41,14 +55,12 @@ export default async function handler(req, res) {
   });
 
   try {
-    // Upload thumbnail
+    // Handle file uploads
     upload(req, res, async (err) => {
       if (err) {
-        console.error("Thumbnail upload error:", err);
-        return res.status(500).json({ error: "Thumbnail upload error" });
+        console.error("Upload error:", err);
+        return res.status(500).json({ error: "File upload error" });
       }
-
-      console.log("Thumbnail upload successful");
 
       // Destructure product data from request body
       const {
@@ -68,12 +80,15 @@ export default async function handler(req, res) {
         userID,
       } = req.body;
 
-      if (!req.file) {
+      if (!req.files.thumbnail) {
         console.error("No thumbnail uploaded");
         return res.status(400).json({ error: "No thumbnail uploaded" });
       }
 
-      // Create product data with Cloudinary image URL for thumbnail
+      const thumbnailPath = req.files.thumbnail[0].path; // Get thumbnail path
+      const imageUrls = req.files.images.map((file) => file.path); // Get image paths
+
+      // Create product data with Cloudinary image URLs
       const productData = new Product({
         name,
         category,
@@ -82,7 +97,8 @@ export default async function handler(req, res) {
         price,
         shortdescription,
         description,
-        thumbnail: req.file.path, // Assuming req.file.path contains Cloudinary URL
+        thumbnail: thumbnailPath,
+        images: imageUrls,
         variant,
         size,
         shipping,
