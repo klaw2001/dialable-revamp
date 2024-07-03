@@ -1,8 +1,10 @@
+import Order from "@/models/orders";
 import Razorpay from "razorpay";
 import shortid from "shortid";
 
 export default async function handler(req, res) {
-    const { price } = req.body;
+    const { price , products  } = req.body;
+    console.log(products)
     //console.log('price',price*100)
     if (req.method === "POST") {
       // Initialize razorpay object
@@ -26,6 +28,14 @@ export default async function handler(req, res) {
   
       try {
         const response = await razorpay.orders.create(options);
+        const order = await new Order({
+          paymentId: response.id,
+          products,
+          paymentStatus: response.status,
+          paymentAmount: amount / 100,
+          user:'65cb74adbee9d7c924ba9739'
+        });
+        await order.save();
         res.status(200).json({
           id: response._id,
           currency: response.currency,

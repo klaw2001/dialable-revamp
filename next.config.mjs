@@ -20,6 +20,7 @@ const nextConfig = {
   env: {
     RAZORPAY_KEY: process.env.RAZORPAY_KEY,
     RAZORPAY_SECRET: process.env.RAZORPAY_SECRET,
+    RAZORPAY_WEBHOOK_SECRET: process.env.RAZORPAY_WEBHOOK_SECRET,
   },
 };
 

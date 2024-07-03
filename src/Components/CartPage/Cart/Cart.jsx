@@ -91,16 +91,26 @@ const Cart = () => {
 
     try {
       // Make API call to the serverless API
+      const productDetails = cartItems.map(item => ({
+        product: item.productID._id,
+      }));
       const response = await fetch("/api/razorpay-payment/razorpay", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          price: totalamt() * 100, // Assuming totalamt is in rupees, convert to paise for Razorpay
+          price: totalamt() * 100,
+          products:productDetails // Assuming totalamt is in rupees, convert to paise for Razorpay
         }),
       });
 
+      // const response = await axios.post("/api/razorpay-payment/razorpay", {
+      //   price: totalamt() * 100, // Convert to paise for Razorpay
+      //   products: productDetails,
+      // });
+
+      console.log(response)
       // const { firstName, lastName, email, contact } = userData;
 
       const data = await response.json();
