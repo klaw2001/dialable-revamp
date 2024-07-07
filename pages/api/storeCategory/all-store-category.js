@@ -1,9 +1,7 @@
-import Category from "../../../src/models/categoryModel.js";
-import StoreCategory from "../../../src/models/storeCategoryModel.js";
-import multer from "multer";
-import fs from "fs";
-import path from "path";
-import connectDB from "../../../src/dbConfig/dbConfig.js";
+import connectDB from "@/dbConfig/dbConfig";
+import StoreCategory from "@/models/storeCategoryModel";
+import NextCors from "nextjs-cors";
+
 connectDB()
   .then(() => {
     console.log("connected");
@@ -13,7 +11,11 @@ connectDB()
   });
 
 export default async function GET(req, res) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  await NextCors(req, res, {
+    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"],
+    origin: "*",
+    optionsSuccessStatus: 200,
+  });
 
   try {
     const categoryData = await StoreCategory.find();

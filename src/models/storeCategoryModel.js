@@ -9,6 +9,9 @@ const CategorySchema = new Schema({
     type: String,
     default: null,
   },
+  filepath:{
+    type:String,
+  },
   createdAt: {
     type: Date,
     default: Date.now(),

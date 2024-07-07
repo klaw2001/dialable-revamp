@@ -1,10 +1,7 @@
 import mongoose, { Schema } from "mongoose";
 import StoreCategory from "./storeCategoryModel";
-import SubStoreCategory from "./storeSubCategory";
 
-import User from "./userModel";
-
-const storeSchema = new Schema({
+const productSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -14,10 +11,10 @@ const storeSchema = new Schema({
     required: true,
     ref: StoreCategory,
   },
-  subcategory: {
-    type: Schema.Types.ObjectId,
-    required: false,
-    ref: SubStoreCategory,
+  userID: { 
+    type: Schema.Types.ObjectId, 
+    ref: "User", 
+    required: true 
   },
   quantity: {
     type: Number,
@@ -40,9 +37,17 @@ const storeSchema = new Schema({
     type: String,
     default: "",
   },
-  images: {
+  thumbnail_filepath: {
     type: String,
     default: "",
+  },
+  images: {
+    type: [String],    
+    default: [],
+  },
+  images_filepath: {
+    type: [String],    
+    default: [],
   },
   variant: {
     type: String,
@@ -72,6 +77,7 @@ const storeSchema = new Schema({
   },
 });
 
-const Store = mongoose.models.Store || mongoose.model("Store", storeSchema);
+const StoreProduct =
+  mongoose.models.New_Store_Products || mongoose.model("New_Store_Products", productSchema);
 
-export default Store;
+export default StoreProduct;
