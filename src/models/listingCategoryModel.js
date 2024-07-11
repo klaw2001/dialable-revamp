@@ -10,6 +10,9 @@ const listingCategorySchema = new Schema(
       type: String,
       default: null,
     },
+    filepath:{
+      type:String,
+    }
   },
   { timestamps: true }
 );
