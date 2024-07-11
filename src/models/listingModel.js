@@ -1,12 +1,8 @@
 import mongoose, { Schema } from "mongoose";
-import Category from "../models/categoryModel";
 import User from "./userModel";
+import ListingCategory from "./listingCategoryModel";
 const listingSchema = new Schema(
   {
-    placeName: {
-      type: String,
-      required: true,
-    },
     user: {
       type: Schema.Types.ObjectId,
       required: true,
@@ -14,18 +10,14 @@ const listingSchema = new Schema(
     },
     category: {
       type: Schema.Types.ObjectId,
-      ref: Category,
+      ref: ListingCategory,
       required: true,
     },
-    keywords: {
+    name: {
       type: String,
       required: true,
     },
     description: {
-      type: String,
-      required: true,
-    },
-    name: {
       type: String,
       required: true,
     },
@@ -37,32 +29,63 @@ const listingSchema = new Schema(
       type: Number,
       required: true,
     },
+    features: {
+      type: [String],
+      enum: [
+        "Card Payment",
+        "Air Conditioned",
+        "Wireless Internet",
+        "Serves Alcohol",
+        "Parking Street",
+        "Outdoor Seating",
+      ],
+      default: [],
+    },
+    thumbnail: {
+      type: String,
+      default: "",
+    },
+    images: {
+      type: Array,
+      default: [],
+    },
+    thumbnail_filepath: {
+      type: String,
+      default: "",
+    },
+    images_filepath: {
+      type: [String],    
+      default: [],
+    },
+    tags: {
+      type: [String],
+      default: null,
+    },
     website: {
       type: String,
     },
     designation: {
       type: String,
-      required: true,
-    },
-    images: {
-      type: String,
-      default: null,
+      default: "",
     },
     location: {
       type: String,
-      required: true,
+      default: "",
     },
     lowestPrice: {
       type: Number,
-      required: true,
+      default: "",
     },
     highestPrice: {
       type: Number,
-      required: true,
+      default: "",
     },
     company: {
       type: String,
-      required: true,
+      default: "",
+    },
+    iframe: {
+      type: String,
     },
     facebook: {
       type: String,
@@ -82,6 +105,7 @@ const listingSchema = new Schema(
   }
 );
 
-const Listing =
-  mongoose.models.Listing || mongoose.model("Listing", listingSchema);
-export default Listing;
+const BusinessListing =
+  mongoose.models.Business_listing ||
+  mongoose.model("Business_listing", listingSchema);
+export default BusinessListing;
