@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
-import User from "./userModel";
 import Product from "./productModel";
+import User from "./userModel";
 
 const WishListSchema = new Schema(
   {
@@ -9,26 +9,13 @@ const WishListSchema = new Schema(
       ref: User,
       required: true,
     },
-    productID: {
-      type: Schema.Types.ObjectId,
-      ref: Product,
-      required: true,
-    },
-    name: {
-      type: String,
-      required: true,
-    },
-    price: {
-      type: Number,
-      required: true,
-    },
-    quantity: {
-      type: Number,
-      required: true,
-    },
-    thumbnail: {
-      type: String,
-    },
+    products: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: Product,
+        required: true,
+      },
+    ],
   },
   {
     timestamps: true,
@@ -36,6 +23,7 @@ const WishListSchema = new Schema(
 );
 
 const WishList =
-  mongoose.models.WishList || mongoose.model("WishList", WishListSchema);
+  mongoose.models.WishListItems ||
+  mongoose.model("WishListItems", WishListSchema);
 
 export default WishList;

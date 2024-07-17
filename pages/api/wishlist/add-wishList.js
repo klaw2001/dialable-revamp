@@ -1,63 +1,62 @@
+import connectDB from "@/dbConfig/dbConfig";
+import Product from "@/models/productModel";
+import WishList from "@/models/wishListModel";
+import { sendResponse } from "@/utils/response";
 import { useCors } from "@/utils/use-cors";
-import WishList from "../../../src/models/wishListModel.js";
-import connectDB from "../../../src/dbConfig/dbConfig.js";
-import Product from "../../../src/models/productModel.js";
-connectDB()
-  .then(() => {
-    console.log("connected");
-  })
-  .catch(() => {
-    console.log("not connected");
-  });
+import handleMiddleware from "@/utils/user-middleware";
 
-export default async function POST(req, res) {
-  await useCors(req,res)
+connectDB();
+
+const handler = async(req, res) =>{
+  await useCors(req, res);
+
+  const userID = req.userId;
+  if (!userID) {
+    return sendResponse(res, false, null, "Missing user ID", 401);
+  }
 
   try {
-    const { userID, productID } = req.body;
-    const proData = await Product.findOne({ _id: productID });
-    const existwishListItem = await WishList.findOne({
-      productID: productID,
-      userID: userID,
-    });
-    if (existwishListItem) {
-      let quantity = existwishListItem.quantity + 1;
-      const updatedItem = await WishList.updateOne(
-        { _id: existwishListItem._id },
-        {
-          $set: {
-            quantity: quantity,
-          },
-        }
+    const { productID } = req.body;
+
+    if (!productID) {
+      return sendResponse(res, false, null, "Missing product ID", 400);
+    }
+
+    const productData = await Product.findOne({ _id: productID });
+    if (!productData) {
+      return sendResponse(res, false, null, "Product not found", 404);
+    }
+
+    let wishlist = await WishList.findOne({ userID });
+
+    if (!wishlist) {
+      wishlist = new WishList({ userID, products: [productID] });
+    } else {
+      const existingProduct = wishlist.products.find(
+        (item) => item.toString() === productID
       );
-      if (updatedItem.acknowledged) {
-        return res.status(200).json({
-          data: updatedItem,
-          message: "updated",
-        });
+
+      if (existingProduct) {
+        return sendResponse(res, false, null, "Product already exists in wishlist", 400);
       }
+
+      wishlist.products.push(productID);
     }
 
-    const wishListData = new WishList({
-      userID: userID,
-      productID: productID,
-      name: proData.name,
-      price: proData.price,
-      quantity: 1,
-      thumbnail: proData.thumbnail,
-    });
+    await wishlist.save();
 
-    wishListData.save();
-    console.log(wishListData);
-    if (wishListData) {
-      return res.status(201).json({
-        data: wishListData,
-        message: "Product Successfully added to WishList",
-      });
-    }
+    return sendResponse(
+      res,
+      true,
+      wishlist,
+      "Product successfully added to wishlist",
+      201
+    );
   } catch (error) {
-    return res.status(500).json({
-      message: error.message,
-    });
+    console.error("Error adding product to wishlist:", error);
+    return sendResponse(res, false, null, "Error adding product to wishlist", 500);
   }
 }
+
+
+export default handleMiddleware(handler)

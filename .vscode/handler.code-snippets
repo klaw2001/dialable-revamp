@@ -1,0 +1,26 @@
+{
+	"use-handler": { // This is the name/trigger for your snippet
+	  "prefix": "use-handler", // When you type this, the snippet will be suggested
+	  "body": [ // The code to be inserted
+		"import handleMiddleware from \"@/utils/user-middleware\"",
+		"import { useCors } from \"@/utils/use-cors\";",
+		"import { sendResponse } from \"@/utils/response\";",
+		"",
+		"const handler = async (req, res) => {",
+		"  await useCors(req, res);",
+		"",
+			"\ttry {",
+			"",
+			"",
+			"",
+			"\t\treturn sendResponse(res, true, null, 'success' , 200)",
+			"\t} catch (error) {",
+			"\t\tconsole.error('Error in ', error);",
+			"\t\treturn sendResponse(res, false, null, 'Error ', 500)",
+			"\t}",
+			"};",
+		"export default handleMiddleware(handler);"
+	  ],
+	  "description": "Handler with CORS middleware" // Optional description
+	}
+  }

@@ -24,7 +24,6 @@ const blogSchema = new Schema(
       type: String,
       default: "",
     },
-
     thumbnail: {
       type: String,
       default: "",

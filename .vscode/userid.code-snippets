@@ -1,0 +1,10 @@
+{
+	"use userid": {
+	  "prefix": "userid",
+	  "body": [
+		"const userID = req.userId;"
+	  ],
+	  "description": "Declare userID from request"
+	}
+  }
+  
