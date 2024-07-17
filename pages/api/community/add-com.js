@@ -1,6 +1,6 @@
 import Community from "../../../src/models/communityModel.js";
 
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 import connectDB from "../../../src/dbConfig/dbConfig.js";
 connectDB()
   .then(() => {
@@ -11,7 +11,7 @@ connectDB()
   });
 
 export default async function POST(req, res) {
-  await useCors(req,res)
+  await handleCors(req,res)
   try {
     const { user, title, description } = req.body;
     const community = await Community.create({ user, title, description });

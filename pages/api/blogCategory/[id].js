@@ -1,4 +1,4 @@
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 import BlogCategory from "../../../src/models/blogCategoryModel";
 import connectDB from "../../../src/dbConfig/dbConfig";
 connectDB()
@@ -10,7 +10,7 @@ connectDB()
   });
 
 export default async function handler(req, res) {
-  await useCors(req,res)
+  await handleCors(req,res)
 
   if (req.method === "GET") {
     try {

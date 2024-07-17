@@ -1,7 +1,7 @@
 // pages/api/user/products.js
 import Product from "@/models/productModel";
 import connectDB from "@/dbConfig/dbConfig";
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 import extractUserIdMiddleware from "@/utils/user-middleware";
 
 const handler = async (req, res) => {

@@ -1,10 +1,10 @@
 import handleMiddleware from "@/utils/user-middleware";
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 import { sendResponse } from "@/utils/response";
 import WishList from "@/models/wishListModel";
 
 const handler = async (req, res) => {
-  await useCors(req, res);
+  await handleCors(req, res);
   const userID = req.userId;
   try {
     const wishlist = await WishList.findOne({ userID: userID }).populate('products');

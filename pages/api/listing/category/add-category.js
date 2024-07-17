@@ -1,4 +1,4 @@
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 import multer from "multer";
 import { CloudinaryStorage } from "multer-storage-cloudinary";
 import { v2 as cloudinary } from "cloudinary";
@@ -41,7 +41,7 @@ export const config = {
 };
 
 export default async function handler(req, res) {
-  await useCors(req,res)
+  await handleCors(req,res)
 
   if (req.method === "POST") {
     upload.single("image")(req, res, async (err) => {

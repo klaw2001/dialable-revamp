@@ -1,6 +1,6 @@
 import connectDB from "@/dbConfig/dbConfig";
 import BusinessListing from "@/models/listingModel";
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 
 export default async function handler(req, res) {
   await NextCors(req, res, {

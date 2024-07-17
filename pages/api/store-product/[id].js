@@ -1,6 +1,6 @@
 import connectDB from "@/dbConfig/dbConfig";
 import StoreProduct from "@/models/storeProduct";
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 import { CloudinaryStorage } from "multer-storage-cloudinary";
 import cloudinary from "@/utils/cloudinary";
 import multer from "multer";
@@ -43,7 +43,7 @@ export const config = {
 };
 
 export default async function handler(req, res) {
-  await useCors(req,res)
+  await handleCors(req,res)
 
   if (req.method === "GET") {
     try {

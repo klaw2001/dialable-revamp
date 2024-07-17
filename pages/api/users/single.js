@@ -1,9 +1,9 @@
 import User from "@/models/userModel";
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 import handleMiddleware from "@/utils/user-middleware";
 import bcrypt from "bcrypt"
 const handler = async (req, res) => {
-  await useCors(req, res);
+  await handleCors(req, res);
 
   const userID = req.userId;
 

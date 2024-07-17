@@ -1,7 +1,7 @@
 // pages/api/user/products.js
 import connectDB from "@/dbConfig/dbConfig";
 import StoreProduct from "@/models/storeProduct";
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 
 export default async function handler(req, res) {
   if (req.method === "GET") {

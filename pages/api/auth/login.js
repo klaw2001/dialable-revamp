@@ -3,12 +3,12 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import Cookies from "cookies";
 import connectDB from "@/dbConfig/dbConfig.js";
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 
 connectDB();
 
 export default async function handler(req, res) {
- await useCors(req,res)
+ await handleCors(req,res)
   try {
     
     if (req.method === "OPTIONS") {

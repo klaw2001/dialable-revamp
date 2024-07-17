@@ -1,7 +1,7 @@
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 
 const handler = async (req, res) => {
-  await useCors(req, res);
+  await handleCors(req, res);
   if (req.method === "POST") {
     res.setHeader(
       "Set-Cookie",

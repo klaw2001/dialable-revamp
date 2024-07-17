@@ -1,4 +1,4 @@
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 import connectDB from "@/dbConfig/dbConfig";
 import StoreCategory from "@/models/storeCategoryModel";
 import multer from "multer";
@@ -41,7 +41,7 @@ connectDB()
   });
 
 export default async function handler(req, res) {
-  await useCors(req,res)
+  await handleCors(req,res)
 
   if (req.method === "GET") {
     // Handle GET request

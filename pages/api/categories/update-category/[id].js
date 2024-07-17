@@ -1,7 +1,7 @@
 // updateCategory.js
 
 import Category from "../../../../src/models/categoryModel.js";
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 import connectDB from "../../../../src/dbConfig/dbConfig.js";
 import multer from "multer";
 import { CloudinaryStorage } from "multer-storage-cloudinary";
@@ -39,7 +39,7 @@ export const config = {
 };
 
 export default async function handler(req, res) {
-  await useCors(req,res)
+  await handleCors(req,res)
 
 
   if (req.method === "PUT") {

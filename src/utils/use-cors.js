@@ -6,6 +6,6 @@ const corsOptions = {
   optionsSuccessStatus: 200,
 };
 
-export const useCors = async (req, res) => {
+export const handleCors = async (req, res) => {
   await NextCors(req, res, corsOptions);
 };

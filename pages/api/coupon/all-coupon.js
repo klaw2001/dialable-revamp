@@ -1,4 +1,4 @@
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 import connectDB from "../../../src/dbConfig/dbConfig.js";
 import Coupon from "../../../src/models/couponModel.js";
 connectDB()
@@ -10,7 +10,7 @@ connectDB()
   });
 
 export default async function GET(req, res) {
-  await useCors(req,res)
+  await handleCors(req,res)
 
   try {
     const coupons = await Coupon.find();

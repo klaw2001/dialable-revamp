@@ -1,7 +1,7 @@
 import connectDB from "@/dbConfig/dbConfig";
 import BlogD from "@/models/blogModel";
 import { sendResponse } from "@/utils/response";
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 import { CloudinaryStorage } from "multer-storage-cloudinary";
 import cloudinary from "@/utils/cloudinary";
 import multer from "multer";
@@ -37,7 +37,7 @@ export const config = {
 };
 
 export default async function handler(req, res) {
-  await useCors(req, res);
+  await handleCors(req, res);
 const userID = req.userId;
   if (req.method === "GET") {
     try {

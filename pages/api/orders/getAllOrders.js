@@ -1,10 +1,10 @@
 import connectDB from "@/dbConfig/dbConfig";
 import Order from "@/models/orders";
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 
 export default async function handler(req, res) {
   connectDB();
-  await useCors(req,res)
+  await handleCors(req,res)
   try {
     // productIds: ["659d5c41ca4abbf13b502a30", "659d5bd8ca4abbf13b502a2e"]
     const orders = await Order.find().populate('products.product').populate("user");

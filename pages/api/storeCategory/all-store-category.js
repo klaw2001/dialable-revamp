@@ -1,6 +1,6 @@
 import connectDB from "@/dbConfig/dbConfig";
 import StoreCategory from "@/models/storeCategoryModel";
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 
 connectDB()
   .then(() => {
@@ -11,7 +11,7 @@ connectDB()
   });
 
 export default async function GET(req, res) {
-  await useCors(req,res)
+  await handleCors(req,res)
 
   try {
     const categoryData = await StoreCategory.find();

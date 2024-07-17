@@ -1,6 +1,6 @@
 import connectDB from "@/dbConfig/dbConfig";
 import StoreCart from "@/models/storeCartModel";
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 connectDB()
   .then(() => {
     console.log("connected");
@@ -10,7 +10,7 @@ connectDB()
   });
 
 export default async function POST(req, res) {
-  await useCors(req,res)
+  await handleCors(req,res)
 
   try {
     const { userID, storeProductID } = req.body;

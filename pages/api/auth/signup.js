@@ -1,11 +1,11 @@
 import connectDB from "@/dbConfig/dbConfig";
 import User from "@/models/userModel";
-import { useCors } from "@/utils/use-cors.js";
+import { handleCors } from "@/utils/use-cors.js";
 
 connectDB();
 
 export default async function handler(req, res) {
-  await useCors(req, res);
+  await handleCors(req, res);
 
   try {
     if (req.method !== "POST") {

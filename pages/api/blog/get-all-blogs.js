@@ -1,4 +1,4 @@
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 import BlogD from "../../../src/models/blogModel";
 import connectDB from "../../../src/dbConfig/dbConfig";
 import handleMiddleware from "@/utils/user-middleware";
@@ -10,7 +10,7 @@ connectDB()
     console.log("not connected");
   });
 const handler = async(req, res) =>{
-  await useCors(req,res)
+  await handleCors(req,res)
 
   try {
     const blogData = await BlogD.find().populate('userID');

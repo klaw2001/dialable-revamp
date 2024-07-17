@@ -1,4 +1,4 @@
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 import multer from "multer";
 import { CloudinaryStorage } from "multer-storage-cloudinary";
 import cloudinary from "@/utils/cloudinary";
@@ -48,7 +48,7 @@ export const config = {
 // Main API route handler
 export default async function handler(req, res) {
   // Enable CORS
-  await useCors(req,res)
+  await handleCors(req,res)
 
   try {
     // Handle file uploads

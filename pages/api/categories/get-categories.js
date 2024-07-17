@@ -3,7 +3,7 @@ import multer from "multer";
 import fs from "fs";
 import path from "path";
 import connectDB from "../../../src/dbConfig/dbConfig.js";
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 connectDB()
   .then(() => {
     console.log("connected");
@@ -15,7 +15,7 @@ connectDB()
 
 
 export default async function GET(req, res) {
-  await useCors(req,res)
+  await handleCors(req,res)
 
 
   try {

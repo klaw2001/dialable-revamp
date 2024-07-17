@@ -2,7 +2,7 @@ import multer from "multer";
 import fs from "fs";
 import path from "path";
 import Category from "../../../src/models/categoryModel.js";
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 import connectDB from "../../../src/dbConfig/dbConfig.js";
 connectDB()
   .then(() => {
@@ -19,7 +19,7 @@ export default async function DELETE(req, res) {
     res.status(200).end();
     return;
   }
-  await useCors(req,res)
+  await handleCors(req,res)
 
   try {
     const categoryID = req.params.category_id;

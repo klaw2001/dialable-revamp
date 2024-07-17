@@ -1,13 +1,13 @@
 import connectDB from "@/dbConfig/dbConfig";
 import User from "@/models/userModel";
-import { useCors } from "@/utils/use-cors";
+import { handleCors } from "@/utils/use-cors";
 import handleMiddleware from "@/utils/user-middleware";
 
 const handler = async(req, res) => {
   connectDB();
 
   try {
-    await useCors(req, res);
+    await handleCors(req, res);
 
     const users = await User.find();
 
