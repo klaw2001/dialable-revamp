@@ -1,50 +1,47 @@
-import User from "../../../src/models/userModel.js";
-import connectDB from "../../../src/dbConfig/dbConfig";
-connectDB()
-  .then(() => {
-    console.log("connected");
-  })
-  .catch(() => {
-    console.log("not connected");
-  });
+import connectDB from "@/dbConfig/dbConfig";
+import User from "@/models/userModel";
+import { useCors } from "@/utils/use-cors.js";
+
+connectDB();
 
 export default async function handler(req, res) {
-  if (req.method === "POST") {
+  await useCors(req, res);
+
+  try {
+    if (req.method !== "POST") {
+      return res.status(405).end(); // Method Not Allowed
+    }
+
     const { email, fullName, password, role } = req.body;
 
     const existedUser = await User.findOne({ email });
-
     if (existedUser) {
       return res.status(409).json({
-        message: "User with email or username already exists",
+        message: "User with this email already exists",
       });
     }
 
     const user = await User.create({
       email,
       fullName,
-
       password,
       role: role || "CUSTOMER",
     });
 
-    const createdUser = await User.findById(user._id).select(
-      "-password -refreshToken -emailVerificationToken -emailVerificationExpiry"
-    );
-
-    if (!createdUser) {
-      return res.status(500).json({
-        error: "Something went wrong while registering the user",
-      });
-    }
-
     return res.status(201).json({
       status: 200,
-      data: user,
-      message:
-        "Users registered successfully and verification email has been sent on your email.",
+      data: {
+        _id: user._id,
+        email: user.email,
+        fullName: user.fullName,
+        role: user.role,
+      },
+      message: "User registered successfully.",
     });
-  } else {
-    res.status(405).end(); // Method Not Allowed
+  } catch (error) {
+    console.error("Error registering user:", error);
+    return res.status(500).json({
+      error: "Internal Server Error",
+    });
   }
 }

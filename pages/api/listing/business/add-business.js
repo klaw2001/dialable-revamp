@@ -1,4 +1,4 @@
-import NextCors from "nextjs-cors";
+import { useCors } from "@/utils/use-cors";
 import multer from "multer";
 import { CloudinaryStorage } from "multer-storage-cloudinary";
 import cloudinary from "@/utils/cloudinary";
@@ -41,11 +41,7 @@ export const config = {
 // Main API route handler
 export default async function handler(req, res) {
   // Enable CORS
-  await NextCors(req, res, {
-    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"],
-    origin: "*",
-    optionsSuccessStatus: 200,
-  });
+  await useCors(req,res)
 
   try {
     // Handle file uploads

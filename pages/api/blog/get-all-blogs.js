@@ -1,6 +1,7 @@
-import NextCors from "nextjs-cors";
+import { useCors } from "@/utils/use-cors";
 import BlogD from "../../../src/models/blogModel";
 import connectDB from "../../../src/dbConfig/dbConfig";
+import handleMiddleware from "@/utils/user-middleware";
 connectDB()
   .then(() => {
     console.log("connected");
@@ -8,13 +9,8 @@ connectDB()
   .catch(() => {
     console.log("not connected");
   });
-
-export default async function GET(req, res) {
-  await NextCors(req, res, {
-    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"],
-    origin: "*",
-    optionsSuccessStatus: 200,
-  });
+const handler = async(req, res) =>{
+  await useCors(req,res)
 
   try {
     const blogData = await BlogD.find().populate('userID');
@@ -35,3 +31,4 @@ export default async function GET(req, res) {
     });
   }
 }
+export default handleMiddleware(handler)

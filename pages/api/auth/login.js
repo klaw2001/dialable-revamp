@@ -3,18 +3,12 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import Cookies from "cookies";
 import connectDB from "@/dbConfig/dbConfig.js";
-import cors from "cors";
-import NextCors from "nextjs-cors";
+import { useCors } from "@/utils/use-cors";
 
 connectDB();
 
 export default async function handler(req, res) {
-  await NextCors(req, res, {
-    // Options
-    methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
-    origin: '*',
-    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
- });
+ await useCors(req,res)
   try {
     
     if (req.method === "OPTIONS") {
@@ -49,12 +43,12 @@ export default async function handler(req, res) {
           id: existUser._id,
           email: existUser.email,
         },
-        "mysecretkey",
+        process.env.JWT_SECRET,
         { expiresIn: "1h" }
       );
       
       var cookies = new Cookies(req, res);
-      cookies.set("users", JSON.stringify(existUser));
+      cookies.set("token", token);
 
       return res.status(200).json({
         data: existUser,

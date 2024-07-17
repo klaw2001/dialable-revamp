@@ -1,7 +1,7 @@
 import multer from "multer";
 import fs from "fs";
 import path from "path";
-import NextCors from "nextjs-cors";
+import { useCors } from "@/utils/use-cors";
 import Category from "../../../../src/models/categoryModel";
 import connectDB from "../../../../src/dbConfig/dbConfig";
 connectDB()
@@ -13,11 +13,7 @@ connectDB()
   });
 
 export default async function handler(req, res) {
-  await NextCors(req, res, {
-    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"],
-    origin: "*",
-    optionsSuccessStatus: 200,
-  });
+  await useCors(req,res)
 
   if (req.method === "GET") {
     // Handle GET request

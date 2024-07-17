@@ -1,24 +1,17 @@
-import User from "../../../src/models/userModel";
+import { useCors } from "@/utils/use-cors";
 
-const logoutUser = asyncHandler(async (req, res) => {
-  await User.findByIdAndUpdate(
-    req.user?._id,
-    {
-      $set: {
-        refreshToken: undefined,
-      },
-    },
-    { new: true }
-  );
+const handler = async (req, res) => {
+  await useCors(req, res);
+  if (req.method === "POST") {
+    res.setHeader(
+      "Set-Cookie",
+      "token=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT"
+    );
+    res.status(200).json({ message: "Logged out successfully" });
+  } else {
+    res.setHeader("Allow", ["POST"]);
+    res.status(405).json({ message: `Method ${req.method} Not Allowed` });
+  }
+};
 
-  const options = {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-  };
-
-  return res
-    .status(200)
-    .clearCookie("accessToken", options)
-    .clearCookie("refreshToken", options)
-    .json({ message: "User logged out" });
-});
+export default handler;

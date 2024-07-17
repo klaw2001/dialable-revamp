@@ -1,4 +1,4 @@
-import NextCors from "nextjs-cors";
+import { useCors } from "@/utils/use-cors";
 import WishList from "../../../src/models/wishListModel.js";
 import connectDB from "../../../src/dbConfig/dbConfig.js";
 import Product from "../../../src/models/productModel.js";
@@ -11,11 +11,7 @@ connectDB()
   });
 
 export default async function POST(req, res) {
-  await NextCors(req, res, {
-    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"],
-    origin: "*",
-    optionsSuccessStatus: 200,
-  });
+  await useCors(req,res)
 
   try {
     const { userID, productID } = req.body;

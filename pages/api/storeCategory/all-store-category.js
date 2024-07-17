@@ -1,6 +1,6 @@
 import connectDB from "@/dbConfig/dbConfig";
 import StoreCategory from "@/models/storeCategoryModel";
-import NextCors from "nextjs-cors";
+import { useCors } from "@/utils/use-cors";
 
 connectDB()
   .then(() => {
@@ -11,11 +11,7 @@ connectDB()
   });
 
 export default async function GET(req, res) {
-  await NextCors(req, res, {
-    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"],
-    origin: "*",
-    optionsSuccessStatus: 200,
-  });
+  await useCors(req,res)
 
   try {
     const categoryData = await StoreCategory.find();

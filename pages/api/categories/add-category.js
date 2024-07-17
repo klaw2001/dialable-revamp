@@ -1,5 +1,5 @@
 import Category from "../../../src/models/categoryModel.js";
-import NextCors from "nextjs-cors";
+import { useCors } from "@/utils/use-cors";
 import connectDB from "../../../src/dbConfig/dbConfig.js";
 import multer from "multer";
 import { CloudinaryStorage } from "multer-storage-cloudinary";
@@ -41,11 +41,7 @@ export const config = {
 };
 
 export default async function handler(req, res) {
-  await NextCors(req, res, {
-    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"],
-    origin: "*",
-    optionsSuccessStatus: 200,
-  });
+  await useCors(req,res)
 
   if (req.method === "POST") {
     console.log("POST request received");

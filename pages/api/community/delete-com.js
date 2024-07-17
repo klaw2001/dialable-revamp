@@ -1,6 +1,6 @@
 import Community from "../../../src/models/communityModel.js";
 
-import NextCors from "nextjs-cors";
+import { useCors } from "@/utils/use-cors";
 import connectDB from "../../../src/dbConfig/dbConfig.js";
 connectDB()
   .then(() => {
@@ -11,12 +11,7 @@ connectDB()
   });
 
 export default async function POST(req, res) {
-  await NextCors(req, res, {
-    // Options
-    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"],
-    origin: "*",
-    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
-  });
+  await useCors(req,res)
   try {
     const community = await Community.findByIdAndDelete(req.params.id);
     if (!community) {

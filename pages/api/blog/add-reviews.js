@@ -1,4 +1,4 @@
-import NextCors from "nextjs-cors";
+import { useCors } from "@/utils/use-cors";
 import BlogD from "../../../src/models/blogModel";
 import connectDB from "../../../src/dbConfig/dbConfig";
 connectDB()
@@ -10,11 +10,7 @@ connectDB()
   });
 
 export default async function POST(req, res) {
-  await NextCors(req, res, {
-    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"],
-    origin: "*",
-    optionsSuccessStatus: 200,
-  });
+  await useCors(req,res)
   try {
     const { user, rating, comment, blogID } = req.body;
 

@@ -6,7 +6,6 @@ import Logo from "../../../public/Images/dialable-logo.png";
 import { FaFacebook, FaGoogle } from "react-icons/fa6";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { signIn } from "next-auth/react";
 import { toast } from "react-toastify";
 import axios from "axios";
 const Login = () => {
@@ -22,9 +21,8 @@ const Login = () => {
         email,
         password,
       });
-      console.log(res);
-      if (res.status === 200) {
-        toast.success("Sign in Successful");
+      if (res.data.success) {
+        toast.success(res.data.message);
         setTimeout(() => {
           router.push("/");
         }, 2000);
@@ -33,9 +31,10 @@ const Login = () => {
           "user",
           JSON.stringify(res.data.data),
         );
+      }else{
       }
     } catch (error) {
-      console.log(error);
+      toast.error(error.response.data.message)
     }
   };
 

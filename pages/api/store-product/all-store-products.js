@@ -1,6 +1,6 @@
 import connectDB from "@/dbConfig/dbConfig";
 import StoreProduct from "@/models/storeProduct";
-import NextCors from "nextjs-cors";
+import { useCors } from "@/utils/use-cors";
 
 export default async function handler(req, res) {
   if (req.method === "GET") {

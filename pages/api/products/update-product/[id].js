@@ -1,4 +1,4 @@
-import NextCors from "nextjs-cors";
+import { useCors } from "@/utils/use-cors";
 import connectDB from "../../../../src/dbConfig/dbConfig";
 import Product from "../../../../src/models/productModel";
 import multer from "multer";
@@ -50,11 +50,7 @@ export const config = {
 // Controller function to handle PUT requests for product update
 export default async function PUT(req, res) {
   // Enable CORS
-  await NextCors(req, res, {
-    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"],
-    origin: "*",
-    optionsSuccessStatus: 200,
-  });
+  await useCors(req,res)
 
   try {
     // Handle file uploads

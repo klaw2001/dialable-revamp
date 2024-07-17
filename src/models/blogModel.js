@@ -3,61 +3,69 @@ import User from "./userModel";
 
 const blogSchema = new Schema(
   {
-    title: {
-      type: String,
-      required: false,
-    },
-    content: {
-      type: String,
-      required: false,
-    },
     userID: {
       type: Schema.Types.ObjectId,
       ref: User,
       required: false,
     },
-    image: {
+    title: {
       type: String,
-      default: null,
+      required: false,
+    },
+    paragraph1: {
+      type: String,
+      default: "",
+    },
+    paragraph2: {
+      type: String,
+      default: "",
+    },
+    paragraph3: {
+      type: String,
+      default: "",
+    },
+
+    thumbnail: {
+      type: String,
+      default: "",
+    },
+    thumbnail_filepath: {
+      type: String,
+      default: "",
+    },
+    images: {
+      type: [String],
+      default: [],
+    },
+    images_filepath: {
+      type: [String],
+      default: [],
     },
     comments: [
       {
-        userId: {
+        user: {
           type: Schema.Types.ObjectId,
           ref: User,
+          required: true,
         },
-        userComment: {
+        comment: {
           type: String,
+          required: true,
+        },
+        createdAt: {
+          type: Date,
+          default: Date.now,
         },
       },
     ],
     tags: {
-      type: String,
+      type: [String],
+      default: [],
     },
-    reviews: [
-      {
-        user: {
-          type: Object,
-        },
-        rating: {
-          type: Number,
-        },
-        comment: {
-          type: String,
-        },
-        blogID: {
-          type: String,
-        },
-        createdAt: {
-          type: Date,
-          default: Date.now(),
-        },
-      },
-    ],
   },
   { timestamps: true }
 );
 
-const BlogD = mongoose.models.Blog || mongoose.model("Blog", blogSchema);
+const BlogD = mongoose.models.BlogData || mongoose.model("BlogData", blogSchema);
 
 export default BlogD;

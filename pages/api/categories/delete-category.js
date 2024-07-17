@@ -2,7 +2,7 @@ import multer from "multer";
 import fs from "fs";
 import path from "path";
 import Category from "../../../src/models/categoryModel.js";
-import NextCors from "nextjs-cors";
+import { useCors } from "@/utils/use-cors";
 import connectDB from "../../../src/dbConfig/dbConfig.js";
 connectDB()
   .then(() => {
@@ -19,12 +19,8 @@ export default async function DELETE(req, res) {
     res.status(200).end();
     return;
   }
-  await NextCors(req, res, {
-    // Options
-    methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE' , 'OPTIONS'],
-    origin: '*',
-    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
- });
+  await useCors(req,res)
+
   try {
     const categoryID = req.params.category_id;
     const category = await Category.findOne({ _id: categoryID });

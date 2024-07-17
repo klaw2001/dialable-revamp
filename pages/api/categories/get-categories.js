@@ -3,7 +3,7 @@ import multer from "multer";
 import fs from "fs";
 import path from "path";
 import connectDB from "../../../src/dbConfig/dbConfig.js";
-import NextCors from "nextjs-cors";
+import { useCors } from "@/utils/use-cors";
 connectDB()
   .then(() => {
     console.log("connected");
@@ -15,11 +15,7 @@ connectDB()
 
 
 export default async function GET(req, res) {
-  await NextCors(req, res, {
-    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"],
-    origin: "*",
-    optionsSuccessStatus: 200,
-  });
+  await useCors(req,res)
 
 
   try {
