@@ -114,12 +114,18 @@ export default async function handler(req, res) {
           );
         }
 
-        const thumbnailPath = req.files.thumbnail
-          ? req.files.thumbnail[0].path
-          : buisnessData.thumbnail;
-        const imageUrls = req.files.images
-          ? req.files.images.map((file) => file.path)
-          : buisnessData.images;
+         const thumbnailPath = req.files.thumbnail
+        ? req.files.thumbnail[0].path
+        : buisnessData.thumbnail;
+      const thumbnailFilePath = req.files.thumbnail
+        ? req.files.thumbnail[0].filename
+        : buisnessData.thumbnail_filepath;
+      const imageUrls = req.files.images
+        ? req.files.images.map((file) => file.path)
+        : buisnessData.images;
+      const imageFilePaths = req.files.images
+        ? req.files.images.map((file) => file.filename)
+        : buisnessData.images_filepath;
 
         const updatedData = await BusinessListing.updateOne(
           { _id: listingID },
@@ -132,8 +138,8 @@ export default async function handler(req, res) {
               features,
               thumbnail: thumbnailPath,
               images: imageUrls,
-              thumbnail_filepath: req.files.thumbnail[0].filename,
-              images_filepath: req.files.images.map((file) => file.filename),
+              thumbnail_filepath: thumbnailFilePath,
+              images_filepath: imageFilePaths,
               tags,
               website,
               designation,

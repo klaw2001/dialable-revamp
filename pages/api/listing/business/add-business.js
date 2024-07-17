@@ -109,6 +109,8 @@ export default async function handler(req, res) {
         skype,
       });
 
+      console.log(buisnessData)
+
       // Validate product data
       const validationError = buisnessData.validateSync();
       if (validationError) {

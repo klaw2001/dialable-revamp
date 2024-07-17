@@ -31,14 +31,6 @@ const listingSchema = new Schema(
     },
     features: {
       type: [String],
-      enum: [
-        "Card Payment",
-        "Air Conditioned",
-        "Wireless Internet",
-        "Serves Alcohol",
-        "Parking Street",
-        "Outdoor Seating",
-      ],
       default: [],
     },
     thumbnail: {
@@ -74,11 +66,11 @@ const listingSchema = new Schema(
     },
     lowestPrice: {
       type: Number,
-      default: "",
+      default: null,
     },
     highestPrice: {
       type: Number,
-      default: "",
+      default: null,
     },
     company: {
       type: String,
