@@ -1,10 +1,11 @@
 import mongoose, { Schema } from "mongoose";
+import User from "./userModel";
 
 const communitySchema = new Schema(
   {
     user: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
+      ref: User,
       required: true,
     },
     title: {
@@ -13,15 +14,37 @@ const communitySchema = new Schema(
     },
     description: {
       type: String,
+      maxlength: 2000,
     },
-    likes: {
-      type: Array,
-      default: [],
-    },
-    comments: {
-      type: Array,
-      default: [],
-    },
+    likes: [
+      {
+        user: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: User,
+          required: true,
+        },
+        createdAt: {
+          type: Date,
+          default: Date.now,
+        },
+      },
+    ],
+    comments: [
+      {
+        user: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: User,
+          required: true,
+        },
+        text: {
+          type: String,
+        },
+        createdAt: {
+          type: Date,
+          default: Date.now,
+        },
+      },
+    ],
   },
   { timestamps: true }
 );

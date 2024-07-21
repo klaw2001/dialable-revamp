@@ -3,11 +3,13 @@
 	  "prefix": "use-handler", // When you type this, the snippet will be suggested
 	  "body": [ // The code to be inserted
 		"import handleMiddleware from \"@/utils/user-middleware\"",
-		"import { useCors } from \"@/utils/use-cors\";",
+		"import { handleCors } from \"@/utils/use-cors\";",
 		"import { sendResponse } from \"@/utils/response\";",
+		"import connectDB from \"@/dbConfig/dbConfig\";",
 		"",
+		"connectDB()",
 		"const handler = async (req, res) => {",
-		"  await useCors(req, res);",
+		"  await handleCors(req, res);",
 		"",
 			"\ttry {",
 			"",

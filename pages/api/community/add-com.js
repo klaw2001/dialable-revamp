@@ -1,22 +1,26 @@
-import Community from "../../../src/models/communityModel.js";
-
+import connectDB from "@/dbConfig/dbConfig";
+import Community from "@/models/communityModel";
+import { sendResponse } from "@/utils/response";
 import { handleCors } from "@/utils/use-cors";
-import connectDB from "../../../src/dbConfig/dbConfig.js";
-connectDB()
-  .then(() => {
-    console.log("connected");
-  })
-  .catch(() => {
-    console.log("not connected");
-  });
+import handleMiddleware from "@/utils/user-middleware";
+connectDB();
 
-export default async function POST(req, res) {
-  await handleCors(req,res)
+const handler = async(req, res) =>{
+  await handleCors(req, res);
   try {
-    const { user, title, description } = req.body;
-    const community = await Community.create({ user, title, description });
-    res.status(201).json({ success: true, data: community });
+    const userID = req.userId;
+    const { title, description } = req.body;
+    const newCommunity = new Community({
+      user:userID,
+      title,
+      description,
+    });
+    const savedCommunity = await newCommunity.save();
+    sendResponse(res, true, savedCommunity, "Community Data Saved", 201);
   } catch (error) {
-    res.status(400).json({ success: false, message: error.message });
+    console.log(error);
+    sendResponse(res, false, null, "Community Data Not Saved", 500);
   }
 }
+
+export default handleMiddleware(handler)
