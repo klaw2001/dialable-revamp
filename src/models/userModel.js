@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
-import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
+
 
 const userSchema = new mongoose.Schema(
   {
@@ -42,6 +41,38 @@ const userSchema = new mongoose.Schema(
     isEmailVerified: {
       type: Boolean,
       default: false,
+    },
+    dateOfBirth: {
+      type: Date,
+      default: "",
+    },
+    language: {
+      type: String,
+      default: "",
+    },
+    contact: {
+      type: Number,
+      default: null,
+    },
+    address01: {
+      type: String,
+      default: "",
+    },
+    address02: {
+      type: String,
+      default: "",
+    },
+    countryRegion: {
+      type: String,
+      default: "",
+    },
+    state: {
+      type: String,
+      default: "",
+    },
+    pincode: {
+      type: Number,
+      default: null,
     },
   },
   { timestamps: true }

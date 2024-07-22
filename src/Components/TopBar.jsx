@@ -1,6 +1,5 @@
 "use client";
 import { countries } from "@/utils/countries";
-import { languages } from "@/utils/languages";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { FaAngleDown } from "react-icons/fa6";

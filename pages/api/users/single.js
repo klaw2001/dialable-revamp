@@ -1,7 +1,9 @@
 import User from "@/models/userModel";
+import { sendResponse } from "@/utils/response";
 import { handleCors } from "@/utils/use-cors";
 import handleMiddleware from "@/utils/user-middleware";
-import bcrypt from "bcrypt"
+import bcrypt from "bcrypt";
+
 const handler = async (req, res) => {
   await handleCors(req, res);
 
@@ -10,35 +12,30 @@ const handler = async (req, res) => {
   if (req.method === "GET") {
     try {
       if (!userID) {
-        return res.status(401).json({ message: "Unauthorized" });
+        return sendResponse(res, false, null, "Unauthorized", 401);
       }
 
       const userData = await User.findOne({ _id: userID });
 
       if (!userData) {
-        return res.status(404).json({
-          msg: "User Not Found",
-        });
+        return sendResponse(res, false, null, "User Not Found", 404);
       }
 
-      return res.status(200).json({
-        success: true,
-        data: userData,
-      });
+      return sendResponse(res, true, userData, "User fetched successfully");
     } catch (error) {
       console.error("Error fetching user:", error);
-      return res.status(500).json({
-        success: false,
-        msg: "Internal Server Error",
-      });
+      return sendResponse(res, false, null, "Internal Server Error", 500);
     }
   } else if (req.method === "PUT") {
     try {
       if (!userID) {
-        return res.status(401).json({ message: "Unauthorized" });
+        return sendResponse(res, false, null, "Unauthorized", 401);
       }
 
-      const { firstName, lastName, fullName, email, role, password } = req.body;
+      const { 
+        firstName, lastName, fullName, email, role, password, dateOfBirth,
+        language, contact, address01, address02, countryRegion, state, pincode 
+      } = req.body;
 
       let hashedPassword;
       if (password) {
@@ -52,6 +49,14 @@ const handler = async (req, res) => {
         email,
         role,
         password: hashedPassword,
+        dateOfBirth,
+        language,
+        contact,
+        address01,
+        address02,
+        countryRegion,
+        state,
+        pincode
       };
 
       const updatedUser = await User.updateOne(
@@ -60,48 +65,30 @@ const handler = async (req, res) => {
       );
 
       if (!updatedUser) {
-        return res.status(404).json({
-          msg: "User Not Found",
-        });
+        return sendResponse(res, false, null, "User Not Found", 404);
       }
 
-      return res.status(200).json({
-        success: true,
-        data: updatedUser,
-        msg: "User updated successfully",
-      });
+      return sendResponse(res, true, updatedUser, "User updated successfully");
     } catch (error) {
       console.error("Error updating user:", error);
-      return res.status(500).json({
-        success: false,
-        msg: "Internal Server Error",
-      });
+      return sendResponse(res, false, null, "Internal Server Error", 500);
     }
   } else if (req.method === "DELETE") {
     try {
       if (!userID) {
-        return res.status(401).json({ message: "Unauthorized" });
+        return sendResponse(res, false, null, "Unauthorized", 401);
       }
 
       const deletedUser = await User.findOneAndDelete({ _id: userID });
 
       if (!deletedUser) {
-        return res.status(404).json({
-          msg: "User Not Found",
-        });
+        return sendResponse(res, false, null, "User Not Found", 404);
       }
 
-      return res.status(200).json({
-        success: true,
-        data: deletedUser,
-        msg: "User deleted successfully",
-      });
+      return sendResponse(res, true, deletedUser, "User deleted successfully");
     } catch (error) {
       console.error("Error deleting user:", error);
-      return res.status(500).json({
-        success: false,
-        msg: "Internal Server Error",
-      });
+      return sendResponse(res, false, null, "Internal Server Error", 500);
     }
   }
 };
